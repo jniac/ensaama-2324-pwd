@@ -1,0 +1,65 @@
+students:
+- names: 
+  - Cassandre
+  - Auvray
+  github: cxssandre
+- names: 
+  - Ingrid
+  - Cazenave
+  github: ingrid-caz
+- names:
+  - Martin
+  - D'Aboville
+  github: martindabo
+- names:
+  - Louise
+  - Dessart
+  github: ldssrt
+- names:
+  - Eolyna
+  - Dumont
+  github: eoly-pik
+- names:
+  - Pierre
+  - Faure
+  github: pierrenoi
+- names:
+  - Safia
+  - Harireche
+  github: SafiaHRCH
+- names:
+  - Kévin
+  - Hascoet
+  github: kevinhascoet
+- names:
+  - Sofiya
+  - Krasilnikova
+  github: paragorika
+- names: 
+  - Graig-Lucien
+  - Lowen N'Zouba
+  github: Graigouzzz
+- names:
+  - Celia
+  - Lunt
+  github: babib3l
+- names:
+  - Miranda
+  - Maillard
+  github: mirandaMllrd
+- names:
+  - Lorine
+  - Mercier
+  github: LorineMercier
+- names:
+  - Raphaël
+  - Selaries
+  github: RSelaries
+- names:
+  - Allie
+  - Tessier
+  github: alliezgood
+- names:
+  - Lou
+  - Vachey
+  github: Dissolvons
