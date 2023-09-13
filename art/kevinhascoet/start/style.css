@@ -12,6 +12,7 @@ body {
     font-family: 'Open Sans', sans-serif;
   background-color: white;
   font-size:50px;
+  padding:32px;
 }
 
 h1 {
@@ -22,7 +23,6 @@ h1 {
 
 div.gallery {
     height: 360px;
-    padding: 32px;
     display: flex;
     flex-direction: row;
     gap: 32px;
