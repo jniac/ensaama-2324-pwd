@@ -17,3 +17,11 @@ p{
     color: blueviolet;
     font-family: 'Source Code Pro', monospace;
 }
+
+.gallerie{
+    height: 360px;
+    padding: 32px;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
