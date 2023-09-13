@@ -12,6 +12,7 @@ body {
     font-family: 'Open Sans', sans-serif;
   background-color: white;
   font-size:50px;
+  padding:32px;
 }
 
 h1 {
@@ -19,15 +20,22 @@ h1 {
 }
 
 
-img {
-    width:30%;
-    height:30%;
-}
+
+div.gallery {
+    height: 360px;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+  }
 
 
-div.icon {
-    height:64px;
-    width:64px;
-background-color: #fff6;
-background-image: url(assets/);
-}
+
+
+  div.icon {
+    width: 64px;
+    height: 64px;
+    background-color: #fff6;
+    background-image: url(assets/donut.svg);
+  }
+  
+  
