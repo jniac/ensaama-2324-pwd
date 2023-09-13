@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+body, body *{
+    margin: unset;
+
+}
+
+body {
+    background-color:#5EC293;
+    font-family: 'Oswald', sans-serif; 
+    font-size: 20px;
+    color: aliceblue;
+
+}
+p {
+    font-size: 40px;
+    font-family: 'Raleway', sans-serif;
+    color: #21503a;
+}
+
+p.t1 {
+    font-size: 30px;
+    font-family: 'Rubik', sans-serif;
+
+}
+
+div.gallery{
+    height: 360px;
+    padding: 32px;
+    display: flex;
+    gap: 32
+}
+
