@@ -31,3 +31,25 @@ div.images {
     display: flex;
     gap: 8px;
 }
+
+div.poutou {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+div.poutou img {
+    height: 150px;
+}
+
+img.svg_love {
+    height: 50px;
+}
+
+
+div.icon {
+    height: 64px;
+    width: 64px;
+    background-color: #ffffffc0;
+    background-image: url(./assets/love.svg);
+}
