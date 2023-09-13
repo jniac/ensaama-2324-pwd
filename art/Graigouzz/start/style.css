@@ -40,7 +40,14 @@ p{
     width: 64px;
     height: 64px;
     background-color: #7065ac;
-    background-image: url(asset/cat-bold-duotone.svg);
     background-size: contain;
     border-radius: 8px; /*faire des bords ronds*/
+}
+
+.icon-1{
+    background-image: url(asset/cat-bold-duotone.svg);
+}
+
+.icon-2{
+    background-image: url(asset/dog.svg);
 }
