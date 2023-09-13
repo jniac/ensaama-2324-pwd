@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Wavefont:wght@400;500;600;700;800;900&display=swap');
+
+h1 {
+    font-family: 'Rubik Iso', cursive;
+    font-size: xx-large;
+    color: blueviolet;
+    font-weight: bolder;
+    text-align: center;
+}
+
+p{
+    font-family: 'Wavefont', cursive;
+    font-size: larger;
+    font-weight: bolder;
+    text-align: center;
+    color: black;
+}
