@@ -30,6 +30,41 @@ div.gallery{
     height: 360px;
     padding: 32px;
     display: flex;
-    gap: 32
+    gap: 2
 }
 
+div.icons { 
+   margin: 16px;
+   border: solid 2px #fff;
+   border-radius: 12px;
+   padding: 4px;
+   flex-direction: row;
+   gap:4px;
+}
+
+div.icon { 
+    height: 64px;
+    padding: 64px;
+    background-color: #fff6;
+    background-image: url(assets/icone1.svg);
+    background-size: contain;
+    border-radius: 5px;
+}
+
+div.icon-1{
+    background-image: url(assets/icone1.svg);
+}
+
+div.icon-1{
+    background-image: url(assets/icone2.svg);
+}
+div.icon-1{
+    background-image: url(assets/icone3.svg);
+}
+
+div.icon-1{
+    background-image: url(assets/icone4.svg);
+}
+div.icon-1{
+    background-image: url(assets/icone5.svg);
+}
