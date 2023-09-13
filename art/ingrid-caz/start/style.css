@@ -9,13 +9,19 @@ body, body * {
 
 /* ici on change le style */
 body {
-    background-color:#5EC293;
+    background-color:#238650;
     font-family: 'Oswald', sans-serif; 
     font-size: 20px;
     color: aliceblue;
 
 }
+h1{
+    padding: 10px;
+
+}
+
 p {
+    padding: 20px;
     font-size: 40px;
     font-family: 'Raleway', sans-serif;
     color: #21503a;
@@ -27,6 +33,18 @@ p2 {
 
 }
 
-img {
-    resize: 200px;
+div.gallery {
+
+    height: 400px;
+    padding: 32px;
+    display: flex;
+    flex-direction: row;
+}
+
+div.icons {
+    width: 64px;
+    height: 64px;
+    background-color: #fff3;
+    background-image: url(assets/flower.svg);
+
 }
