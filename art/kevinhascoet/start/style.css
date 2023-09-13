@@ -10,7 +10,7 @@ body, body * {
 
 body {
     font-family: 'Open Sans', sans-serif;
-  background-color: #af9db0;
+  background-color: #ebb1f9;
   font-size:50px;;
 }
 
@@ -33,7 +33,7 @@ div.gallery {
   div.icons {
     margin: 16px;
     border: solid 2px #fff;
-    border-radius: 12px;
+    border-radius: 20px;
     padding: 4px;
     display:flex;
     flex-direction: row;
@@ -46,7 +46,9 @@ div.gallery {
     height: 64px;
     background-color: #fff5;
     background-size: contain;
-    border-radius: 8px;
+    border-radius: 16px;
+    cursor:pointer;
+    transition: all 0.6s ease-in-out;
   }
   
   div.icon-1 {
@@ -55,4 +57,10 @@ div.gallery {
 
   div.icon-2 {
     background-image: url(assets/donut.svg);
+  }
+
+  div.icon:hover{
+    background-color: #a774c5;
+    transform: scale(1.1);
+    transition-duration: 0.2s;
   }
