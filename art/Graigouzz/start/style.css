@@ -25,3 +25,10 @@ p{
     flex-direction: row;
     gap: 32px;
 }
+
+.icon{
+    width: 64px;
+    height: 64px;
+    background-color: #7065ac;
+    background-image: url(asset/cat-bold-duotone.svg);
+}
