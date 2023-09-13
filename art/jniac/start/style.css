@@ -44,6 +44,14 @@ div.icon {
   background-color: #fff6;
   background-size: contain;
   border-radius: 8px;
+  cursor: pointer; 
+  transition: all 0.3s ease-in-out; /* BANGER! Animation en 1 ligne. */
+}
+
+div.icon:hover {
+  background-color: rgb(242, 245, 43);
+  transform: scale(1.1) rotate(-5deg);
+  transition-duration: 0.1s;
 }
 
 div.icon-1 {
