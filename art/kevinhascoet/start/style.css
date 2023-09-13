@@ -10,7 +10,7 @@ body, body * {
 
 body {
     font-family: 'Open Sans', sans-serif;
-  background-color: white;
+  background-color: #af9db0;
   font-size:50px;;
 }
 
@@ -44,10 +44,15 @@ div.gallery {
   div.icon {
     width: 64px;
     height: 64px;
-    background-color: #fff6;
-    background-image: url(assets/donut.svg);
+    background-color: #fff5;
     background-size: contain;
     border-radius: 8px;
   }
   
-  
+  div.icon-1 {
+    background-image: url(assets/sugar.svg);
+  }
+
+  div.icon-2 {
+    background-image: url(assets/donut.svg);
+  }
