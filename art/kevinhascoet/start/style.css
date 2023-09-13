@@ -22,3 +22,11 @@ img {
     width:30%;
     height:30%;
 }
+
+
+div.icon {
+    height:64px;
+    width:64px;
+background-color: #fff6;
+background-image: url(assets/);
+}
