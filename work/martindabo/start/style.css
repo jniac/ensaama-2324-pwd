@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Italianno&family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Monoton&display=swap');
+
+body {
+    font-style: italic;
+    font-family: 'Italianno', cursive;
+    font-size: x-large;
+    font-weight: 50000;
+    color: cornflowerblue;
+    
+}
+
+h1 {
+    font-family: 'Monoton', cursive;
+}
