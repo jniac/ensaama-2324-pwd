@@ -9,13 +9,21 @@ body, body * {
 
 /* ici on change le style */
 body {
-    background-color:#5EC293;
+    background-color:#238650;
     font-family: 'Oswald', sans-serif; 
     font-size: 20px;
     color: aliceblue;
 
 }
+
+/* texte */
+h1{
+    padding: 10px;
+
+}
+
 p {
+    padding: 20px;
     font-size: 40px;
     font-family: 'Raleway', sans-serif;
     color: #21503a;
@@ -27,6 +35,48 @@ p2 {
 
 }
 
-img {
-    resize: 200px;
+/* sorte de box */
+div.gallery {
+    height: 400px;
+    padding: 32px;
+    display: flex;
+    flex-direction: row;
+}
+
+/* icones */
+div.icons {
+    display: flex;
+    flex-direction: row;
+    border: solid 2px #fff ;
+    border-radius: 8px;
+    margin:16px;
+    padding: 4px;
+    gap: 4px;
+
+}
+
+div.icon {
+    width: 64px;
+    height: 64px;
+    background-color: #fff3;
+    border-radius: 8px;
+    background-size: contain;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+div.icon:hover {
+    background-color: #c0709f9d;
+    transform: scale(1,1) rotate(-5deg);
+    transition-duration: 0.1s;
+
+}
+
+div.icon-1 {
+    background-image: url(assets/flower.svg);
+}
+
+div.icon-2 {
+    background-image: url(assets/flower-poppy.svg);
 }
