@@ -61,6 +61,15 @@ div.icon {
     background-color: #fff3;
     border-radius: 8px;
     background-size: contain;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+div.icon:hover {
+    background-color: #c0709f9d;
+    transform: scale(1,1) rotate(-5deg);
+    transition-duration: 0.1s;
 
 }
 
