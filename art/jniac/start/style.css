@@ -28,12 +28,19 @@ div.gallery {
 
 
 
-
+div.icons {
+  margin: 16px;
+  border: solid 2px #fff;
+  border-radius: 12px;
+  padding: 4px;
+}
 
 div.icon {
   width: 64px;
   height: 64px;
   background-color: #fff6;
   background-image: url(assets/send-plane-fill.svg);
+  background-size: contain;
+  border-radius: 8px;
 }
 
