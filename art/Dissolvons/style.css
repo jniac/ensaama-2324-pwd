@@ -25,3 +25,11 @@ p.t1 {
     font-family: 'Rubik', sans-serif;
 
 }
+
+div.gallery{
+    height: 360px;
+    padding: 32px;
+    display: flex;
+    gap: 32
+}
+
