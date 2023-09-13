@@ -17,4 +17,23 @@ h1 {
   font-family: 'Oswald', sans-serif;
 }
 
+div.gallery {
+  height: 360px;
+  padding: 32px;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+
+
+
+
+
+div.icon {
+  width: 64px;
+  height: 64px;
+  background-color: #fff6;
+  background-image: url(assets/send-plane-fill.svg);
+}
 
