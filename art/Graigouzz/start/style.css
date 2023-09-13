@@ -21,9 +21,19 @@ p{
 .gallerie{
     height: 360px;
     padding: 32px;
-    display: flex;
+    display: flex; /* décider d'avoior des rangements soit horizontaux soit verticaux*/
     flex-direction: row;
     gap: 32px;
+}
+
+.icons{
+    margin: 16px;
+    border: solid 2px #7065ac;
+    border-radius: 12px;
+    padding: 4px;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
 }
 
 .icon{
@@ -31,4 +41,6 @@ p{
     height: 64px;
     background-color: #7065ac;
     background-image: url(asset/cat-bold-duotone.svg);
+    background-size: contain;
+    border-radius: 8px; /*faire des bords ronds*/
 }
