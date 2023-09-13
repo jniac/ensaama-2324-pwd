@@ -43,7 +43,7 @@ p{
     height: 64px;
     background-color: #7065ac;
     background-size: contain;
-    border-radius: 8px; /*faire des bords ronds*/
+    border-radius: 50px; /*faire des bords ronds*/
 }
 
 .icon:hover{
