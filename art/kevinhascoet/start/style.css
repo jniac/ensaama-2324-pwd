@@ -11,8 +11,7 @@ body, body * {
 body {
     font-family: 'Open Sans', sans-serif;
   background-color: white;
-  font-size:50px;
-  padding:32px;
+  font-size:50px;;
 }
 
 h1 {
@@ -23,6 +22,7 @@ h1 {
 
 div.gallery {
     height: 360px;
+    padding:32px;
     display: flex;
     flex-direction: row;
     gap: 32px;
@@ -30,12 +30,24 @@ div.gallery {
 
 
 
+  div.icons {
+    margin: 16px;
+    border: solid 2px #fff;
+    border-radius: 12px;
+    padding: 4px;
+    display:flex;
+    flex-direction: row;
+    gap:4px;
+  }
+  
 
   div.icon {
     width: 64px;
     height: 64px;
     background-color: #fff6;
     background-image: url(assets/donut.svg);
+    background-size: contain;
+    border-radius: 8px;
   }
   
   
