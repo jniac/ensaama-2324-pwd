@@ -2,6 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 
+/* c'est juste les marges */
+body, body * {
+    margin: unset
+}
+
+/* ici on change le style */
 body {
     background-color:#5EC293;
     font-family: 'Oswald', sans-serif; 
@@ -15,8 +21,12 @@ p {
     color: #21503a;
 }
 
-p2{
+p2 {
     font-size: 30px;
     font-family: 'Rubik', sans-serif;
 
+}
+
+img {
+    resize: 200px;
 }
