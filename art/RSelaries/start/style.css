@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Nag+Mundari:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Nag+Mundari:wght@700&family=Shippori+Antique&display=swap');
 
+body, body * {
+    margin: unset;
+}
+
 body { 
     background-color: blueviolet;
     font-family: 'Shippori Antique', sans-serif;
     color: white;
 }
+
+/* Popopooww */
 
 p {
     color: gold;
@@ -24,4 +30,26 @@ div.images {
     height: 400px;
     display: flex;
     gap: 8px;
+}
+
+div.poutou {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+div.poutou img {
+    height: 150px;
+}
+
+img.svg_love {
+    height: 50px;
+}
+
+
+div.icon {
+    height: 64px;
+    width: 64px;
+    background-color: #ffffffc0;
+    background-image: url(./assets/love.svg);
 }

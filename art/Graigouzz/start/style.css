@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
 
+body, body *{
+    margin: 0;
+} 
+
 body{
     font-family: 'Source Code Pro', monospace;
 }
@@ -12,4 +16,46 @@ h1{
 p{
     color: blueviolet;
     font-family: 'Source Code Pro', monospace;
+}
+
+.gallerie{
+    height: 360px;
+    padding: 32px;
+    display: flex; /* décider d'avoior des rangements soit horizontaux soit verticaux*/
+    flex-direction: row;
+    gap: 32px;
+}
+
+.icons{
+    margin: 16px;
+    border: solid 2px #7065ac;
+    border-radius: 12px;
+    padding: 4px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.icon{
+    width: 64px;
+    height: 64px;
+    background-color: #7065ac;
+    background-size: contain;
+    border-radius: 50px; /*faire des bords ronds*/
+}
+
+.icon:hover{
+    background-color: aqua;
+    transform: scale(1.1) rotate(-5deg) ;
+    transition-duration: 0.3s;
+}
+
+.icon-1{
+    background-image: url(asset/cat-bold-duotone.svg);
+}
+
+.icon-2{
+    background-image: url(asset/dog.svg);
 }
