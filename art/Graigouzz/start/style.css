@@ -33,14 +33,29 @@ p{
     padding: 4px;
     display: flex;
     flex-direction: row;
-    gap: 4px;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 .icon{
     width: 64px;
     height: 64px;
     background-color: #7065ac;
-    background-image: url(asset/cat-bold-duotone.svg);
     background-size: contain;
     border-radius: 8px; /*faire des bords ronds*/
+}
+
+.icon:hover{
+    background-color: aqua;
+    transform: scale(1.1) rotate(-5deg) ;
+    transition-duration: 0.3s;
+}
+
+.icon-1{
+    background-image: url(asset/cat-bold-duotone.svg);
+}
+
+.icon-2{
+    background-image: url(asset/dog.svg);
 }

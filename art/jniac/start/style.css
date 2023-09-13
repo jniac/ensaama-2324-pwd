@@ -33,14 +33,23 @@ div.icons {
   border: solid 2px #fff;
   border-radius: 12px;
   padding: 4px;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
 }
 
 div.icon {
   width: 64px;
   height: 64px;
   background-color: #fff6;
-  background-image: url(assets/send-plane-fill.svg);
   background-size: contain;
   border-radius: 8px;
 }
 
+div.icon-1 {
+  background-image: url(assets/send-plane-fill.svg);
+}
+
+div.icon-2 {
+  background-image: url(assets/cat-bold.svg);
+}
