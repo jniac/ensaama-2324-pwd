@@ -1,21 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+/* c'est juste les marges */
+body, body * {
+    margin: unset
+}
+
+/* ici on change le style */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    background-color:#578f63;
+    font-family: 'Oswald', sans-serif; 
+    font-size: 20px;
+    color: rgb(255, 255, 255);
 
 }
-h1 {
-    font-family: 'Oswald', sans-serif;
-  }
+h1{
+    padding: 10px;
 
-  img.imagebite {
-    width: 30px; 
-    height: auto;
-  }
+}
+
+p {
+    padding: 20px;
+    font-size: 40px;
+    font-family: 'Raleway', sans-serif;
+    color: #da7eb3;
+}
+
+p2 {
+    font-size: 30px;
+    font-family: 'Rubik', sans-serif;
+
+}
+
+div.gallery {
+
+    height: 400px;
+    padding: 32px;
+    display: flex;
+    flex-direction: row;
+}
+
+div.icons {
+  display: flex;
+  flex-direction: row;
+  border: solid 2px #fff ;
+  border-radius: 8px;
+  margin:16px;
+  padding: 4px;
+  gap: 4px;
+
+}
+
+div.icon {
+  width: 64px;
+  height: 64px;
+  background-color: #fff3;
+  border-radius: 8px;
+  background-size: contain;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+
+}
+
+div.icon-1 {
+  background-image: url(assets/cat-fill.svg);
+}
+
+div.icon-2 {
+  background-image: url(assets/bird-fill.svg);
+}
+
+div.icon:hover{
+background-color: pink;
+transform:rotate(-3deg) scale(1.1);
+transition-duration: 0.1s;
 
 
-
-
-
-  div.icon{
-background-color: #ff0099;
-
-  }
+}
