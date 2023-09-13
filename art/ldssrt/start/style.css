@@ -1,10 +1,65 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital@0;1&display=swap');
-body{
+
+body, body * {
+    margin: unset;
+    background-color: rgb(91, 110, 87);
+}
+
+h1{
     font-family: 'Playfair Display', serif;
 
 }
 p{
     font-family: 'Libre Baskerville', serif;
+}
+
+div.gallery {
+    height: 360px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+div.icons {
+    border: solid 3px rgb(138, 185, 138);
+    margin: 16px;
+    border-radius: 12px;
+    padding: 4px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+div.icon {
+    background-color: rgba(255, 255, 255, 0.219);
+    height: 64px;
+    width: 64px;
+    
+    background-size: contain;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+   
+}
+
+div.icon:hover {
+
+    background-color: rgb(62, 85, 66);
+    transform: scale(1.1) rotate(5deg);
+    transition-duration: 0.1s;
+}
+
+div.icon-1 {
+    background-image: url(./assets/paint-brush-32-filled.svg);
+}
+
+div.icon-2 {
+    background-image: url(./assets/paint-drop.svg);
+}
+
+div.icon-3 {
+    background-image: url(./assets/paint-brush.svg);
 }
