@@ -10,7 +10,8 @@ body, body * {
 
 body {
     font-family: 'Open Sans', sans-serif;
-  background-color: white;
+  background-color: #af9db0;
+  font-size:50px;;
 }
 
 h1 {
@@ -18,7 +19,40 @@ h1 {
 }
 
 
-img {
-    width:30%;
-    height:30%;
-}
+
+div.gallery {
+    height: 360px;
+    padding:32px;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+  }
+
+
+
+  div.icons {
+    margin: 16px;
+    border: solid 2px #fff;
+    border-radius: 12px;
+    padding: 4px;
+    display:flex;
+    flex-direction: row;
+    gap:4px;
+  }
+  
+
+  div.icon {
+    width: 64px;
+    height: 64px;
+    background-color: #fff5;
+    background-size: contain;
+    border-radius: 8px;
+  }
+  
+  div.icon-1 {
+    background-image: url(assets/sugar.svg);
+  }
+
+  div.icon-2 {
+    background-image: url(assets/donut.svg);
+  }
