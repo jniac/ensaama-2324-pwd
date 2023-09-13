@@ -46,9 +46,18 @@ div.icon {
     height: 64px;
     padding: 64px;
     background-color: #fff6;
-    background-image: url(assets/icone1.svg);
     background-size: contain;
-    border-radius: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+
+div.icon:hover{ 
+    
+background-color: #21503a;
+   transform: scale(1.1); rotate: (-5deg);
+    animation: duration 0.1em; ;
 }
 
 div.icon-1{
