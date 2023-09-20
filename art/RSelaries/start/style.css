@@ -27,6 +27,13 @@ h2 {
     color: aqua;
 }
 
+div.box-model-demo {
+    margin: 16px;
+    margin-top: 32px;
+    border: solid 8px yellow;
+    padding: 24px;
+}
+
 div.images {
     height: 400px;
     display: flex;
