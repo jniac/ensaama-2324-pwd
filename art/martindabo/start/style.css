@@ -14,6 +14,13 @@ h1 {
     font-family: 'Monoton', cursive;
 }
 
+div.box-model-demo {
+    margin: 16px; /* 16 pixels en haut, bas, gauche et droite */
+    margin-top: 32px; /* override: 32 pixels pour le haut uniquement */
+    border: solid 8px purple;
+    padding: 24px;
+}
+
 
 div.gallery {
     height: 360px;
@@ -47,11 +54,11 @@ div.gallery {
   }
   
   div.icon-1 {
-    background-image: url(assets/sugar.svg);
+    background-image: url(/art/martindabo/cat.svg);
   }
 
   div.icon-2 {
-    background-image: url(assets/donut.svg);
+    background-image: url(/art/martindabo/dragon-face.svg);
   }
 
   div.icon:hover{

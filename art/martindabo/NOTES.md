@@ -18,3 +18,4 @@ div {
     padding: 24px;
 }
 ```
+<img src="box-model-demo.png">
