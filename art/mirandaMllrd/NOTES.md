@@ -19,5 +19,5 @@ div{
     padding: 24px; 
 }
 ```
-<img src="scan manga.png"
+<img src="scan manga.png">
 
