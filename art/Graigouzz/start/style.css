@@ -23,7 +23,6 @@ p{
     padding: 32px;
     display: flex; /* décider d'avoior des rangements soit horizontaux soit verticaux*/
     flex-direction: row;
-    gap: 32px;
 }
 
 .icons{
