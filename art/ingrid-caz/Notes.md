@@ -17,3 +17,4 @@ div {
     padding: 24px;
 }
 ```
+<img src="1.png">
