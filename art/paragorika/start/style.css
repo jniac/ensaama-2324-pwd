@@ -26,14 +26,26 @@ h1 {
     border-radius: 5px;
 }
 
-.icons{
-    width: 40;
-    height: 40;
-    background-color: blue;
+div.icon {
+    width: 64px;
+    height: 64px;
+    background-color: #fff6;
     background-size: contain;
-    border-radius: 5px;
-}
-
-.icon1{
-    background image: url(asset/)
-}
+    border-radius: 8px;
+    cursor: pointer; 
+    transition: all 0.3s ease-in-out; /* BANGER! Animation en 1 ligne. */
+  }
+  
+  div.icon:hover {
+    background-color: rgb(242, 245, 43);
+    transform: scale(1.1) rotate(-5deg);
+    transition-duration: 0.1s;
+  }
+  
+  div.icon-1 {
+    background-image: url(assets/icon1.svg);
+  }
+  
+  div.icon-2 {
+    background-image: url(assets/icon2.svg);
+  }
