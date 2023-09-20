@@ -12,4 +12,44 @@ h1 {
 
 }
 
+div.box-model-demo {
+    margin: 16px;
+    margin-top: 32px;
+    border: solid 8px plum;
+    padding: 24px;
 
+}
+
+div.icons{
+    margin: 16px;
+    border: solid 2px rgb(73, 51, 32);
+    border-radius: 12px;
+    padding: 4px;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+div.icon {
+    width: 64px;
+    height: 64px;
+    background-color: #fff6;
+    background-size: contain;
+    border-radius: 8px ;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+div.icon:hover {
+    background-color: rgb(253, 189, 92);
+    transform: scale(2) rotate(360deg);
+    transition-duration: 0.1s;
+}
+
+div.icon-1{
+    background-image: url(telechargement/bible.svg);
+}
+
+div.icon-2{
+    background-image: url(telechargement/book-heart.svg);
+}
