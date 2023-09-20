@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap');
 
+/*Reset*/
 body, body * {
     margin: unset; 
+    color: beige;
+}
+
+body {
+    background-color: black;
 }
 
 h1 {
@@ -10,3 +16,24 @@ h1 {
     color: azure;
 }
 
+.gallery{
+    height: 360;
+    padding: 32px;
+    display: flex;
+    flex-direction: row;
+    background-color: #fff9;
+    background-size: contain;
+    border-radius: 5px;
+}
+
+.icons{
+    width: 40;
+    height: 40;
+    background-color: blue;
+    background-size: contain;
+    border-radius: 5px;
+}
+
+.icon1{
+    background image: url(asset/)
+}
