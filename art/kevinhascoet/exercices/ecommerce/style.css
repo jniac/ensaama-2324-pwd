@@ -1,26 +1,28 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+  @import url(header.css);
 
 
-/* reset css */
 body, body * {
     margin:0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
 
+
+
 button.start {
     transition: all 0.6s ease-in-out;
-    font: size 18px;
+    font-size:18px;
     appearance: none;
     border: none;
     background-color: white;
     color: #1c3754;
     padding:16px;
-    margin-top: 8px;
+    margin-top: 24px;
     cursor:pointer;
     border-radius: 5px;
-    width:30%
+    width:200px;
 }
 
 button.start:hover{
@@ -34,7 +36,7 @@ h1{
 }
 
 section.intro{
-    height: 90vh;
+    height: 85vh;
     background-size: cover;
     background-image: url(assets/eau.jpg);
     background-position: 85% 0%;
