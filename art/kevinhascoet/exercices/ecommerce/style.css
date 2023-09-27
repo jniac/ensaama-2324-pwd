@@ -9,6 +9,21 @@ body, body * {
     font-family: 'Open Sans', sans-serif;
 }
 
+button.start {
+    appearance: none;
+    border: none;
+    background-color: white;
+    color: black;
+    padding:16px;
+    cursor:pointer;
+    border-radius: 12px;
+}
+
+button.start:hover{
+    background-color: lightblue;
+    color:white;
+}
+
 
 section.intro{
     height: 90vh;
@@ -26,4 +41,17 @@ section.intro div.left-content{
     flex-direction: column;
     gap: 16px;
     justify-content: center;
+}
+
+section.intro p.subtitle {
+    text-transform: uppercase;
+}
+
+section.blabla {
+    height:90vh;
+    padding:64px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:16px;
 }
