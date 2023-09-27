@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=Creepster&family=Italianno&family=Monoton&family=Permanent+Marker&display=swap");
+@import url(header.css);
+@import url(../../../../common-resources/reset.css);
 
 body,
 body * {
@@ -15,6 +17,7 @@ button.start{
     text-transform: uppercase;
     cursor: pointer;
     border-radius: 20px;
+    width: 700px;
 }
 
 button.start:hover{
@@ -26,6 +29,10 @@ h1{
     font-size: 100px;
     margin-top: -35px;
     margin-bottom: 30px;
+}
+
+div.logo {
+    color: aliceblue;
 }
 
 
@@ -46,6 +53,11 @@ section.intro div.left-content {
   flex-direction: column;
   gap: 16px;
   justify-content: center;
+}
+
+
+section.intro div.left-content h1 {
+    transform: translateX(-0.05em);
 }
 
 section.intro p.subtitle {

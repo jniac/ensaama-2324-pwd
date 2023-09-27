@@ -1,37 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
 @import url(header.css);
 @import url(../../../../common-resources/reset.css);
 
-
-
-
-body{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+body, body * {
+    margin: 0;
+    box-sizing: border-box;
 }
 
-button.start {
+body{
+    font-family: 'Lugrasimo', cursive;
+}
+
+button.love {
     appearance: none;
     border: none;
-    background-color: cornflowerblue;
     color: black;
     padding: 16px;
     text-transform: uppercase;
     cursor: pointer;
     border-radius: 4px;
-
 }
 
-button.start:hover {
-    background-color: rgb(65, 93, 145);
-    color:white;
+button.love:hover{
+    background-color: rgb(233, 224, 148);
+    color: azure;
 }
 
 section.intro {
-    height: 90vh;
-    background-image: url(assets/background_3.jpg);
+    height:90vh;
+    background-image: url(assets/ciel4k.jpg);
     background-size: cover;
     background-position: center;
+    color:azure;
     padding: 32px;
-    color:aliceblue;
 }
 
 section.intro div.left-content {
@@ -47,7 +48,7 @@ section.intro p.subtitle {
     text-transform: uppercase;
 }
 
-section.blabla {
+section.homosexuel {
     height: 90vh;
     padding: 64px;
     display: flex;
@@ -56,6 +57,4 @@ section.blabla {
     align-items: center;
     justify-content: center;
     text-align: center;
-
 }
-
