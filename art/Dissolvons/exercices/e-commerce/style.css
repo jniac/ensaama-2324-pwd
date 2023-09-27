@@ -12,8 +12,8 @@ body {
 button.start {
   appearance: none;
   border: none;
-  background-color: green;
-  color: black;
+  background-color: rgb(53, 76, 153);
+  color: rgb(236, 182, 200);
   padding: 16px;
   text-transform: uppercase;
   border-radius: 4px;
@@ -21,7 +21,7 @@ button.start {
 }
 
 button.start:hover {
-  background-color: blue;
+  background-color: rgb(127, 127, 199);
   color: antiquewhite;
 }
 section.intro {
@@ -44,4 +44,15 @@ section.intro div.left-content {
 
 section.intro p.subtitle {
   text-transform: uppercase;
+}
+
+section.blabla {
+    height: 90vh; 
+    padding: 64px;
+    display:flex ;
+    flex-direction: column;
+    gap:16px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
