@@ -5,5 +5,6 @@ body, body * {
 }
 
 section.intro {
-    background-image: url(assets/background.jpg);
+    height: 90vh;
+    background-image: url(assets/background_3.jpg);
 }

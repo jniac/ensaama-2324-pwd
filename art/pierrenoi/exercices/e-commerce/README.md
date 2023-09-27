@@ -2,4 +2,4 @@
 
 Référence:
 
-<img src="assets/background.jpg">
+<img src="assets/background_3.jpg">
