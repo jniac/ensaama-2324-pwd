@@ -1,0 +1,18 @@
+header {
+    position: fixed;
+    background-color: #00000015;
+    backdrop-filter: blur(2px);
+    color: #ffb64d; 
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 25px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img.bagnole {
+    height: 25px;
+}

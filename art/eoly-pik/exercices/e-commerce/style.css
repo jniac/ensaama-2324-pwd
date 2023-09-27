@@ -1,0 +1,68 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nabla&family=Press+Start+2P&display=swap');
+@import url(header.css);
+@import url(../../../../common-resources/reset.css);
+
+
+/* body, body * {
+margin: 0;
+box-sizing: border-box;
+} */
+
+body {
+    font-family: 'Press Start 2P', cursive;
+}
+
+
+
+button.start {
+
+    appearance: none;
+    border: none;
+    background-color: rgb(153, 99, 204);
+    padding: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;;
+    color: aliceblue;
+}
+
+button.start:hover {
+
+    background-color: rgb(196, 128, 209);
+}
+
+section.intro {
+    height: 90vh;
+    background-image: url(assets/2506838.png);
+    background-size: cover;
+    background-position: center;
+    padding: 32px;
+    color: rgb(247, 233, 250);
+
+}
+
+section.intro div.left-content {
+    width: 33%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+}
+
+/* section.intro p.subtitle { */
+    /* text-transform: uppercase;} */
+
+section.blabla {
+
+    height: 90vh;
+    padding: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(153, 99, 204);
+}
