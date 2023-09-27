@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+body, body *{
+    margin: unset;
+
+}
+
 body {
     background-color:#5EC293;
     font-family: 'Oswald', sans-serif; 
@@ -14,8 +20,62 @@ p {
     color: #21503a;
 }
 
-p2{
+p.t1 {
     font-size: 30px;
     font-family: 'Rubik', sans-serif;
 
+}
+
+div.gallery{
+    height: 360px;
+    padding: 32px;
+    display: flex; /* décider d'avoior des rangements soit horizontaux soit verticaux*/
+    flex-direction: row;
+    gap: 32px;
+}
+
+.icons{
+    margin: 16px;
+    border: solid 2px;color: #21503a;
+    border-radius: 12px;
+    padding: 4px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.icon{
+    width: 64px;
+    height: 64px;
+    background-color: green;
+    background-size: contain;
+    border-radius: 8px; /*faire des bords ronds*/
+}
+
+.icon:hover{
+    background-color: greenyellow;
+    transform: scale(1.1) rotate(-5deg) ;
+    transition-duration: 0.3s;
+}
+
+
+
+div.icon-1{
+    background-image: url(assets/icone1.svg);
+}
+
+div.icon-2{
+    background-image: url(assets/icone2.svg);
+}
+div.icon-3{
+    background-image: url(assets/icone3.svg);
+}
+
+div.icon-4{
+    background-image: url(assets/icone4.svg);
+}
+div.icon-5{
+    background-image: url(assets/icone5.svg);
 }
