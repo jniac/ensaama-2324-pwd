@@ -1,0 +1,61 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+/* reset css */
+body, body * {
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+button.start {
+    appearance: none;
+    border: none;
+    background-color: white;
+    color: #1c3754;
+    padding:16px;
+    margin-top: 32px;
+    cursor:pointer;
+    border-radius: 5px;
+    width:30%
+}
+
+button.start:hover{
+    background-color: #1e3b59;
+    color:white;
+}
+
+h1{
+    font-size: 80px;
+}
+
+section.intro{
+    height: 90vh;
+    background-size: cover;
+    background-image: url(assets/eau.jpg);
+    background-position: 85% 0%;
+    color:white;
+    padding: 128px;
+}
+
+section.intro div.left-content{
+    width:33%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section.intro p.subtitle {
+    text-transform: uppercase;
+}
+
+section.blabla {
+    height:90vh;
+    padding:64px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:16px;
+}
