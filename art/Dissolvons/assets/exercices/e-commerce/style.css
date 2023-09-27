@@ -1,8 +1,11 @@
-body,body *{
+body, body * {
     margin: 0;
     box-sizing: border-box;
 }
 
 section.intro {
-    background-image: url(asset/mo);
+    height: 90vh;
+    background-image: url(assets/montagne.webp);
+    background-size: cover;
+    background-position: center;
 }
