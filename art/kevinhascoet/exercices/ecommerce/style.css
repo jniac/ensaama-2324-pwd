@@ -1,6 +1,7 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
   @import url(header.css);
+  @import url(../../../../common-resources/reset.css);
 
 
 body, body * {
