@@ -1,18 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Wavefont:wght@400;500;600;700;800;900&display=swap');
 
+body, body *{
+    margin: unset;
+    background-color: rgb(252, 239, 170);
+}
+
 h1 {
     font-family: 'Rubik Iso', cursive;
     font-size: xx-large;
-    color: blueviolet;
+    color: rgb(73, 51, 32);
     font-weight: bolder;
     text-align: center;
 }
 
 p{
-    font-family: 'Wavefont', cursive;
-    font-size: larger;
+    font-family: 'Rubik Iso', cursive;
+    font-size: xx-large;
     font-weight: bolder;
     text-align: center;
-    color: black;
+    color: rgb(73, 51, 32);
 }
+
+div.box-model-demo {
+    margin: 16px;
+    margin-top: 32px;
+    border: solid 8px rgb(73, 51, 32);
+    padding: 24px;
+}
+
+div.gallery {
+    height: 360px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+
+div.icons{
+    margin: 16px;
+    border: solid 2px rgb(73, 51, 32);
+    border-radius: 12px;
+    padding: 4px;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+div.icon {
+    width: 64px;
+    height: 64px;
+    background-color: #fff6;
+    background-size: contain;
+    border-radius: 8px ;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+
+div.icon:hover {
+    background-color: rgb(253, 189, 92);
+    transform: scale(2) rotate(360deg);
+    transition-duration: 0.1s;
+}
+
+div.icon-1{
+    background-image: url(assets/capybara.svg);
+}
+
+div.icon-2{
+    background-image: url(assets/dog.svg);
+}
+
