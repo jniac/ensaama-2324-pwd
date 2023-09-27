@@ -1,0 +1,29 @@
+/* Fonts familly */
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Sedgwick+Ave+Display&display=swap');
+
+/* Reset CSS */
+body, body * {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Première section */
+section.intro {
+    height: 90vh;
+    background-image: url(./assets/giscardpunk.jpg);
+    background-size: cover;
+    background-position: 0% 90%;
+}
+
+div.top-menu {
+    background-color: #00000015;
+    backdrop-filter: blur(2px);
+    color: #ffb64d; 
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 25px;
+}
+
+div.titre {
+    padding: 4px;
+    padding-left: 16px;
+}
