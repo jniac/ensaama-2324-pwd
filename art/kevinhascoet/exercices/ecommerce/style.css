@@ -46,3 +46,12 @@ section.intro div.left-content{
 section.intro p.subtitle {
     text-transform: uppercase;
 }
+
+section.blabla {
+    height:90vh;
+    padding:64px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:16px;
+}
