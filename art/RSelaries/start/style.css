@@ -6,7 +6,7 @@ body, body * {
 }
 
 body { 
-    background-color: aqua;
+    background-color: bisque;
     background-image: src="https://resize-elle.ladmedia.fr/rcrop/1098,768/img/var/plain_site/storage/images/societe/news/le-depute-louis-boyard-lance-un-blocuschallenge-et-cree-la-polemique-4114185/98555092-1-fre-FR/Le-depute-Louis-Boyard-lance-un-BlocusChallenge-et-cree-la-polemique.jpg";
     font-family: 'Shippori Antique', sans-serif;
     color: white;
@@ -48,6 +48,7 @@ div.poutou {
 
 div.poutou img {
     height: 150px;
+    border-radius: 8px;
 }
 
 img.svg_love {
@@ -110,4 +111,8 @@ div.icon-6 {
     text-wrap: wrap;
     color: black;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+div.shrek {
+    color: #00FF00;
 }
