@@ -39,8 +39,15 @@ p2 {
 
 }
 
+div.box-model-demo {
+    margin: 10px;
+    padding: 8px;
+    border:  solid 2px aliceblue;
+    border-radius: 8px;
+}
 
-/* BOX image*/
+
+/* sorte de box */
 div.gallery {
     height: 400px;
     padding: 32px;

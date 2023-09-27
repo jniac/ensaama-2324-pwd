@@ -29,42 +29,53 @@ p.t1 {
 div.gallery{
     height: 360px;
     padding: 32px;
+    display: flex; /* décider d'avoior des rangements soit horizontaux soit verticaux*/
+    flex-direction: row;
+    gap: 32px;
+}
+
+.icons{
+    margin: 16px;
+    border: solid 2px;color: #21503a;
+    border-radius: 12px;
+    padding: 4px;
     display: flex;
-    gap: 2
+    flex-direction: row;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
-div.icons { 
-   margin: 16px;
-   border: solid 2px #fff;
-   border-radius: 12px;
-   padding: 4px;
-   flex-direction: row;
-   gap:4px;
-}
-
-div.icon { 
+.icon{
+    width: 64px;
     height: 64px;
-    padding: 64px;
-    background-color: #fff6;
-    background-image: url(assets/icone1.svg);
+    background-color: green;
     background-size: contain;
-    border-radius: 5px;
+    border-radius: 8px; /*faire des bords ronds*/
 }
+
+.icon:hover{
+    background-color: greenyellow;
+    transform: scale(1.1) rotate(-5deg) ;
+    transition-duration: 0.3s;
+}
+
+
 
 div.icon-1{
     background-image: url(assets/icone1.svg);
 }
 
-div.icon-1{
+div.icon-2{
     background-image: url(assets/icone2.svg);
 }
-div.icon-1{
+div.icon-3{
     background-image: url(assets/icone3.svg);
 }
 
-div.icon-1{
+div.icon-4{
     background-image: url(assets/icone4.svg);
 }
-div.icon-1{
+div.icon-5{
     background-image: url(assets/icone5.svg);
 }

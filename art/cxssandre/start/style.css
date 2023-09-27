@@ -22,3 +22,53 @@ p2 {
     font-style: italic;
     font-size: small
 }
+
+div.box-model-demo{
+
+    margin: 16px;
+    margin-top: 32px;
+    padding: 24px;
+    border: solid 8px rgb(79, 71, 53);
+}
+
+div.gallery{
+    height: 360px;
+    padding: 32px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+div.icons{
+    margin: 16px;
+    border: solid 2px #fff;
+    border-radius: 12px;
+    padding: 4px;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+div.icon{
+    width: 64px;
+    height: 64px;
+    background-color: #9994 ;
+    background-size: contain;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+div.icon:hover {
+    background-color: rgb(168, 192, 192);
+    transform: scale(1,1) rotate(-5deg);
+    transition-duration: 0.1s;
+}
+
+div.icon-1 {
+    background-image: url(assets/cat-light.svg);
+}
+
+div.icon-2 {
+    background-image: url(assets/cat-outline.svg);
+}
