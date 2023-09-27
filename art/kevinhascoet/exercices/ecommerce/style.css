@@ -8,5 +8,8 @@ body, body * {
 
 
 section.intro{
+    height: 90vh;
+    background-size: cover;
     background-image: url(assets/eau.jpg);
+    background-position: 85% 0%;
 }
