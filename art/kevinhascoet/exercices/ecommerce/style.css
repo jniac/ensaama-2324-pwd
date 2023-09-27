@@ -13,17 +13,22 @@ button.start {
     appearance: none;
     border: none;
     background-color: white;
-    color: black;
+    color: #1c3754;
     padding:16px;
+    margin-top: 32px;
     cursor:pointer;
-    border-radius: 12px;
+    border-radius: 5px;
+    width:30%
 }
 
 button.start:hover{
-    background-color: lightblue;
+    background-color: #1e3b59;
     color:white;
 }
 
+h1{
+    font-size: 80px;
+}
 
 section.intro{
     height: 90vh;
@@ -39,7 +44,6 @@ section.intro div.left-content{
     height:100%;
     display: flex;
     flex-direction: column;
-    gap: 16px;
     justify-content: center;
 }
 
