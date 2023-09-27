@@ -2,7 +2,7 @@
 
 (preview markdown : ctrl+shift+p)
 
-# CSS
+## CSS
 
 un noeud de la page est affiché en fonction de 3 pricpales propriétés :
 - margin = marges
