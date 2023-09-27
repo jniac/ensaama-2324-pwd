@@ -27,3 +27,7 @@ section.intro div.left-content{
     gap: 16px;
     justify-content: center;
 }
+
+section.intro p.subtitle {
+    text-transform: uppercase;
+}
