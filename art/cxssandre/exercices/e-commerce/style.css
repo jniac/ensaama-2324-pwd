@@ -1,35 +1,37 @@
+/* Reset Css */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ruda:wght@400;500;600;700;800;900&display=swap');
 
-/* reset css */
-body, body * {
+body, body* {
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+body{
+    font-family:  'Comfortaa', cursive;
 }
 
 button.start {
     appearance: none;
     border: none;
-    background-color: cornflowerblue;
+    background-color: rgba(240, 248, 255, 0.603);
     color: black;
     padding: 16px;
     text-transform: uppercase;
     cursor: pointer;
-    border-radius: 4px;
-
 }
 
-button.start:hover {
-    background-color: rgb(65, 93, 145);
-    color:white;
+button.start:hover{
+    background-color: rgba(91, 139, 202, 0.603);
+    color: aliceblue;
 }
-
-section.intro {
+section.intro{
     height: 90vh;
-    background-image: url(assets/background_3.jpg);
+    background-image: url(https://c.pxhere.com/photos/27/85/cat_animal_cute_pets-601137.jpg!d);
     background-size: cover;
     background-position: center;
+    color: white;
     padding: 32px;
-    color:aliceblue;
 }
 
 section.intro div.left-content {
@@ -45,7 +47,7 @@ section.intro p.subtitle {
     text-transform: uppercase;
 }
 
-section.blabla {
+section.bleb{
     height: 90vh;
     padding: 64px;
     display: flex;
@@ -54,6 +56,4 @@ section.blabla {
     align-items: center;
     justify-content: center;
     text-align: center;
-
 }
-
