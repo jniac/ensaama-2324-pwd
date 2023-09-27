@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
-
+@import url(header.css);
 section.intro {
   background-image: url(./asset/dubai.jpg);
 }
@@ -9,6 +9,8 @@ body * {
   margin: 0;
   box-sizing: border-box;
 }
+
+
 
 body {
   font-family: "Fjalla One", sans-serif;
@@ -28,7 +30,7 @@ cursor: pointer;
 }
 
 button.start:hover {
-    background-color:green;
+    background-color:rgb(58, 97, 58,50);
     color: aliceblue;
     
     }
