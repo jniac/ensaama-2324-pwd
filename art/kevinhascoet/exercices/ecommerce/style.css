@@ -1,0 +1,15 @@
+
+/* reset css */
+body, body * {
+    margin:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+
+section.intro{
+    height: 90vh;
+    background-size: cover;
+    background-image: url(assets/eau.jpg);
+    background-position: 85% 0%;
+}
