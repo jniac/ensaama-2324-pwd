@@ -22,3 +22,38 @@ div.gallery{
     flex-direction: row;
     gap: 32px;
 }
+
+div.icons {
+    margin: 16px;
+    border: solid 2px #2a624f;
+    border-radius: 16px;
+    padding: 4px;
+    display:flex;
+    flex-direction: row;
+    gap: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* anim */
+}
+
+div.icon:hover{
+background-color: #2a624f;
+transform: scale(1.1) rotate(-5deg);
+transition-duration: 0.1s;
+}
+
+div.icon {
+    width: 64px;
+    height: 64px;
+    background-color: #fff6;
+    background-size: contain;
+    border-radius: 50px;
+    
+}
+
+div.icon-1 {
+    background-image: url(assets/beer-alt-filled-loop.svg);
+}
+
+div.icon-2 {
+    background-image: url(assets/coffee-half-empty-twotone-loop.svg);
+}
