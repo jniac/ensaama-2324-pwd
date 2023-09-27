@@ -23,7 +23,6 @@ p{
     padding: 32px;
     display: flex; /* décider d'avoior des rangements soit horizontaux soit verticaux*/
     flex-direction: row;
-    gap: 32px;
 }
 
 .icons{
@@ -43,7 +42,7 @@ p{
     height: 64px;
     background-color: #7065ac;
     background-size: contain;
-    border-radius: 8px; /*faire des bords ronds*/
+    border-radius: 50px; /*faire des bords ronds*/
 }
 
 .icon:hover{
