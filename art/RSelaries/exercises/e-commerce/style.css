@@ -1,16 +1,7 @@
 /* Fonts familly */
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Fjalla+One&family=Sedgwick+Ave+Display&display=swap');
 @import url(header.css);
-
-::-webkit-scrollbar {
-    display: none;
-}
-
-/* Reset CSS */
-body, body * {
-    margin: 0;
-    box-sizing: border-box;
-}
+@import url(../../../../common-resources/reset.css);
 
 /* Première section */
 section.intro {
@@ -41,6 +32,8 @@ div.titre {
 }
 
 div.left-content {
+    background-color: #00000050;
+    backdrop-filter: blur(2px);
     padding: 32px;
     width: 33%;
     height: 100%;
