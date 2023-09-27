@@ -1,68 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Italianno&family=Monoton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Monoton&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Creepster&family=Italianno&family=Monoton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Creepster&family=Monoton&display=swap");
 
 body {
-    font-style: italic;
-    font-family: 'Italianno', cursive;
-    font-size: x-large;
-    font-weight: 50000;
-    color: cornflowerblue;
-    
+  font-style: italic;
+  font-family: "Italianno", cursive;
+  font-size: x-large;
+  font-weight: 50000;
+  color: cornflowerblue;
 }
 
 h1 {
-    font-family: 'Monoton', cursive;
+  font-family: "Monoton", cursive;
+}
+
+body {
+  background-color: #238650;
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  color: aliceblue;
+}
+
+h1 {
+  padding: 10px;
+}
+
+p {
+  padding: 20px;
+  font-size: 40px;
+  font-family: "Raleway", sans-serif;
+  color: #21503a;
+}
+
+div.gallery {
+  height: 400px;
+  padding: 32px;
+  display: flex;
+  flex-direction: row;
+}
+
+div.icons {
+  display: flex;
+  flex-direction: row;
+  margin: 16px;
+  border: solid 2px #fff;
+  border-radius: 12px;
+  padding: 4px;
+  gap: 4px;
+}
+
+div.icon {
+  width: 64px;
+  height: 64px;
+  background-color: #fff3;
+  background-size: contain;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all s ease-in-out;
+}
+
+div.icon-1 {
+  background-image: url(assets/cat.svg);
+}
+
+div.icon-2 {
+  background-image: url(/art/martindabo/start/assets/horse-zodiac.svg);
+}
+
+div.icon:hover {
+  background-color: green;
+  transform: scale(1.1) rotate(5deg);
+  transition-duration: 0.2s;
 }
 
 div.box-model-demo {
-    margin: 16px; /* 16 pixels en haut, bas, gauche et droite */
-    margin-top: 32px; /* override: 32 pixels pour le haut uniquement */
-    border: solid 8px purple;
-    padding: 24px;
+  margin: 16px; /* 16 pixels en haut, bas, gauche et droite */
+  margin-top: 32px; /* override: 32 pixels pour le haut uniquement */
+  border: solid 8px purple;
+  padding: 24px;
 }
-
-
-div.gallery {
-    height: 360px;
-    padding:32px;
-    display: flex;
-    flex-direction: row;
-    gap: 32px;
-  }
-
-
-
-  div.icons {
-    margin: 16px;
-    border: solid 2px #fff;
-    border-radius: 20px;
-    padding: 4px;
-    display:flex;
-    flex-direction: row;
-    gap:4px;
-  }
-  
-
-  div.icon {
-    width: 64px;
-    height: 64px;
-    background-color: #fff5;
-    background-size: contain;
-    border-radius: 16px;
-    cursor:pointer;
-    transition: all 0.6s ease-in-out;
-  }
-  
-  div.icon-1 {
-    background-image: url(/art/martindabo/cat.svg);
-  }
-
-  div.icon-2 {
-    background-image: url(/art/martindabo/dragon-face.svg);
-  }
-
-  div.icon:hover{
-    background-color: #a774c5;
-    transform: scale(1.1);
-    transition-duration: 0.2s;
-  }
