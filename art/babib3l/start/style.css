@@ -20,3 +20,38 @@ padding: 32px;
 display: flex;
 flex-direction: row;
 gap: 32px;
+}
+
+div.icons {
+  margin: 16px;
+  border: solid 2px #fff;
+  border-radius: 12px;
+  padding: 4px;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+div.icon {
+  width: 64px;
+  height: 64px;
+  background-color: #fff6;
+  background-size: contain;
+  border-radius: 8px;
+  cursor: pointer; 
+  transition: all 0.3s ease-in-out; /* BANGER! Animation en 1 ligne. */
+}
+
+div.icon:hover {
+  background-color: rgb(242, 245, 43);
+  transform: scale(1.1) rotate(-5deg);
+  transition-duration: 0.1s;
+}
+
+div.icon-1 {
+  background-image: url(assets/send-plane-fill.svg);
+}
+
+div.icon-2 {
+  background-image: url(assets/cat-bold.svg);
+}
