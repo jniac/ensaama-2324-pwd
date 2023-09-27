@@ -1,14 +1,11 @@
-
-/* reset css */
 body, body * {
     margin: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif
 }
 
 section.intro {
     height: 90vh;
-    background-image: url(assets/background_3.jpg);
+    background-image: url(assets/montagne.webp);
     background-size: cover;
     background-position: center;
 }

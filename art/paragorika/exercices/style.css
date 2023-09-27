@@ -6,5 +6,8 @@ box-sizing: border-box;
 }
 
 section.intro {
+    height: 100vh;
     background-image: url(assets/210928115722-01-neanderthals-cave-gibraltar-scn-scli-intl.jpg);
+    background-size: cover;
+    background-position: center;
 }
