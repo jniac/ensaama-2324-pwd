@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+@import url(../../../../);
+@import url(header.css);
+@import url(bouton.css);
+
+/* RESET CSS */
+body, body *{
+    box-sizing: border-box;
+
+    margin: unset;
+    
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+
+/* SECTION INTRO */
+section.intro { 
+    height: 85VH;
+    background-image: url(assets/What-is-landscape-photography.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 32px;
+}
+
+section.intro div.left-content {
+    width: 40%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 25px;
+
+}
+
+/* TEXTE INTRO*/
+
+section.intro h1.sous-titre{
+    text-transform: uppercase;
+    font-size: 50px;
+
+}
+
+section.intro p{
+    font-size: 25px;
+    color: aliceblue;
+
+}
+
+/* SECTION 1 */
+section.blabla{
+    height: 50vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+    gap: 25px;
+    padding: 32px;
+
+    text-align: center;
+}
+
+/* TEXTE SECTION1 */
+section.blabla h1{
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+section.blabla p{
+    font-size: 25px;
+}
