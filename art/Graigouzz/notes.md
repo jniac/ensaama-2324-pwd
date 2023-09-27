@@ -19,4 +19,4 @@ div{
 ```
 
 
-https://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@github.com/jniac/ensaama-2324-pwd
+git remote set-url origin https://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@github.com/jniac/ensaama-2324-pwd
