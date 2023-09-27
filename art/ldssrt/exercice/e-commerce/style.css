@@ -1,0 +1,72 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,800;1,400&display=swap');
+
+body, body * {
+    
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+}
+
+button.start {
+    appearance: none;
+    border: none;
+    background-color: rgb(52, 70, 50);
+    padding: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: white;
+    font-family: 'Playfair Display', serif;
+
+}
+
+button.start:hover {
+
+    background-color: rgb(96, 114, 92);
+    color: white;
+
+}
+
+section.intro {
+    height: 90vh;
+    background-image: url(./assets/landscape-painting2.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 32px;
+    color: rgb(255, 255, 255);
+}
+
+section.intro div.left-content {
+    width: 33%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+}
+
+section.intro p.subtitle {
+    text-transform: uppercase;
+}
+
+section.blbl {
+
+    height: 90vh;
+    padding: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+section.blbl h1 {
+
+    text-transform: uppercase;
+}
+
