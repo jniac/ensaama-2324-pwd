@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
 @import url(header.css);
+@import url(../../../../common-resources/reset.css);
 
 body, body * {
     margin: 0;
