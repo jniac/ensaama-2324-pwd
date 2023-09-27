@@ -1,35 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url(header.css);
+@import url(../../../../);
 
-/* reset css */
-body, body * {
+body, body *{
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    font-family: 'Lilita One', cursive;
 }
 
 button.start {
     appearance: none;
     border: none;
-    background-color: cornflowerblue;
-    color: black;
+    background-color: rgb(255, 249, 191);
+    color: rgb(77, 44, 35);
     padding: 16px;
     text-transform: uppercase;
     cursor: pointer;
     border-radius: 4px;
-
 }
 
-button.start:hover {
-    background-color: rgb(65, 93, 145);
-    color:white;
+button.start:hover{
+    background-color: rgb(255, 170, 13);
+    color: beige;
 }
 
 section.intro {
     height: 90vh;
-    background-image: url(assets/background_3.jpg);
+    background-image: url(./assets/fond_pompom.jpg);
     background-size: cover;
     background-position: center;
     padding: 32px;
-    color:aliceblue;
+    color: rgb(77, 44, 35);
 }
 
 section.intro div.left-content {
@@ -45,7 +49,7 @@ section.intro p.subtitle {
     text-transform: uppercase;
 }
 
-section.blabla {
+section.next {
     height: 90vh;
     padding: 64px;
     display: flex;
@@ -54,6 +58,6 @@ section.blabla {
     align-items: center;
     justify-content: center;
     text-align: center;
-
+    color: rgb(77, 44, 35);
+    background-color: rgb(255, 220, 64);
 }
-
