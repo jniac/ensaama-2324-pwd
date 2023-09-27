@@ -1,13 +1,15 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+  @import url(header.css);
 
 
-/* reset css */
 body, body * {
     margin:0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
+
+
 
 button.start {
     transition: all 0.6s ease-in-out;
@@ -20,7 +22,7 @@ button.start {
     margin-top: 24px;
     cursor:pointer;
     border-radius: 5px;
-    width:150px;
+    width:200px;
 }
 
 button.start:hover{
