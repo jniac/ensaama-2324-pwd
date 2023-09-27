@@ -13,3 +13,56 @@ body {
 h1 {
     font-family: 'Monoton', cursive;
 }
+
+div.box-model-demo {
+    margin: 16px; /* 16 pixels en haut, bas, gauche et droite */
+    margin-top: 32px; /* override: 32 pixels pour le haut uniquement */
+    border: solid 8px purple;
+    padding: 24px;
+}
+
+
+div.gallery {
+    height: 360px;
+    padding:32px;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+  }
+
+
+
+  div.icons {
+    margin: 16px;
+    border: solid 2px #fff;
+    border-radius: 20px;
+    padding: 4px;
+    display:flex;
+    flex-direction: row;
+    gap:4px;
+  }
+  
+
+  div.icon {
+    width: 64px;
+    height: 64px;
+    background-color: #fff5;
+    background-size: contain;
+    border-radius: 16px;
+    cursor:pointer;
+    transition: all 0.6s ease-in-out;
+  }
+  
+  div.icon-1 {
+    background-image: url(/art/martindabo/cat.svg);
+  }
+
+  div.icon-2 {
+    background-image: url(/art/martindabo/dragon-face.svg);
+  }
+
+  div.icon:hover{
+    background-color: #a774c5;
+    transform: scale(1.1);
+    transition-duration: 0.2s;
+  }
