@@ -1,0 +1,10 @@
+
+body, body * {
+margin: 0;
+box-sizing: border-box;
+
+}
+
+section.intro {
+    background-image: url(assets/210928115722-01-neanderthals-cave-gibraltar-scn-scli-intl.jpg);
+}
