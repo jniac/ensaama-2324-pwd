@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url(header.css);
+@import url(../../../../common-resources/reset.css);
 
 body, body *{
     margin: 0;
@@ -21,6 +23,38 @@ button.start {
 }
 
 button.start:hover{
+    background-color: rgb(255, 170, 13);
+    color: beige;
+}
+
+div.menu button{
+    appearance: none;
+    border: none;
+    background-color: rgb(255, 249, 191);
+    color: rgb(77, 44, 35);
+    padding: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+div.menu button:hover {
+    background-color: rgb(255, 170, 13);
+    color: beige;
+}
+
+button.login {
+    appearance: none;
+    border: none;
+    background-color: rgb(255, 249, 191);
+    color: rgb(77, 44, 35);
+    padding: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button.login:hover{
     background-color: rgb(255, 170, 13);
     color: beige;
 }
@@ -57,4 +91,5 @@ section.next {
     justify-content: center;
     text-align: center;
     color: rgb(77, 44, 35);
+    background-color: rgb(255, 223, 80);
 }
