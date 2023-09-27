@@ -3,7 +3,7 @@
 body, body * {
     margin: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 section.intro {
@@ -11,4 +11,15 @@ section.intro {
     background-image: url(assets/background_3.jpg);
     background-size: cover;
     background-position: center;
+    padding: 32px;
+    color:aliceblue;
+}
+
+section.intro div.left-content {
+    width: 33%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
 }

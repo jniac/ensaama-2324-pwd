@@ -1,9 +1,27 @@
 
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
 /* reset css */
 body, body * {
     margin:0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif
+    font-family: 'Open Sans', sans-serif;
+}
+
+button.start {
+    appearance: none;
+    border: none;
+    background-color: white;
+    color: black;
+    padding:16px;
+    cursor:pointer;
+    border-radius: 12px;
+}
+
+button.start:hover{
+    background-color: lightblue;
+    color:white;
 }
 
 
@@ -12,4 +30,19 @@ section.intro{
     background-size: cover;
     background-image: url(assets/eau.jpg);
     background-position: 85% 0%;
+    color:white;
+    padding: 128px;
+}
+
+section.intro div.left-content{
+    width:33%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+}
+
+section.intro p.subtitle {
+    text-transform: uppercase;
 }
