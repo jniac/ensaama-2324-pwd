@@ -1,22 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 
-/* c'est juste les marges */
+/* MARGES */
 body, body * {
     margin: unset
 }
 
-/* ici on change le style */
+
+/* STYLE GENERAL */
 body {
     background-color:#238650;
+    color: aliceblue;
+
     font-family: 'Oswald', sans-serif; 
     font-size: 20px;
-    color: aliceblue;
 
 }
 
-/* texte */
+
+/* TEXTE */
 h1{
     padding: 10px;
 
@@ -24,17 +26,21 @@ h1{
 
 p {
     padding: 20px;
+
     font-size: 40px;
     font-family: 'Raleway', sans-serif;
+
     color: #21503a;
 }
 
 p2 {
     font-size: 30px;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Raleway', sans-serif;
 
 }
 
+/* LIEN */
+/* esthétique lien */
 div.box-model-demo {
     margin: 10px;
     padding: 8px;
@@ -42,41 +48,52 @@ div.box-model-demo {
     border-radius: 8px;
 }
 
-
+/* IMAGE */
 /* sorte de box */
 div.gallery {
     height: 400px;
     padding: 32px;
+
     display: flex;
     flex-direction: row;
 }
 
-/* icones */
+
+/* ICONES */
+/* boite dans laquelle sont icones */
 div.icons {
     display: flex;
     flex-direction: row;
-    border: solid 2px #fff ;
+
+    border: solid 2px #c6e3e6 ;
     border-radius: 8px;
+
     margin:16px;
     padding: 4px;
-    gap: 4px;
+    gap: 10px;
 
 }
 
+
+/* propriétés*/
 div.icon {
     width: 64px;
     height: 64px;
-    background-color: #fff3;
     border-radius: 8px;
+
+    background-color: #fff3;
     background-size: contain;
+
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     
 }
 
+/* propiétés survol */
 div.icon:hover {
     background-color: #c0709f9d;
-    transform: scale(1,1) rotate(-5deg);
+
+    transform: scale(1,1) rotate(-45deg);
     transition-duration: 0.1s;
 
 }
