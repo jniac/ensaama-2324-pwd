@@ -16,6 +16,15 @@ p{
   background-color: blue;
 }
 
+div.box-model-demo {
+
+  margin: 16px;
+  margin-top: 32px;
+  padding: 24px;
+  border: solid 8px rgb(31, 41, 85);
+
+}
+
 div.gallery {
   height: 360px;
   padding: 32px;
