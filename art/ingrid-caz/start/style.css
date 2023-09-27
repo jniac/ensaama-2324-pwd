@@ -39,6 +39,8 @@ p2 {
 
 }
 
+/* LIEN */
+/* esthétique lien */
 div.box-model-demo {
     margin: 10px;
     padding: 8px;
@@ -46,7 +48,7 @@ div.box-model-demo {
     border-radius: 8px;
 }
 
-
+/* IMAGE */
 /* sorte de box */
 div.gallery {
     height: 400px;
