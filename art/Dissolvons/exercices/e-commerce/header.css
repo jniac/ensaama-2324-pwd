@@ -15,30 +15,6 @@ header {
     flex: 1;
   }
   
-  header button {
-background-color: aliceblue;
-backdrop-filter: blur(16px);
-border: none;
-border-radius: 0px;
-color: black;
-align-self: stretch;
-padding:0 16px ;
-cursor: pointer;
-  }
-
- header button:hover
- 
- 
-  header button:first-child {
-    border-radius: 8px 0 0 8px;
-  }
- 
- 
- 
- 
- 
- 
- 
   header .menu {
     flex: 2;
   }
@@ -54,21 +30,45 @@ cursor: pointer;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 8px;
+    gap: 1px;
+    align-self: stretch;
+  }
+  
+  header button {
+    background-color: rgb(236, 182, 200);
+    backdrop-filter: blur(16px); /* Trop puissant, du flou ! */
+    border: none;
+    border-radius: 0px;
+    color: black;
+    align-self: stretch;
+    padding: 0 16px;
+    cursor: pointer;
+  }
+  
+  header button:hover {
+    background-color: #b9f8a8;
+  }
+  
+  header button:first-child {
+    border-radius: 8px 0 0 8px;
+  }
+  
+  header button:last-child {
+    border-radius: 0 8px 8px 0;
   }
   
   header .actions {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    gap: 8px;
+    gap: 1px;
   }
   
   
   
   .logo-icon {
     aspect-ratio: 1 / 1;
-    background-color: rgb(236, 182, 200);
+    background-color: rgb(236, 182, 200) ;
     
     -webkit-mask-image: url(assets/icone1.svg);
     -webkit-mask-size: contain;
@@ -79,5 +79,5 @@ cursor: pointer;
   }
   
   .logo-icon:hover {
-    background-color:rgb(41, 77, 192) ;
+    background-color: #b9f8a8;
   }
