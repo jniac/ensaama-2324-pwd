@@ -5,7 +5,18 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     padding: 8px;
   }
-  
+
+  header .logo,
+  header .actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  header .menu {
+    flex: 2;
+  }
