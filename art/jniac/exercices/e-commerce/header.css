@@ -20,7 +20,11 @@ header .menu {
 }
 /* <- Gestion de l'espace du header <- */
 
-
+header .logo {
+  display: flex;
+  flex-direction: row;
+  align-self: stretch;
+}
 
 header .menu {
   display: flex;
@@ -35,3 +39,29 @@ header .actions {
   justify-content: flex-end;
   gap: 8px;
 }
+
+
+
+.logo-icon {
+  aspect-ratio: 1 / 1;
+  background-color: red;
+  
+  -webkit-mask-image: url(assets/sait-boat.svg);
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+
+  transition: all .1s ease-in-out;
+  cursor: pointer;
+}
+
+.logo-icon:hover {
+  background-color: blue;
+}
+
+
+
+
+
+
+
+
