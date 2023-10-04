@@ -9,7 +9,7 @@ body {
 button.start {
   appearance: none;
   border: none;
-  background-color: #b9f8a8;
+  background-color: #a8e1f8;
   color: black;
   padding: 16px;
   text-transform: uppercase;
@@ -18,7 +18,7 @@ button.start {
 }
 
 button.start:hover {
-  background-color: blue;
+  background-color: rgb(70, 70, 218);
   color: white;
 }
 
@@ -28,7 +28,7 @@ section.intro {
   background-size: cover;
   background-position: center;
   padding: 32px;
-  color: white;
+  color: rgb(255, 247, 0);
 }
 
 section.intro div.left-content {
