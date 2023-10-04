@@ -9,6 +9,7 @@ body{
 
 }
 
+
 img{ width: 200px;   height:200px;}
 
 button.start {
@@ -26,7 +27,7 @@ button.start {
 
 button.start:hover {
     background-color: rgb(65, 93, 145);
-    color:white;
+    color:rgb(255, 255, 255);
 }
 
 section.intro {
