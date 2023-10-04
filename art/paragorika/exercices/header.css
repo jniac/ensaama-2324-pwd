@@ -32,3 +32,16 @@ header .menu {
 header .actions {
     justify-content: flex-end;
 }
+
+header .logo.icon{
+    aspect-ratio: 1;
+}
+
+header .logo{
+    display: flex;
+    background-image: url(assets/radiation.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-content: stretch;
+}
+
