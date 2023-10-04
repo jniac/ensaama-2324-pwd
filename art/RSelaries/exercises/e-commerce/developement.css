@@ -1,0 +1,13 @@
+/* Deuxième section  */
+section.developement {
+    height: 90vh;
+    padding: 64px;
+    padding-left: 320px;
+    padding-right: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: start;
+    align-items: center;
+}
+

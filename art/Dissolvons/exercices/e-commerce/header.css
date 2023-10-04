@@ -1,9 +1,31 @@
-header{
-    position: fixed;
-    width: 100vw;
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 8px;
+header {
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: space-between; */
+  padding: 8px;
 }
+
+header .logo {
+  flex: 1;
+}
+
+header .actions {
+  flex: 1;
+}
+
+header .menu {
+    flex: 2;
+    flex-direction: row;
+    justify-content: center;
+    
+  }
+
+  header .actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 8px;
+  }
