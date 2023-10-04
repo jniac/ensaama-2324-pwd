@@ -2,6 +2,7 @@
 body, body * {
   margin: 0;
   box-sizing: border-box;
+  font-family: inherit; /* Forcer l'usage d'une typo unique */
 }
 
 /* Enlever les "ascenseurs" (windows). */
