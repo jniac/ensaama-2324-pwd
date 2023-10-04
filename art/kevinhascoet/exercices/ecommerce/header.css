@@ -11,7 +11,7 @@ header{
 }
 
 
-header .actions, header.logo{
+header .actions, header .logo{
     flex:1;
 }
 
@@ -58,7 +58,7 @@ header .menu button {
     background-color: white;
     color: #2b0e02;
     padding:16px;
-    margin-top: 24px;
+    margin-top: 16px;
     cursor:pointer;
     border-radius: 5px;
     width:200px;
@@ -91,7 +91,16 @@ header .actions {
 }
 
 
-header .logo {
+header .logo-icon {
     aspect-ratio: 1 / 1;
-    background-color:red;
+    background-color:#4d1c0b;
+    transition: all 0.6s ease-in-out;
+
+    -webkit-mask-image: url(assets/donut.svg);
+    -webkit-mask-size: contain;
 }
+
+header .logo-icon:hover {
+    background-color:#2b0e02;
+}
+
