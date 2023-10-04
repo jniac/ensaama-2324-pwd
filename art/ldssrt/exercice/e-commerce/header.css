@@ -5,5 +5,60 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+} 
+
+header .logo,
+header .action{
+    flex: 1;
+}
+
+header .logo {
+
+    display: flex;
+    flex-direction: row;
+    align-self: stretch;
+}
+
+header .menu{
+
+    flex: 2;
+   
+}
+
+header .menu {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+header .action {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+ .logo-icon {
+
+    aspect-ratio: 1 / 1;
+    background-color: rgb(0, 0, 0);
+    transition: all .3s ease-in-out;
+    
+    -webkit-mask-image: url(./assets/paint-pallet-circle.svg);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    
+    transition: all .1s ease-in-out;
+    cursor: pointer;
+}
+
+header button {
+
+    background-color: #fff6;
+    backdrop-filter: blur(2px);
+
 }
