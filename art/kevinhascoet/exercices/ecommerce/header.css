@@ -7,6 +7,7 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding: 24px;
 
 }
 
@@ -27,7 +28,6 @@ button.login {
     background-color: #fff0;
     color: white;
     padding:16px;
-    margin-top: 24px;
     cursor:pointer;
     border-radius: 5px;
     width:200px;
@@ -58,7 +58,6 @@ header .menu button {
     background-color: white;
     color: #2b0e02;
     padding:16px;
-    margin-top: 16px;
     cursor:pointer;
     border-radius: 5px;
     width:200px;
@@ -102,5 +101,6 @@ header .logo-icon {
 
 header .logo-icon:hover {
     background-color:#2b0e02;
+    scale: 1.2;
 }
 
