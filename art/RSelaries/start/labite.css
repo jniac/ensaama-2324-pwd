@@ -6,8 +6,9 @@ div.labite {
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
-div.labite :hover {
-    transform: scale(15);
+div.labite:hover {
+    transform: scale(1.1) rotate(364deg);
 }
