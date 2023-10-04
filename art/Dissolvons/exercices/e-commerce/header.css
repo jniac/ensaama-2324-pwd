@@ -15,6 +15,30 @@ header {
     flex: 1;
   }
   
+  header button {
+background-color: aliceblue;
+backdrop-filter: blur(16px);
+border: none;
+border-radius: 0px;
+color: black;
+align-self: stretch;
+padding:0 16px ;
+cursor: pointer;
+  }
+
+ header button:hover
+ 
+ 
+  header button:first-child {
+    border-radius: 8px 0 0 8px;
+  }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
   header .menu {
     flex: 2;
   }
