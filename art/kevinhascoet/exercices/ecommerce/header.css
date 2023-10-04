@@ -35,7 +35,7 @@ button.login {
     border-radius: 5px;
     width:200px;
     border-radius: 12px;
-    margin-right: 12px;
+    margin-left: 12px;
 
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(20px);
@@ -118,8 +118,6 @@ header .logo-icon {
 }
 
 header .logo-icon:hover {
-    background-color:#2b0e02;
     scale: 1.2;
     rotate: 0.5turn;
 }
-

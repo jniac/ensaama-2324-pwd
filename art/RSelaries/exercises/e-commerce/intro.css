@@ -23,6 +23,21 @@ button.baise:hover {
     background-color: #ffb64d;
 }
 
+a {
+    border: none;
+    background-color: #ffb64db0;
+    color: white;
+    padding: 8px 32px;
+    font-size: 20px;
+    font-family: 'Fjalla One', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #ffb64d;
+}
+
 div.left-content {
     background-color: #ffffff20;
     backdrop-filter: blur(3px);
