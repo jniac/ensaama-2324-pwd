@@ -1,4 +1,7 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Monsieur+La+Doulaise&display=swap');
+@import url(header.css);
+
 body, body * {
 margin: 0;
 box-sizing: border-box;

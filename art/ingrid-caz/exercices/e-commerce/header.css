@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+
+/* GENERAL HEADER */
+header{
+    width: 100%;
+    position: fixed;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px;
+}
+
+/* LOGO */
+header div.logo{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+}
+
+header h1.titre{
+    font-size: 50px;
+    
+}
+
+
+div.icon {
+    background-image: url(assets/cube-20-solid.svg);
+
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+
+    background-size: contain;
+}

@@ -1,2 +1,2 @@
-# ENSAAMA 2022-2023 Pratiques Web & Digital
+# ENSAAMA 2022-2023 Pratiques (Artistiques) Web & Digitales
 

@@ -1,12 +1,13 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
   @import url(header.css);
+  @import url(../../../../common-resources/reset.css);
 
 
 body, body * {
     margin:0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif, bold;
 }
 
 
@@ -17,7 +18,7 @@ button.start {
     appearance: none;
     border: none;
     background-color: white;
-    color: #1c3754;
+    color: #2b0e02;
     padding:16px;
     margin-top: 24px;
     cursor:pointer;
@@ -26,7 +27,7 @@ button.start {
 }
 
 button.start:hover{
-    background-color: #1e3b59;
+    background-color: #4d1c0b;
     color:white;
     transition-duration: 0.4s;
 }
@@ -38,9 +39,9 @@ h1{
 section.intro{
     height: 85vh;
     background-size: cover;
-    background-image: url(assets/eau.jpg);
+    background-image: url(assets/donut3.png);
     background-position: 85% 0%;
-    color:white;
+    color:#2b0e02;
     padding: 128px;
     font-size:20px;
 }
@@ -56,13 +57,14 @@ section.intro div.left-content{
 
 section.intro p.subtitle {
     text-transform: uppercase;
-    margin-bottom:-32px;
+    margin-top:-40px;
 }
 
 section.blabla {
     height:90vh;
     padding:64px;
     display:flex;
+    color:#2b0e02;
     flex-direction: column;
     align-items: center;
     gap:16px;

@@ -9,3 +9,98 @@ header{
     justify-content: space-between;
 
 }
+
+
+header .actions, header .logo{
+    flex:1;
+}
+
+header .menu {
+    flex:2;
+}
+
+
+button.login {
+    font-size:18px;
+    appearance: none;
+    border: none;
+    background-color: #fff0;
+    color: white;
+    padding:16px;
+    margin-top: 24px;
+    cursor:pointer;
+    border-radius: 5px;
+    width:200px;
+}
+
+button.login:hover{
+    background-color: #4d1c0b;
+    color:white;
+    transition-duration: 0.4s;
+}
+
+
+
+
+
+header .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+}
+
+header .menu button {
+    transition: all 0.6s ease-in-out;
+    font-size:18px;
+    appearance: none;
+    border: none;
+    background-color: white;
+    color: #2b0e02;
+    padding:16px;
+    margin-top: 16px;
+    cursor:pointer;
+    border-radius: 5px;
+    width:200px;
+}
+header .menu button:hover {
+    background-color: #4d1c0b;
+    color:white;
+    transition-duration: 0.4s;
+}
+
+
+
+
+
+
+
+
+header .logo {
+    display:flex;
+    flex-direction: row;
+    align-self: stretch;
+}
+
+
+header .actions {
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+
+header .logo-icon {
+    aspect-ratio: 1 / 1;
+    background-color:#4d1c0b;
+    transition: all 0.6s ease-in-out;
+
+    -webkit-mask-image: url(assets/donut.svg);
+    -webkit-mask-size: contain;
+}
+
+header .logo-icon:hover {
+    background-color:#2b0e02;
+}
+

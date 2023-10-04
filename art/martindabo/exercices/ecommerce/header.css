@@ -1,0 +1,57 @@
+header {
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+header button.start {
+  align-self: center;
+  width: 150px;
+}
+
+header .logo,
+header .actions {
+  flex: 1;
+}
+
+header .menu {
+  flex: 2;
+}
+
+header .menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 16px;
+}
+
+header .logo {
+  display: flex;
+  flex-direction: row;
+  align-self: stretch;
+}
+
+header .actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+header .logo-icon {
+  aspect-ratio: 1 / 1;
+  background-color: beige;
+
+  -webkit-mask-image: url(assets/detective2.svg);
+  -webkit-mask-size: 58px;
+}
+
+header .logo-icon:hover {
+  background-color: burlywood;
+  transform: scale(1.2);
+  transition-duration: 0.2s;
+}

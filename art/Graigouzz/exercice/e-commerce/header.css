@@ -1,0 +1,13 @@
+header{
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.logo{
+    background-image: url(asset/dailyart.svg);
+}
