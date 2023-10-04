@@ -1,66 +1,15 @@
 /* Fonts familly */
-@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Fjalla+One&family=Sedgwick+Ave+Display&display=swap');
-@import url(header.css);
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Fjalla+One&family=Sedgwick+Ave+Display&display=swap");
 @import url(../../../../common-resources/reset.css);
+@import url(intro.css);
+@import url(developement.css);
 
-/* Première section */
-section.intro {
-    height: 90vh;
-    background-image: url(./assets/giscardpunk.jpg);
-    background-size: cover;
-    background-position: 0% 90%;
+body {
+  font-size: 16px;
 }
 
-button.baise {
-    border: none;
-    background-color: #ffb64db0;
-    color: white;
-    padding: 8px 32px;
-    font-family: 'Fjalla One', sans-serif;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-button.baise:hover {
-    background-color: #ffb64d;
-}
-
-
-div.titre {
-    padding: 4px;
-    padding-left: 16px;
-}
-
-div.left-content {
-    background-color: #ffffff50;
-    backdrop-filter: blur(2px);
-    padding: 32px;
-    width: 33%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    justify-content: center;
-    
-    font-family: 'Fjalla One', sans-serif;
-}
-
-div.left-content button.baise {
-    align-self: center;
-}
-
-div.left-content h1 {
-    text-transform: uppercase;
-    color: #ffb64d;
-}
-
-/* Deuxième section  */
-section.developement {
-    height: 90vh;
-    padding: 64px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    justify-content: start;
-    align-items: center;
+@media (max-width: 1250px) {
+  body {
+    font-size: 12px;
+  }
 }
