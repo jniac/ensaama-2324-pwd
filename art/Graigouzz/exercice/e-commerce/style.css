@@ -1,0 +1,68 @@
+/* reset css */
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300&display=swap');
+@import url(header.css);
+
+/* Reset CSS */
+body, body *{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Enlever les "ascenseurs" (windows). */
+*::-webkit-scrollbar {
+    display: none;
+  }
+
+body{
+    font-family: 'Martian Mono', monospace;
+    color: white;
+}
+
+.start{
+    appearance: none;
+    border: none;
+    background-color: whitesmoke;
+    padding: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+button.start:hover{
+    background-color:rgba(127, 255, 212, 0.493);
+    color:antiquewhite;
+    transition-duration: 0.3s;
+}
+
+.intro{
+    height: 80vh; /*90% de la taille du viewport*/
+    background-image: url(asset/sky.jpg);
+    background-size: cover;
+    background-position:center;
+    padding: 16px;
+}
+
+.intro .left-content{
+    width: 33%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+}
+
+.subtitle{
+    text-transform: uppercase;
+}
+.blabla{
+    height: 25vh;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+}
