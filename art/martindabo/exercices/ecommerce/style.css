@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=Creepster&family=Italianno&family=Monoton&family=Permanent+Marker&display=swap");
+@import url('https://fonts.cdnfonts.com/css/hackney');
 @import url(header.css);
 @import url(../../../../common-resources/reset.css);
 
@@ -41,6 +42,7 @@ h1 {
   margin-top: -35px;
   margin-bottom: 30px;
 }
+
 
 div.logo {
   color: aliceblue;
@@ -94,8 +96,22 @@ section.cinema .texte h1 {
   font-size: 50px;
 }
 
+section.cinema .texte h2 {
+  font-size: 50px;
+  margin: 30px;
+}
+
+section.cinema .texte h3 {
+  font-size: 50px;
+  margin: 30px;
+}
+
+img.real {
+width: 700px;
+}
+
 section.cinema .image {
-  flex: 2;
+  flex: 1.2;
   background-color: rgb(255, 255, 255);
   background-image: url(assets/affiche_mom.jpg);
 }
@@ -141,6 +157,9 @@ button.login:hover {
   transition-duration: 0.2s;
 }
 
+.left-content h1 {
+  font-family: 'Hackney', sans-serif;
+}
 
 /* div.top-menu {
     font-size: 50px;
