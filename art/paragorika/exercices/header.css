@@ -32,3 +32,12 @@ header .menu {
 header .actions {
     justify-content: flex-end;
 }
+
+header .logo.icon{
+    aspect-ratio: 1;
+}
+
+header .logo{
+    display: flex;
+    background-image: url();
+}
