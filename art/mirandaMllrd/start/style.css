@@ -58,3 +58,26 @@ div.icon-1{
 div.icon-2{
     background-image: url(book-heart.svg);
 }
+
+
+div.troll {
+    width: 300px;
+    height: 350px;
+    background-image: url(assets/jesus.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+div.troll-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+div.troll:hover {
+    transform: scale(1.5) rotate(25deg);
+}
