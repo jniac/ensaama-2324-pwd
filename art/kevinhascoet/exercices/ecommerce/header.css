@@ -10,6 +10,7 @@ header{
     padding: 24px;
     z-index: 10;
 
+
 }
 
 
@@ -23,6 +24,7 @@ header .menu {
 
 
 button.login {
+    transition: all 0.4s ease-in-out;
     font-size:18px;
     appearance: none;
     border: none;
@@ -36,7 +38,7 @@ button.login {
     margin-right: 12px;
 
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
+backdrop-filter: blur(20px);
 -webkit-backdrop-filter: blur(5px);
 border: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -73,7 +75,7 @@ header .menu button {
 
 border-radius: 12px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
+backdrop-filter: blur(20px);
 -webkit-backdrop-filter: blur(5px);
 border: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -118,5 +120,6 @@ header .logo-icon {
 header .logo-icon:hover {
     background-color:#2b0e02;
     scale: 1.2;
+    rotate: 0.5turn;
 }
 

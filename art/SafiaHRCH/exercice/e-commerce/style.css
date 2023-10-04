@@ -14,12 +14,12 @@ body{
 button.start {
     appearance: none;
     border: none;
-    background-color: rgb(255, 249, 191);
+    background-color: rgb(255 248 176);
     color: rgb(77, 44, 35);
     padding: 16px;
     text-transform: uppercase;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 button.start:hover{
@@ -30,12 +30,12 @@ button.start:hover{
 div.menu button{
     appearance: none;
     border: none;
-    background-color: rgb(255, 249, 191);
+    /* background-color: rgb(255, 249, 191); */
     color: rgb(77, 44, 35);
-    padding: 16px;
+    padding: 10px;
     text-transform: uppercase;
     cursor: pointer;
-    border-radius: 4px;
+    /* border-radius: 4px; */
 }
 
 div.menu button:hover {
@@ -46,12 +46,12 @@ div.menu button:hover {
 button.login {
     appearance: none;
     border: none;
-    background-color: rgb(255, 249, 191);
+    background-color: rgb(255 248 176);
     color: rgb(77, 44, 35);
-    padding: 16px;
+    padding: 20px;
     text-transform: uppercase;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 button.login:hover{
