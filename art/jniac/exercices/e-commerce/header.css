@@ -30,21 +30,45 @@ header .menu {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 8px;
+  gap: 1px;
+  align-self: stretch;
+}
+
+header button {
+  background-color: #fff9;
+  backdrop-filter: blur(16px); /* Trop puissant, du flou ! */
+  border: none;
+  border-radius: 0px;
+  color: black;
+  align-self: stretch;
+  padding: 0 16px;
+  cursor: pointer;
+}
+
+header button:hover {
+  background-color: #b9f8a8;
+}
+
+header button:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+header button:last-child {
+  border-radius: 0 8px 8px 0;
 }
 
 header .actions {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  gap: 8px;
+  gap: 1px;
 }
 
 
 
 .logo-icon {
   aspect-ratio: 1 / 1;
-  background-color: red;
+  background-color: white;
   
   -webkit-mask-image: url(assets/sait-boat.svg);
   -webkit-mask-size: contain;
@@ -55,13 +79,8 @@ header .actions {
 }
 
 .logo-icon:hover {
-  background-color: blue;
+  background-color: #b9f8a8;
 }
-
-
-
-
-
 
 
 
