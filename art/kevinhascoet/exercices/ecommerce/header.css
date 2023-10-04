@@ -80,6 +80,6 @@ header .actions {
 
 
 header .logo-icon {
-    aspect-ratio: 1;
-    color:red;
+    aspect-ratio: 1 / 1;
+    background-color:red;
 }
