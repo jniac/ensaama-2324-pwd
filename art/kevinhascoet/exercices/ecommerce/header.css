@@ -61,7 +61,7 @@ header .menu {
     gap: 20px;
 }
 
-header .menu button {
+header .menu button, header .menu a {
     transition: all 0.6s ease-in-out;
     font-size:18px;
     appearance: none;
@@ -72,6 +72,8 @@ header .menu button {
     cursor:pointer;
     border-radius: 5px;
     width:200px;
+    text-align: center;
+    text-decoration: none;
 
 border-radius: 12px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -79,7 +81,7 @@ backdrop-filter: blur(20px);
 -webkit-backdrop-filter: blur(5px);
 border: 1px solid rgba(255, 255, 255, 0.3);
 }
-header .menu button:hover {
+header .menu button:hover, header .menu a:hover {
     background-color: #4d1c0bcc;
     color:white;
     transition-duration: 0.4s;
