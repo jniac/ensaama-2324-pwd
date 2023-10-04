@@ -17,20 +17,24 @@ button.start {
     font-size:18px;
     appearance: none;
     border: none;
-    background-color: white;
+    background-color: #fff5;
     color: #2b0e02;
     padding:16px;
-    margin-top: 24px;
     cursor:pointer;
-    border-radius: 5px;
+    border-radius: 12px;
     width:200px;
     
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 button.start:hover{
-    background-color: #4d1c0b;
+    background-color: #4d1c0bcc;
     color:white;
     transition-duration: 0.4s;
+    scale: 1.1;
 }
 
 h1{
@@ -49,12 +53,12 @@ section.intro{
 }
 
 section.intro div.left-content{
-    transition: all 1.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
     
     width:40%;
-    height:80%;
+    height:70%;
     padding: 100px;
-    margin-top:100px;
+    margin-top:120px;
     margin-left:20px;
     display: flex;
     flex-direction: column;
@@ -85,7 +89,9 @@ section.intro p.subtitle {
 
 section.blabla {
     height:90vh;
+    width: 40%;
     padding:64px;
+    margin: 120px;
     display:flex;
     color:#2b0e02;
     flex-direction: column;

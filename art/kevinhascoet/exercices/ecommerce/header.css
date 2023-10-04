@@ -7,6 +7,8 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding: 24px;
+    z-index: 10;
 
 }
 
@@ -24,19 +26,26 @@ button.login {
     font-size:18px;
     appearance: none;
     border: none;
-    background-color: #fff0;
-    color: white;
+    background-color: #fff5;
+    color: #2b0e02;
     padding:16px;
-    margin-top: 24px;
     cursor:pointer;
     border-radius: 5px;
     width:200px;
+    border-radius: 12px;
+    margin-right: 12px;
+
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 button.login:hover{
-    background-color: #4d1c0b;
+    background-color: #4d1c0bcc;
     color:white;
     transition-duration: 0.4s;
+    scale: 1.1;
 }
 
 
@@ -55,18 +64,24 @@ header .menu button {
     font-size:18px;
     appearance: none;
     border: none;
-    background-color: white;
+    background-color: #fff5;
     color: #2b0e02;
     padding:16px;
-    margin-top: 16px;
     cursor:pointer;
     border-radius: 5px;
     width:200px;
+
+border-radius: 12px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
 }
 header .menu button:hover {
-    background-color: #4d1c0b;
+    background-color: #4d1c0bcc;
     color:white;
     transition-duration: 0.4s;
+    scale: 1.1;
 }
 
 
@@ -102,5 +117,6 @@ header .logo-icon {
 
 header .logo-icon:hover {
     background-color:#2b0e02;
+    scale: 1.2;
 }
 
