@@ -42,11 +42,12 @@ h1{
 
 
 
+
 section.intro{
     height: 90vh;
     background-size: cover;
-    background-image: url(assets/donut3.png);
-    background-position: 85% 0%;
+    background-image: url(assets/donut4.png);
+    background-position: 100% 23%;
     color:#2b0e02;
     padding: 128px;
     font-size:20px;
@@ -76,11 +77,33 @@ border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 section.intro div.left-content:hover{
-    transform : skew(2deg,3deg) translate(3%);
+    transform : skew(2deg,3deg) translate(5%);
     transition-duration: 0.6s;
 }
 
 
+
+section.intro {
+    display: flex;
+    flex-direction: row;
+}
+
+section.intro div.donut{
+    transition: all 1s ease-in-out;
+    width:10%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 300px;
+    scale: 85%;
+}
+
+section.intro div.donut:hover{
+    scale: 92%;
+    margin-left: 280px;
+    margin-top:-50px;
+    transform: skew(-2deg,3deg);
+    transition-duration: 0.4s;
+}
 
 
 section.intro p.subtitle {
