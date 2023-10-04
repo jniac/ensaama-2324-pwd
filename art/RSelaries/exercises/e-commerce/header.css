@@ -11,8 +11,18 @@ header {
     flex-direction: row;
     gap: 16px;
     width: 100vw;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
+}
+
+/* Espacements des éléments du header*/
+header .actions,
+header .logo {
+    flex: 1;
+}
+
+header .menu {
+    flex: 2;
 }
 
 img.bagnole {
@@ -34,6 +44,7 @@ header .actions {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: right;
 }
 
 header .menu {
@@ -41,6 +52,7 @@ header .menu {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 
 header .baisedeux {
