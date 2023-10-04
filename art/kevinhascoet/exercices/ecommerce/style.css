@@ -31,9 +31,9 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 button.start:hover{
-    background-color: #4d1c0bcc;
-    color:white;
-    scale: 1.1;
+    
+    transform: scale(1.1) translate(10%);
+    border: 1px solid #4d1c0b;
 }
 
 h1{
@@ -47,16 +47,16 @@ section.intro{
     transition: all 3s ease-in-out;
     height: 90vh;
     background-size: cover;
-    background-image: url(assets/donut4.png);
-    background-position: 100% 30%;
+    background-image: url(assets/defile.png);
+    background-position: 100% 0%;
     color:#2b0e02;
     padding: 128px;
     font-size:20px;
 }
 
 section.intro:hover{
-    background-position: 100% 10%;
-    transition-duration: 3s;
+    background-position: 100% 95%;
+    transition-duration: 30s;
 }
 
 
