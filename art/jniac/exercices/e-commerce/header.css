@@ -5,6 +5,82 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   padding: 8px;
 }
+
+/* -> Gestion de l'espace du header -> */
+header .logo,
+header .actions {
+  flex: 1;
+}
+
+header .menu {
+  flex: 2;
+}
+/* <- Gestion de l'espace du header <- */
+
+header .logo {
+  display: flex;
+  flex-direction: row;
+  align-self: stretch;
+}
+
+header .menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1px;
+  align-self: stretch;
+}
+
+header button {
+  background-color: #fff9;
+  backdrop-filter: blur(16px); /* Trop puissant, du flou ! */
+  border: none;
+  border-radius: 0px;
+  color: black;
+  align-self: stretch;
+  padding: 0 16px;
+  cursor: pointer;
+}
+
+header button:hover {
+  background-color: #b9f8a8;
+}
+
+header button:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+header button:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+header .actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 1px;
+}
+
+
+
+.logo-icon {
+  aspect-ratio: 1 / 1;
+  background-color: white;
+  
+  -webkit-mask-image: url(assets/sait-boat.svg);
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+
+  transition: all .1s ease-in-out;
+  cursor: pointer;
+}
+
+.logo-icon:hover {
+  background-color: #b9f8a8;
+}
+
+
+
