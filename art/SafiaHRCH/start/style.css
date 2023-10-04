@@ -73,11 +73,17 @@ div.icon-2{
     background-image: url(assets/dog.svg);
 }
 
+div.capy-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 div.capy {
-    width: 300px;
+    width: 420px;
     height: 300px;
     background-image: url(assets/capybara.jpg);
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     transition: all .2s ease-out;
@@ -85,5 +91,5 @@ div.capy {
 }
 
 div.capy:hover {
-    transform: scale(1.1) rotate(360deg);
+    transform: scale(1.5) rotate(30deg);
 }
