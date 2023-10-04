@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
-@import url(../../../../);
+@import url(../../../../common-resources/reset.css);
 @import url(header.css);
 @import url(bouton.css);
 
@@ -11,13 +11,13 @@ body, body *{
     margin: unset;
     
     font-family: 'Raleway', sans-serif;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 /* SECTION INTRO */
 section.intro { 
     height: 85VH;
-    background-image: url(assets/What-is-landscape-photography.jpg);
+    background-image: url(assets/téléchargement.jpeg);
     background-size: cover;
     background-position: center;
     padding: 32px;

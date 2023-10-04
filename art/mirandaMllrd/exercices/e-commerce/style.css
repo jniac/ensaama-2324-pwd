@@ -14,7 +14,8 @@ body{
 button.love {
     appearance: none;
     border: none;
-    color: black;
+    background-color: rgb(255, 249, 191);
+    color: rgb(77, 44, 35);
     padding: 16px;
     text-transform: uppercase;
     cursor: pointer;
@@ -25,6 +26,18 @@ button.love:hover{
     background-color: rgb(233, 224, 148);
     color: azure;
 }
+
+div.menu button{
+    appearance: none;
+    border: none;
+    /* background-color: rgb(255, 249, 191);
+    color: rgb(77, 44, 35); */
+    padding: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    /* border-radius: 4px; */
+}
+
 
 section.intro {
     height:90vh;

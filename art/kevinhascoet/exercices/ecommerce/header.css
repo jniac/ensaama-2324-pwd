@@ -7,84 +7,119 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding: 24px;
+    z-index: 10;
+
 
 }
 
+
+header .actions, header .logo{
+    flex:1;
+}
+
+header .menu {
+    flex:2;
+}
 
 
 button.login {
+    transition: all 0.4s ease-in-out;
     font-size:18px;
     appearance: none;
     border: none;
-    background-color: #fff0;
-    color: white;
+    background-color: #fff5;
+    color: #2b0e02;
     padding:16px;
-    margin-top: 24px;
     cursor:pointer;
     border-radius: 5px;
     width:200px;
+    border-radius: 12px;
+    margin-right: 12px;
+
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 button.login:hover{
-    background-color: #1e3b59;
+    background-color: #4d1c0bcc;
     color:white;
     transition-duration: 0.4s;
+    scale: 1.1;
 }
 
 
 
 
-button.b1 {
+
+header .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+header .menu button {
     transition: all 0.6s ease-in-out;
     font-size:18px;
     appearance: none;
     border: none;
-    background-color: white;
-    color: #1c3754;
+    background-color: #fff5;
+    color: #2b0e02;
     padding:16px;
-    margin-top: 24px;
     cursor:pointer;
     border-radius: 5px;
     width:200px;
+
+border-radius: 12px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
 }
-button.b2 {
+header .menu button:hover {
+    background-color: #4d1c0bcc;
+    color:white;
+    transition-duration: 0.4s;
+    scale: 1.1;
+}
+
+
+
+
+
+
+
+
+header .logo {
+    display:flex;
+    flex-direction: row;
+    align-self: stretch;
+}
+
+
+header .actions {
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+
+header .logo-icon {
+    aspect-ratio: 1 / 1;
+    background-color:#4d1c0b;
     transition: all 0.6s ease-in-out;
-    font-size:18px;
-    appearance: none;
-    border: none;
-    background-color: white;
-    color: #1c3754;
-    padding:16px;
-    margin-top: 24px;
-    cursor:pointer;
-    border-radius: 5px;
-    width:200px;
+
+    -webkit-mask-image: url(assets/donut.svg);
+    -webkit-mask-size: contain;
 }
-button.b3 {
-    transition: all 0.6s ease-in-out;
-    font-size:18px;
-    appearance: none;
-    border: none;
-    background-color: white;
-    color: #1c3754;
-    padding:16px;
-    margin-top: 24px;
-    cursor:pointer;
-    border-radius: 5px;
-    width:200px;
+
+header .logo-icon:hover {
+    background-color:#2b0e02;
+    scale: 1.2;
+    rotate: 0.5turn;
 }
-button.b1:hover{
-    background-color: #1e3b59;
-    color:white;
-    transition-duration: 0.4s;
-}
-button.b2:hover{
-    background-color: #1e3b59;
-    color:white;
-    transition-duration: 0.4s;
-}
-button.b3:hover{
-    background-color: #1e3b59;
-    color:white;
-    transition-duration: 0.4s;
-}
+
