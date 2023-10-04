@@ -12,3 +12,58 @@ header button.start {
   align-self: center;
   width: 150px;
 }
+
+ .menu button { 
+  appearance: none;
+  border: none;
+  background-color: beige;
+  padding: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 120px;
+ }
+
+
+
+header .menu {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+header .logo {
+  display: flex;
+  flex-direction: row;
+  align-self: stretch;
+}
+
+header .logo,
+header .actions {
+  flex: 1;
+}
+
+header .menu {
+  flex: 2;
+}
+
+header .actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 8px;
+
+}
+
+
+header .logo-icon {
+background-color: rgb(255, 255, 255);
+aspect-ratio: 1/1;
+-webkit-mask-image: url(assets/two-hump-camel.svg);
+-webkit-mask-size: contain;
+}
+
+header .logo-icon:hover {
+background-color: rgb(117, 57, 109);
+}

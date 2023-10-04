@@ -88,3 +88,32 @@ button.b3:hover{
     color:white;
     transition-duration: 0.4s;
 }
+
+header .menu {
+
+justify-content: center;
+
+}
+
+header .logo,
+
+header .actions {
+
+    flex: 1;
+
+}
+
+header .menu {
+
+flex: 2;
+
+}
+
+header .actions {
+
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+gap: 8px ;
+
+}

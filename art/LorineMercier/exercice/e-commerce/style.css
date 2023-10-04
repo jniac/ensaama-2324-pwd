@@ -1,9 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
 @import url(header.css);
 @import url(../../../../common-resources/reset.css);
-section.intro {
-  background-image: url(./asset/dubai.jpg);
-}
 
 body {
   font-family: "Fjalla One", sans-serif;
@@ -12,7 +9,7 @@ body {
 button.start {
   appearance: none;
   border: none;
-  background-color: skyblue;
+  background-color: rgb(117, 57, 109);
   color: black;
   padding: 10px 20px;
   text-transform: uppercase;
@@ -20,16 +17,29 @@ button.start {
   cursor: pointer;
 }
 
+
+
 button.start:hover {
   background-color: rgb(58, 97, 58, 50);
   color: aliceblue;
 }
 
+button.login {
+  appearance: none;
+  border: none;
+  background-color: #fff0;
+  color: black;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  cursor: pointer;
+ }
+
 section.intro {
   height: 90vh;
-  background-image: url(./asset/dubai.jpg);
+  background-image: url(./assets/illu\ cool.png);
   background-size: cover;
-  color: aliceblue;
+  color: rgb(255, 255, 255);
   padding: 32px;
 }
 
@@ -48,11 +58,12 @@ section.intro div.left-content button {
 }
 
 div.left-content h1 {
-  color: skyblue;
+  color: rgb(255, 255, 255), 255;
+  width: 20px;
 }
 
 section.intro div.left-content p.un {
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 section.blabla {
