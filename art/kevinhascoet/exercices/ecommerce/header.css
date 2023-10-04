@@ -10,6 +10,7 @@ header{
     padding: 24px;
     z-index: 10;
 
+
 }
 
 
@@ -23,6 +24,7 @@ header .menu {
 
 
 button.login {
+    transition: all 0.4s ease-in-out;
     font-size:18px;
     appearance: none;
     border: none;
@@ -45,7 +47,7 @@ button.login:hover{
     background-color: #4d1c0bcc;
     color:white;
     transition-duration: 0.4s;
-    scale: 1.2;
+    scale: 1.1;
 }
 
 
@@ -81,7 +83,7 @@ header .menu button:hover {
     background-color: #4d1c0bcc;
     color:white;
     transition-duration: 0.4s;
-    scale: 1.2;
+    scale: 1.1;
 }
 
 
@@ -118,5 +120,6 @@ header .logo-icon {
 header .logo-icon:hover {
     background-color:#2b0e02;
     scale: 1.2;
+    rotate: 0.5turn;
 }
 
