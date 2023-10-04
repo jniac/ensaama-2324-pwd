@@ -2,46 +2,49 @@
 @import url(header.css);
 @import url(../../../../common-resources/reset.css);
 
-body,
-body * {
-  margin: 0;
-  box-sizing: border-box;
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  --button-bg: beige;
+
   font-family: "Antonio", sans-serif;
 }
 
-button.start{
-    appearance: none;
-    border: none;
-    background-color: beige;
-    padding: 16px;
-    text-transform: uppercase;
-    cursor: pointer;
-    border-radius: 20px;
-    width: 700px;
+button.start {
+  appearance: none;
+  border: none;
+  background-color: beige;
+  padding: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 640px;
+  font-size: 20px;
 }
 
-button.start:hover{
-    background-color: black;
-    color: aliceblue;
+button.start:hover {
+  background-color: black;
+  color: aliceblue;
 }
 
-h1{
-    font-size: 100px;
-    margin-top: -35px;
-    margin-bottom: 30px;
+h1 {
+  font-size: 91px;
+  margin-top: -35px;
+  margin-bottom: 30px;
 }
 
 div.logo {
-    color: aliceblue;
+  color: aliceblue;
 }
-
-
 
 section.intro {
   height: 90vh;
   background-size: cover;
   background-image: url(assets/memoriesofmurder.jpg);
   background-position: center;
+  background-attachment: fixed;
   color: aliceblue;
   padding: 32px;
 }
@@ -55,9 +58,8 @@ section.intro div.left-content {
   justify-content: center;
 }
 
-
 section.intro div.left-content h1 {
-    transform: translateX(-0.05em);
+  transform: translateX(-0.05em);
 }
 
 section.intro p.subtitle {
@@ -65,17 +67,48 @@ section.intro p.subtitle {
 }
 
 section.cinema {
-    height: 90vh;
-    padding: 64px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
+  height: 100vh;
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 
-section.cinema h1{
-    font-size: 50px;
+section.cinema h1 {
+  font-size: 50px;
 }
+
+.menu button {
+  appearance: none;
+  border: none;
+  background-color: var(--button-bg);
+  padding: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 150px;
+  font-size: 20px;
+}
+
+button.login {
+  appearance: none;
+  border: none;
+  background-color: #fff0;
+  color: aliceblue;
+  padding: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 150px;
+  font-size: 20px;
+}
+
+button.login:hover {
+  background-color: beige;
+  color: black;
+}
+
 
 /* div.top-menu {
     font-size: 50px;
