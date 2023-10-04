@@ -27,7 +27,7 @@ section.intro {
     color: white;
 }
 
-section.intro div.left-content{
+section.intro div.middle-content{
     width: 30%;
     height: 100%;
     margin: auto;
@@ -37,3 +37,19 @@ section.intro div.left-content{
     justify-content: center;
     align-items: center;
 }
+
+button.start1 {
+    appearance: none;
+    border: none;
+    backdrop-filter: blur(16px);
+    color: black;
+    padding:0 16px;
+    text-transform: capitalize;
+    border-radius: 0px;
+    cursor: pointer;
+  }
+  
+  button.start1:hover {
+    background-color: blue;
+    color: white;
+  }
