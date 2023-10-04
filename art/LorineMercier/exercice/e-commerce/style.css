@@ -10,7 +10,7 @@ button.start {
   appearance: none;
   border: none;
   background-color: rgb(117, 57, 109);
-  color: black;
+  color: rgb(255, 255, 255);
   padding: 10px 20px;
   text-transform: uppercase;
   border-radius: 20px;
@@ -28,7 +28,7 @@ button.login {
   appearance: none;
   border: none;
   background-color: #fff0;
-  color: black;
+  color: rgb(255, 255, 255);
   padding: 10px 20px;
   text-transform: uppercase;
   border-radius: 20px;
