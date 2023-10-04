@@ -1,13 +1,52 @@
 /* Deuxième section  */
 section.developement {
-    height: 90vh;
     padding: 64px;
-    padding-left: 320px;
-    padding-right: 320px;
     display: flex;
     flex-direction: column;
     gap: 16px;
     justify-content: start;
     align-items: center;
+
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.imgtxt {
+    width: 33vw;
+}
+
+.imghor img {
+    height: 40vh;
+}
+
+.superfrench {
+    gap: 16px;
+    display: flex;
+    flex-direction: row;
+}
+
+img.superfrench {
+    width: 20vw;    
+}
+
+img.imghor {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+div.sprtxt {
+    width: 20vw;
+    gap: 3vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 3vw;
+}
+
+section.developement h1 {
+    font-size: 2em;
+}
+
+section.developement     p {
+    font-size: 1.4em;
 }
 
