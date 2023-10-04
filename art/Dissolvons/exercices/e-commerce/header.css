@@ -44,7 +44,7 @@ header {
   
   .logo-icon {
     aspect-ratio: 1 / 1;
-    background-color:rgb(41, 77, 192) ;
+    background-color: rgb(236, 182, 200);
     
     -webkit-mask-image: url(assets/icone1.svg);
     -webkit-mask-size: contain;
@@ -55,5 +55,5 @@ header {
   }
   
   .logo-icon:hover {
-    background-color: blue;
+    background-color:rgb(41, 77, 192) ;
   }
