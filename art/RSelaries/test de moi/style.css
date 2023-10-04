@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Fjalla+One&family=Sedgwick+Ave+Display&display=swap');
+@import url(../../../common-resources/reset.css);
+
+body {
+    background-color: #F2E8CF;
+}
+
+div.noms {
+    margin: 32px;
+    width: 100vw;
+    gap: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.nom {
+    width: 400px;
+    backdrop-filter: blur(2px);
+    text-decoration: none;
+    background-color: #ffffffb0;
+    padding: 16px;
+    color: #100007;
+
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 3em;
+
+}

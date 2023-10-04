@@ -89,7 +89,7 @@ div.icon {
     transition: all 0.3s ease-in-out;
 }
 
-div.icon:hover {
+div.icon:hover {    
     background-color: white;
     cursor: pointer;
     transform: scale(1.05) rotate(-1458deg); /* BANGER ANIMATION EN UNE LIGNE POPOPO /!\ */
