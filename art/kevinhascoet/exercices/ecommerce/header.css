@@ -36,7 +36,7 @@ button.login {
     margin-right: 12px;
 
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
+backdrop-filter: blur(20px);
 -webkit-backdrop-filter: blur(5px);
 border: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -45,7 +45,7 @@ button.login:hover{
     background-color: #4d1c0bcc;
     color:white;
     transition-duration: 0.4s;
-    scale: 1.1;
+    scale: 1.2;
 }
 
 
@@ -73,7 +73,7 @@ header .menu button {
 
 border-radius: 12px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
+backdrop-filter: blur(20px);
 -webkit-backdrop-filter: blur(5px);
 border: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -81,7 +81,7 @@ header .menu button:hover {
     background-color: #4d1c0bcc;
     color:white;
     transition-duration: 0.4s;
-    scale: 1.1;
+    scale: 1.2;
 }
 
 
