@@ -1,5 +1,5 @@
 
-header{
+header {
     position: fixed;
     width: 100vw;
     display: flex;
@@ -7,4 +7,5 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 8px;
-}
+  }
+  

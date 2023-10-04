@@ -3,63 +3,95 @@ students:
   - Cassandre
   - Auvray
   github: cxssandre
+  prefix: csd
+
 - names: 
   - Ingrid
   - Cazenave
   github: ingrid-caz
+  prefix: ing
+
 - names:
   - Martin
   - D'Aboville
   github: martindabo
+  prefix: mrt
+
 - names:
   - Louise
   - Dessart
   github: ldssrt
+  prefix: lds
+
 - names:
   - Eolyna
   - Dumont
   github: eoly-pik
+  prefix: eol
+
 - names:
   - Pierre
   - Faure
   github: pierrenoi
+  prefix: pf7
+
 - names:
   - Safia
   - Harireche
   github: SafiaHRCH
+  prefix: sah
+
 - names:
   - Kévin
   - Hascoet
   github: kevinhascoet
+  prefix: kev
+
 - names:
   - Sofiya
   - Krasilnikova
   github: paragorika
+  prefix: ppp
+
 - names: 
   - Graig-Lucien
   - Lowen N'Zouba
   github: Graigouzzz
+  prefix: glo
+
 - names:
   - Celia
   - Lunt
   github: babib3l
+  prefix: cel
+
 - names:
   - Miranda
   - Maillard
   github: mirandaMllrd
+  prefix: mai
+
 - names:
   - Lorine
   - Mercier
   github: LorineMercier
+  prefix: pdp
+
 - names:
   - Raphaël
   - Selaries
   github: RSelaries
+  prefix: raf
+
 - names:
   - Allie
   - Tessier
   github: alliezgood
+  prefix: ali
+
 - names:
   - Lou
   - Vachey
   github: Dissolvons
+  prefix: lou
+

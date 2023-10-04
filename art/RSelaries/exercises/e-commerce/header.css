@@ -16,7 +16,17 @@ header {
 }
 
 img.bagnole {
+    cursor: pointer;
     height: 25px;
+}
+
+button.homebutton {
+    cursor: pointer;
+    border: none;
+    color: #ffb64d; 
+    background-color: #00000000;
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 25px;
 }
 
 header .actions {
@@ -35,7 +45,7 @@ header .menu {
 
 header .baisedeux {
     border: none;
-    background-color: #ffffff   bo;
+    background-color: #ffffffd0;
     color: #ffb64d;
     padding: 8px 32px;
     font-family: 'Fjalla One', sans-serif;
