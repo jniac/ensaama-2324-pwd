@@ -1,4 +1,6 @@
 header {
+    z-index: 10;
+    padding: 8px 16px;
     position: fixed;
     background-color: #00000015;
     backdrop-filter: blur(2px);
@@ -14,5 +16,43 @@ header {
 }
 
 img.bagnole {
+    cursor: pointer;
     height: 25px;
+}
+
+button.homebutton {
+    cursor: pointer;
+    border: none;
+    color: #ffb64d; 
+    background-color: #00000000;
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 25px;
+}
+
+header .actions {
+    gap: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header .menu {
+    gap: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header .baisedeux {
+    border: none;
+    background-color: #ffffffd0;
+    color: #ffb64d;
+    padding: 8px 32px;
+    font-family: 'Fjalla One', sans-serif;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+header .baisedeux:hover {
+    background-color: white;
 }

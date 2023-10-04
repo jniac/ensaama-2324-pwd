@@ -9,7 +9,7 @@ body {
 button.start {
   appearance: none;
   border: none;
-  background-color: burlywood;
+  background-color: #b9f8a8;
   color: black;
   padding: 16px;
   text-transform: uppercase;
