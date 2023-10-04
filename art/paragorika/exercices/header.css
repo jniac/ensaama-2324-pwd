@@ -39,5 +39,9 @@ header .logo.icon{
 
 header .logo{
     display: flex;
-    background-image: url();
+    background-image: url(assets/radiation.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-content: stretch;
 }
+

@@ -20,10 +20,10 @@ button.start {
     background-color: white;
     color: #2b0e02;
     padding:16px;
-    margin-top: 24px;
     cursor:pointer;
     border-radius: 5px;
     width:200px;
+    
 }
 
 button.start:hover{
@@ -44,16 +44,38 @@ section.intro{
     color:#2b0e02;
     padding: 128px;
     font-size:20px;
+    
 }
 
 section.intro div.left-content{
-    width:33%;
-    height:100%;
+    transition: all 0.6s ease-in-out;
+    
+    width:40%;
+    height:70%;
+    padding: 100px;
+    margin-top:120px;
+    margin-left:20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap:32px;
+
+    
+background: rgba(255, 255, 255, 0.2);
+border-radius: 32px;
+box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
 }
+
+section.intro div.left-content:hover{
+    transform : skew(2deg,3deg) translate(3%);
+    transition-duration: 0.6s;
+}
+
+
+
 
 section.intro p.subtitle {
     text-transform: uppercase;
@@ -62,7 +84,9 @@ section.intro p.subtitle {
 
 section.blabla {
     height:90vh;
+    width: 40%;
     padding:64px;
+    margin: 120px;
     display:flex;
     color:#2b0e02;
     flex-direction: column;
