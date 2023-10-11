@@ -7,14 +7,18 @@ body {
 }
 
 button.start {
+
   appearance: none;
   border: none;
   background-color: rgb(117, 57, 109);
   color: rgb(255, 255, 255);
-  padding: 10px 20px;
+  padding: 10px 100px;
   text-transform: uppercase;
   border-radius: 20px;
   cursor: pointer;
+  font-size: 20px;
+
+
 }
 
 
@@ -22,6 +26,9 @@ button.start {
 button.start:hover {
   background-color: rgb(58, 97, 58, 50);
   color: aliceblue;
+ 
+  
+
 }
 
 button.login {
@@ -33,33 +40,33 @@ button.login {
   text-transform: uppercase;
   border-radius: 20px;
   cursor: pointer;
+  font-size: 20px;
  }
 
 section.intro {
+  
   height: 90vh;
   background-image: url(./assets/illu\ cool.png);
   background-size: cover;
   color: rgb(255, 255, 255);
   padding: 32px;
+ 
+
 }
 
 section.intro div.left-content {
-  width: 33%;
   height: 100%;
   display: flex;
   flex-direction: column;
   gap: 16px;
   justify-content: center;
+  align-items: center;
 }
 
-section.intro div.left-content button {
-  align-self: flex-start;
-  width: 200px;
-}
 
 div.left-content h1 {
   color: rgb(255, 255, 255), 255;
-  width: 20px;
+  /* width: 20px; */
 }
 
 section.intro div.left-content p.un {
@@ -79,4 +86,5 @@ section.blabla {
 
 h1 {
   font-size: 45px;
+  text-align: center;
 }

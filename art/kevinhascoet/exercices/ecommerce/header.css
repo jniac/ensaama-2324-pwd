@@ -35,16 +35,16 @@ button.login {
     border-radius: 5px;
     width:200px;
     border-radius: 12px;
-    margin-right: 12px;
+    margin-left: 12px;
 
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(20px);
+backdrop-filter: blur(5);
 -webkit-backdrop-filter: blur(5px);
 border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 button.login:hover{
-    background-color: #4d1c0bcc;
+    background-color: #7d2b0f88;
     color:white;
     transition-duration: 0.4s;
     scale: 1.1;
@@ -61,7 +61,7 @@ header .menu {
     gap: 20px;
 }
 
-header .menu button {
+header .menu button, header .menu a {
     transition: all 0.6s ease-in-out;
     font-size:18px;
     appearance: none;
@@ -72,15 +72,17 @@ header .menu button {
     cursor:pointer;
     border-radius: 5px;
     width:200px;
+    text-align: center;
+    text-decoration: none;
 
 border-radius: 12px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(20px);
+backdrop-filter: blur(5px);
 -webkit-backdrop-filter: blur(5px);
 border: 1px solid rgba(255, 255, 255, 0.3);
 }
-header .menu button:hover {
-    background-color: #4d1c0bcc;
+header .menu button:hover, header .menu a:hover {
+    background-color: #7d2b0f88;
     color:white;
     transition-duration: 0.4s;
     scale: 1.1;
@@ -118,7 +120,6 @@ header .logo-icon {
 }
 
 header .logo-icon:hover {
-    background-color:#2b0e02;
     scale: 1.2;
     rotate: 0.5turn;
 }
