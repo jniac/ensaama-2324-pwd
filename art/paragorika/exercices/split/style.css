@@ -55,3 +55,55 @@ p.lettrine::first-letter {
     line-height: 1rem;
     margin-left: -0.15em;
 }
+
+
+.photoblock {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding-left: 7%;
+  }
+  
+  .photoblock img {
+    height: 200px;
+  }
+
+
+  .photoblock .text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    font-family: 'Martian Mono', monospace;
+    font-size: 25px;
+    color: whitesmoke;
+  }
+  
+  .photoblock .text .spacer_couleur {
+    width: 80px;
+    height: 8px;
+    background-color: burlywood;
+  }
+  
+
+
+p2 {
+    font-family: 'Martian Mono', monospace;
+    font-size: 18px;
+    color: whitesmoke;
+    text-align: left;
+    padding: 7%;
+    padding-top: 50px;
+}
+
+div.spacer_vide{
+    flex: 0 0 10rem;
+}
+
+p3 {
+    font-family: 'Martian Mono', monospace;
+    font-size: 18px;
+    color: whitesmoke;
+    text-align: left;
+    padding: 7%;
+}
