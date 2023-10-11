@@ -1,0 +1,32 @@
+@import url(../../../../common-resources/reset.css);
+
+section.intro{
+    display: flex;
+    flex-direction: row;
+}
+
+div.left {
+    height: 100vh;
+    width: 50%;
+    background-image: url(./assets/maison_cage.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+
+}
+
+div.right{
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+}
+
+/* section.intro p.subtitle {
+    text-transform: uppercase;
+}

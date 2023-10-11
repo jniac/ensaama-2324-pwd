@@ -1,64 +1,85 @@
 
-
 header {
     position: fixed;
     width: 100vw;
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* justify-content: space-between; */
     padding: 8px;
-  }
-  
-  /* -> Gestion de l'espace du header -> */
-  header .logo,
-  header .actions {
+}
+
+header .logo,
+header .actions {
     flex: 1;
-  }
-  
-  header .menu {
+}
+
+header .menu {
     flex: 2;
-  }
-  /* <- Gestion de l'espace du header <- */
-  
-  header .logo {
+}
+
+header .logo {
     display: flex;
     flex-direction: row;
     align-self: stretch;
-  }
-  
-  header .menu {
+
+}
+
+
+header .menu {
+    align-self: stretch;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 8px;
-  }
+    gap: 1px;
+    align-items: stretch;
+}
 
-  header button 
-  
-  header .actions {
+header button {
+    background-color: transparent;
+    border: none;
+    background-color: #fff6;
+    backdrop-filter: blur(10px);
+    color: black;
+    align-self: stretch;
+    padding: 0 16px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+header button:hover {
+    background-color: cornflowerblue;
+}
+
+header button:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+header button:last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+
+header .actions {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    gap: 8px;
-  }
-  
-  
-  
-  .logo-icon {
-    aspect-ratio: 1 / 1;
-    background-color: red;
-    
-    -webkit-mask-image: url(assets/sonic.png);s
+    gap: 1px;
+}
+
+
+.logo-icon {
+    aspect-ratio: 1/1;
+    background-color: rgb(240, 240, 240);
+    transition: all .3s ease-in-out;
+
+   
     -webkit-mask-size: contain;
     -webkit-mask-repeat: no-repeat;
-  
-    transition: all .1s ease-in-out;
+
+    transition: all .3s ease-in-out;
     cursor: pointer;
-  }
-  
-  .logo-icon:hover {
-    background-color: blue;
-  }
-  
+}
+.logo-icon:hover {
+    background-color: cornflowerblue;
+}
   

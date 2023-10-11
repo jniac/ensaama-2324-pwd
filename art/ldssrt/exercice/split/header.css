@@ -1,0 +1,24 @@
+header {
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+
+
+div.achat-icon{
+
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    justify-content: center;
+    background-color: black;
+    -webkit-mask-image: url(./assets/cart-2-bold.svg);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    
+    
+}

@@ -1,0 +1,85 @@
+
+header {
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px;
+}
+
+header .logo,
+header .actions {
+    flex: 1;
+}
+
+header .menu {
+    flex: 2;
+}
+
+header .logo {
+    display: flex;
+    flex-direction: row;
+    align-self: stretch;
+
+}
+
+
+header .menu {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1px;
+    align-items: stretch;
+}
+
+header button {
+    background-color: transparent;
+    border: none;
+    background-color: #fff6;
+    backdrop-filter: blur(10px);
+    color: black;
+    align-self: stretch;
+    padding: 0 16px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+header button:hover {
+    background-color: cornflowerblue;
+}
+
+header button:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+header button:last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+
+header .actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1px;
+}
+
+
+.logo-icon {
+    aspect-ratio: 1/1;
+    background-color: rgb(240, 240, 240);
+    transition: all .3s ease-in-out;
+
+   
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+.logo-icon:hover {
+    background-color: cornflowerblue;
+}
+  
