@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=Creepster&family=Italianno&family=Monoton&family=Permanent+Marker&display=swap");
+@import url('https://fonts.cdnfonts.com/css/dune-rise');
+@import url(../../../../common-resources/reset.css);
+@import url(header.css);
+
+body, body *{
+    margin: 0px;
+}
+
+main{
+height: 100vh;
+display: flex;
+flex-direction: row;
+}
+
+main>div{
+    width: 50%;
+}
+
+div.right {
+    width: 100%;
+    height: 100%;
+    padding: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 50px;
+    overflow: scroll;
+
+}
+
+h1 {
+    margin-bottom: 250px;
+    font-family: 'Dune Rise', sans-serif;
+}
+
+p {
+    font-size: 25px;
+}
+
+div.logo {
+    color: #ff8000;
+  }
+
+
+div.left {
+width: 100%;
+padding: 128px;
+display: flex;
+flex-direction: column;
+background-image: url(assets/dune.jpg);
+background-size: cover;
+background-position: center;
+gap: 16px;
+font-size: 32px;
+}
+
+img {
+    width: 35%;
+}
+
+div.paf {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+div.pif {
+    margin-left: 50px;
+    gap: 16px;
+}
+
+h2 {
+    margin-bottom: 50px;
+    font-family: 'Dune Rise', sans-serif;
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 35px
+}
+
+div.trait {
+    border-top: 20px solid #ff8000;
+    width: 445px;
+    margin-bottom: 50px;
+}
