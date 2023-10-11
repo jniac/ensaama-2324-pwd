@@ -2,6 +2,7 @@
 @import url('https://fonts.cdnfonts.com/css/hackney');
 @import url(header.css);
 @import url(../../../../common-resources/reset.css);
+@import url(menu-deroulant.css);
 
 ::-webkit-scrollbar {
   display: none;
@@ -127,7 +128,7 @@ section.cinema .image {
   text-transform: uppercase;
   cursor: pointer;
   border-radius: 20px;
-  width: 150px;
+  width: 250px;
   font-size: 20px;
 }
 
@@ -174,6 +175,8 @@ button.login:hover {
     margin-left: 50%;
     transform: translateX(-50%);
     }
+
+    
 
 /* div.top-menu {
     font-size: 50px;
