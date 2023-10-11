@@ -12,17 +12,25 @@ body {
   font-family: "barlow condensed", sans-serif;
 }
 
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
 main > div {
   width: 50%;
 }
 
 div.left {
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/f/f9/Turkish_Okey_Game_%28boards_and_tiles%29.jpg);
+  background-image: url(assets/TurkishOkey.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 div.right {
   background-color: aliceblue;
-  padding: 32;
+  padding: 32px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -31,3 +39,45 @@ div.right {
   overflow: scroll;
   background-color: aliceblue;
 }
+
+
+
+
+
+
+
+
+header {
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-between; */
+    padding: 8px;
+  }
+  
+  /* -> Gestion de l'espace du header -> */
+  header .logo,
+  header .actions {
+    flex: 1;
+  }
+
+    
+  .logo-icon {
+    aspect-ratio: 1 / 1;
+    width: 64px;
+    height: 64px;
+    background-color: rgb(236, 182, 200) ;
+    
+    -webkit-mask-image: url(assets/icone1.svg);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+  
+    transition: all .1s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .logo-icon:hover {
+    background-color: #b9f8a8;
+  }
