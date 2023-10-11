@@ -1,0 +1,50 @@
+@import url(../../../common-resources/reset.css);
+@import url(header.css);
+
+img{
+    max-width: 50%;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+main > div {
+    width: 50%;
+}
+
+div.left {
+    background-image: url(assets/BigBulle4.jpg);
+    background-size: cover;
+}
+
+div.right {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 3em;
+
+    overflow: scroll;
+
+    background-color: aliceblue;
+}
+
+
+div.icon {
+    width: 64px;
+    height: 64px;
+    color: red;
+    background-size: contain;
+   
+   
+
+}
+
+
+div.tg{
+    display: flex;
+    flex-direction: row;
+}
