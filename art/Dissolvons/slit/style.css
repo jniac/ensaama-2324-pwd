@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url(header.css);
+@import url(../../../../common-resources/reset.css);
+
+body,
+body * {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "barlow condensed", sans-serif;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+main > div {
+  width: 50%;
+}
+
+div.left {
+  background-image: url(assets/TurkishOkey.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+div.right {
+  background-color: aliceblue;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font: 3em;
+
+  overflow: scroll;
+  background-color: aliceblue;
+}
+
+
+
+
+
+
+
+
+header {
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-between; */
+    padding: 8px;
+  }
+  
+  /* -> Gestion de l'espace du header -> */
+  header .logo,
+  header .actions {
+    flex: 1;
+  }
+
+    
+  .logo-icon {
+    aspect-ratio: 1 / 1;
+    width: 64px;
+    height: 64px;
+    background-color: rgb(236, 182, 200) ;
+    
+    -webkit-mask-image: url(assets/icone1.svg);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+  
+    transition: all .1s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .logo-icon:hover {
+    background-color: #b9f8a8;
+  }
