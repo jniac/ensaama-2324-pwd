@@ -21,3 +21,4 @@ div {
 
 
 git remote set-url origin https://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@github.com/jniac/ensaama-2324-pwd
+git remote set-url origin https://github.com/jniac/ensaama-2324-pwd
