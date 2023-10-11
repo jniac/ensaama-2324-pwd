@@ -24,9 +24,11 @@ section.split {
     overflow: scroll;
 }
 
-.split h1,h2 {
+.split h1 {
     font-size: 4em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    
 }
 
 .fourchan {
@@ -73,4 +75,5 @@ section.split {
 
 .split .imgtxt div h2 {
     color: #006600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;s
 }
