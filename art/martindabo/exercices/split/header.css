@@ -1,0 +1,39 @@
+header {
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+header .logo-icon {
+  height: 64px;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  cursor: pointer;
+  background-image: url(assets/timer-sand-complete.svg);
+  background-size: contain;
+}
+
+header .logo-icon:hover {
+  transform: scale(1.2);
+  transition-duration: 0.2s;
+  rotate: 0.5turn;
+}
+
+header .shop {
+  height: 64px;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  cursor: pointer;
+  background-image: url(assets/shopping-bag.svg);
+  background-size: contain;
+  justify-content: space-between;
+}
+
+header .shop:hover {
+    transform: scale(1.2);
+    transition-duration: 0.2s;
+  }

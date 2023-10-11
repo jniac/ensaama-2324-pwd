@@ -76,7 +76,7 @@ section.intro p.subtitle {
 }
 
 section.cinema {
-  height: 150vh;
+  /* height: 150vh; */
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -111,6 +111,7 @@ width: 700px;
 }
 
 section.cinema .image {
+  background-size: 1400px;
   flex: 1.2;
   background-color: rgb(255, 255, 255);
   background-image: url(assets/affiche_mom.jpg);
@@ -160,6 +161,19 @@ button.login:hover {
 .left-content h1 {
   font-family: 'Hackney', sans-serif;
 }
+
+#background-video {
+  width: 35vw;
+  object-fit: cover;
+  }
+
+  #btnVideo{
+    font-size: 50px;
+    background: 0;
+    border: 0;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    }
 
 /* div.top-menu {
     font-size: 50px;
