@@ -20,7 +20,7 @@ section.base{
 div.left{
   width: 50%;
   background-size: cover;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.0)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0)),
   url(assets/eau.jpg);
 }
 
@@ -75,6 +75,11 @@ div.tg{
 
 
 div.trait{
+  transition: all 1s ease-in-out;
   border-top: 12px solid #D64747;
   width: 173px;
+}
+
+div.trait:hover{
+  width: 730px;
 }

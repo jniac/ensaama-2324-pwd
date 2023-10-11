@@ -16,7 +16,7 @@ header .logo-icon {
     height: 128px;
     aspect-ratio: 1 / 1;
     background-color: white;
-    transition: all 0.6s ease-in-out;
+    transition: all 0.4s ease-in-out;
 
     -webkit-mask-image: url(assets/logo.svg);
     mask-image: url(assets/logo.svg);
@@ -36,7 +36,7 @@ header .shop {
     height: 64px;
     aspect-ratio: 1 / 1;
     background-color: #D64747;
-    transition: all 0.6s ease-in-out;
+    transition: all 0.4s ease-in-out;
 
     -webkit-mask-image: url(assets/shop.svg);
     mask-image: url(assets/shop.svg);
