@@ -76,7 +76,7 @@ section.intro p.subtitle {
 }
 
 section.cinema {
-  height: 150vh;
+  /* height: 150vh; */
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -111,6 +111,7 @@ width: 700px;
 }
 
 section.cinema .image {
+  background-size: 1400px;
   flex: 1.2;
   background-color: rgb(255, 255, 255);
   background-image: url(assets/affiche_mom.jpg);
@@ -162,15 +163,8 @@ button.login:hover {
 }
 
 #background-video {
-  height: 100vh;
-  width: 100vw;
+  width: 35vw;
   object-fit: cover;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -1;
   }
 
   #btnVideo{
