@@ -44,7 +44,7 @@ h1{
 
 
 section.intro{
-    transition: all 3s ease-in-out;
+    transition: all 10s ease-in-out;
     height: 90vh;
     background-size: cover;
     background-image: url(assets/defile.png);
