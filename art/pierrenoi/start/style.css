@@ -14,12 +14,20 @@ h1 {
   font-family: 'Oswald', sans-serif;
 }
 
+div.box-model-demo {
+    margin: 16px;
+    margin-top: 32px;
+    border: solid 8px rgb(12, 55, 172);
+    padding: 24px;
+  }
+
 div.gallery{
 height: 360px;
 padding: 32px;
 display: flex;
 flex-direction: row;
 gap: 32px;
+rotate: turn;
 
 img{ width: 400px;   height:400px;}
 
