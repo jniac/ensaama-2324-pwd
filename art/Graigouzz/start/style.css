@@ -59,4 +59,13 @@ p{
     background-image: url(asset/dog.svg);
 }
 
-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
+.gumball{
+    width: 300px;
+    height: 300px;
+    background-image: url(asset/TAWOG.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all is ease-in-out;
+}
+ 
