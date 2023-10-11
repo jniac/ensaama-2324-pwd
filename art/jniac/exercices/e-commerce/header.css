@@ -30,13 +30,12 @@ header .menu {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 1px;
   align-self: stretch;
 }
 
 header button {
   background-color: #fff9;
-  backdrop-filter: blur(16px); /* Trop puissant, du flou ! */
+  backdrop-filter: blur(8px); /* Trop puissant, du flou ! */
   border: none;
   border-radius: 0px;
   color: black;
@@ -57,11 +56,17 @@ header button:last-child {
   border-radius: 0 8px 8px 0;
 }
 
+header .separator {
+  background-color: #ccc9;
+  backdrop-filter: blur(4px);
+  flex: 0 0 1px;
+  align-self: stretch;
+}
+
 header .actions {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  gap: 1px;
 }
 
 

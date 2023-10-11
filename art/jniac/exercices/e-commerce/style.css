@@ -8,7 +8,7 @@ body {
 
 button.start {
   appearance: none;
-  border: none;
+  border: unset;
   background-color: #b9f8a8;
   color: black;
   padding: 16px;
