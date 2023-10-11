@@ -2,10 +2,16 @@
 
 /* Première section */
 section.intro {
+    background-attachment: fixed;
     height: 90vh;
     background-image: url(./assets/giscardpunk.jpg);
     background-size: cover;
-    background-position: 0% 90%;
+    background-position: 0% 130%;
+}
+
+div.imgiscard {
+    z-index: 0;
+    background-image: url(./assets/giscardpunk.jpg);
 }
 
 /* Bouton principal */
@@ -29,7 +35,8 @@ a {
 }
 
 
-div.left-content {
+.intro div.left-content {
+    z-index: 5;
     background-color: #ffffff20;
     backdrop-filter: blur(3px);
     padding: 32px;
@@ -43,15 +50,15 @@ div.left-content {
     font-family: 'Fjalla One', sans-serif;
 
     box-shadow: 20px 5px 20px #000000b0;
-    border-bottom-right-radius: 32px;
+    border-bottom-right-radius: 16px;
     border: 1px solid #ffffff40;
 }
 
-div.left-content .baise {
+.intro div.left-content .baise {
     align-self: center;
 }
 
-div.left-content h1 {
+.intro div.left-content h1 {
     text-transform: uppercase;
     color: #ffb64d;
 }
