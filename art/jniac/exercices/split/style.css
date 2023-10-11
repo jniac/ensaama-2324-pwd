@@ -11,7 +11,7 @@ main > div {
 }
 
 .left {
-  background-image: url(assets/image-1.avif);
+  background-image: url(assets/image-1.jpg);
   background-size: cover;
   background-position: center;
 }
