@@ -116,7 +116,9 @@ header .logo-icon {
     transition: all 0.6s ease-in-out;
 
     -webkit-mask-image: url(assets/donut.svg);
+    mask-image: url(assets/donut.svg);
     -webkit-mask-size: contain;
+    mask-size: contain;
 }
 
 header .logo-icon:hover {
