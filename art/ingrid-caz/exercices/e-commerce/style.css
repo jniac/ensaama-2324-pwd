@@ -17,7 +17,7 @@ body, body *{
 /* SECTION INTRO */
 section.intro { 
     height: 85VH;
-    background-image: url(assets/téléchargement.jpeg);
+    background-image: url(assets/What-is-landscape-photography.jpg);
     background-size: cover;
     background-position: center;
     padding: 32px;

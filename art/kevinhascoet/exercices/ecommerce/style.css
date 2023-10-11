@@ -25,31 +25,41 @@ button.start {
     width:200px;
     
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(20px);
+backdrop-filter: blur(5);
 -webkit-backdrop-filter: blur(5px);
 border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 button.start:hover{
-    background-color: #4d1c0bcc;
-    color:white;
-    scale: 1.1;
+    
+    transform: scale(1.1) translate(10%);
+    border: 1px solid #4d1c0b;
 }
 
 h1{
     font-size: 80px;
 }
 
+
+
+
 section.intro{
-    height: 85vh;
+    transition: all 30s ease-in-out;
+    height: 90vh;
     background-size: cover;
-    background-image: url(assets/donut3.png);
-    background-position: 85% 0%;
+    background-image: url(assets/defile.png);
+    background-position: 100% 0%;
     color:#2b0e02;
     padding: 128px;
     font-size:20px;
-    
 }
+
+section.intro:hover{
+    background-position: 100% 95%;
+    transition-duration: 30s ease-in-out;
+}
+
+
 
 section.intro div.left-content{
     transition: all 0.6s ease-in-out;
@@ -74,11 +84,33 @@ border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 section.intro div.left-content:hover{
-    transform : skew(2deg,3deg) translate(3%);
+    transform : skew(2deg,3deg) translate(5%);
     transition-duration: 0.6s;
 }
 
 
+
+section.intro {
+    display: flex;
+    flex-direction: row;
+}
+
+section.intro div.donut{
+    transition: all 1s ease-in-out;
+    width:10%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 300px;
+    scale: 85%;
+}
+
+section.intro div.donut:hover{
+    scale: 92%;
+    margin-left: 280px;
+    margin-top:-50px;
+    transform: skew(-2deg,3deg);
+    transition-duration: 0.6s;
+}
 
 
 section.intro p.subtitle {
@@ -86,14 +118,19 @@ section.intro p.subtitle {
     margin-top:-40px;
 }
 
+section.section{
+    background-color: #ebe4d9cc;
+    margin: 0px;
+}
+
 section.blabla {
-    height:90vh;
+    height:70vh;
     width: 40%;
-    padding:64px;
-    margin: 120px;
+    padding:128px;
     display:flex;
     color:#2b0e02;
     flex-direction: column;
     align-items: center;
-    gap:16px;
+    gap:48px;
+    font-size:18px;
 }
