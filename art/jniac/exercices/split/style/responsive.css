@@ -13,4 +13,9 @@
       font-size: 24px;
     }
   }
+  @media (min-width: 1601px) {
+    :root {
+      font-size: 26px;
+    }
+  }
 }
