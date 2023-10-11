@@ -1,0 +1,38 @@
+
+@import url(header.css);
+@import url(../../../../common-resources/reset.css);
+
+section.intro{
+    display: flex;
+    flex-direction: row;
+   
+}
+
+div.left-content{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: center;
+    background-image: url(./assets/chrysanthemes-monet.jpg);
+    background-size: cover;
+
+}
+
+div.right-content {
+
+    
+    width: 50%;
+    height: 100vh;
+ 
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    padding: 32px;
+
+}
+
+h1.title {
+    margin-bottom: 32px;
+}

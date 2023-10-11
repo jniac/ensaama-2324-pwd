@@ -10,31 +10,31 @@ section.developement {
     font-family: 'Fjalla One', sans-serif;
 }
 
-.imgtxt {
+.developement .imgtxt {
     width: 33vw;
 }
 
-.imghor img {
+.developement .imghor img {
     height: 40vh;
 }
 
-.superfrench {
+.developement .superfrench {
     gap: 16px;
     display: flex;
     flex-direction: row;
 }
 
-img.superfrench {
+.developement img.superfrench {
     width: 20vw;    
 }
 
-img.imghor {
+.developement img.imghor {
     display: flex;
     flex-direction: row;
     
 }
 
-div.sprtxt {
+.developement div.sprtxt {
     width: 20vw;
     gap: 3vh;
     display: flex;
@@ -42,11 +42,11 @@ div.sprtxt {
     padding-top: 3vw;
 }
 
-section.developement h1 {
+.developement section.developement h1 {
     font-size: 2em;
 }
 
-section.developement     p {
+.developement section.developement     p {
     font-size: 1.4em;
 }
 
