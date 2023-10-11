@@ -1,0 +1,67 @@
+@import url(header.css);
+@import url(../../../../../common-resources/reset.css);
+
+/* Split the screen in half*/
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+}
+
+/* Left side*/
+.left {
+  background-image: url(assets/fond-mauve.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/*Right side*/
+.right {
+  display: flex;
+  flex-direction: column;
+  padding: 96px 64px;
+  gap:16px;
+  background-color: rgb(194, 194, 233);
+  overflow: scroll;
+}
+
+div.split h1.Titre {
+  margin-bottom: 64px;
+}
+
+div.img {
+  height: 190px;
+  width: 120px;
+  background-image: url(assets/fond-mauve.jpg);
+  background-size: contain;
+}
+
+.title-block {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.title-block .image {
+  flex: 1;
+  background-image: url(assets/fond-mauve.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.title-block .text {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-block .text .dash {
+  background-color: blueviolet;
+  flex: 0 0 1px;
+  width: 100%;
+}

@@ -1,0 +1,70 @@
+@import url(header.css);
+@import url(../../../../common-resources/reset.css);
+
+section.intro{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+div.left {
+    height: 100vh;
+    width: 50%;
+    background-image: url(./assets/maison_cage.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+}
+
+div.right{
+    height: 100vh;
+    width: 50%;
+
+    /* display: flex; */
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    padding: 32px;
+    overflow: scroll;
+}
+
+div.right h1.title{
+    font-size: 50px;
+    margin-bottom: 150px;
+}
+
+
+
+div.text-block {
+
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+div.text-block .image{
+    flex: 1;
+    background-image: url(assets/maison_cage.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+div.text-block .text{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+div.text-block .text .dash{
+    background-color: rgb(209 1 53);
+    flex: 0 0 1px;
+    width: 100%;
+
+}
+p{
+    margin-top: 50px;
+}                                                     
