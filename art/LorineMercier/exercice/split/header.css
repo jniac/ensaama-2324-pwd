@@ -1,0 +1,29 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+  position: fixed;
+  width: 100vw;
+}
+
+header .logo-icon {
+ margin: 10px;
+  height: 55px;
+  width: 55px;
+  background-image: url(assets/death-skull.svg);
+  background-position: center;
+  background-size: contain;
+
+}
+
+header .logo-shop{
+    margin: 10px;
+    height: 55px;
+    width: 55px;
+    background-image: url(assets/shop-outlined.svg);
+    background-position: center;
+    background-size: contain;
+    
+    
+}
