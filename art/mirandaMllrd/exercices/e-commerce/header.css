@@ -4,5 +4,97 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    padding: 8px;
+}
+
+/* gestion de l'espace header */
+
+header .logo,
+header .actions {
+    flex: 1;
+}
+
+header .menu {
+    flex: 2;
+}
+
+/* gestion de l'affichage des boutons "action": */
+header .menu {
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    gap:8px;
+}
+
+header .actions {
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+header .logo {
+    display: flex;
+    flex-direction: row;
+    align-self: stretch;
+
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+}
+
+header .menu button {
+    background-color:rgba(233, 224, 148, 0.4);
+    backdrop-filter: blur(16px); /* du blur */
+    border: none;
+    color: rgb(77, 44, 35);
+    align-self: stretch;
+    border-radius: 0px;
+    padding: 0 16px;
+    cursor: pointer;
+}
+
+header .menu button:hover {
+    background-color:rgba(77, 44, 35, 0.596);
+    color: aliceblue;
+}
+
+header .menu button:first-child{
+    border-radius: 8px 0 0 8px;
+}
+
+header .menu button:last-child{
+    border-radius: 0 8px 8px 0;
+}
+
+header .actions button.login {
+    background-color:rgba(233, 224, 148, 0.4);
+    backdrop-filter: blur(16px); /* du blur */
+    border: none;
+    color: rgb(77, 44, 35);
+    align-self: stretch;
+    border-radius: 4px;
+    padding: 0 16px;
+    cursor: pointer;
+}
+
+header .actions button.login:hover{
+    background-color: rgb(77, 44, 35);
+    color: aliceblue;
+}
+
+header .logo-icon {
+    aspect-ratio: 1/1;
+    background-color: rgb(255, 255, 255);
+    
+    -webkit-mask-image: url(assets/statue-of-jesus.svg);
+    -webkit-mask-size: contain ;
+    -webkit-mask-repeat: no-repeat;
+
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+}
+
+header .logo :hover{
+    background-color: rgb(77, 44, 35);
 }

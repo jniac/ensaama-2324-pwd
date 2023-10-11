@@ -5,5 +5,99 @@ header{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    padding: 8px;
+}
+
+/* Gestion de l'espace */
+header .logo,
+header .actions {
+    flex: 1;
+}
+
+header .menu{
+    flex: 2;
+}
+
+/* Gestion de l'espace */
+
+
+/* Gestion de l'affichage des boutons actions */
+
+header .logo{
+    display: flex;
+    flex-direction: row;
+    align-self: stretch;
+}
+
+
+header .menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+}
+
+header button{
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(16px);
+    border: none;
+    /* border-radius: 4px; */
+    color: black;
+    align-self: stretch;
+    padding: 0 16px;
+    cursor: pointer;
+}
+
+header .menu button:first-child{
+    border-radius: 8px 0 0 8px;
+}
+
+header .menu button:last-child{
+    border-radius: 0 8px 8px 0;
+}
+
+header .menu button:hover{
+    background-color:   rgb(255, 170, 13);
+}
+
+header .actions{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+header .actions button.login {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(16px);
+    border: none;
+    /* border-radius: 4px; */
+    color: black;
+    align-self: stretch;
+    padding: 20px;
+    cursor: pointer;
+}
+
+header .actions button.login:hover{
+    background-color:   rgb(255, 170, 13);
+}
+
+
+
+.logo-icon{
+    aspect-ratio: 1 / 1;
+    background-color:  rgb(77, 44, 35);
+    transition: all .3s ease-in-out;
+
+    -webkit-mask-image: url(assets/custard.svg);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+
+    transition: all .1s ease-in-out;
+    cursor: pointer;
+}
+
+.logo-icon:hover{
+    background-color:   rgb(255, 170, 13);
 }

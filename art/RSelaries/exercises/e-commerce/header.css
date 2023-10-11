@@ -11,12 +11,32 @@ header {
     flex-direction: row;
     gap: 16px;
     width: 100vw;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
 }
 
+/* Espacements des éléments du header*/
+header .actions,
+header .logo {
+    flex: 1;
+}
+
+header .menu {
+    flex: 2;
+}
+
 img.bagnole {
+    cursor: pointer;
     height: 25px;
+}
+
+button.homebutton {
+    cursor: pointer;
+    border: none;
+    color: #ffb64d; 
+    background-color: #00000000;
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 25px;
 }
 
 header .actions {
@@ -24,6 +44,7 @@ header .actions {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: right;
 }
 
 header .menu {
@@ -31,11 +52,12 @@ header .menu {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 
 header .baisedeux {
     border: none;
-    background-color: #ffffff   bo;
+    background-color: #ffffffd0;
     color: #ffb64d;
     padding: 8px 32px;
     font-family: 'Fjalla One', sans-serif;

@@ -1,47 +1,59 @@
 @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=Creepster&family=Italianno&family=Monoton&family=Permanent+Marker&display=swap");
+@import url('https://fonts.cdnfonts.com/css/hackney');
 @import url(header.css);
 @import url(../../../../common-resources/reset.css);
 
-body,
-body * {
-  margin: 0;
-  box-sizing: border-box;
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  --button-bg: beige;
+
   font-family: "Antonio", sans-serif;
 }
 
-button.start{
-    appearance: none;
-    border: none;
-    background-color: beige;
-    padding: 16px;
-    text-transform: uppercase;
-    cursor: pointer;
-    border-radius: 20px;
-    width: 700px;
+body.light {
+  --button-bg: rgb(0, 0, 0);
 }
 
-button.start:hover{
-    background-color: black;
-    color: aliceblue;
+
+button.start {
+  appearance: none;
+  border: none;
+  background-color: beige;
+  padding: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 640px;
+  font-size: 20px;
 }
 
-h1{
-    font-size: 100px;
-    margin-top: -35px;
-    margin-bottom: 30px;
+button.start:hover {
+  background-color: black;
+  color: aliceblue;
+  transform: scale(1.05);
+  transition-duration: 0.2s;
 }
+
+h1 {
+  font-size: 98px;
+  margin-top: -35px;
+  margin-bottom: 30px;
+}
+
 
 div.logo {
-    color: aliceblue;
+  color: aliceblue;
 }
-
-
 
 section.intro {
   height: 90vh;
   background-size: cover;
   background-image: url(assets/memoriesofmurder.jpg);
   background-position: center;
+  background-attachment: fixed;
   color: aliceblue;
   padding: 32px;
 }
@@ -55,9 +67,8 @@ section.intro div.left-content {
   justify-content: center;
 }
 
-
 section.intro div.left-content h1 {
-    transform: translateX(-0.05em);
+  transform: translateX(-0.05em);
 }
 
 section.intro p.subtitle {
@@ -65,16 +76,89 @@ section.intro p.subtitle {
 }
 
 section.cinema {
-    height: 90vh;
-    padding: 64px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
+  height: 150vh;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
 }
 
-section.cinema h1{
-    font-size: 50px;
+section.cinema .texte {
+  flex: 1;
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  background-color: beige;
+}
+
+section.cinema .texte h1 {
+  font-size: 50px;
+}
+
+section.cinema .texte h2 {
+  font-size: 50px;
+  margin: 30px;
+}
+
+section.cinema .texte h3 {
+  font-size: 50px;
+  margin: 30px;
+}
+
+img.real {
+width: 700px;
+}
+
+section.cinema .image {
+  flex: 1.2;
+  background-color: rgb(255, 255, 255);
+  background-image: url(assets/affiche_mom.jpg);
+}
+
+
+
+.menu button {
+  appearance: none;
+  border: none;
+  background-color: var(--button-bg);
+  padding: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 150px;
+  font-size: 20px;
+}
+
+.menu button:hover {
+  background-color: black;
+  color: aliceblue;
+  transform: scale(1.05);
+  transition-duration: 0.2s;
+}
+
+button.login {
+  appearance: none;
+  border: none;
+  background-color: #fff0;
+  color: aliceblue;
+  padding: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 150px;
+  font-size: 20px;
+}
+
+button.login:hover {
+  background-color: beige;
+  color: black;
+  transform: scale(1.05);
+  transition-duration: 0.2s;
+}
+
+.left-content h1 {
+  font-family: 'Hackney', sans-serif;
 }
 
 /* div.top-menu {
