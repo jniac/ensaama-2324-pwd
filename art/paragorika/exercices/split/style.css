@@ -5,8 +5,8 @@
 
 
 body {
-    font-family:'Martian Mono', monospace;
-  }
+    font-family: 'Martian Mono', monospace;
+}
 
 
 main {
@@ -16,37 +16,42 @@ main {
 }
 
 main > div {
-width: 50%;
+    width: 50%;
 }
 
-div.left{
-background-image: url(assets/dewy-spider-web-of-life-1280x1600.jpg);
-width: 50%;
-height: 100%;
-display: flex;
-justify-content: left;
+div.left {
+    background-image: url(assets/dewy-spider-web-of-life-1280x1600.jpg);
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
 }
 
-div.right{
+div.right {
     background-color: black;
     display: flex;
     flex-direction: column;
 }
 
-h1{
-    font-family:'Martian Mono', monospace;
+h1 {
+    font-family: 'Martian Mono', monospace;
     font-size: 70px;
     color: whitesmoke;
     padding: 7%;
 }
 
-p1 {
-    font-family:'Martian Mono', monospace;
+p {
+    font-family: 'Martian Mono', monospace;
     font-size: 18px;
     color: whitesmoke;
-    display: flex;
-    flex-direction: column;
     text-align: left;
     padding: 7%;
     padding-top: 200px;
-  }
+}
+
+p.lettrine::first-letter {
+    font-size: 3em;
+    padding-right: 1px;
+    line-height: 1rem;
+    margin-left: -0.15em;
+}

@@ -161,6 +161,26 @@ button.login:hover {
   font-family: 'Hackney', sans-serif;
 }
 
+#background-video {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  }
+
+  #btnVideo{
+    font-size: 50px;
+    background: 0;
+    border: 0;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    }
+
 /* div.top-menu {
     font-size: 50px;
 } */
