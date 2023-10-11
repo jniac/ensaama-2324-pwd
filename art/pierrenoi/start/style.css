@@ -14,12 +14,20 @@ h1 {
   font-family: 'Oswald', sans-serif;
 }
 
+div.box-model-demo {
+    margin: 16px;
+    margin-top: 32px;
+    border: solid 8px rgb(12, 55, 172);
+    padding: 24px;
+  }
+
 div.gallery{
 height: 360px;
 padding: 32px;
 display: flex;
 flex-direction: row;
 gap: 32px;
+rotate: turn;
 
 img{ width: 400px;   height:400px;}
 
@@ -76,3 +84,20 @@ div.icon-4 {
 div.icon-5 {
     background-image: url(assets/location.svg);
 }
+
+
+div.troll {
+    width: 300px;
+    height: 300px;
+    background-image: url(https://upload.wikimedia.org/wikipedia/en/9/9a/Trollface_non-free.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all .2s ease-out;
+    cursor: pointer;
+  }
+  
+  div.troll:hover {
+    transform: scale(1.1) rotate(-5deg);
+  }
+  
