@@ -1,0 +1,28 @@
+header {
+    position:fixed; 
+    width: 100vw;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+
+    z-index:5;
+}
+
+header .icon {
+    width: 64px;
+    height: 64px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+header .icon.logo {
+    background-image: url(assets/purple-heart.svg);
+}
+
+header .icon.cart {
+    background-image: url(assets/cart.svg);
+    
+}
