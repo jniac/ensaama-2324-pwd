@@ -1,4 +1,11 @@
-@import url(../../../../common-resources/reset.css);
+@import url(../../../../../common-resources/reset.css);
+@import url(responsive.css);
+@import url(left.css);
+@import url(header.css);
+
+:root {
+  --accent-color: red;
+}
 
 main {
   height: 100vh;
@@ -8,24 +15,6 @@ main {
 
 main > div {
   width: 50%;
-}
-
-.left {
-  position: relative;
-}
-
-.left .image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: opacity 1.5s cubic-bezier(0.3, 0.8, 0.3, 1);
-}
-
-.left .image.hidden {
-  opacity: 0;
-  transition: opacity 0s linear;
 }
 
 .right {
@@ -73,7 +62,7 @@ p.lettrine::first-letter {
 .title-block .text .separator {
   width: 80px;
   height: 8px;
-  background-color: red;
+  background-color: var(--accent-color);
 }
 
 

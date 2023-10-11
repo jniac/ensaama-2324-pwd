@@ -1,0 +1,35 @@
+header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em;
+  z-index: 10;
+}
+
+header .icon {
+  --url: url(../assets/image.svg);
+  width: 2em;
+  height: 2em;
+  background-color: var(--accent-color);
+
+  mask-image: var(--url);
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  -webkit-mask-image: var(--url);
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+}
+
+header .icon.logo {
+  background-color: white;
+  --url: url(../assets/pets.svg);
+}
+
+header .icon.cart {
+  --url: url(../assets/cart.svg);
+}
