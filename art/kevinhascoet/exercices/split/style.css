@@ -58,6 +58,10 @@ div.slt{
 
 img{
   width: 300px;
+  transition: all .4s ease-in-out;
+}
+img:hover{
+  filter: hue-rotate(140deg);
 }
 
 
@@ -65,7 +69,6 @@ h2{
   font-size: 80px;
   margin-top: -26px;
 }
-
 
 div.tg{
   display: flex;
@@ -77,9 +80,38 @@ div.tg{
 div.trait{
   transition: all 1s ease-in-out;
   border-top: 12px solid #D64747;
-  width: 173px;
+  width: 172px;
 }
 
 div.trait:hover{
   width: 730px;
+}
+
+
+
+#martin{
+  transition: all 1s ease-in-out;
+  font-size:28px;
+}
+#martin:hover{
+  font-size: 36px;
+}
+
+
+#graig{
+  transition: all 1s ease-in-out;
+}
+#graig:hover{
+  letter-spacing: 4px;
+}
+
+
+#safia{
+  transition: all 1s ease-in-out;
+  column-count: 3;
+  column-gap: 2em;
+  text-align: justify;
+}
+#safia:hover{
+  column-gap:0em;
 }
