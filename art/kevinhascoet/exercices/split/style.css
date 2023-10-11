@@ -1,0 +1,43 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url(header.css);
+@import url(../../../../common-resources/reset.css);
+
+
+body, body * {
+  margin:0;
+  font-family: 'Open Sans', sans-serif, bold;
+}
+
+
+section.base{
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+div.left{
+  width: 50%;
+  background-size: cover;
+  background-image: url(assets/eau.jpg);
+}
+
+
+
+div.right{
+  width: 50%;
+  padding: 128px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 32px;
+  overflow: scroll;
+  background-color: aliceblue;
+}
+
+
+h1{
+  font-size: 128px;
+  
+}
+
