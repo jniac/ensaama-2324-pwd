@@ -13,62 +13,9 @@ main > div {
 }
 
 div.left {
-    background-image : url(assets/pnl-cover-dans-la-legende.jpg)
+    background-image: url(assets/);
 }
 
-body{
-    font-family: 'Barlow Condensed', sans-serif;
-
-}ody{
-    font-family: 'Barlow Condensed', sans-serif;
+div.right {
 
 }
-
-
-/*div.left {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-div.left{
-    height: 90vh;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    text-align: left;
-
-}
-
-
-div.left {
-    height: 90vh;
-    background-color: cadetblue;
-    background-size: cover;
-    background-position: center;
-    padding: 32px;
-    color:aliceblue;
-}
-
-div.farright {
-    width: 40%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    justify-content: flex-end;
-}
-
-section.farright{
-    height: 90vh;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    text-align: left;
-
-}
-
