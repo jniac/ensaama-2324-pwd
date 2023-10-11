@@ -1,0 +1,67 @@
+@import url(header.css);
+@import url(../../../../common-resources/reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+main > div {
+  width: 50%;
+}
+
+div.left {
+  width: 110%;
+  height: 100%;
+
+  background-image: url(assets/grande\ image.jpg);
+  background-size: cover;
+}
+
+div.right {
+  width: 90%;
+  height: 100%;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 64px;
+}
+
+h1 {
+  font-size: 90px;
+  padding-bottom: 300px;
+}
+
+div.textop {
+  font-size: 20px;
+  padding-top: 25%;
+  margin: 5%;
+}
+
+div.title-block {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+div.title-block h2 {
+  font-size: 50px;
+}
+
+div.title-block img {
+  height: 300px;
+}
+
+div.trait {
+  border-top: 20px solid #000000;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+h4{
+
+  font-size: 40px;
+}
