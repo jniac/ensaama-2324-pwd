@@ -81,6 +81,13 @@ h3 {
     font-size: 35px
 }
 
+h4 {
+    font-size: 40px;
+    font-family: 'Dune Rise', sans-serif;
+    background-position: center;
+    margin-top: 50px;
+}
+
 div.trait {
     border-top: 20px solid #ff8000;
     width: 445px;
