@@ -1,8 +1,15 @@
 @import url(../../../common-resources/reset.css);
 @import url(header.css);
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: small;
+
+}
 
 img{
-    max-width: 50%;
+    max-width: 40%;
 }
 
 main {
@@ -21,11 +28,11 @@ div.left {
 }
 
 div.right {
-    padding: 32px;
+    padding: 50px;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    font-size: 3em;
+    font-size: 2em;
 
     overflow: scroll;
 
@@ -39,7 +46,13 @@ div.icon {
     color: red;
     background-size: contain;
    
-   
+}
+
+div.logo {
+    width: 64px;
+    height: 64px;
+    color: black;
+    background-size: contain;
 
 }
 
@@ -47,4 +60,28 @@ div.icon {
 div.tg{
     display: flex;
     flex-direction: row;
+    font-size: large;
+    align-items: center;
+    
+   
 }
+
+
+.spacer {
+    flex: 0 0 10rem;
+}
+
+
+div.txt{
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    padding: 30px;
+}
+
+p.letterine::first-letter {
+    font-size: 2em;
+    padding-right: 1px;
+    line-height: 1rem;
+}
+

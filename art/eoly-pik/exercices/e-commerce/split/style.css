@@ -1,4 +1,3 @@
-
 @import url(header.css);
 @import url(../../../../common-resources/reset.css);
 @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500&display=swap');
@@ -15,7 +14,7 @@ div.left-content{
     flex-direction: row;
     gap: 16px;
     justify-content: center;
-    background-image: url(./assets/chrysanthemes-monet.jpg);
+    background-image: url(./assets/4078930-2933999-5140005978-pimin-1688415463818.jpg);
     background-size: cover;
     
 

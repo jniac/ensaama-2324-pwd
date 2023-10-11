@@ -8,7 +8,7 @@ header {
     /* justify-content: space-between; */
 }
 
-header .logo 
+header .logo, 
 header .actions {
 
     flex:1;
@@ -55,4 +55,10 @@ header .actions {
 
     transition: all .1s ease-in-out;
     cursor: pointer;
+}
+
+header button {
+
+    background-color: #fff6;
+    backdrop-filter: blur(2px);
 }
