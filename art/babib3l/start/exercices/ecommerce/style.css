@@ -1,56 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url(header.css);
 @import url(../../../../common-resources/reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-body {
-  font-family: 'Barlow Condensed', sans-serif;
+
+
+body{
+    font-family: 'Barlow Condensed', sans-serif;
+
 }
 
+
+img{ width: 200px;   height:200px;}
+
 button.start {
-  appearance: none;
-  border: none;
-  background-color: #a8e1f8;
-  color: black;
-  padding: 16px;
-  text-transform: uppercase;
-  border-radius: 4px;
-  cursor: pointer;
+    appearance: none;
+    border: none;
+    background-color: cornflowerblue;
+    color: black;
+    padding: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 1s ease-in-out;
+
 }
 
 button.start:hover {
-  background-color: rgb(70, 70, 218);
-  color: white;
+    background-color: rgb(65, 93, 145);
+    color:rgb(255, 255, 255);
 }
 
 section.intro {
-  height: 90vh;
-  background-image: url(assets/herobg_1920.jpg);
-  background-size: cover;
-  background-position: center;
-  padding: 32px;
-  color: rgb(255, 247, 0);
+    height: 90vh;
+    background-image: url(assets/background_3.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 32px;
+    color:aliceblue;
 }
 
 section.intro div.left-content {
-  width: 33%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  justify-content: center;
+    width: 33%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
 }
 
 section.intro p.subtitle {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 section.blabla {
-  height: 90vh;
-  padding: 64px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+    height: 90vh;
+    padding: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
 }
+

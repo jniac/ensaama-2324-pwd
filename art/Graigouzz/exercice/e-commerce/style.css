@@ -8,7 +8,7 @@ body, body *{
     box-sizing: border-box;
 }
 
-/* Enlever les "ascenseurs" (windows). */
+/* Enlever les scrollbar (windows). */
 *::-webkit-scrollbar {
     display: none;
   }
@@ -33,6 +33,14 @@ button.start:hover{
     background-color:rgba(127, 255, 212, 0.493);
     color:antiquewhite;
     transition-duration: 0.3s;
+}
+
+.menu button{
+    appearance: none;
+    border: none;
+    padding: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
 .intro{

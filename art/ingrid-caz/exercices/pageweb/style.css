@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+@import url(../../../../common-resources/reset.css);
+@import url(header.css);
+
+/* RESET CSS */
+body, body *{
+    box-sizing: border-box;
+
+    margin: unset;
+    
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+}
+
+/* SECTION INTRO */
+section.intro { 
+    display: flex;
+    flex-direction: row;
+    height: 100VH;
+}
+
+section.intro div.gauche {
+    width: 50%;
+    height: 100%;
+    background-image: url(assets/téléchargement.jpeg);
+    background-size: cover;
+    background-position: center;
+
+    
+}
+
+section.intro div.droite{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    height: 100%;
+    
+
+    padding: 32px;
+
+}
+
+div.droite h1{
+     text-transform: uppercase;
+}

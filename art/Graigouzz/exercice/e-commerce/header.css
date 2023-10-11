@@ -4,10 +4,69 @@ header{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    padding: 16px;
+    /* justify-content: space-between; */
+    padding: 8px;
 }
 
-.logo{
-    background-image: url(asset/dailyart.svg);
+ header .logo {
+    display: flex;
+    flex-direction: row;
+    align-self: stretch;
 }
+
+header .logo,
+header .actions{
+    flex: 1;
+}
+
+header .menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex: 2;
+}
+
+header .actions{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.logo-icon{
+    -webkit-mask-image: url(asset/dailyart.svg);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat:no-repeat;
+    aspect-ratio: 1;
+    background-color: antiquewhite;
+}
+
+.logo-icon:hover{
+    background-color:black;
+    transition-duration: 0.3s;
+}
+
+header .menu button{
+    background-color: #fff6;
+    backdrop-filter: blur(32px);
+    border: none;
+    color: black;
+    align-self: stretch;
+    border-radius: 4px;
+    padding: 0 16px;
+    cursor
+    : pointer;
+}
+
+header .actions button.login{
+    background-color: #fff6;
+    backdrop-filter: blur(32px);
+    border: none;
+    color: black;
+    align-self: stretch;
+    border-radius: 4px;
+    padding: 0 16px;
+    cursor: pointer;
+}
+
+
