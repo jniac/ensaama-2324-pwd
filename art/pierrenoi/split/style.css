@@ -10,6 +10,7 @@ body{
 
 img{
     max-width: 40%;
+    height: auto;
 }
 
 main {
@@ -40,35 +41,30 @@ div.right {
 }
 
 
-div.icon {
-    width: 64px;
-    height: 64px;
-    color: red;
-    background-size: contain;
-   
-}
-
-div.logo {
-    width: 64px;
-    height: 64px;
-    color: black;
-    background-size: contain;
-
-}
-
 
 div.tg{
     display: flex;
     flex-direction: row;
     font-size: large;
     align-items: center;
+    margin-top: 26px;
+    margin-bottom: 26px;
+    gap: 26px;    
+}
+
+div.trait{
+    border: 5px solid red;
+    width: auto;
     
-   
+    
 }
 
 
-.spacer {
-    flex: 0 0 10rem;
+div.pizza{
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+   
 }
 
 
@@ -76,7 +72,7 @@ div.txt{
     display: flex;
     flex-direction: column;
     font-size: large;
-    padding: 30px;
+    gap: 32px;
 }
 
 p.letterine::first-letter {
