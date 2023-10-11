@@ -44,7 +44,7 @@ h1{
 
 
 section.intro{
-    transition: all 10s ease-in-out;
+    transition: all 30s ease-in-out;
     height: 90vh;
     background-size: cover;
     background-image: url(assets/defile.png);
@@ -56,7 +56,7 @@ section.intro{
 
 section.intro:hover{
     background-position: 100% 95%;
-    transition-duration: 30s;
+    transition-duration: 30s ease-in-out;
 }
 
 
