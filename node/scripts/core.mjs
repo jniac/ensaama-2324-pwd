@@ -2,20 +2,22 @@ import fs from 'fs/promises'
 import yaml from 'js-yaml'
 
 /**
- * @typedef {object} Student
- * @property {[string, string]} names
- * @property {string} github
- * @property {string} prefix
+ * @typedef {{
+ *   names: [string, string]
+ *   github: string
+ *   prefix: string
+ * }} Student
  * 
- * @typedef {object} Info
- * @property {Student[]} promotion
+ * @typedef {{
+ *   promotion: Student[]
+ * }} Info
  */
 
 /**
- * 
+ * Load and deserialize info.yaml
  * @returns {Promise<Info>}
  */
 export async function loadInfo() {
-  const str = await fs.readFile('../info/promotion.yaml', { encoding: 'utf-8' })
+  const str = await fs.readFile('../info/info.yaml', { encoding: 'utf-8' })
   return yaml.load(str)
 }
