@@ -1,7 +1,7 @@
 import yaml from 'js-yaml'
 import fs from 'fs/promises'
 
-fs.readFile('promotion.yaml', { encoding: 'utf-8' }).then(str => {
+fs.readFile('../info/promotion.yaml', { encoding: 'utf-8' }).then(str => {
   /** @type {{ students: { names: [string, string], github: string }[] }} */
   const doc = yaml.load(str)
   const csv = [
