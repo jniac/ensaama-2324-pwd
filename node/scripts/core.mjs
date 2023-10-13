@@ -21,3 +21,10 @@ export async function loadInfo() {
   const str = await fs.readFile('../info/info.yaml', { encoding: 'utf-8' })
   return yaml.load(str)
 }
+
+export async function saveInfo(info) {
+  const str = yaml.dump(info, { noArrayIndent: true })
+  return str
+}
+
+console.log(await saveInfo(await loadInfo()))
