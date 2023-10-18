@@ -13,7 +13,7 @@ body {
 
 body,
 main,
-div {
+main div {
   display: flex;
   container-type: size;
   flex: 1;

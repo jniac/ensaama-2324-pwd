@@ -1,3 +1,3 @@
-import { initialize } from '../../../common-projects/colorful/src/colorful.js'
+import { initializeStandalonePage } from '../../../common-projects/colorful/src/colorful.js'
 
-initialize()
+initializeStandalonePage()
