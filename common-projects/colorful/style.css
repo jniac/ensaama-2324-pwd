@@ -1,0 +1,16 @@
+@import url(../../common-resources/reset.css);
+@import url(../../common-resources/layout/spacing.css);
+@import url(colorful.css);
+
+:root {
+  scroll-behavior: none;
+  overscroll-behavior: none;
+}
+
+main {
+  position: absolute;
+}
+
+.art-container {
+  position: absolute;
+}
