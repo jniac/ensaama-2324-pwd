@@ -3,13 +3,20 @@ import yaml from 'https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/+esm'
 const parser = new DOMParser()
 
 /**
- * @type {{
- *   promotion: {
- *     names: [string, string]
- *     github: string
- *     prefix: string
- *   }[]
- * }}
+ * @typedef {{
+ *   names: [string, string]
+ *   github: string
+ *   prefix: string
+ * }} Person
+ * 
+ * @typedef {{
+ *   teacher: Person
+ *   students: Person[]
+ * }} Data
+ */
+
+/**
+ * @type {Data}
  */
 export const data = await window
   .fetch('../../info/info.yaml')
@@ -17,7 +24,7 @@ export const data = await window
   .then(text => yaml.load(text))
 
 export const arts = await Promise.all(
-  data.promotion.map(async student => {
+  data.students.map(async student => {
     const { github } = student
     // const github = 'jniac'
     try {
@@ -39,7 +46,11 @@ export const arts = await Promise.all(
         })
         .then(text => {
           const doc = parser.parseFromString(text, "text/html")
-          return doc.querySelector('main')
+          const main = doc.querySelector('main')
+          if (!main) {
+            throw new Error(`Pas de <main/> art/${github}/colorful/index.html`)
+          }
+          return main
         })
       return { student, ok: true, style, mainElement }
     } catch (error) {

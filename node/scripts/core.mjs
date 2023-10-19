@@ -6,10 +6,11 @@ import yaml from 'js-yaml'
  *   names: [string, string]
  *   github: string
  *   prefix: string
- * }} Student
+ * }} Person
  * 
  * @typedef {{
- *   promotion: Student[]
+ *   teacher: Person
+ *   students: Person[]
  * }} Info
  */
 

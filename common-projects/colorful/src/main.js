@@ -1,6 +1,5 @@
 import { arts } from './data.js'
 import { initializeColorDiv } from './colorful.js'
-import { doRectsOverlap } from './utils.js'
 
 /**
  * @typedef {typeof arts[number]} Art
