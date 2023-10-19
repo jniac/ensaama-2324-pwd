@@ -46,7 +46,7 @@ async function fetchStyle(url) {
 }
 
 export const arts = await Promise.all(
-  data.students.map(async student => {
+  [...data.students, data.teacher].map(async student => {
     const { github } = student
     // const github = 'jniac'
     

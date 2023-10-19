@@ -1,6 +1,7 @@
 import { arts } from './data.js'
 import { initializeColorDiv } from './colorful.js'
 import { round } from './utils.js'
+import { onDrag } from './drag.js'
 
 /**
  * @typedef {typeof arts[number]} Art
@@ -109,8 +110,22 @@ updatePosition()
 
 document.body.addEventListener('wheel', event => {
   event.preventDefault()
-  state.view.x += event.deltaX
-  state.view.y += event.deltaY
+  state.view.x += event.deltaX * .5
+  state.view.y += event.deltaY * .5
   updatePosition()
 }, { passive: false })
 
+onDrag(document.body, {
+  simulatePhysics: true,
+  onDrag: info => {
+    state.view.x += -info.delta.x
+    state.view.y += -info.delta.y
+    updatePosition()
+  },
+  onDragStart: () => {
+    document.documentElement.classList.add('dragged')
+  },
+  onDragStop: () => {
+    document.documentElement.classList.remove('dragged')
+  },
+})

@@ -101,9 +101,11 @@ function initializeColorDiv(element = document.body) {
   /** @type {NodeListOf<HTMLElement>} */
   const divs = element.querySelectorAll('*[class*=color-]')
   for (const div of divs) {
-    div.onmouseover = event => {
-      event.stopPropagation()
-      addOverFeedback(div)
+    div.onpointerover = event => {
+      if (event.pointerType === 'mouse') {
+        event.stopPropagation()
+        addOverFeedback(div)
+      }
     }
     div.onclick = event => {
       event.stopPropagation()

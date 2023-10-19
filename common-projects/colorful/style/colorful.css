@@ -46,8 +46,9 @@ main {
 }
 
 *[class*=color] {
-  cursor: pointer;
   --over-feedback-color: #fff;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .solid {

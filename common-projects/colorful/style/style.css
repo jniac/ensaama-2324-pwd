@@ -20,3 +20,22 @@ main {
 .art-container {
   position: absolute;
 }
+
+.drag-highlight {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  border-style: solid;
+  border-width: 0;
+  border-color: currentColor;
+  opacity: 0;
+  pointer-events: none;
+  transition: 
+    opacity .3s ease-out,
+    border-width .1s linear;
+}
+
+:root.dragged .drag-highlight {
+  opacity: 1;
+  border-width: 8px;
+}
