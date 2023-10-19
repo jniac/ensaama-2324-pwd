@@ -1,4 +1,8 @@
 
+export function round(x, base = 1) {
+  return Math.round(x / base) * base
+}
+
 /**
  * 
  * @param {DOMRect} a

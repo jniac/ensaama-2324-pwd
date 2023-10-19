@@ -1,5 +1,6 @@
 import { arts } from './data.js'
 import { initializeColorDiv } from './colorful.js'
+import { round } from './utils.js'
 
 /**
  * @typedef {typeof arts[number]} Art
@@ -10,11 +11,9 @@ const style = document.createElement('style')
 style.innerHTML = arts.map(art => `/* ${art.student.github} (${art.student.names.join(' ')}) */\n${art.style}`).join('\n\n')
 document.head.appendChild(style)
 
-const mainSize = 600
+let mainSize = 600
 const col = 4
 const row = Math.ceil(arts.length / col)
-
-document.documentElement.style.setProperty('--spacing', `${(mainSize / 500).toFixed(3)}px`)
 
 const artContainer = document.createElement('div')
 artContainer.classList.add('art-container')
@@ -36,11 +35,7 @@ const state = {
   outsideCells: new Set(),
 }
 
-for (const { art, rect } of state.cells) {
-  art.mainElement.style.left = `${rect.x}px`
-  art.mainElement.style.top = `${rect.y}px`
-  art.mainElement.style.width = `${rect.width}px`
-  art.mainElement.style.height = `${rect.height}px`
+for (const { art } of state.cells) {
   artContainer.append(art.mainElement)
   initializeColorDiv(art.mainElement)
 }
@@ -50,7 +45,17 @@ function pmod(x, mod) {
   return x < 0 ? x + mod : x
 }
 
-function update() {
+function updateSize() {
+  mainSize = round(Math.min(window.innerWidth, window.innerHeight) * .9, 50)
+  document.documentElement.style.setProperty('--spacing', `${(mainSize / 500).toFixed(3)}px`)
+
+  for (const { art: { mainElement } } of state.cells) {
+    mainElement.style.width = `${mainSize}px`
+    mainElement.style.height = `${mainSize}px`
+  }
+}
+
+function updatePosition() {
   const { view, cells, insideCells, outsideCells } = state
   artContainer.style.left = `${-view.x}px`
   artContainer.style.top = `${-view.y}px`
@@ -64,7 +69,7 @@ function update() {
   const endY = Math.ceil(view.bottom / mainSize)
 
   insideCells.clear()
-  for (let y = startY; y < endY; y++) {    
+  for (let y = startY; y < endY; y++) {
     for (let x = startX; x < endX; x++) {
       const ix = pmod(x, col)
       const iy = pmod(y, row)
@@ -86,15 +91,26 @@ function update() {
     if (inside === false) {
       outsideCells.add(cell)
     }
+    inside
+      ? cell.art.mainElement.style.removeProperty('display')
+      : cell.art.mainElement.style.setProperty('display', 'none')
   }
 
   // console.log(`${insideCells.size} / ${cells.length}`)
 }
 
+window.onresize = () => {
+  updateSize()
+  updatePosition()
+}
+
+updateSize()
+updatePosition()
+
 document.body.addEventListener('wheel', event => {
   event.preventDefault()
   state.view.x += event.deltaX
   state.view.y += event.deltaY
-  update()
+  updatePosition()
 }, { passive: false })
 

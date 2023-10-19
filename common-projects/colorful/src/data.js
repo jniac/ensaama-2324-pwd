@@ -23,43 +23,61 @@ export const data = await window
   .then(response => response.text())
   .then(text => yaml.load(text))
 
+async function fetchMainElement(url) {
+  const response = await window.fetch(url)
+  if (response.ok === false) {
+    throw new Error(`Pas de index.html pour ${url}`)
+  }
+  const str = await response.text()
+  const doc = parser.parseFromString(str, "text/html")
+  const main = doc.querySelector('main')
+  if (!main) {
+    throw new Error(`Pas de <main/> dans ${url}`)
+  }
+  return main
+}
+
+async function fetchStyle(url) {
+  const response = await window.fetch(url)
+  if (response.ok === false) {
+    throw new Error(`Pas de style.css pour ${url}`)
+  }
+  return await response.text()
+}
+
 export const arts = await Promise.all(
   data.students.map(async student => {
     const { github } = student
     // const github = 'jniac'
+    
+    /** @type {Error[]} */
+    const errors = []
+    /** @type {HTMLElement | null} */
+    let mainElement = null
+    /** @type {string | null} */
+    let style = null
+
     try {
-      const style = await window
-        .fetch(`../../art/${github}/colorful/style.css`)
-        .then(response => {
-          if (response.ok) {
-            return response.text()
-          }
-          throw new Error(`Pas de style.css pour ${github}`)
-        })
-      const mainElement = await window
-        .fetch(`../../art/${github}/colorful/index.html`)
-        .then(response => {
-          if (response.ok) {
-            return response.text()
-          }
-          throw new Error(`Pas de index.html pour ${github}`)
-        })
-        .then(text => {
-          const doc = parser.parseFromString(text, "text/html")
-          const main = doc.querySelector('main')
-          if (!main) {
-            throw new Error(`Pas de <main/> art/${github}/colorful/index.html`)
-          }
-          return main
-        })
-      return { student, ok: true, style, mainElement }
+      mainElement = await fetchMainElement(`../../art/${github}/colorful/index.html`)
     } catch (error) {
+      errors.push(error)
+    }
+
+    try {
+      style = await fetchStyle(`../../art/${github}/colorful/style.css`)
+    } catch (error) {
+      errors.push(error)
+    }
+
+    if (mainElement === null || style === null) {
       const mainElement = document.createElement('main')
       mainElement.classList.add('center')
       mainElement.style.textAlign = 'center'
       mainElement.style.border = 'solid 1px #666'
-      mainElement.innerHTML = `${student.github} (${student.names.join(' ')})<br>${error.message}`
+      mainElement.innerHTML = `${student.github} (${student.names.join(' ')})<br>${errors.map(e => e.message).join('<br>')}`
       return { student, ok: false, style: '', mainElement }
     }
+
+    return { student, ok: true, style, mainElement }
   })
 )
