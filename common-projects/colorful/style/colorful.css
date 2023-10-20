@@ -1,15 +1,19 @@
 @import url(../../../common-resources/layout/spacing.css);
 
 body {
-  height: 100vh;
+  color: #333;
   background-color: #ddd;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #333;
     color: white;
+    background-color: #333;
   }
+}
+
+body {
+  height: 100vh;
 }
 
 body,
@@ -45,7 +49,7 @@ main {
   overflow: hidden;
 }
 
-*[class*=color] {
+*[class*='color'] {
   --over-feedback-color: #fff;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;

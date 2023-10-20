@@ -16,16 +16,15 @@ header .title {
   display: flex;
   align-items: center;
   font-family: 'Fira Code', monospace;
-  font-size: .66em;
-  letter-spacing: .2em;
+  font-size: 0.66em;
+  letter-spacing: 0.2em;
 }
-
 
 header .icon {
   width: 2em;
   height: 2em;
   background-color: currentColor;
-  opacity: .33;
+  opacity: 0.33;
 
   --url: url(../assets/baseline-fullscreen.svg);
   mask-image: var(--url);
@@ -33,15 +32,15 @@ header .icon {
   -webkit-mask-image: var(--url);
   -webkit-mask-size: contain;
 
-  transition: opacity .3s ease-out;
+  transition: opacity 0.3s ease-out;
   cursor: pointer;
 }
 
 header .icon:hover {
   opacity: 1;
-  transition: opacity .1s ease-out;
+  transition: opacity 0.1s ease-out;
 }
 
-body:fullscreen header .icon {
+:fullscreen header .icon {
   --url: url(../assets/baseline-fullscreen-exit.svg);
 }
