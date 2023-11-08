@@ -32,5 +32,5 @@ header {
   mask-repeat: no-repeat;
   -webkit-mask-size: contain;
   mask-size: contain;
-  background-color: red;
+  background-color: rgb(11, 49, 214);;
 }
