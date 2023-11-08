@@ -1,0 +1,32 @@
+header{
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    z-index: 10;
+}
+
+
+header.logo {
+    display: flex;
+    flex-direction: row;
+    align-self: stretch;
+}
+
+.icon{
+    width: 64px;
+    height: 64px;
+    -webkit-mask-image: url(asset/movie-open.svg);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat:no-repeat;
+    aspect-ratio: 1;
+    background-color: black;
+}
+
+.icon:hover{
+    background-color:white;
+    transition-duration: 0.3s;
+}

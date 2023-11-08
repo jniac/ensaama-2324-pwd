@@ -1,9 +1,43 @@
 /* Reset Css */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa:wght@300&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ruda:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa:wght@300&family=Cormorant+Garamond:wght@300&family=Crimson+Text&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ruda:wght@400;500;600;700;800;900&display=swap');
-@import url(header.css);
 @import url(../../../../../common-resources/reset.css);
 
 body{
     font-family: 'Crimson Text', serif;
+}
+
+main {
+    height:100vh;
+    display: flex;
+    flex-direction:row;
+}
+
+main > div {
+    width: 50%;
+}
+
+div.left{
+    width: 50%;
+    height: 100VH;
+    background-image: url(../assets/latetesousleau_wallpaper.png);
+    background-size: cover;
+    background-position: center;
+}
+
+div.right{
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+    padding: 4em;
+
+    overflow: scroll;
+
+    background-color: aliceblue;
+}
+
+div.right h1{
+    font-size: 4em;
+    margin-bottom: 10rem;
 }

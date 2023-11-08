@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500&display=swap');
+
+
+header {
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+   
+
+}
+
+ 
+
+div.achat-icon{
+
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    justify-content: center;
+    background-color: rgb(206, 28, 28);
+    -webkit-mask-image: url(./assets/cart-2-bold.svg);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    margin: 10px;
+    
+}
+
+div.logo h1{
+
+    font-family: 'Frank Ruhl Libre', serif;
+    padding: 16px;
+
+}

@@ -1,4 +1,6 @@
 
 node_modules
+tmp
+trash
 
 .DS_Store
