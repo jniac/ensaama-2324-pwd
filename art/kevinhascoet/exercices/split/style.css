@@ -1,12 +1,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url(header.css);
+@import url(responsive.css);
 @import url(../../../../common-resources/reset.css);
 
 
 body, body * {
   margin:0;
   font-family: 'Open Sans', sans-serif, bold;
+  color: #071629 ;
 }
 
 
@@ -19,25 +21,98 @@ section.base{
 div.left{
   width: 50%;
   background-size: cover;
-  background-image: url(assets/eau.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0)),
+  url(assets/eau.jpg);
 }
+
 
 
 
 div.right{
   width: 50%;
-  padding: 128px;
+  padding: 64px;
+  padding-right: 128px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  font-size: 32px;
+  gap: 48px;
+  font-size: 28px;
   overflow: scroll;
   background-color: aliceblue;
+
 }
 
 
 h1{
-  font-size: 128px;
-  
+  font-size: 100px;
+  margin-bottom: 250px;
 }
 
+
+
+
+div.slt{
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+
+img{
+  width: 300px;
+  transition: all .4s ease-in-out;
+}
+img:hover{
+  filter: hue-rotate(140deg);
+}
+
+
+h2{
+  font-size: 80px;
+  margin-top: -26px;
+}
+
+div.tg{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+
+div.trait{
+  transition: all 1s ease-in-out;
+  border-top: 12px solid #D64747;
+  width: 172px;
+}
+
+div.trait:hover{
+  width: 730px;
+}
+
+
+
+#martin{
+  transition: all 1s ease-in-out;
+  font-size:28px;
+}
+#martin:hover{
+  font-size: 36px;
+}
+
+
+#graig{
+  transition: all 1s ease-in-out;
+}
+#graig:hover{
+  letter-spacing: 4px;
+}
+
+
+#safia{
+  transition: all 1s ease-in-out;
+  column-count: 3;
+  column-gap: 2em;
+  text-align: justify;
+}
+#safia:hover{
+  column-gap:0em;
+}

@@ -1,0 +1,24 @@
+
+.jnc .color-a {
+  background-image: linear-gradient(
+    90deg,
+    rgb(52, 40, 65),
+    rgb(35, 27, 42));
+}
+
+.jnc .color-a.alt {
+  background-image: linear-gradient(
+    rgb(32, 24, 42),
+    rgb(20, 15, 27));
+}
+
+.jnc .color-b {
+  background-color: rgb(48, 87, 185);
+}
+
+.jnc .color-c {
+  --over-feedback-color: black;
+  background-image: linear-gradient(
+    rgb(196, 221, 152),
+    rgb(244, 255, 225));
+}
