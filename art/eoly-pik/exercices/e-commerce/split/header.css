@@ -19,7 +19,7 @@ div.achat-icon{
     width: 50px;
     aspect-ratio: 1 / 1;
     justify-content: center;
-    background-color: rgb(67, 77, 230);
+    background-color: rgb(253, 40, 40);
     -webkit-mask-image: url(./assets/cart-2-bold.svg);
     -webkit-mask-size: contain;
     -webkit-mask-repeat: no-repeat;
