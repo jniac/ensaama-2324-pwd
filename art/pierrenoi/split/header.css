@@ -19,7 +19,8 @@ header {
 }
 
 .icon.logo {
-    color: black;
+    background-image: url(assets/drone.svg);
+    background-color: var(--accent-color);
     font-size: x-large;
     background-size: contain;
 }
@@ -32,5 +33,5 @@ header {
   mask-repeat: no-repeat;
   -webkit-mask-size: contain;
   mask-size: contain;
-  background-color: red;
+  background-color: var(--accent-color);
 }
