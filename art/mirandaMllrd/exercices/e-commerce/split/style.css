@@ -1,5 +1,30 @@
 @import url(header.css);
 @import url(../../../../../common-resources/reset.css);
+@import url(responsive.css);
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&family=Yeseva+One&display=swap');
+
+:root {
+  --text-color: rgb(0, 0, 0);
+  --background-color: rgb(194, 194, 233);
+  --accent-color: blueviolet;
+
+}
+
+:root.dark-theme{
+  --text-color: rgb(194, 194, 233);
+  --background-color: rgb(20, 20, 27);
+  --accent-color: blueviolet;
+}
+
+body{
+  color: var(--text-color);
+  font-family: 'Lugrasimo', cursive;
+  font-family: 'Yeseva One', serif;
+}
+
+.right {
+  background-color: (var(--background-color));
+}
 
 /* Split the screen in half*/
 main {
@@ -26,7 +51,8 @@ main {
   flex-direction: column;
   padding: 96px 64px;
   gap:16px;
-  background-color: rgb(194, 194, 233);
+  background-color: var(--background-color);
+  /* background-color: rgb(194, 194, 233); */
   overflow: scroll;
 }
 
@@ -55,13 +81,14 @@ div.img {
 }
 
 .title-block .text {
+  font-weight: 16px;
   flex: 2;
   display: flex;
   flex-direction: column;
 }
 
 .title-block .text .dash {
-  background-color: blueviolet;
+  background-color: var(--accent-color);
   flex: 0 0 1px;
   width: 100%;
 }

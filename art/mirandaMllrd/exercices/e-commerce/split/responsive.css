@@ -1,0 +1,39 @@
+body {
+    font-size: 20 px;
+}
+
+@media (min-width:1101px){
+    body{
+    font-size: 28px;
+}
+}
+
+/* tablet < 900
+desktop 901-1200
+desktop-wide 1201-1600
+desktop-ultra-wide > 1601*/
+
+/* tablet */
+@media(min-width:900){
+    body{
+        font-size: 16px;
+    }
+}
+
+@media(min-width:901) and (max-width:1200){
+    body{
+        font-size: 22px;
+    }
+}
+
+@media(min-width:1201) and (max-width:1600){
+    body{
+        font-size: 28px;
+    }
+}
+
+@media(min-width:1601){
+    body{
+        font-size: 32px;
+    }
+}
