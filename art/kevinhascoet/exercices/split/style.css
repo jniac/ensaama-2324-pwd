@@ -51,6 +51,7 @@ div.right{
   font-size: 1rem;
   overflow: scroll;
   background-color: var(--bg);
+  transition: all .5s ease-in-out;
 
 }
 
@@ -72,7 +73,7 @@ div.slt{
 
 img{
   width: 300px;
-  transition: all .4s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 img:hover{
   filter: hue-rotate(140deg);
@@ -83,11 +84,17 @@ h2{
   font-size: 3rem;
   margin-top: -1rem;
   color: var(--txt);
-  transition: all .5s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 h2:hover{
   color: var(--accent);
 }
+
+h3{
+  font-size: 1.3rem;
+  transition: all 1s ease-in-out;
+}
+
 
 div.tg{
   display: flex;
