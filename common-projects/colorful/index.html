@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=DEVICE-WIDTH, initial-scale=1.0">
+  <title>Colorful!</title>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  <div class="drag-highlight"></div>
+  
+  <header>
+    <div class="title">
+      colorful
+    </div>
+    <div style="flex: 1;"></div>
+    <div 
+      class="icon" 
+      onclick="
+        document.fullscreenElement 
+          ? document.exitFullscreen() 
+          : document.body.requestFullscreen()
+      "
+    ></div>
+  </header>
+  
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
