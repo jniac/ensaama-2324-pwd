@@ -10,7 +10,10 @@
   <body>
     <header>
       <div class="icon logo"></div>
-      <div class="icon cart"></div>
+     
+      <div class="header-left">
+        <div class="icon theme-button"></div>
+        <div class="icon cart"></div>
     </header>
 
     <main>
@@ -46,5 +49,14 @@
         </p>
       </div>
     </main>
+
+    <script>
+      const element = document.querySelector('header .theme-button')
+      element.onclick = () => {
+        document.documentElement.classList.toggle('dark-theme')
+      }
+    </script>
+
+    
   </body>
 </html>
