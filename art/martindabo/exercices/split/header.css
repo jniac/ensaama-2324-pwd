@@ -23,7 +23,21 @@ header .logo-icon:hover {
   rotate: 0.5turn;
 }
 
-header .shop {
+header .theme-button {
+  height: 64px;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  cursor: pointer;
+  background-image: url(assets/light-dark.svg);
+  background-size: contain;
+  color: #ff8000;
+}
+
+header .header-left {
+  display: flex;
+}
+
+header .boutonshop {
   height: 64px;
   aspect-ratio: 1 / 1;
   position: relative;
@@ -33,7 +47,7 @@ header .shop {
   justify-content: space-between;
 }
 
-header .shop:hover {
-    transform: scale(1.2);
-    transition-duration: 0.2s;
-  }
+header .boutonshop:hover {
+  transform: scale(1.2);
+  transition-duration: 0.2s;
+}

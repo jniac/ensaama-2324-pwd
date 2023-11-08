@@ -11,18 +11,44 @@ header {
     z-index:5;
 }
 
+header .header-left {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+header .theme-button {
+    cursor: pointer;
+    user-select: none;
+  }
+
+
 header .icon {
     width: 64px;
     height: 64px;
-    background-size: contain;
-    background-repeat: no-repeat;
+
+    --url: url(assets/cart.svg);
+    mask-image: var(--url);
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    -webkit-mask-image: var(--url);
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
 }
 
 header .icon.logo {
-    background-image: url(assets/purple-heart.svg);
+    --url: url(assets/purple-heart.svg);
 }
 
 header .icon.cart {
-    background-image: url(assets/cart.svg);
+    --url: url(assets/cart.svg);
+    background-color: var(--accent-color);
+}
+
+header .theme-button {
+    --url: url(assets/moon.svg);
+    background-color: var(--accent-color);
     
 }
