@@ -1,13 +1,27 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url(header.css);
+@import url(responsive.css);
 @import url(../../../../common-resources/reset.css);
+
+
+:root{
+  --txt: #071629;
+  --bg: aliceblue;
+  --accent: #D64747;
+}
+
+:root.dark{
+  --txt: aliceblue;
+  --bg: #020d1b;
+  --accent: #D64747;
+}
 
 
 body, body * {
   margin:0;
   font-family: 'Open Sans', sans-serif, bold;
-  color: #071629 ;
+  color: var(--txt);
 }
 
 
@@ -34,15 +48,15 @@ div.right{
   display: flex;
   flex-direction: column;
   gap: 48px;
-  font-size: 28px;
+  font-size: 1rem;
   overflow: scroll;
-  background-color: aliceblue;
+  background-color: var(--bg);
 
 }
 
 
 h1{
-  font-size: 100px;
+  font-size: 5rem;
   margin-bottom: 250px;
 }
 
@@ -66,8 +80,13 @@ img:hover{
 
 
 h2{
-  font-size: 80px;
-  margin-top: -26px;
+  font-size: 3rem;
+  margin-top: -1rem;
+  color: var(--txt);
+  transition: all .5s ease-in-out;
+}
+h2:hover{
+  color: var(--accent);
 }
 
 div.tg{
@@ -79,7 +98,7 @@ div.tg{
 
 div.trait{
   transition: all 1s ease-in-out;
-  border-top: 12px solid #D64747;
+  border-top: 12px solid var(--accent);
   width: 172px;
 }
 
@@ -91,10 +110,10 @@ div.trait:hover{
 
 #martin{
   transition: all 1s ease-in-out;
-  font-size:28px;
+  font-size:1rem;
 }
 #martin:hover{
-  font-size: 36px;
+  font-size: 1.5rem;
 }
 
 
