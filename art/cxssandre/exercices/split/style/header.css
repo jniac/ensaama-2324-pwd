@@ -5,16 +5,17 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: .5em;
+    padding: 1em;
     z-index: 10;
 }
 
 header .logo {
-    --size: calc(1em + 50px); /* It's complicated: a mix between fixed and dynamic sizes. */
+    --url: url(../assets/crayon.png);
+    --size: calc(1em + 50px);
   
     width: var(--size);
     height: var(--size);
-    background-color: black;
+    background-color: var(--accent-color);
   
     mask-image: var(--url);
     mask-size: contain;
@@ -26,11 +27,11 @@ header .logo {
     -webkit-mask-repeat: no-repeat;
   }
   
-  header div.logo icon {
+  header div.logo.icon {
     background-color: white;
     --url: url(../assets/crayon.png);
   }
   
-  header div.logo small {
+  header div.logo.small {
     --url: url(../assets/chat.png);
   }
