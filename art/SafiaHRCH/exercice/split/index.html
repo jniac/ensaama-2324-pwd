@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"class>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../split/style/style.css" />
   </head>
 
   <body>
     <header>
-      <div class="logo"><h1>LOGO</h1></div>
+      <div class="logo">LOGO<h1></h1></div>
 
       <div class="palette">
         <div class="icon-palette"></div>
+        <div class="theme-button">dark-theme</div>
       </div>
     </header>
 
@@ -68,7 +69,36 @@
           doloribus ullam vel, ratione dolorem fuga quae, culpa recusandae rem
           optio voluptates, quibusdam excepturi harum debitis omnis!
         </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
+          doloremque suscipit similique, repellendus possimus sapiente quia,
+          commodi a consequatur voluptatum praesentium quod explicabo nobis
+          itaque amet voluptates. Rem, optio unde. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Earum quos sed perspiciatis deserunt
+          doloribus ullam vel, ratione dolorem fuga quae, culpa recusandae rem
+          optio voluptates, quibusdam excepturi harum debitis omnis!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
+          doloremque suscipit similique, repellendus possimus sapiente quia,
+          commodi a consequatur voluptatum praesentium quod explicabo nobis
+          itaque amet voluptates. Rem, optio unde. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Earum quos sed perspiciatis deserunt
+          doloribus ullam vel, ratione dolorem fuga quae, culpa recusandae rem
+          optio voluptates, quibusdam excepturi harum debitis omnis!
+        </p>
       </div>
     </section>
+
+    <script>
+      var a = 3
+      let b = 2
+      const element = document.querySelector('header .theme-button')
+
+      element.onclick = () => {
+        document.documentElement.classList.toggle('dark-theme')
+      }
+    </script>
+    <script src="src/main.js" type="module"></script>
   </body>
 </html>
