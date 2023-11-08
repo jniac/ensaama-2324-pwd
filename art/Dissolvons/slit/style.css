@@ -1,4 +1,11 @@
 @import url(../../../../common-resources/reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@700;800&display=swap');
+@import url(responsive.css);
+@import url(left.css);
+@import url(header.css);
+body{
+  font-family: 'Heebo', sans-serif;
+}
 
 main {
   height: 100vh;

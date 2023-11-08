@@ -1,6 +1,7 @@
 @import url(header.css);
-@import url(../../../../common-resources/reset.css);
+@import url(../../../../../common-resources/reset.css);
 @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500&display=swap');
+
 section.intro{
     display: flex;
     flex-direction: row;

@@ -81,3 +81,15 @@ p.letterine::first-letter {
     line-height: 1rem;
 }
 
+#background-video {
+    width: 35vw;
+    object-fit: cover;
+}
+
+#btnVideo{
+    font-size: 50px;
+    background: 0;
+    border: 0;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
