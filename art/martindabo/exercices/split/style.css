@@ -30,7 +30,6 @@ div.right {
 }
 
 h1 {
-    margin-bottom: 250px;
     font-family: 'Dune Rise', sans-serif;
 }
 
@@ -54,6 +53,7 @@ background-position: center;
 gap: 16px;
 font-size: 32px;
 }
+
 
 img {
     width: 35%;
@@ -81,8 +81,27 @@ h3 {
     font-size: 35px
 }
 
+h4 {
+    font-size: 40px;
+    font-family: 'Dune Rise', sans-serif;
+    background-position: center;
+    margin-top: 50px;
+}
+
 div.trait {
     border-top: 20px solid #ff8000;
-    width: 445px;
+    width: 490px;
+    margin-bottom: 50px;
+}
+
+div.trait2 {
+    border-top: 20px solid #ff8000;
+    width: 400px;
+    margin-bottom: 250px;
+}
+
+div.trait3 {
+    border-top: 20px solid #ff8000;
+    width: 250px;
     margin-bottom: 50px;
 }

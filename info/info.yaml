@@ -1,0 +1,104 @@
+teacher:
+  names: 
+  - Joseph
+  - Merdrignac
+  github: jniac
+  prefix: jnc
+
+students:
+- names: 
+  - Cassandre
+  - Auvray
+  github: cxssandre
+  prefix: cxs
+
+- names: 
+  - Ingrid
+  - Cazenave
+  github: ingrid-caz
+  prefix: ing
+
+- names:
+  - Martin
+  - D'Aboville
+  github: martindabo
+  prefix: mar
+
+- names:
+  - Louise
+  - Dessart
+  github: ldssrt
+  prefix: lds
+
+- names:
+  - Eolyna
+  - Dumont
+  github: eoly-pik
+  prefix: eol
+
+- names:
+  - Pierre
+  - Faure
+  github: pierrenoi
+  prefix: pie
+
+- names:
+  - Safia
+  - Harireche
+  github: SafiaHRCH
+  prefix: saf
+
+- names:
+  - Kévin
+  - Hascoet
+  github: kevinhascoet
+  prefix: kev
+
+- names:
+  - Sofiya
+  - Krasilnikova
+  github: paragorika
+  prefix: par
+
+- names: 
+  - Graig-Lucien
+  - Lowen N'Zouba
+  github: Graigouzzz
+  prefix: gra
+
+- names:
+  - Celia
+  - Lunt
+  github: babib3l
+  prefix: bab
+
+- names:
+  - Miranda
+  - Maillard
+  github: mirandaMllrd
+  prefix: mir
+
+- names:
+  - Lorine
+  - Mercier
+  github: LorineMercier
+  prefix: lor
+
+- names:
+  - Raphaël
+  - Selaries
+  github: RSelaries
+  prefix: rse
+
+- names:
+  - Allie
+  - Tessier
+  github: alliezgood
+  prefix: all
+
+- names:
+  - Lou
+  - Vachey
+  github: Dissolvons
+  prefix: dis
+
