@@ -1,0 +1,48 @@
+header{
+    height:100px;
+    width: 100vw;
+    position: fixed;
+
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px;
+}
+
+header .logo-icon,
+header .logo-small{
+    flex: 1;
+}
+
+header div.logo{
+    display:flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+header .logo-small {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.logo-icon{
+    height:80px;
+    width:80px;
+    background-color: white;
+    -webkit-mask-image: url(../assets/crayon.png);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+}
+
+.logo-small{
+    height:60px;
+    width:60px;
+    background-color: black;
+    -webkit-mask-image: url(../assets/chat.png);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+}
