@@ -1,3 +1,4 @@
+@import url(../../../../common-resources/reset.css);
 
 header{
     position: fixed;
@@ -5,28 +6,19 @@ header{
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     padding: 8px;
 } 
 
 /* Gestion de l'espace */
-header .logo{
-    flex: 1;
-}
 
-
-header .logo{
-    display: flex;
-    flex-direction: row;
-    align-self: stretch;
-}
-
-.logo-icon{
+div.icon-palette{
+    width: 50px;
     aspect-ratio: 1 / 1;
-    background-color:  rgb(77, 44, 35);
+    background-color:  rgb(245 160 209);
     transition: all .3s ease-in-out;
 
-    -webkit-mask-image: url(assets/art.svg);
+    -webkit-mask-image: url(./assets/art.svg);
     -webkit-mask-size: contain;
     -webkit-mask-repeat: no-repeat;
 
@@ -34,6 +26,6 @@ header .logo{
     cursor: pointer;
 }
 
-.logo-icon:hover{
-    background-color:   rgb(255, 170, 13);
+div.icon-palette:hover{
+    background-color:   rgb(209 1 53);
 }
