@@ -1,0 +1,30 @@
+.menu-deroulant {
+    position: relative;
+}
+
+.contenu-menu {
+    align-items: center;
+    display: none;
+    position: absolute;
+    overflow: auto;
+    appearance: none;
+    border: none;
+    background-color: var(--button-bg);
+    padding: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 20px;
+    width: 250px;
+    font-size: 20px;
+}
+
+.menu-deroulant:hover .contenu-menu {
+    display: block;
+    background-color: beige;
+    color: rgb(0, 0, 0);
+    transform: scale(1.05);
+    transition-duration: 0.2s;
+    font-size: 40px;
+
+}
+

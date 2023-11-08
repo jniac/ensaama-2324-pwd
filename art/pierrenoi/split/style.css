@@ -1,6 +1,21 @@
 @import url(../../../common-resources/reset.css);
 @import url(header.css);
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url(responsive2.css);
+@import url(left.css);
+
+:root {
+    --text-color: black;
+    --background-color: aliceblue;
+    --accent-color: rgb(12, 107, 52);
+}
+
+:root.dark {
+    --text-color: aliceblue;
+    --background-color: #000214;
+    --accent-color: rgb(141, 222, 247);
+}
+
 
 body{
     font-family: 'Barlow Condensed', sans-serif;
@@ -8,8 +23,14 @@ body{
 
 }
 
+.right {
+    background-color: var(--background-color);
+    overflow: scroll;
+}
+
 img{
     max-width: 40%;
+    height: auto;
 }
 
 main {
@@ -35,26 +56,10 @@ div.right {
     font-size: 2em;
 
     overflow: scroll;
-
-    background-color: aliceblue;
+    color: var(--text-color);
+    background-color: var(--background-color);
 }
 
-
-div.icon {
-    width: 64px;
-    height: 64px;
-    color: red;
-    background-size: contain;
-   
-}
-
-div.logo {
-    width: 64px;
-    height: 64px;
-    color: black;
-    background-size: contain;
-
-}
 
 
 div.tg{
@@ -62,13 +67,24 @@ div.tg{
     flex-direction: row;
     font-size: large;
     align-items: center;
+    margin-top: 26px;
+    margin-bottom: 26px;
+    gap: 26px;    
+}
+
+div.trait{
+    border: 5px solid var(--accent-color);
+    width: auto;
     
-   
+    
 }
 
 
-.spacer {
-    flex: 0 0 10rem;
+div.pizza{
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+   
 }
 
 
@@ -76,7 +92,7 @@ div.txt{
     display: flex;
     flex-direction: column;
     font-size: large;
-    padding: 30px;
+    gap: 32px;
 }
 
 p.letterine::first-letter {
@@ -85,3 +101,15 @@ p.letterine::first-letter {
     line-height: 1rem;
 }
 
+#background-video {
+    width: 35vw;
+    object-fit: cover;
+}
+
+#btnVideo{
+    font-size: 50px;
+    background: 0;
+    border: 0;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}

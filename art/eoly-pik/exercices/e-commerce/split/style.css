@@ -1,0 +1,58 @@
+@import url(header.css);
+@import url(../../../../../common-resources/reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500&display=swap');
+
+section.intro{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Frank Ruhl Libre', serif;
+}
+
+div.left-content{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: center;
+    background-image: url(./assets/4078930-2933999-5140005978-pimin-1688415463818.jpg);
+    background-size: cover;
+    
+
+}
+
+div.right-content {
+
+    
+    width: 50%;
+    height: 100vh;
+ 
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    padding: 32px;
+    overflow: scroll;
+
+}
+
+h1.title {
+    margin-bottom: 32px;
+    font-size: 3em;
+}
+
+div.presentation {
+
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+p {
+    margin-top: 32px;
+}
+
+div.right h2{
+
+    font-size: 2em;
+}
