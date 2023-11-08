@@ -163,6 +163,18 @@ button.login:hover {
   font-family: 'Hackney', sans-serif;
 }
 
+.contenu-menu .boutonfilms {
+  appearance: none;
+  border: none;
+  background-color: var(--button-bg);
+  padding: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 250px;
+  font-size: 15px;
+}
+
 #background-video {
   width: 35vw;
   object-fit: cover;

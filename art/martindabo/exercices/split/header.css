@@ -23,7 +23,7 @@ header .logo-icon:hover {
   rotate: 0.5turn;
 }
 
-header .shop {
+header .boutonshop {
   height: 64px;
   aspect-ratio: 1 / 1;
   position: relative;
@@ -33,7 +33,7 @@ header .shop {
   justify-content: space-between;
 }
 
-header .shop:hover {
+header .boutonshop:hover {
     transform: scale(1.2);
     transition-duration: 0.2s;
   }
