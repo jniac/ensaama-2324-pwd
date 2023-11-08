@@ -3,33 +3,54 @@
 
 header {
     position: fixed;
+    top: 0;
     width: 100vw;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
-   
-
-}
-
- 
-
-div.achat-icon{
-
-    width: 50px;
-    aspect-ratio: 1 / 1;
-    justify-content: center;
-    background-color: rgb(206, 28, 28);
-    -webkit-mask-image: url(./assets/cart-2-bold.svg);
+    padding: 0.5em;
+    z-index: 10;
+  }
+  
+  header .header-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  header .theme-button {
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  header .icon {
+    --url: url(assets/image.svg);
+    --size: calc(
+      1em + 16px
+    ); /* It's complicated: a mix between fixed and dynamic sizes. */
+  
+    width: var(--size);
+    height: var(--size);
+    background-color: var(--la-couleur);
+  
+    mask-image: var(--url);
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    -webkit-mask-image: var(--url);
     -webkit-mask-size: contain;
+    -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
-    margin: 10px;
-    
-}
-
-div.logo h1{
-
-    font-family: 'Frank Ruhl Libre', serif;
-    padding: 16px;
-
-}
+  }
+  
+  header .icon.logo {
+    background-color: white;
+    --url: url(assets/pets.svg);
+  }
+  
+  header .icon.cart {
+    background-color: var(--la-couleur);
+    --url: url(assets/cart.svg);
+  }
+  
