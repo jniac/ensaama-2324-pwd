@@ -12,8 +12,8 @@ font-family: 'Oswald', sans-serif;
 /* Autres pages CSS */
 @import url(intro.css);
 @import url(developement.css);
-@import url(split.css);
 @import url(transition.css);
+@import url(menu-deroulant.css);
 
 body {
   font-size: 16px;
