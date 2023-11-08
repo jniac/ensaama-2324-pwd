@@ -4,11 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style/style.css" />
   </head>
   <body>
+    <header>
+      <div class="icon logo"></div>
+
+      <div class="header-left">
+        <div class="theme-button">dark-theme</div>
+        <div class="icon cart"></div>
+      </div>
+    </header>
+
     <main>
-      <div class="left"></div>
+      <div class="left">
+        <div class="image"></div>
+        <div class="image"></div>
+      </div>
 
       <div class="right">
         <h1>Un titre ici</h1>
@@ -23,7 +35,7 @@
         </p>
 
         <div class="title-block">
-          <img src="assets/image-1.jpg" alt="" />
+          <img src="assets/pexels-viktor-4327575.jpg" alt="" />
           <div class="text">
             <h2>Un second titre ici</h2>
             <div class="separator"></div>
@@ -51,9 +63,9 @@
         </p>
 
         <div class="spacer"></div>
-        
+
         <div class="title-block">
-          <img src="assets/image-2.jpg" alt="" />
+          <img src="assets/pexels-abdurrahim-israfilov-18415108.jpg" alt="" />
           <div class="text">
             <h2>Un second titre ici</h2>
             <div class="separator"></div>
@@ -82,8 +94,15 @@
           eos officia. Quisquam, dolorum.
         </p>
       </div>
-
-      <script src="main.js" type="module"></script>
     </main>
+
+    <script>
+      const element = document.querySelector('header .theme-button')
+      element.onclick = () => {
+        document.documentElement.classList.toggle('dark-theme')
+      }
+    </script>
+
+    <script src="src/main.js" type="module"></script>
   </body>
 </html>
