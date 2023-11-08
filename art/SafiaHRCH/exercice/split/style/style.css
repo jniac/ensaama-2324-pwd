@@ -1,0 +1,90 @@
+@import url(header.css);
+@import url(../../../../../common-resources/reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+@import url(responsive.css);
+
+:root {
+    --text-color: black;
+    --background-color: rgb(247, 167, 208);
+    --accent-color: rgb(209 1 53);
+}
+
+:root.dark-theme{
+    --text-color: rgb(255 178 211);;
+    --background-color: rgb(124 12 52);;
+    --accent-color: rgb(236 26 97);
+}
+
+body{
+    font-family: 'Kosugi Maru', sans-serif;
+    /* font-size: x-large; */
+    color: var(--text-color)
+}
+
+section.intro{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+div.left {
+    height: 100vh;
+    width: 50%;
+    background-image: url(../assets/maison_cage.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+}
+
+div.right{
+    height: 100vh;
+    width: 50%;
+    /* display: flex; */
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    padding: 32px;
+    background-color: var(--background-color);
+    overflow: scroll;
+}
+
+div.right h1.title{
+    font-size: 4em;
+    margin-bottom: 150px;
+}
+
+
+
+div.text-block {
+
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+div.text-block .image{
+    flex: 1;
+    background-image: url(../assets/maison_cage.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+div.text-block .text{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+div.text-block .text .dash{
+    background-color: var(--accent-color);
+    flex: 0 0 1px;
+    width: 100%;
+}
+
+p{
+    margin-top: 50px;
+}                                                     

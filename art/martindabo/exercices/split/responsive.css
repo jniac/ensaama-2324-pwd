@@ -1,0 +1,15 @@
+:root {
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  div.left {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1101px) {
+  :root {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,78 @@
+@import url(../../../common-resources/layout/spacing.css);
+
+body {
+  color: #333;
+  background-color: #ddd;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: white;
+    background-color: #333;
+  }
+}
+
+body {
+  height: 100vh;
+}
+
+body,
+main,
+main div {
+  display: flex;
+  container-type: size;
+  flex: 1;
+
+  &.column {
+    flex-direction: column;
+  }
+
+  .debug & {
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: solid 1px #ddd;
+    }
+
+    &:nth-child(2n + 1) {
+      background-color: #fff;
+    }
+
+    &:nth-child(2n) {
+      background-color: #eee;
+    }
+  }
+}
+
+main {
+  overflow: hidden;
+}
+
+*[class*='color'] {
+  --over-feedback-color: #fff;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.solid {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.square {
+  aspect-ratio: 1;
+  flex: 0 0 100cqmin;
+  block-size: 100cqmin;
+}
+
+.over-feedback {
+  background-color: var(--over-feedback-color);
+}
