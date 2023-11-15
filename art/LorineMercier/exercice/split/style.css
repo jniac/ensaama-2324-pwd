@@ -15,6 +15,10 @@
   --accent-color: orange;
 }
 
+body {
+  color: var(--text-color);
+}
+
 main {
   height: 100vh;
   display: flex;
