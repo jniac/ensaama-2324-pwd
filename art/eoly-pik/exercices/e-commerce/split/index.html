@@ -10,39 +10,102 @@
 <body>
     
     <header>
-        <div class="logo">
-            <h1>logo</h1>
-        </div>
-        <div class="achat">
-            <div class="achat-icon"></div>
+        <div class="icon logo"></div>
+
+        <div class="header-left">
+          <div class="theme-button">dark-theme</div>
+          <div class="icon cart"></div>
         </div>
     </header>
 
-    <section class="intro">
-        <div class="left-content"></div>
-        <div class="right-content">
-            <h1 class="title">Titre</h1>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sint, cupiditate officia autem, corrupti placeat ducimus dolorem inventore repellat dolores rerum reiciendis tenetur provident error necessitatibus. Explicabo aut a dolorem.
-            
-            <div class="presentation">
-                <div class="left"><img src="./assets/4078930-2933999-5140005978-pimin-1688415463818.jpg" height="180px"></div>
-                <div class="right">
-                    <h2>Titre</h2>
-                    <h3>sous-titre</h3>
-
-                </div>
-            </div>
-            
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis exercitationem non repudiandae. Temporibus, voluptatibus, ut doloribus ullam voluptatem provident natus porro necessitatibus atque maxime ratione at deserunt quaerat sunt minima!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, corrupti consequuntur enim recusandae perspiciatis a vel ipsa alias earum blanditiis! Tempora cupiditate pariatur dolorem explicabo eligendi beatae corrupti? Ipsam, provident.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, corrupti consequuntur enim recusandae perspiciatis a vel ipsa alias earum blanditiis! Tempora cupiditate pariatur dolorem explicabo eligendi beatae corrupti? Ipsam, provident.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, corrupti consequuntur enim recusandae perspiciatis a vel ipsa alias earum blanditiis! Tempora cupiditate pariatur dolorem explicabo eligendi beatae corrupti? Ipsam, provident.</p>
-
+    <main>
+        <div class="left">
+          <div class="image"></div>
+          <div class="image"></div>
         </div>
-            
-
-        </section>
-
-
-</body>
-</html>
+  
+        <div class="right">
+          <h1>PIKMINNNN</h1>
+  
+          <div class="spacer"></div>
+  
+          <p class="lettrine">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam sequi
+            unde, repellendus praesentium perferendis voluptatem dolor molestiae
+            corporis officiis magni inventore est nobis eaque explicabo reiciendis
+            eos officia. Quisquam, dolorum.
+          </p>
+  
+          <div class="title-block">
+            <img src="assets/4078930-2933999-5140005978-pimin-1688415463818.jpg" alt="" />
+            <div class="text">
+              <h2>Un second titre ici</h2>
+              <div class="separator"></div>
+              <h3>Un sous-titre inspiré, inspirant, captivant.</h3>
+            </div>
+          </div>
+  
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam sequi
+            unde, repellendus praesentium perferendis voluptatem dolor molestiae
+            corporis officiis magni inventore est nobis eaque explicabo reiciendis
+            eos officia. Quisquam, dolorum.
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam sequi
+            unde, repellendus praesentium perferendis voluptatem dolor molestiae
+            corporis officiis magni inventore est nobis eaque explicabo reiciendis
+            eos officia. Quisquam, dolorum.
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam sequi
+            unde, repellendus praesentium perferendis voluptatem dolor molestiae
+            corporis officiis magni inventore est nobis eaque explicabo reiciendis
+            eos officia. Quisquam, dolorum.
+          </p>
+  
+          <div class="spacer"></div>
+  
+          <div class="title-block">
+            <img src="assets/nintendo_pikmin-3-orange.jpg" alt="" />
+            <div class="text">
+              <h2>Un second titre ici</h2>
+              <div class="separator"></div>
+              <h3>Un sous-titre inspiré, inspirant, captivant.</h3>
+            </div>
+          </div>
+  
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam sequi
+            unde, repellendus praesentium perferendis voluptatem dolor molestiae
+            corporis officiis magni inventore est nobis eaque explicabo reiciendis
+            eos officia. Quisquam, dolorum.
+          </p>
+  
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam sequi
+            unde, repellendus praesentium perferendis voluptatem dolor molestiae
+            corporis officiis magni inventore est nobis eaque explicabo reiciendis
+            eos officia. Quisquam, dolorum.
+          </p>
+  
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam sequi
+            unde, repellendus praesentium perferendis voluptatem dolor molestiae
+            corporis officiis magni inventore est nobis eaque explicabo reiciendis
+            eos officia. Quisquam, dolorum.
+          </p>
+        </div>
+      </main>
+  
+      <script>
+        const element = document.querySelector('header .theme-button')
+        element.onclick = () => {
+          document.documentElement.classList.toggle('dark-theme')
+        }
+      </script>
+  
+      <script src="src/main.js" type="module"></script>
+    </body>
+  </html>
+  

@@ -1,9 +1,94 @@
+@import url(header.css);
+@import url(../../../../../common-resources/reset.css);
+@import url(responsive.css);
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&family=Yeseva+One&display=swap');
+
+:root {
+  --text-color: rgb(0, 0, 0);
+  --background-color: rgb(194, 194, 233);
+  --accent-color: blueviolet;
+
+}
+
+:root.dark-theme{
+  --text-color: rgb(194, 194, 233);
+  --background-color: rgb(20, 20, 27);
+  --accent-color: blueviolet;
+}
+
+body{
+  color: var(--text-color);
+  font-family: 'Lugrasimo', cursive;
+  font-family: 'Yeseva One', serif;
+}
+
+.right {
+  background-color: (var(--background-color));
+}
+
 /* Split the screen in half*/
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
 
 .split {
-height: 100%;
-width : 50%;
-display: flex;
-flex-direction: column;
+  height: 100%;
+  width: 50%;
+}
 
+/* Left side*/
+.left {
+  background-image: url(assets/fond-mauve.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/*Right side*/
+.right {
+  display: flex;
+  flex-direction: column;
+  padding: 96px 64px;
+  gap:16px;
+  background-color: var(--background-color);
+  /* background-color: rgb(194, 194, 233); */
+  overflow: scroll;
+}
+
+div.split h1.Titre {
+  margin-bottom: 64px;
+}
+
+div.img {
+  height: 190px;
+  width: 120px;
+  background-image: url(assets/fond-mauve.jpg);
+  background-size: contain;
+}
+
+.title-block {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.title-block .image {
+  flex: 1;
+  background-image: url(assets/fond-mauve.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.title-block .text {
+  font-weight: 16px;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-block .text .dash {
+  background-color: var(--accent-color);
+  flex: 0 0 1px;
+  width: 100%;
 }

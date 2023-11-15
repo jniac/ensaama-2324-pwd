@@ -1,0 +1,80 @@
+/* Reset Css */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa:wght@300&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ruda:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa:wght@300&family=Cormorant+Garamond:wght@300&family=Crimson+Text&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ruda:wght@400;500;600;700;800;900&display=swap');
+@import url(header.css);
+@import url(responsive=.css);
+@import url(../../../../../common-resources/reset.css);
+
+:root {
+    --accent-color: black;
+  }
+  
+body{
+    font-family: 'Crimson Text', serif;
+}
+
+main {
+    height:100vh;
+    display: flex;
+    flex-direction:row;
+}
+
+
+main > div {
+    width: 50%;
+}
+
+div.left{
+    width: 50%;
+    height: 100VH;
+    background-image: url(https://i.pinimg.com/originals/45/75/6e/45756ebe4fa2d9bb6f4f565e49efb11c.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+div.right{
+    padding:4em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5px;
+
+    overflow: scroll;
+
+    background-color: aliceblue;
+}
+
+.right h1{
+
+    font-size: 4em;
+
+}
+
+.spacer {
+    flex: 0 0 10rem;
+  }
+
+p.resume{
+    font-size: 2em;
+}
+
+.photo-text{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.photo-text img{
+    height: 200;
+}
+
+.photo-text .text{
+    height: 200;
+}
+
+.photo-text .text .separator {
+    width: 80px;
+    height: 8px;
+    background-color: var(--accent-color);
+  }

@@ -1,56 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"class>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../split/style/style.css" />
   </head>
 
   <body>
-
-      
     <header>
-        <div class="logo">
-            <div class="logo-icon">LOGO</div>
-        </div>
+      <div class="logo">LOGO<h1></h1></div>
+
+      <div class="palette">
+        <div class="icon-palette"></div>
+        <div class="theme-button">dark-theme</div>
+      </div>
     </header>
-    
+
     <section class="intro">
+      <div class="left"></div>
 
-        <div class="left"></div>
+      <div class="right">
+        <h1 class="title">Title</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
+          doloremque suscipit similique, repellendus possimus sapiente quia,
+          commodi a consequatur voluptatum praesentium quod explicabo nobis
+          itaque amet voluptates. Rem, optio unde. Lorem ipsum dolor sit, amet
+          consectetur adipisicing elit. Consectetur earum facere maxime
+          excepturi molestiae unde vero impedit quam atque. Sint nesciunt iure
+          animi blanditiis quos unde est reiciendis alias repellendus.
+        </p>
 
-        <div class="right">
-            <h1 class="title">Title</h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
-                doloremque suscipit similique, repellendus possimus sapiente quia,
-                commodi a consequatur voluptatum praesentium quod explicabo nobis itaque
-                amet voluptates. Rem, optio unde.
-            </p>
-            <p class="title2">Title 2</p>
-            <p class="subtitle">subtitle</p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
-                doloremque suscipit similique, repellendus possimus sapiente quia,
-                commodi a consequatur voluptatum praesentium quod explicabo nobis itaque
-                amet voluptates. Rem, optio unde.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
-                doloremque suscipit similique, repellendus possimus sapiente quia,
-                commodi a consequatur voluptatum praesentium quod explicabo nobis itaque
-                amet voluptates. Rem, optio unde.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
-                doloremque suscipit similique, repellendus possimus sapiente quia,
-                commodi a consequatur voluptatum praesentium quod explicabo nobis itaque
-                amet voluptates. Rem, optio unde.
-            </p>
+
+        <div class="text-block">
+          <div class="image"></div>
+          <div class="text">
+            <h2 class="title2">Title 2</h2>
+            <div class="dash"></div>
+            <h3 class="subtitle">subtitle</h3>
+          </div>
         </div>
-    </section >
 
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
+          doloremque suscipit similique, repellendus possimus sapiente quia,
+          commodi a consequatur voluptatum praesentium quod explicabo nobis
+          itaque amet voluptates. Rem, optio unde. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Pariatur voluptas, autem enim dolore
+          ullam ea qui? Possimus laudantium itaque inventore tempore, aliquid
+          harum officiis in asperiores magnam, architecto minus? Inventore.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
+          doloremque suscipit similique, repellendus possimus sapiente quia,
+          commodi a consequatur voluptatum praesentium quod explicabo nobis
+          itaque amet voluptates. Rem, optio unde. Lorem ipsum, dolor sit amet
+          consectetur adipisicing elit. Laudantium dicta illum sequi id
+          nesciunt, natus omnis magni tenetur harum nemo suscipit quisquam
+          mollitia asperiores cupiditate. Optio incidunt nam molestiae sit!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
+          doloremque suscipit similique, repellendus possimus sapiente quia,
+          commodi a consequatur voluptatum praesentium quod explicabo nobis
+          itaque amet voluptates. Rem, optio unde. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Earum quos sed perspiciatis deserunt
+          doloribus ullam vel, ratione dolorem fuga quae, culpa recusandae rem
+          optio voluptates, quibusdam excepturi harum debitis omnis!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
+          doloremque suscipit similique, repellendus possimus sapiente quia,
+          commodi a consequatur voluptatum praesentium quod explicabo nobis
+          itaque amet voluptates. Rem, optio unde. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Earum quos sed perspiciatis deserunt
+          doloribus ullam vel, ratione dolorem fuga quae, culpa recusandae rem
+          optio voluptates, quibusdam excepturi harum debitis omnis!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
+          doloremque suscipit similique, repellendus possimus sapiente quia,
+          commodi a consequatur voluptatum praesentium quod explicabo nobis
+          itaque amet voluptates. Rem, optio unde. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Earum quos sed perspiciatis deserunt
+          doloribus ullam vel, ratione dolorem fuga quae, culpa recusandae rem
+          optio voluptates, quibusdam excepturi harum debitis omnis!
+        </p>
+      </div>
+    </section>
+
+    <script>
+      var a = 3
+      let b = 2
+      const element = document.querySelector('header .theme-button')
+
+      element.onclick = () => {
+        document.documentElement.classList.toggle('dark-theme')
+      }
+    </script>
+    <script src="src/main.js" type="module"></script>
   </body>
-
 </html>

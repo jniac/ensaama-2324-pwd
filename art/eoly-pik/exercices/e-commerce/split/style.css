@@ -1,6 +1,9 @@
+
+@import url(../../../../../common-resources/reset.css);
+@import url(responsive2.css);
+@import url(left.css);
 @import url(header.css);
-@import url(../../../../common-resources/reset.css);
-@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500&display=swap');
+
 section.intro{
     display: flex;
     flex-direction: row;
@@ -54,4 +57,80 @@ p {
 div.right h2{
 
     font-size: 2em;
+}
+
+:root {
+  --le-texte: #111;
+  --derriere-le-texte: aliceblue;
+  --la-couleur: red;
+}
+
+:root.dark-theme {
+  --le-texte: #c2c3b6;
+  --derriere-le-texte: #101a24;
+  --la-couleur: #d6717f;
+}
+
+body {
+  color: var(--le-texte);
+}
+
+.right {
+  background-color: var(--derriere-le-texte);
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+main > div {
+  width: 50%;
+}
+
+.right {
+  padding: 4em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+
+  overflow: scroll;
+}
+
+.right h1 {
+  font-size: 4em;
+}
+
+.spacer {
+  flex: 0 0 10rem;
+}
+
+p.lettrine::first-letter {
+  font-size: 2em;
+  padding-right: 1px;
+  line-height: 1rem;
+}
+
+.title-block {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.title-block img {
+  height: 200px;
+}
+
+.title-block .text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+}
+
+.title-block .text .separator {
+  width: 80px;
+  height: 8px;
+  background-color: var(--la-couleur);
 }
