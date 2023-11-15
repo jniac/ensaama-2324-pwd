@@ -1,0 +1,23 @@
+.gra .color-a{
+    background-color: rgb(231, 208, 164);
+}
+
+.gra .color-b{
+    background-color: lightblue;
+}
+
+.gra .color-c{
+    background-color: rgb(235, 164, 164);
+}
+
+.gra .color-d{
+    background-color: aliceblue;
+}
+
+.cercle{
+    border-radius: 50% 0% 50%;
+    background-image: radial-gradient(aliceblue 25%,lightblue 80%);
+}
+
+
+
