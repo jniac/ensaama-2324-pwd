@@ -13,7 +13,7 @@
   <header>
     <div class="title">colorful</div>
     <div style="flex: 1"></div>
-    <div>fullscreen</div>
+    <div onclick="document.fullscreenElement ? document.exitFullscreen() : document.body.requestFullscreen()">fullscreen</div>
   </header>
 </body>
 </html>
