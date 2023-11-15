@@ -1,0 +1,38 @@
+.demo-gradient {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  padding: 4em;
+}
+
+.demo-gradient .swatch {
+  --size: 360px;
+  width: var(--size);
+  height: var(--size);
+  background-color: white;
+}
+
+.demo-gradient .gradient-1 {
+  background-image: linear-gradient(90deg, purple 30%, blue 100%);
+}
+
+.demo-gradient .gradient-2 {
+  background-image: linear-gradient(blue, white);
+}
+
+.demo-gradient .gradient-3 {
+  background-image: radial-gradient(yellow, red);
+}
+
+.demo-gradient .gradient-4 {
+  background-image: radial-gradient(
+    pink,
+    red,
+    yellow,
+    green,
+    blue,
+    purple,
+    brown,
+    orange
+  );
+}
