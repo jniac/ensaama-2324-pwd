@@ -80,5 +80,11 @@
         </p>
       </div>
     </main>
+    <script>
+      const element = document.querySelector("header .theme-button");
+      element.onclick = () => {
+        document.documentElement.classList.toggle("dark-theme");
+      };
+    </script>
   </body>
 </html>
