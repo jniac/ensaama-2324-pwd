@@ -1,0 +1,49 @@
+.demo-gradient {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2em;
+  padding: 4em;
+}
+
+.demo-gradient .swatch {
+  --size: 360px;
+  width: var(--size);
+  height: var(--size);
+  background-color: white;
+}
+
+.demo-gradient .gradient-1 {
+  background-image: linear-gradient(red, blue);
+}
+
+.demo-gradient .gradient-2 {
+  background-image: linear-gradient(45deg, red, blue);
+}
+
+/* Dégradé avec positions relatives (%) précisées. */
+.demo-gradient .gradient-3 {
+  background-image: linear-gradient(
+    80deg, 
+    red 10%, 
+    blue 15%, 
+    #fc0 75%);
+}
+
+.demo-gradient .gradient-4 {
+    background-image: radial-gradient(red, blue);
+}
+
+.demo-gradient .gradient-5 {
+  background-image: radial-gradient(
+    at 20% 80%,
+    white 0%,
+    #ffff88 25%,
+    yellow 30%,
+    red 60%,
+    #5d006b 70%,
+    blue 100%);
+}
+
+
+

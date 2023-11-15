@@ -1,0 +1,27 @@
+header .icon {
+    --url: url(assets/);
+    --size: calc(1em + 16px); /* It's complicated: a mix between fixed and dynamic sizes. */
+  
+    width: var(--size);
+    height: var(--size);
+    background-color: var(--accent-color);
+  
+    mask-image: var(--url);
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    -webkit-mask-image: var(--url);
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+  }
+  
+  header .icon.logo {
+    background-color: white;
+    --url: url(assets/icone1.svg);
+  }
+  
+  header .icon.cart {
+    --url: url(assets/TurkishOkey.jpg);
+  }
+  

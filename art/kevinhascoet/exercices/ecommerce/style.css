@@ -12,6 +12,12 @@ body, body * {
 
 
 
+* ::-webkit-scrollbar{
+    display: none;
+}
+
+
+
 button.start {
     transition: all 0.4s ease-in-out;
     font-size:18px;
@@ -134,3 +140,5 @@ section.blabla {
     gap:48px;
     font-size:18px;
 }
+
+
