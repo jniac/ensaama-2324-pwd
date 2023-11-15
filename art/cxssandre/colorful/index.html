@@ -9,10 +9,36 @@
     <link rel="stylesheet" href="../../../common-projects/colorful/style/header.css" />
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="flex-layout fullscreen center p-16">
     <header>
-        
+      <div class="title">colorful</div>
+      <div style="flex: 1"></div>
+      <div onclick="document.fullscreenElement ? document.exitFullscreen() : document.body.requestFullscreen()">fullscreen</div>
     </header>
-    <div></div>
-</body>
+  
+    <main class="cxs square">
+        <div class="p-20 color-a column">
+            <div class=" p-10 color-b column">
+                <div class=" p-5 color-a"></div>
+                <div class=" p-5 color-c">
+                    <div class=" p-5 color-b"></div>
+                </div>
+            </div>
+        </div>
+        <div class="p-20 color-b column">
+            <div class=" p-10 color-c row">
+                <div class=" p-5 color-b"></div>
+                <div class=" p-5 color-a">
+                    <div class=" p-5 color-c"></div>
+                </div>
+            </div>
+        </div>
+  
+    </main>
+
+    <script type="module">
+        import { initializeStandalonePage } from '../../../common-projects/colorful/src/colorful.js' 
+        initializeStandalonePage()
+    </script>
+  </body>
 </html>

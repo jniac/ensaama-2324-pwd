@@ -120,8 +120,8 @@ function initializeColorDiv(element = document.body) {
 
 function initializeMainSpacing() {
   const main = document.querySelector('main')
-  const spacing = main.offsetWidth / 500
-  main.style.setProperty('--spacing', `${spacing.toFixed(3)}px`)
+  const spacing = Math.round(main.offsetWidth / 500 * 4) / 4
+  main.style.setProperty('--spacing', `${spacing.toFixed(2)}px`)
 }
 
 function initializeStandalonePage() {

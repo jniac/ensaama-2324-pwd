@@ -1,0 +1,10 @@
+.cxs .color-a {
+    background-color: #488CB2;
+}
+.cxs .color-b {
+    background-color: #81C2EA;
+    background-image: linear-gradient(#488CB2, #81C2EA);
+}
+.cxs .color-c {
+    background-color:#EB9929;
+}
