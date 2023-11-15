@@ -1,0 +1,36 @@
+:root {
+    font-family: 'Raleway', sans-serif;
+    font-size: 10px;
+}
+
+/* tablette */
+@media (max-width: 900px) {
+    :root {
+        font-size: 8px;
+    }
+    
+}
+
+/* desktop */
+@media (min-width: 901px) and (max-width: 1200px) {
+    :root {
+        font-size: 12px;
+    }
+    
+}
+
+/* desktop-wide */
+@media (min-width: 1201px) and (max-width: 1600px) {
+    :root {
+        font-size: 16px;
+    }
+    
+}
+
+/* desktop-ultrawide */
+@media (min-width: 1601px){
+    :root {
+        font-size: 24px;
+    }
+    
+}
