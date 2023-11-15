@@ -3,7 +3,7 @@ const colors = [
   'color-a',
   'color-b',
   'color-c',
-  'color-d',
+  'color-d',   //ajout d'une 4eme couleur
 ]
 
 /**
