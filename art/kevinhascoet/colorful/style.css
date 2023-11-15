@@ -1,39 +1,69 @@
 
 
-body{
-  font-family: Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 16px;
-  
+
+:root{
   --c1: #FA55AB;
   --c2: #2874FA;
   --c3: #FAB728;
   --c4: #45FA78;
 
+  --g1:linear-gradient(var(--c1),var(--c2));
+  --g2:linear-gradient(var(--c2),var(--c3));
+  --g3:linear-gradient(var(--c3),var(--c4));
+  --g4:linear-gradient(var(--c4),var(--c1));
+}
 
-  /* --c1: #FA4444;
-  --c2: #283AFA;
-  --c3: #FACD28;
-  --c4: #3FE06D; */
+:root.horizontal{
+  --g1:linear-gradient(10deg,var(--c1),var(--c2));
+  --g2:linear-gradient(10deg,var(--c2),var(--c3));
+  --g3:linear-gradient(10deg,var(--c3),var(--c4));
+  --g4:linear-gradient(10deg,var(--c4),var(--c1));
+}
+
+
+
+
+body{
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 
 main.kev {
-  background-image: linear-gradient(var(--c2),var(--c3));
+  background-image: var(--g2);
 }
 
 .kev .color-a {
-  background-image: linear-gradient(var(--c1),var(--c2));
+  background-image: var(--g1);
 }
 
 .kev .color-b {
-  background-image: linear-gradient(var(--c2),var(--c3));
+  background-image: var(--g2);
 }
 
 .kev .color-c {
-  background-image: linear-gradient(var(--c3),var(--c4));
+  background-image: var(--g3);
 }
 
 .kev .color-d {
-  background-image: linear-gradient(var(--c4),var(--c1));
+  background-image: var(--g4);
+}
+
+
+
+
+
+.hori{
+  transition: .4s ease-in-out;
+}
+.hori:hover{
+  transform: translate(10px);
+}
+
+.full{
+  transition: .4s ease-in-out;
+}
+.full:hover{
+  transform: translate(-10px);
 }
