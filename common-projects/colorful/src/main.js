@@ -48,7 +48,7 @@ function pmod(x, mod) {
 
 function updateSize() {
   mainSize = round(Math.min(window.innerWidth, window.innerHeight) * .9, 50)
-  document.documentElement.style.setProperty('--spacing', `${(mainSize / 500).toFixed(3)}px`)
+  document.documentElement.style.setProperty('--spacing', `${(Math.round(mainSize / 500 * 4) / 4).toFixed(2)}px`)
 
   for (const { art: { mainElement } } of state.cells) {
     mainElement.style.width = `${mainSize}px`
