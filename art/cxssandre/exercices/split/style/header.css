@@ -29,7 +29,6 @@ header .logo {
   
   header div.logo.icon {
     background-color: white;
-    --url: url(../assets/crayon.png);
   }
   
   header div.logo.small {

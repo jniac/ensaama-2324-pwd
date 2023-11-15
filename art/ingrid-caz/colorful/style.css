@@ -1,0 +1,40 @@
+@import url(../../../../common-resources/reset.css);
+@import  url(gradient.css);
+
+
+/* RESET CSS */
+body, body *{
+    box-sizing: border-box;
+
+    margin: unset;
+
+}
+
+.sq-base {
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+    gap: 2em;
+
+    --size:1000px;
+    width: var(--size);
+    height: var(--size);
+    background-color: #009488;
+}
+
+.rec {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding:2em;
+
+    --size:470px;
+    width: var(--size);
+    height: 2var(--size);
+    background-color: #2F4858;
+}
+
+.sq-base .n1 {
+    background-color: #186073;
+    align-items: flex-end;
+}
