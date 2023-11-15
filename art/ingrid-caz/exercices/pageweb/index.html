@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark-theme">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,10 +11,11 @@
     <header>
       <div class="logo">
         <div class="wrapper-icon-1">
-            <div class="icon icon-1"></div>
+          <div class="icon icon-1"></div>
         </div>
       </div>
       <div class="connexion">
+        <div class="icon theme-button"></div>
         <div class="icon icon-2"></div>
       </div>
     </header>
@@ -36,7 +37,7 @@
             <h1>Présentation</h1>
             <div class="tiret"></div>
             <h2>
-              Les margherites sont belles, se sont des fleurs qui poussent dans
+              Les margherites sont belles, ce sont des fleurs qui poussent dans
               des prairies.
             </h2>
           </div>
@@ -45,15 +46,34 @@
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias
           quidem quasi accusamus mollitia ea, impedit, neque quod distinctio
           optio consequatur sit corporis, in odit quae velit sunt? Dolorem,
-          repellendus hic.
+          repellendus hic. Lorem ipsum, dolor sit amet consectetur adipisicing
+          elit. Repudiandae nemo ipsum cum quaerat minus necessitatibus nam quam
+          voluptatem harum, consectetur aspernatur impedit ullam labore odit
+          iure molestiae sapiente soluta placeat?
         </p>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ratione
           facilis magni dignissimos aspernatur odit quasi dolore molestiae
           aliquam quos similique blanditiis ab neque asperiores corrupti iure,
-          veritatis ex perferendis.
+          veritatis ex perferendis. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Quam ducimus sequi voluptate ea distinctio. Tempora
+          incidunt ea repellendus vitae sit distinctio error debitis quisquam
+          nesciunt. Dolorum laboriosam mollitia voluptate fugit?
+        </p>
+        <img src="assets/pexels-pixabay-67857.jpg" alt="" />
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis a
+          esse optio animi mollitia, magni velit quos iure sapiente soluta nam
+          fuga, illo cumque architecto autem dolorem corrupti aliquam quibusdam.
         </p>
       </div>
     </section>
+
+    <script>
+      const element = document.querySelector('header .theme-button')
+      element.onclick = () => {
+        document.documentElement.classList.toggle('dark-theme');
+      }
+    </script>
   </body>
 </html>
