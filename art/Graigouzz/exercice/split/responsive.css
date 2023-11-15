@@ -1,0 +1,28 @@
+body{
+    font-size: 22px;
+}
+
+
+@media(min-width:900px){
+    body{
+        font-size: 16px;
+    }
+}
+
+@media((min-width:901px) and (max-width:1200)){
+    body{
+        font-size: 22px;
+    }
+}
+
+@media((min-width:1201) and (max-width:1600)){
+    body{
+        font-size: 28px;
+    }
+}
+
+@media(min-width:1601){
+    body{
+        font-size: 32px;
+    }
+}

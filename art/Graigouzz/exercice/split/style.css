@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300&display=swap');
 @import url(header.css);
+@import url(responsive.css);
+
+:root{
+    --text-color:rgb(14, 13, 13);
+    --background-color: rgb(243, 235, 235);
+    --accent-color: rgb(56, 2, 2);
+}
+
+:root.dark-theme{
+    --text-color:rgb(243, 235, 235);
+    --background-color: rgb(14, 13, 13);
+    --accent-color:red;
+}
 
 
 /* Reset CSS */
@@ -15,7 +28,7 @@ body, body *{
 
 body{
     font-family: 'Martian Mono', monospace;
-    color: black;
+    color: var(--text-color);
 }
 
 /* Split the screen in half */
@@ -38,41 +51,61 @@ main > div{
 }
 
 .split-right{
+    background-color: var(--background-color);
     overflow: scroll;
+    padding: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }
 
 h1{
-    margin: 128px;
     text-align: center;
+    margin-bottom: 64px;
 }
 
 h2{
-    margin-left: 32px;
+    
 }
 
 p{
-    margin: 32px;
+    
 }
 
 .presentation{
     display: flex;
     flex-direction: row;
-    margin-top: 32px;
-    height: 25%;
+    margin-top: 320px;
+    flex: 0 0 240px;
 }
 
 .small{
-    margin-left: 32px;
-    width: 45%;
+    flex: 0 0 220px;
     height: 100%;
     background-image: url(asset/akira2.jpg);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
+.small2{
+    flex: 0 0 220px;
+    height: 100%;
+    background-image: url(asset/akira.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.text{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
 .text .dash {
-    background-color: red;
-    flex: 0 0 1px;
-    width: 100%;
+    background-color: var(--accent-color);
+    flex: 0 0 8px;
+    width: 50%;
+    margin-top: 8px;
+    margin-bottom: 32px;
   }
 

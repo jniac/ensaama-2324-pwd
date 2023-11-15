@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark-theme">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,6 +10,9 @@
     <header>
       <div class="logo">
         <div class="icon"></div>
+      </div>
+      <div class="theme-button">
+        <div class="icon2"></div>
       </div>
     </header>
     <main>
@@ -36,12 +39,33 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ducimus vero nesciunt maxime tempora repellat ut tempore iure sed esse debitis, beatae et nobis numquam omnis voluptas iusto aperiam consequatur?</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ducimus vero nesciunt maxime tempora repellat ut tempore iure sed esse debitis, beatae et nobis numquam omnis voluptas iusto aperiam consequatur?</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ducimus vero nesciunt maxime tempora repellat ut tempore iure sed esse debitis, beatae et nobis numquam omnis voluptas iusto aperiam consequatur?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ducimus vero nesciunt maxime tempora repellat ut tempore iure sed esse debitis, beatae et nobis numquam omnis voluptas iusto aperiam consequatur?</p>
+
+        <div class="presentation">
+          <div class="small2"></div>
+          <div class="text">
+              <h2>analyse</h2>
+              <div class="dash"></div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro doloribus voluptatem ut quasi ipsa quos aut itaque hic labore ducimus alias ex quisquam, repudiandae quo repellat! Totam nemo molestiae omnis!</p>
+          </div>
+      </div>
+
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ducimus vero nesciunt maxime tempora repellat ut tempore iure sed esse debitis, beatae et nobis numquam omnis voluptas iusto aperiam consequatur?</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ducimus vero nesciunt maxime tempora repellat ut tempore iure sed esse debitis, beatae et nobis numquam omnis voluptas iusto aperiam consequatur?</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ducimus vero nesciunt maxime tempora repellat ut tempore iure sed esse debitis, beatae et nobis numquam omnis voluptas iusto aperiam consequatur?</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ducimus vero nesciunt maxime tempora repellat ut tempore iure sed esse debitis, beatae et nobis numquam omnis voluptas iusto aperiam consequatur?</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ducimus vero nesciunt maxime tempora repellat ut tempore iure sed esse debitis, beatae et nobis numquam omnis voluptas iusto aperiam consequatur?</p>
       </div>
     </main>
+
+    <script>
+      const element= document.querySelector('header .theme-button');
+      element.onclick = () => {
+        document.documentElement.classList.toggle('dark-theme')
+      }
+    </script>
+
+    <script src="src/main.js"></script>
+
+
   </body>
 </html>
