@@ -1,7 +1,7 @@
 .eol .color-a {
     background-image: linear-gradient(
       90deg,
-      rgb(199, 146, 24),
+      rgb(125, 150, 129),
       rgb(130, 151, 99));
   }
   
@@ -12,7 +12,7 @@
   }
   
   .eol .color-b {
-    background-color: rgb(185, 80, 48);
+    background-color: rgb(61, 104, 37);
   }
   
   .eol .color-c {
