@@ -16,6 +16,13 @@ header.logo {
     align-self: stretch;
 }
 
+
+header .theme-button{
+    cursor: pointer;
+    user-select: none;
+    
+}
+
 .icon{
     width: 64px;
     height: 64px;
@@ -23,10 +30,21 @@ header.logo {
     -webkit-mask-size: contain;
     -webkit-mask-repeat:no-repeat;
     aspect-ratio: 1;
-    background-color: black;
+    background-color: rgb(14, 13, 13);
 }
 
+.icon2{
+    width: 64px;
+    height: 64px;
+    -webkit-mask-image: url(asset/moon.svg);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat:no-repeat;
+    aspect-ratio: 1;
+    background-color: rgb(243, 235, 235);
+}
+
+
 .icon:hover{
-    background-color:white;
+    background-color: rgb(243, 235, 235);
     transition-duration: 0.3s;
 }
