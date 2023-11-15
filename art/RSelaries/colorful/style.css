@@ -1,31 +1,10 @@
-@import url(../../assets/css-assets/reset.css);
+.quare-background { background-color: aliceblue; }
 
-html {
-    background-color: black;
-}
+.grad-1 {
+    background-image: linear-gradient(
+        0deg,
+        #23153B,
+        #231A3D
+);}
 
-.gradient-container {
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-    padding: 4rem;
-}
-
-.gradient {
-    --size: 360px;
-    width: var(--size);
-    height: var(--size);
-    background-color: #f00;
-}
-
-.gradient-1 {
-    background-image: linear-gradient(60deg, rgb(44, 6, 39), rgb(37, 3, 3));
-}
-
-.gradient-2 {
-    background-image: linear-gradient(150deg, rgb(44, 6, 39), rgb(22, 3, 37));
-}
-
-.gradient-3 {
-    background-image: radial-gradient(rgb(5, 23, 73), rgb(10, 4, 35));
-}
+.left-1 { width: 15%; }

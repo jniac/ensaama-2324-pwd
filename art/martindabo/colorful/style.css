@@ -1,0 +1,15 @@
+.mar .color-a {
+  background-image: linear-gradient(#de4340, orange);
+}
+
+.mar .color-b {
+  background-image: linear-gradient(90deg, orange, #c568e6);
+}
+
+.mar .color-c {
+  background-image: linear-gradient(#e0c75a, #de4340);
+}
+
+.mar .color-d {
+  background-color: #c568e6;
+}
