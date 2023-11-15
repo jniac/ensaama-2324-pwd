@@ -9,7 +9,11 @@
   <body>
     <header>
       <div class="logo-icon"></div>
-      <a class="boutonshop" href="https://www.etsy.com/fr/market/dune"></a>
+
+      <div class="header-left">
+        <div class="theme-button"></div>
+        <a class="boutonshop" href="https://www.etsy.com/fr/market/dune"></a>
+      </div>
     </header>
     <main>
       <div class="left"></div>
@@ -115,5 +119,11 @@
         </video>
       </div>
     </main>
+    <script>
+      const element = document.querySelector("header .theme-button");
+      element.onclick = () => {
+        document.documentElement.classList.toggle("dark-theme");
+      };
+    </script>
   </body>
 </html>
