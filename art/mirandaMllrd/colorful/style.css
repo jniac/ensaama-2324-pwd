@@ -1,19 +1,25 @@
 .mir .color-a {
-    background-color:rgb(95, 97, 182);
-}
-
-.mir .color-a.alt {
     background-image: linear-gradient(
     rgb(95, 97, 182),
     rgb(51, 52, 133));
+    
+}
+
+.mir .color-a.alt {
+   background-color:rgb(95, 97, 182);
 }
 
 .mir .color-b {
-    background-color:rgb(231, 214, 243)
+    background-image: linear-gradient(
+        rgb(114, 250, 255)
+        rgb(60, 147, 150)
+        rgb(114, 250, 255));
 }
 
 .mir .color-c {
-    background-color:rgb(190, 129, 235);
+    background-image: linear-gradient(
+        rgb(243, 237, 204),
+        rgb(250, 183, 241));
 }
 
 .mir .shape-1 {
