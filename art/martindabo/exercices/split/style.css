@@ -21,6 +21,10 @@ body * {
   margin: 0px;
 }
 
+body {
+  color: var(--text-color);
+}
+
 main {
   height: 100vh;
   display: flex;
@@ -40,7 +44,6 @@ div.right {
   gap: 16px;
   font-size: 3.3em;
   overflow: scroll;
-  color: var(--text-color);
   background-color: var(--background-color);
 }
 
