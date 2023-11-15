@@ -5,38 +5,32 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: .5em;
+    padding: 1em;
     z-index: 10;
 }
 
-header div.logo{
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-
-}
-
-.logo {
-  --image-url: url(../assets/crayon.png);
-
-  -webkit-mask-image: var(--image-url);
-  -webkit-mask-size: contain;
-  -webkit-mask-position: center;
-  -webkit-mask-repeat: no-repeat;
-  mask-image: url();
-  mask-size: contain;
-  mask-position: center;
-  mask-repeat: no-repeat;
-
-  width: 50px;
-  height: 50px;
-}
+header .logo {
+    --url: url(../assets/crayon.png);
+    --size: calc(1em + 50px);
   
-  header div.logo-icon {
+    width: var(--size);
+    height: var(--size);
+    background-color: var(--accent-color);
+  
+    mask-image: var(--url);
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    -webkit-mask-image: var(--url);
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+  }
+  
+  header div.logo.icon {
     background-color: white;
   }
   
-  header div.logo-small {
-    background-color: white;
+  header div.logo.small {
     --url: url(../assets/chat.png);
   }
