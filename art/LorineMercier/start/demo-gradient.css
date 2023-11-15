@@ -1,0 +1,27 @@
+.demo-gradient {
+display:flex;
+flex-direction: row;
+gap: 2em;
+padding: 4em;
+}
+
+.demo-gradient .swatch {
+--size:360px;
+height: var(--size);
+width:var(--size);
+background-color: #fff;
+}
+
+.demo-gradient .gradient-1{
+background-image: linear-gradient(pink,green);
+}
+
+.demo-gradient .gradient-2{
+    background-image: linear-gradient(rgb(134, 47, 61),rgb(0, 55, 128));
+
+}
+
+.demo-gradient .gradient-3{
+    background-image: linear-gradient(skyblue,blue);
+
+}

@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
-
+@import url(responsive.css);
 
 /* GENERAL HEADER */
 header{
     width: 100%;
-    height: 100px;
+    height: 70px;
     position: fixed;
 
     display: flex;
@@ -24,14 +24,19 @@ header div.logo{
 
 }
 
+header .connexion {
+    display: flex;
+    flex-direction: row;
+}
+
 header h1{
     font-family: 'Oswald', sans-serif; 
-    font-size: 80px;
+    font-size: 5em;
     text-transform: uppercase;
 }
 
 .icon {
-    --image-url: url(assets/flower-pot.svg);
+    --image-url: url(assets/flower-outline.svg);
 
     -webkit-mask-image: var(--image-url);
     -webkit-mask-size: contain;
@@ -42,20 +47,29 @@ header h1{
     mask-position: center;
     mask-repeat: no-repeat;
 
-    width: 64px;
-    height: 64px;
+    width: 50px;
+    height: 50px;
 }
 
 .icon-1 {
-    background-color:rgb(216, 149, 62);
+    background-color:rgba(243, 243, 243, 0.87);
 }
 
 .icon-2 {
     --image-url: url(assets/log-off.svg);
-    background-color: rgba(82, 124, 185, 0.849);
+    background-color: var(--accent-color);
 }
 
-.wrapper-icon-1 {
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.658);
+.icon:hover{
+    transform: scale(1.05,1.05);
+}
+
+.icon-1:hover{
+    background-color:var(--accent-color);
+}
+
+.theme-button {
+    --image-url: url(assets/bulb-sharp.svg);
+    background-color: var(--accent-color);
+
 }

@@ -9,11 +9,15 @@
   <link rel="stylesheet" href="../../../common-projects/colorful/style/header.css" />
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="flex-layout fullscreen center p-16">
   <header>
     <div class="title">colorful</div>
     <div style="flex: 1"></div>
-    <div>fullscreen</div>
+    <div onclick="document.fullscreenElement ? document.exitFullscreen() : document.body.requestFullscreen()">fullscreen</div>
   </header>
+
+  <main class="jnc square" style="background-color: white;">
+
+  </main>
 </body>
 </html>
