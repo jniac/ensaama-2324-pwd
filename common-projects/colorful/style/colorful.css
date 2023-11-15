@@ -45,7 +45,8 @@ main div {
   }
 }
 
-main {
+main,
+main * {
   overflow: hidden;
 }
 
@@ -71,6 +72,13 @@ main {
   aspect-ratio: 1;
   flex: 0 0 100cqmin;
   block-size: 100cqmin;
+}
+
+.circle {
+  aspect-ratio: 1;
+  flex: 0 0 100cqmin;
+  block-size: 100cqmin;
+  border-radius: 50%;
 }
 
 .over-feedback {
