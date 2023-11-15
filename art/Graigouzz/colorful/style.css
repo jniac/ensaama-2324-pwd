@@ -1,5 +1,5 @@
 .gra .color-a{
-    background-color: rgb(255, 195, 84);
+    background-color: rgb(231, 208, 164);
 }
 
 .gra .color-b{
@@ -16,7 +16,7 @@
 
 .cercle{
     border-radius: 50% 0% 50%;
-    background-image: linear-gradient(rgb(255, 195, 84),lightblue);
+    background-image: linear-gradient(aliceblue,lightblue);
 }
 
 
