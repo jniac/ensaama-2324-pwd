@@ -16,7 +16,7 @@ header .logo-icon {
     height: 128px;
     aspect-ratio: 1 / 1;
     background-color: white;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.5s ease-in-out;
 
     -webkit-mask-image: url(assets/logo.svg);
     mask-image: url(assets/logo.svg);
@@ -36,8 +36,9 @@ header .shop {
     height: 80px;
     aspect-ratio: 1 / 1;
     background-color: var(--accent);
-    transition: all 0.4s ease-in-out;
+    transition: all 0.5s ease-in-out;
     transform: scale(-1, 1);
+    margin-right: 128px;
 
     -webkit-mask-image: url(assets/moon.svg);
     mask-image: url(assets/moon.svg);
@@ -50,5 +51,5 @@ header .shop {
 }
 
 header .shop:hover {
-    scale: 1.5;
+    scale: 1.3;
 }

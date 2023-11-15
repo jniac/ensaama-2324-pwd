@@ -15,7 +15,7 @@
         </div>
         <div class="achat">
             <div class="achat-icon"></div>
-            <div class="themebutton">dark theme</div>
+            <div class="themebutton"></div>
         </div>
 
     </header>
@@ -64,8 +64,13 @@
 
         <script>
             const element = document.querySelector('header .themebutton')
+            element.onclick = () => {
+            document.documentElement.classList.toggle('dark')
+            }
 
         </script>
+
+<script src="src/main.js" type="module"></script>
 
 </body>
 </html>
