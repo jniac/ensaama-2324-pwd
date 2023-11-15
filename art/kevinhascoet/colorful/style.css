@@ -44,12 +44,12 @@ main.kev {
   transition: 0.4s ease-in-out;
 }
 .hori:hover {
-  transform: translate(10px);
+  transform: translate(20px);
 }
 
 .full {
   transition: 0.4s ease-in-out;
 }
 .full:hover {
-  transform: translate(-10px);
+  transform: translate(-20px);
 }
