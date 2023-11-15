@@ -10,11 +10,44 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
-<body>
+<body class="flex-layout fullscreen center p-4">
     <header>
         <div class="title">colorful</div>
         <div style="flex: 1"></div>
-        <div>fullscreen</div>
+        <div onclick="document.fullscreenElement ? document.exitFullscreen() : document.body.requestFullscreen()">fullscreen</div>
     </header>
+
+    <main class="gra square">
+        <div class="row color-a">
+            <div class="column" style="flex: 3;">
+                <div class="color-b">
+                    <div class="cercle color-d m-16" ></div>
+                </div>
+                <div class="color-a"></div>
+                <div class=" row color-b">
+                    <div class="column" style="flex: 3;">
+                        <div class="color-b">
+                            <div class="cercle color-d m-16" ></div>
+                        </div>
+                        <div class="color-a"></div>
+                        <div class="row color-b">
+                            <div class="column" style="flex: 3;">
+                                <div class="color-b"></div>
+                                <div class="color-a"></div>
+                            </div>
+
+                        <div class="color-c"></div>
+                        <div class="color-b"></div>
+                        </div>
+                    </div>
+                    <div class="color-c"></div>
+                    <div class="color-b"></div>
+                </div>
+            </div>
+
+            <div class="color-c"></div>
+            <div class="color-b"></div>
+        </div>
+    </main>
 </body>
 </html>
