@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=Creepster&family=Italianno&family=Monoton&family=Permanent+Marker&display=swap");
+@import url("https://fonts.cdnfonts.com/css/dune-rise");
+@import url(../../../../common-resources/reset.css);
+@import url(header.css);
+@import url(responsive.css);
+
+:root {
+  --text-color: #111;
+  --background-color: white;
+  --accent-color: orange;
+}
+
+:root.dark-theme {
+  --text-color: white;
+  --background-color: black;
+  --accent-color: #ff8000;
+}
+
+body,
+body * {
+  margin: 0px;
+}
+
+body {
+  color: var(--text-color);
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+main > div {
+  width: 50%;
+}
+
+div.right {
+  width: 100%;
+  height: 100%;
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 3.3em;
+  overflow: scroll;
+  background-color: var(--background-color);
+}
+
+h1 {
+  font-family: "Dune Rise", sans-serif;
+  font-size: 6rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+div.logo {
+  color: #ff8000;
+}
+
+div.left {
+  width: 50%;
+  padding: 128px;
+  display: flex;
+  flex-direction: column;
+  background-image: url(assets/dune.jpg);
+  background-size: cover;
+  background-position: center;
+  gap: 16px;
+  font-size: 2em;
+}
+
+.paf {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  gap: 50px;
+}
+
+.paf > img {
+  flex: 0 0 35%;
+  width: 0;
+  object-fit: contain;
+  object-position: top;
+}
+
+.paf > .pif {
+  overflow: hidden;
+  flex: 1;
+  gap: 16px;
+}
+
+h2 {
+  margin-bottom: 50px;
+  font-family: "Dune Rise", sans-serif;
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+h4 {
+  font-size: 2.5rem;
+  font-family: "Dune Rise", sans-serif;
+  background-position: center;
+  margin-top: 100px;
+}
+
+div.trait {
+  border-top: 20px solid var(--accent-color);
+  width: 490px;
+  margin-bottom: 50px;
+}
+
+div.trait2 {
+  border-top: 20px solid var(--accent-color);
+  width: 400px;
+  margin-bottom: 250px;
+}
+
+div.trait3 {
+  border-top: 20px solid var(--accent-color);
+  width: 250px;
+  margin-bottom: 50px;
+}
+
+.boutonshop {
+  background-image: url(assets/shopping-bag.svg);
+}

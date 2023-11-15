@@ -1,0 +1,81 @@
+
+@import url(header.css);
+@import url(../../../../common-resources/reset.css);
+@import url(responsive.css);
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500&display=swap');
+
+:root {
+
+    --text-color: black;
+    --background-color: rgb(177, 191, 223);
+    --accent-color: blue;
+}
+
+:root.dark {
+
+    --text-color: white;
+    --background-color: rgb(55, 48, 71);
+    --accent-color:blue;
+
+}
+
+body {
+
+    color: var(--text-color);
+}
+
+section.intro{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Frank Ruhl Libre', serif;
+}
+
+div.left-content{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: center;
+    background-image: url(./assets/chrysanthemes-monet.jpg);
+    background-size: cover;
+    
+
+}
+
+div.right-content {
+
+    
+    width: 50%;
+    height: 100vh;
+ 
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    padding: 32px;
+    overflow: scroll;
+    background-color:var(--background-color)
+
+}
+
+h1.title {
+    margin-bottom: 32px;
+    font-size: 3em;
+}
+
+div.presentation {
+
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+p {
+    margin-top: 32px;
+}
+
+div.right h2{
+
+    font-size: 2em;
+}

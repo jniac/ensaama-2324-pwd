@@ -1,0 +1,37 @@
+header{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em;
+    z-index: 10;
+}
+
+header .logo {
+    --url: url(../assets/crayon.png);
+    --size: calc(1em + 50px);
+  
+    width: var(--size);
+    height: var(--size);
+    background-color: var(--accent-color);
+  
+    mask-image: var(--url);
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    -webkit-mask-image: var(--url);
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+  }
+  
+  header div.logo.icon {
+    background-color: white;
+    --url: url(../assets/crayon.png);
+  }
+  
+  header div.logo.small {
+    --url: url(../assets/chat.png);
+  }

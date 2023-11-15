@@ -1,0 +1,53 @@
+header {
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+header .logo-icon {
+  height: 64px;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  cursor: pointer;
+  background-image: url(assets/timer-sand-complete.svg);
+  background-size: contain;
+}
+
+header .logo-icon:hover {
+  transform: scale(1.2);
+  transition-duration: 0.2s;
+  rotate: 0.5turn;
+}
+
+header .theme-button {
+  height: 64px;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  cursor: pointer;
+  background-image: url(assets/light-dark.svg);
+  background-size: contain;
+  color: #ff8000;
+}
+
+header .header-left {
+  display: flex;
+}
+
+header .boutonshop {
+  height: 64px;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  cursor: pointer;
+  background-image: url(assets/shopping-bag.svg);
+  background-size: contain;
+  justify-content: space-between;
+}
+
+header .boutonshop:hover {
+  transform: scale(1.2);
+  transition-duration: 0.2s;
+}

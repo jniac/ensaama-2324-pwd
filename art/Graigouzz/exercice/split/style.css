@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300&display=swap');
+@import url(header.css);
+
+
+/* Reset CSS */
+body, body *{
+    margin: 0;
+    box-sizing: border-box;
+
+/* Enlever les scrollbar (windows). */
+*::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+body{
+    font-family: 'Martian Mono', monospace;
+    color: black;
+}
+
+/* Split the screen in half */
+main{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+main > div{
+    width: 50%;
+}
+
+.split-left{
+    background-image: url(asset/akira2.jpg);
+    background-size: cover;
+    align-self: stretch;
+    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
+}
+
+.split-right{
+    overflow: scroll;
+}
+
+h1{
+    margin: 128px;
+    text-align: center;
+}
+
+h2{
+    margin-left: 32px;
+}
+
+p{
+    margin: 32px;
+}
+
+.presentation{
+    display: flex;
+    flex-direction: row;
+    margin-top: 32px;
+    height: 25%;
+}
+
+.small{
+    margin-left: 32px;
+    width: 45%;
+    height: 100%;
+    background-image: url(asset/akira2.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="eng" class="dark-theme">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="icon logo"></div>
+     
+      <div class="header-left">
+        <div class="icon theme-button"></div>
+        <div class="icon cart"></div>
+    </header>
+
+    <main>
+      <div class="split left"></div>
+
+      <div class="split right">
+        <h1 class="Titre">Purple</h1>
+        <p class="subtitle">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae
+          atque alias cumque doloremque aliquid suscipit voluptates autem
+          molestiae? Ea nesciunt asperiores quos esse officiis sit amet hic
+          veritatis cupiditate quia.
+        </p>
+        <div class="title-block">
+          <div class="image"></div>
+          <div class="text">
+            <h2>Un autre titre ici</h2>
+            <div class="dash"></div>
+            <h3>Avec un sous-titre inspiré, captivant, lumineux</h3>
+          </div>
+        </div>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus
+          delectus, molestias aliquid eligendi ad sit, sequi nobis perferendis
+          porro tempore itaque hic reiciendis ea, ipsa aperiam numquam totam.
+          Autem, est!
+        </p>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus
+          delectus, molestias aliquid eligendi ad sit, sequi nobis perferendis
+          porro tempore itaque hic reiciendis ea, ipsa aperiam numquam totam.
+          Autem, est!
+        </p>
+      </div>
+    </main>
+
+    <script>
+      const element = document.querySelector('header .theme-button')
+      element.onclick = () => {
+        document.documentElement.classList.toggle('dark-theme')
+      }
+    </script>
+
+    
+  </body>
+</html>

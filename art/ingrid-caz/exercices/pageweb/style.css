@@ -10,7 +10,11 @@ body, body *{
     margin: unset;
     
     font-family: 'Raleway', sans-serif;
-    font-size: 30px;
+    font-size: 25px;
+}
+
+p::first-letter{
+    font-size: 1.5em;
 }
 
 /* SECTION INTRO */
@@ -20,9 +24,10 @@ section.intro {
     height: 100VH;
 }
 
+/* GAUCHE */
 section.intro div.gauche {
     width: 50%;
-    height: 100%;
+    height: 100VH;
     background-image: url(assets/téléchargement.jpeg);
     background-size: cover;
     background-position: center;
@@ -30,19 +35,56 @@ section.intro div.gauche {
     
 }
 
+/* DROITE */
 section.intro div.droite{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
     width: 50%;
     height: 100%;
     
+    gap: 50px;
+    padding: 60px;
 
-    padding: 32px;
-
+    overflow: scroll;
 }
+
 
 div.droite h1{
      text-transform: uppercase;
+     font-size: 80px;
+
+     margin-bottom: 200px;
+}
+
+
+div.presentation{
+    display: flex;
+    flex-direction: row;
+    height: 40%;
+    
+}
+
+
+div.text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    
+    padding: 10px;
+    gap: 15px;
+    
+}
+
+div.text h1{
+    text-transform: none;
+    margin: unset;
+}
+
+
+div.tiret{
+    background-color: rgba(110, 164, 207, 0.829);
+    height: 10px;
+    width: 25%;
 }

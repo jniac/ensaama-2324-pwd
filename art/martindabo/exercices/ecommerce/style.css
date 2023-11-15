@@ -2,6 +2,7 @@
 @import url('https://fonts.cdnfonts.com/css/hackney');
 @import url(header.css);
 @import url(../../../../common-resources/reset.css);
+@import url(menu-deroulant.css);
 
 ::-webkit-scrollbar {
   display: none;
@@ -76,7 +77,7 @@ section.intro p.subtitle {
 }
 
 section.cinema {
-  height: 150vh;
+  /* height: 150vh; */
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -111,6 +112,7 @@ width: 700px;
 }
 
 section.cinema .image {
+  background-size: 1400px;
   flex: 1.2;
   background-color: rgb(255, 255, 255);
   background-image: url(assets/affiche_mom.jpg);
@@ -126,7 +128,7 @@ section.cinema .image {
   text-transform: uppercase;
   cursor: pointer;
   border-radius: 20px;
-  width: 150px;
+  width: 250px;
   font-size: 20px;
 }
 
@@ -160,6 +162,33 @@ button.login:hover {
 .left-content h1 {
   font-family: 'Hackney', sans-serif;
 }
+
+.contenu-menu .boutonfilms {
+  appearance: none;
+  border: none;
+  background-color: var(--button-bg);
+  padding: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 250px;
+  font-size: 15px;
+}
+
+#background-video {
+  width: 35vw;
+  object-fit: cover;
+  }
+
+  #btnVideo{
+    font-size: 50px;
+    background: 0;
+    border: 0;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    }
+
+    
 
 /* div.top-menu {
     font-size: 50px;

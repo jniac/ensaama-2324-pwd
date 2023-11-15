@@ -1,0 +1,54 @@
+header {
+    position:fixed; 
+    width: 100vw;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+
+    z-index:5;
+}
+
+header .header-left {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+header .theme-button {
+    cursor: pointer;
+    user-select: none;
+  }
+
+
+header .icon {
+    width: 64px;
+    height: 64px;
+
+    --url: url(assets/cart.svg);
+    mask-image: var(--url);
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    -webkit-mask-image: var(--url);
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+}
+
+header .icon.logo {
+    --url: url(assets/purple-heart.svg);
+}
+
+header .icon.cart {
+    --url: url(assets/cart.svg);
+    background-color: var(--accent-color);
+}
+
+header .theme-button {
+    --url: url(assets/moon.svg);
+    background-color: var(--accent-color);
+    
+}
