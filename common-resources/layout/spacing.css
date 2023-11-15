@@ -69,6 +69,130 @@
 }
 
 
+.mt-1 {
+  margin-top: calc(1 * var(--spacing));
+}
+.mt-2 {
+  margin-top: calc(2 * var(--spacing));
+}
+.mt-3 {
+  margin-top: calc(3 * var(--spacing));
+}
+.mt-4 {
+  margin-top: calc(4 * var(--spacing));
+}
+.mt-5 {
+  margin-top: calc(5 * var(--spacing));
+}
+.mt-6 {
+  margin-top: calc(6 * var(--spacing));
+}
+.mt-7 {
+  margin-top: calc(7 * var(--spacing));
+}
+.mt-8 {
+  margin-top: calc(8 * var(--spacing));
+}
+.mt-10 {
+  margin-top: calc(10 * var(--spacing));
+}
+.mt-12 {
+  margin-top: calc(12 * var(--spacing));
+}
+.mt-14 {
+  margin-top: calc(14 * var(--spacing));
+}
+.mt-16 {
+  margin-top: calc(16 * var(--spacing));
+}
+.mt-20 {
+  margin-top: calc(20 * var(--spacing));
+}
+.mt-24 {
+  margin-top: calc(24 * var(--spacing));
+}
+.mt-28 {
+  margin-top: calc(28 * var(--spacing));
+}
+.mt-32 {
+  margin-top: calc(32 * var(--spacing));
+}
+.mt-40 {
+  margin-top: calc(40 * var(--spacing));
+}
+.mt-48 {
+  margin-top: calc(48 * var(--spacing));
+}
+.mt-56 {
+  margin-top: calc(56 * var(--spacing));
+}
+.mt-64 {
+  margin-top: calc(64 * var(--spacing));
+}
+
+
+
+.mb-1 {
+  margin-bottom: calc(1 * var(--spacing));
+}
+.mb-2 {
+  margin-bottom: calc(2 * var(--spacing));
+}
+.mb-3 {
+  margin-bottom: calc(3 * var(--spacing));
+}
+.mb-4 {
+  margin-bottom: calc(4 * var(--spacing));
+}
+.mb-5 {
+  margin-bottom: calc(5 * var(--spacing));
+}
+.mb-6 {
+  margin-bottom: calc(6 * var(--spacing));
+}
+.mb-7 {
+  margin-bottom: calc(7 * var(--spacing));
+}
+.mb-8 {
+  margin-bottom: calc(8 * var(--spacing));
+}
+.mb-10 {
+  margin-bottom: calc(10 * var(--spacing));
+}
+.mb-12 {
+  margin-bottom: calc(12 * var(--spacing));
+}
+.mb-14 {
+  margin-bottom: calc(14 * var(--spacing));
+}
+.mb-16 {
+  margin-bottom: calc(16 * var(--spacing));
+}
+.mb-20 {
+  margin-bottom: calc(20 * var(--spacing));
+}
+.mb-24 {
+  margin-bottom: calc(24 * var(--spacing));
+}
+.mb-28 {
+  margin-bottom: calc(28 * var(--spacing));
+}
+.mb-32 {
+  margin-bottom: calc(32 * var(--spacing));
+}
+.mb-40 {
+  margin-bottom: calc(40 * var(--spacing));
+}
+.mb-48 {
+  margin-bottom: calc(48 * var(--spacing));
+}
+.mb-56 {
+  margin-bottom: calc(56 * var(--spacing));
+}
+.mb-64 {
+  margin-bottom: calc(64 * var(--spacing));
+}
+
 
 /* PADDING */
 
