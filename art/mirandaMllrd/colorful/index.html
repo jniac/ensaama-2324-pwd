@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mira Colorful</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jojo Colorful 2</title>
+  <link rel="stylesheet" href="../../../common-resources/reset.css" />
+  <link rel="stylesheet" href="../../../common-projects/colorful/style/colorful.css" />
+  <link rel="stylesheet" href="../../../common-projects/colorful/style/header.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    
-</body>
+<body class="flex-layout fullscreen center p-16">
+  <header>
+    <div class="title">colorful</div>
+    <div style="flex: 1"></div>
+    <div onclick="document.fullscreenElement ? document.exitFullscreen() : document.body.requestFullscreen()">fullscreen</div>
+  </header>
+
+  <main class="mir square color-a column">
+    <div class="color-a"></div>
+    <div class="color-b"></div>
+    <div class="color-c p-8 gap-8" style="flex: 4;">
+        <div class="color-a p-8 column gap-1">
+            <!-- <div class="color-b circle"></div> -->
+            <div class="color-b" style="border-radius: 50cqmin 50cqmin 0 0;"></div>
+            <div class="color-b" style="border-radius: 0 0 50cqmin 50cqmin;"></div>
+        </div>
+        <div class="" style="flex: 3;">
+        </div>
+    </div>
+  </main>
+
+  <script type="module">
+    import { initializeStandalonePage } from '../../../common-projects/colorful/src/colorful.js'
+    initializeStandalonePage()
+  </script></body>
 </html>

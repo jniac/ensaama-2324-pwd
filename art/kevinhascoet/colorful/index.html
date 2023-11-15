@@ -1,66 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Colorful</title>
-    <link rel="stylesheet" href="../../../common-resources/reset.css" />
-    <link
-      rel="stylesheet"
-      href="../../../common-projects/colorful/style/colorful.css" />
-    <link
-      rel="stylesheet"
-      href="../../../common-projects/colorful/style/header.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jojo Colorful 2</title>
+  <link rel="stylesheet" href="../../../common-resources/reset.css" />
+  <link rel="stylesheet" href="../../../common-projects/colorful/style/colorful.css" />
+  <link rel="stylesheet" href="../../../common-projects/colorful/style/header.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex-layout fullscreen center p-16">
+  <header>
+    <div class="hori">invert</div>
+    <div style="flex: 1"></div>
+    <div class="full" onclick="document.fullscreenElement ? document.exitFullscreen() : document.body.requestFullscreen()">fullscreen</div>
+  </header>
 
-  <body class="flex-layout fullscreen center p-16">
-    <header class="jnc">
-      <div class="title">colorful</div>
-      <div style="flex: 1"></div>
-      <div
-        class="icon"
-        onclick="
-          document.fullscreenElement 
-            ? document.exitFullscreen() 
-            : document.body.requestFullscreen()
-        "></div>
-    </header>
 
-    <main class="kev square">
-      <div class="color-b"></div>
-      <div class="flex-2 color-a">
-        <div class="m-8 gap-8 column">
-          <div class="column">
-            <div class="color-a"></div>
-            <div class="color-a alt square"></div>
-          </div>
-          <div class="column">
-            <div class="color-c square"></div>
-            <div class="color-a"></div>
+
+  <main class="kev square">
+
+    <div>
+      <div class="column">
+        <div class="color-c"></div>
+        <div class="color-b">
+          <div class="color-d">
           </div>
         </div>
+        <div class="color-a"></div>
+        <div class="color-d"></div>
       </div>
+      <div class="color-c"></div>
+    </div>
+
+    <div class="column color-b">
+      <div class="color-d"></div>
+     <div class="color-b"></div>
+    </div>
+          <div class="color-a"></div>
+        </div>
+        <div class="column color-b">
+          <div class="color-b"></div>
+          <div class="color-d"></div>
+          <div class="color-a"></div>
+        </div>
+        <div class="color-c"></div>
+        </div>
+      </div>
+    </div>
+    <div class="color-d column">
       <div class="color-a"></div>
-      <div class="flex-2">
-        <div class="column">
-          <div class="color-a"></div>
-          <div class="color-b">
-            <div class="m-8 column">
-              <div></div>
-              <div class="color-c square"></div>
-            </div>
-          </div>
-          <div class="color-a"></div>
-          <div class="color-a alt"></div>
-        </div>
         <div class="color-b"></div>
-      </div>
-    </main>
+    </div>
 
-    <script type="module">
-      import { initializeStandalonePage } from '../../../common-projects/colorful/src/colorful.js'
-      initializeStandalonePage()
-    </script>
+    
+  </main>
+
+  <script type="module">
+    import { initializeStandalonePage } from '../../../common-projects/colorful/src/colorful.js'
+    initializeStandalonePage()
+
+      const element = document.querySelector('.hori')
+      element.onclick = () => {
+        document.documentElement.classList.toggle('horizontal')
+      }
+  </script>
+  
   </body>
 </html>
+
