@@ -38,7 +38,7 @@ header .actions{
     -webkit-mask-size: contain;
     -webkit-mask-repeat:no-repeat;
     aspect-ratio: 1;
-    background-color: antiquewhite;
+    background-color: green;
 }
 
 .logo-icon:hover{
