@@ -1,3 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url(header.css);
-@import url(../../../../common-resources/reset.css);
+@import url(../../../../../../common-resources/reset.css);
+
+body{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: oblique;
+    font-weight: 200;
+}
+
+main{
+    height:100vh;
+    display: flex;
+    -ms-flex-direction: row;
+}
+main>div {
+    width: 50%;
+}
+
+div.left {
+    background-image: url(asset/everything_nothing.jpeg);
+}
+
+div.right {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 1em;
+
+    overflow:scroll;
+
+    background-color: rgb(255, 217, 168);
+}
+
+div.right img {
+    align-self: right;
+}
+p{font-style: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
