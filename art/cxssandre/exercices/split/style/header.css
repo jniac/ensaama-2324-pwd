@@ -9,28 +9,34 @@ header{
     z-index: 10;
 }
 
-header .logo {
-    --size: calc(1em + 50px); /* It's complicated: a mix between fixed and dynamic sizes. */
+header div.logo{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+}
+
+.logo {
+  --image-url: url(../assets/crayon.png);
+
+  -webkit-mask-image: var(--image-url);
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: url();
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+
+  width: 50px;
+  height: 50px;
+}
   
-    width: var(--size);
-    height: var(--size);
-    background-color: black;
-  
-    mask-image: var(--url);
-    mask-size: contain;
-    mask-position: center;
-    mask-repeat: no-repeat;
-    -webkit-mask-image: var(--url);
-    -webkit-mask-size: contain;
-    -webkit-mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-  }
-  
-  header div.logo icon {
+  header div.logo-icon {
     background-color: white;
-    --url: url(../assets/crayon.png);
   }
   
-  header div.logo small {
+  header div.logo-small {
+    background-color: white;
     --url: url(../assets/chat.png);
   }

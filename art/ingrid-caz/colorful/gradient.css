@@ -1,0 +1,21 @@
+.gradient {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    padding: 3em;
+}
+
+.gradient .color{
+    --size:360px;
+    width: var(--size);
+    height: var(--size);
+    background-color: #5EC26C;
+}
+
+.gradient .n1 {
+    background-image: linear-gradient(#5EC26C, #186073);
+}
+
+.gradient .n2 {
+    background-image: linear-gradient(#2F4858, #08AC7F);
+}
