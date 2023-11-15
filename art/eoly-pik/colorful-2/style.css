@@ -1,24 +1,16 @@
-.eol .color-a {
-    background-image: linear-gradient(
-      90deg,
-      rgb(199, 146, 24),
-      rgb(130, 151, 99));
-  }
-  
-  .eol .color-a.alt {
-    background-image: linear-gradient(
-      rgb(32, 24, 42),
-      rgb(20, 15, 27));
-  }
-  
-  .eol .color-b {
-    background-color: rgb(185, 80, 48);
-  }
-  
-  .eol .color-c {
-    --over-feedback-color: black;
-    background-image: linear-gradient(
-      rgb(196, 221, 152),
-      rgb(244, 255, 225));
-  }
-  
+ .eol .color-a {
+  background-image: linear-gradient(rgb(93, 110, 96), rgb(130, 151, 99));
+}
+
+.eol .color-b {
+  background-image: linear-gradient(90deg, rgb(61, 104, 37), #15241b);
+}
+
+.eol .color-c {
+  background-image: linear-gradient(rgb(196, 221, 152),  rgb(244, 255, 225));
+}
+
+.eol
+ .color-d {
+  background-color: #322636;
+}
