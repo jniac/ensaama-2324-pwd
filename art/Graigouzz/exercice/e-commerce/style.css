@@ -74,3 +74,9 @@ button.start:hover{
     text-align: center;
     color: black;
 }
+
+.text .dash {
+    background-color: red;
+    flex: 0 0 1px;
+    width: 100%;
+  }

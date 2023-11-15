@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>site</title>
+    <title>L'or bleu</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -28,7 +28,7 @@
         <div class="slt">
           <img src="assets/eau.jpg" alt="" />
           <div class="tg">
-            <h2>La sauvegarde de l'eau</h2>
+            <h2>La sauvegarde de <br> l'eau</h2>
             <div class="trait"></div>
             <h3>
               L'eau, avec sa capacité unique à se transformer, à passer de
@@ -50,6 +50,8 @@
           turbines des centrales hydroélectriques, et contribuant ainsi à la
           production d'électricité propre et durable.
         </div>
+
+
         <div id="safia">
           Mais l'eau est bien plus qu'une simple substance physique. Elle a une
           signification profonde dans de nombreuses cultures à travers le monde.
@@ -72,5 +74,15 @@
         </div>
       </div>
     </section>
+
+    
+    <script>
+      const element = document.querySelector('header .shop')
+      element.onclick = () => {
+        document.documentElement.classList.toggle('dark')
+      }
+    </script>
+
+    <script src="src/main.js" type="module"></script>
   </body>
 </html>

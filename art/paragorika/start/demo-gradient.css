@@ -1,0 +1,36 @@
+.demo-gradient {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.demo-gradient swatch {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.demo-gradient swatch {
+    --size:360;
+    width: var(--size);
+    height: var(--size);
+    background-color: black;
+
+}
+
+.demo-gradient .gradient-2 {
+    background-image: linear-gradient(
+        80deg,
+        white 10
+        black);
+
+}
+
+.demo-gradient .gradient-1 {
+    background-image: linear-gradient(
+        80deg,
+        red 10
+        
+    );
+
+}

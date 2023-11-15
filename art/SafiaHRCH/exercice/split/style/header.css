@@ -29,3 +29,9 @@ div.icon-palette{
 div.icon-palette:hover{
     background-color:   rgb(209 1 53);
 }
+
+header .theme-button {
+    cursor: pointer;
+    user-select: none;
+  }
+
