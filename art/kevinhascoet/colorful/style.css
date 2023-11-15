@@ -1,25 +1,39 @@
 
+
+body{
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  
+  --c1: #FA55AB;
+  --c2: #2874FA;
+  --c3: #FAB728;
+  --c4: #45FA78;
+
+
+  /* --c1: #FA4444;
+  --c2: #283AFA;
+  --c3: #FACD28;
+  --c4: #3FE06D; */
+}
+
+
+main.kev {
+  background-image: linear-gradient(var(--c2),var(--c3));
+}
+
 .kev .color-a {
-    background-image: linear-gradient(
-      90deg,
-      rgb(52, 40, 65),
-      rgb(35, 27, 42));
-  }
-  
-  .kev .color-a.alt {
-    background-image: linear-gradient(
-      rgb(32, 24, 42),
-      rgb(20, 15, 27));
-  }
-  
-  .kev .color-b {
-    background-color: rgb(48, 87, 185);
-  }
-  
-  .kev .color-c {
-    --over-feedback-color: black;
-    background-image: linear-gradient(
-      rgb(196, 221, 152),
-      rgb(244, 255, 225));
-  }
-  
+  background-image: linear-gradient(var(--c1),var(--c2));
+}
+
+.kev .color-b {
+  background-image: linear-gradient(var(--c2),var(--c3));
+}
+
+.kev .color-c {
+  background-image: linear-gradient(var(--c3),var(--c4));
+}
+
+.kev .color-d {
+  background-image: linear-gradient(var(--c4),var(--c1));
+}
