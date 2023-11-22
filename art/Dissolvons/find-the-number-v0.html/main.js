@@ -16,7 +16,11 @@ if (userIsReady === false) {
     alert('Prends ton temps.')
 }
 
-const hiddenNumber = 36
+for(let i=0;i<3;i +=1){
+    alert(`${3-i}...`)
+}
+
+const hiddenNumber = Math.ceil(Math.random()*100)
 
 alert(`C'est bon, le jeu est prêt. à toi de trouver le nombre caché. Fais moi une proposition.`)
 
@@ -32,8 +36,10 @@ function giveATry(){
     
     }   else if (userNumber < hiddenNumber){
         alert('Trop petit !')
-    }   else {
-        alert('gagné !')
+    }   else if(userNumber === hiddenNumber) {
+        alert('Tu as trouver! trop fort!')
+    } else {
+        alert('Un nombre!')
     }
 
 if(userNumber !== hiddenNumber) {
