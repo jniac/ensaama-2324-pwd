@@ -1,0 +1,47 @@
+/* @import url(../../../../common-resources/reset.css);
+@import  url(gradient.css);
+
+
+.ing {
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+    gap: 2em;
+
+}
+
+.rec {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding:2em;
+
+    --size:470px;
+    width: var(--size);
+    height: 2var(--size);
+    background-color: #2F4858;
+}
+
+.square .n1 {
+    background-color: #186073;
+    align-items: flex-end;
+} */
+
+.ing .color-a {
+    background-color: #009488;
+}
+
+.ing .color-x {
+    background-color: #f00;
+}
+.ing .color-y {
+    background-color: #ff0;
+}
+
+.ing .color-b {
+    background-image: linear-gradient(#1f738a, #134b5a);
+}
+
+.ing .color-c {
+    background-image: linear-gradient(#0a795b, #08AC7F);
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safia Colorful</title>
+  <link rel="stylesheet" href="../../../common-resources/reset.css" />
+  <link rel="stylesheet" href="../../../common-projects/colorful/style/colorful.css" />
+  <link rel="stylesheet" href="../../../common-projects/colorful/style/header.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex-layout fullscreen center p-16">
+  <header>
+    <div class="title">colorful</div>
+    <div style="flex: 1"></div>
+    <div onclick="document.fullscreenElement ? document.exitFullscreen() : document.body.requestFullscreen()">fullscreen</div>
+  </header>
+
+  <!-- <main class="saf square">
+    <div class="m-8 color-a">
+        <div class="m-8 color-b">
+            <div class="m-8 color-c"></div>
+        </div>
+    </div>
+
+  </main> -->
+
+<main class="saf square">
+    <div class="color-b">
+        <div class="color-c square">
+            <div class="color-a" style="border-radius: 50%;"></div>
+        </div>
+    </div>
+    <div class="flex-2 color-a">
+        <div class="m-8 gap-8 column">
+        <div class="column">
+            <div class="color-a"></div>
+            <div class="color-a-alt square" style="border-radius: 50%;"></div>
+        </div>
+        <div class="column">
+            <div class="color-c square"></div>
+            <div class="color-a"></div>
+        </div>
+    </div>
+    <div class="color-a"></div>
+    <div class="flex-2">
+        <div class="column">
+            <div class="color-a"></div>
+            <div class="color-b">
+                <div class="m-8 column">
+                </div></div>
+                <div class="color-c square" style="border-radius: 50%;"></div>
+            </div>
+            <div class="color-a"></div>
+            <div class="color-a-alt"></div>
+        </div>
+        <div class="color-b"></div>
+    </div>
+</main>
+
+<script type="module">
+    import { initializeStandalonePage } from '../../../common-projects/colorful/src/colorful.js'
+    initializeStandalonePage()
+
+      const element = document.querySelector('.hori')
+      element.onclick = () => {
+        document.documentElement.classList.toggle('horizontal')
+      }
+  </script> 
+
+
+</body>
+</html>
