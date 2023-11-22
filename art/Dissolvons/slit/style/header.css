@@ -22,7 +22,7 @@ header .theme-button {
 }
 
 header .icon {
-  --url: url(../assets/image.svg);
+  --url: url(../assets/icone1.svg);
   --size: calc(
     1em + 16px
   ); /* It's complicated: a mix between fixed and dynamic sizes. */
@@ -42,11 +42,11 @@ header .icon {
 }
 
 header .icon.logo {
-  background-color: white;
-  --url: url(../assets/pets.svg);
+  background-color: rgb(224, 104, 104);
+  --url: url(../assets/icone1.svg);
 }
 
 header .icon.cart {
   background-color: var(--la-couleur);
-  --url: url(../assets/cart.svg);
+  --url: url(../assets/icone1.svg);
 }
