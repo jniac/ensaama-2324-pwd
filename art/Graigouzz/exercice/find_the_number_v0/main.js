@@ -2,6 +2,6 @@ alert('hello')
 
 let userWantToPlay=confirm("ui")
 
-if(userWantToPlay==false){
+if(userWantToPlay===false){
     alert("no")
 }
