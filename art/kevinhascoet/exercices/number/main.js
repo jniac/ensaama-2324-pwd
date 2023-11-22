@@ -15,19 +15,30 @@ if (ready === false){
     alert('.. t chiant')
 } 
 
-const number = 45
-
-alert('aler trouve mon nombre')
-
-const userstring = prompt('devine')
-const usernumber = Number.parseFloat(userstring)
-
-if (usernumber > number){
-    alert('c moins !!')
-} else if (usernumber < number){
-    alert('c plus!!!')
-} else if (usernumber == number){
-    alert('bien jouer!!!!')
-} else {
-    alert('epepep aler done moi un nombre')
+for (let i = 0; i < 3; i++){
+    alert(`${3 - i}...`)
 }
+
+const number = Math.ceil(Math.random() * 100)
+
+alert('aler trouve mon nombre! c entre 0 et 100')
+
+function giveATry(){
+    const userstring = prompt('devine')
+    const usernumber = Number.parseFloat(userstring)
+
+    if (usernumber > number){
+        alert('raté!! c moins')
+    } else if (usernumber < number){
+        alert('raté!!! c plus')
+    } else if (usernumber == number){
+        alert('bien jouer!!!!')
+    } else {
+        alert('epepep aler done moi un nombre')
+    }
+    if (usernumber !== number){
+        giveATry()
+    }
+}
+
+giveATry()
