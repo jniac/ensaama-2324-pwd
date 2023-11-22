@@ -1,52 +1,52 @@
 header {
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0.5em;
-    z-index: 10;
-  }
-  
-  header .header-left {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 8px;
-  }
-  
-  header .theme-button {
-    cursor: pointer;
-    user-select: none;
-  }
-  
-  header .icon {
-    --url: url(../assets/image.svg);
-    --size: calc(
-      1em + 16px
-    ); /* It's complicated: a mix between fixed and dynamic sizes. */
-  
-    width: var(--size);
-    height: var(--size);
-    background-color: var(--la-couleur);
-  
-    mask-image: var(--url);
-    mask-size: contain;
-    mask-position: center;
-    mask-repeat: no-repeat;
-    -webkit-mask-image: var(--url);
-    -webkit-mask-size: contain;
-    -webkit-mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-  }
-  
-  header .icon.logo {
-    background-color: white;
-    --url: url(../assets/pets.svg);
-  }
-  
-  header .icon.cart {
-    background-color: var(--la-couleur);
-    --url: url(../assets/cart.svg);
-  }
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5em;
+  z-index: 10;
+}
+
+header .header-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+header .theme-button {
+  cursor: pointer;
+  user-select: none;
+}
+
+header .icon {
+  --url: url(../assets/image.svg);
+  --size: calc(
+    1em + 16px
+  ); /* It's complicated: a mix between fixed and dynamic sizes. */
+
+  width: var(--size);
+  height: var(--size);
+  background-color: var(--la-couleur);
+
+  mask-image: var(--url);
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  -webkit-mask-image: var(--url);
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+}
+
+header .icon.logo {
+  background-color: white;
+  --url: url(../assets/pets.svg);
+}
+
+header .icon.cart {
+  background-color: var(--la-couleur);
+  --url: url(../assets/cart.svg);
+}
