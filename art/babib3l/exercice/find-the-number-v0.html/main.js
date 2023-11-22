@@ -24,4 +24,4 @@ const hiddenNumber = 54
 
 alert ('c est parti que le jeu commence')
 
-const userValue = prompt ("au dd")
+const userValue = prompt ("au dd") 
