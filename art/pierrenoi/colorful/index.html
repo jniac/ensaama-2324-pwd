@@ -37,5 +37,17 @@
             </div>
           </div>
         </main>
+
+        <script type="module">
+          import { initializeStandalonePage } from '../../../common-projects/colorful/src/colorful.js'
+          initializeStandalonePage()
+      
+            const element = document.querySelector('.hori')
+            element.onclick = () => {
+              document.documentElement.classList.toggle('horizontal')
+            }
+        </script>
+
+
       </body>
     </html>

@@ -1,3 +1,4 @@
+
 const [imageA, imageB] = document.querySelectorAll('.left .image')
 
 let image = imageA
