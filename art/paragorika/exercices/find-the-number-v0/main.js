@@ -15,7 +15,7 @@ if (userisready===false) {
 
 
 for (let i = 0; i<3, i+=1) {
-    alert(`{i}...`)
+    alert(`${i}...`)
 }
 
 
