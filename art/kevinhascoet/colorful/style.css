@@ -11,10 +11,9 @@
 }
 
 :root.horizontal {
-  --g1: linear-gradient(10deg, var(--c1), var(--c2));
-  --g2: linear-gradient(10deg, var(--c2), var(--c3));
-  --g3: linear-gradient(10deg, var(--c3), var(--c4));
-  --g4: linear-gradient(10deg, var(--c4), var(--c1));
+  --g1: linear-gradient(0deg, var(--c1), var(--c2));
+  --g2: linear-gradient(0deg, var(--c2), var(--c3));
+  --g3: linear-gradient(0deg, var(--c3), var(--c1));
 }
 
 body {
