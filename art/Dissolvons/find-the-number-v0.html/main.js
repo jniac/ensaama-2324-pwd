@@ -27,13 +27,13 @@ function giveATry(){
     const userNumber = Number.parseFloat(userString)
     
     if (userNumber > hiddenNumber) {
-        alert('Trop grand. Comme ta stupidité')
+        alert('Trop grand! ')
 
     
     }   else if (userNumber < hiddenNumber){
-        alert('Trop petit, comme ton QI')
+        alert('Trop petit !')
     }   else {
-        alert('Enfin, il était temps !')
+        alert('gagné !')
     }
 
 if(userNumber !== hiddenNumber) {
