@@ -6,7 +6,6 @@
 
 
 /* MARGIN */
-
 .m-1 {
   margin: calc(1 * var(--spacing));
 }
@@ -68,7 +67,7 @@
   margin: calc(64 * var(--spacing));
 }
 
-
+/* MARGIN-TOP */
 .mt-1 {
   margin-top: calc(1 * var(--spacing));
 }
@@ -130,8 +129,7 @@
   margin-top: calc(64 * var(--spacing));
 }
 
-
-
+/* MARGIN-BOTTOM */
 .mb-1 {
   margin-bottom: calc(1 * var(--spacing));
 }
@@ -191,6 +189,130 @@
 }
 .mb-64 {
   margin-bottom: calc(64 * var(--spacing));
+}
+
+/* MARGIN-LEFT */
+.mr-1 {
+  margin-left: calc(1 * var(--spacing));
+}
+.mr-2 {
+  margin-left: calc(2 * var(--spacing));
+}
+.mr-3 {
+  margin-left: calc(3 * var(--spacing));
+}
+.mr-4 {
+  margin-left: calc(4 * var(--spacing));
+}
+.mr-5 {
+  margin-left: calc(5 * var(--spacing));
+}
+.mr-6 {
+  margin-left: calc(6 * var(--spacing));
+}
+.mr-7 {
+  margin-left: calc(7 * var(--spacing));
+}
+.mr-8 {
+  margin-left: calc(8 * var(--spacing));
+}
+.mr-10 {
+  margin-left: calc(10 * var(--spacing));
+}
+.mr-12 {
+  margin-left: calc(12 * var(--spacing));
+}
+.mr-14 {
+  margin-left: calc(14 * var(--spacing));
+}
+.mr-16 {
+  margin-left: calc(16 * var(--spacing));
+}
+.mr-20 {
+  margin-left: calc(20 * var(--spacing));
+}
+.mr-24 {
+  margin-left: calc(24 * var(--spacing));
+}
+.mr-28 {
+  margin-left: calc(28 * var(--spacing));
+}
+.mr-32 {
+  margin-left: calc(32 * var(--spacing));
+}
+.mr-40 {
+  margin-left: calc(40 * var(--spacing));
+}
+.mr-48 {
+  margin-left: calc(48 * var(--spacing));
+}
+.mr-56 {
+  margin-left: calc(56 * var(--spacing));
+}
+.mr-64 {
+  margin-left: calc(64 * var(--spacing));
+}
+
+/* MARGIN-RIGHT */
+.mr-1 {
+  margin-right: calc(1 * var(--spacing));
+}
+.mr-2 {
+  margin-right: calc(2 * var(--spacing));
+}
+.mr-3 {
+  margin-right: calc(3 * var(--spacing));
+}
+.mr-4 {
+  margin-right: calc(4 * var(--spacing));
+}
+.mr-5 {
+  margin-right: calc(5 * var(--spacing));
+}
+.mr-6 {
+  margin-right: calc(6 * var(--spacing));
+}
+.mr-7 {
+  margin-right: calc(7 * var(--spacing));
+}
+.mr-8 {
+  margin-right: calc(8 * var(--spacing));
+}
+.mr-10 {
+  margin-right: calc(10 * var(--spacing));
+}
+.mr-12 {
+  margin-right: calc(12 * var(--spacing));
+}
+.mr-14 {
+  margin-right: calc(14 * var(--spacing));
+}
+.mr-16 {
+  margin-right: calc(16 * var(--spacing));
+}
+.mr-20 {
+  margin-right: calc(20 * var(--spacing));
+}
+.mr-24 {
+  margin-right: calc(24 * var(--spacing));
+}
+.mr-28 {
+  margin-right: calc(28 * var(--spacing));
+}
+.mr-32 {
+  margin-right: calc(32 * var(--spacing));
+}
+.mr-40 {
+  margin-right: calc(40 * var(--spacing));
+}
+.mr-48 {
+  margin-right: calc(48 * var(--spacing));
+}
+.mr-56 {
+  margin-right: calc(56 * var(--spacing));
+}
+.mr-64 {
+  margin-right: calc(64 * var(--spacing));
 }
 
 

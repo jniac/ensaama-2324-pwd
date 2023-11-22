@@ -1,0 +1,52 @@
+.saf .color-a {
+    background-image: radial-gradient(
+        #e8751a,
+        #e8431a );
+}
+
+.saf .color-a-alt {
+    background-color: #e8281a;
+}
+
+.saf .color-b {
+    background-image: linear-gradient(
+        #c51350 60%,
+        #c513c5 );
+}
+
+.saf .color-c {
+    background-image: linear-gradient(
+        #8a1253,
+        #5e128a );
+}
+
+
+/* .saf .color-b-alt {
+    background-color: #c513b6;
+} */
+
+
+
+/* .jnc .color-a {
+    background-image: linear-gradient(
+      90deg,
+      rgb(52, 40, 65),
+      rgb(35, 27, 42));
+  }
+  
+  .jnc .color-a.alt {
+    background-image: linear-gradient(
+      rgb(32, 24, 42),
+      rgb(20, 15, 27));
+  }
+  
+  .jnc .color-b {
+    background-color: rgb(48, 87, 185);
+  }
+  
+  .jnc .color-c {
+    --over-feedback-color: black;
+    background-image: linear-gradient(
+      rgb(196, 221, 152),
+      rgb(244, 255, 225));
+  } */
