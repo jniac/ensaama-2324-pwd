@@ -1,7 +1,7 @@
 .mir .color-a {
     background-image: linear-gradient(
     rgb(95, 97, 182),
-    rgb(51, 52, 133));
+    rgb(46, 47, 119));
     
 }
 
@@ -11,9 +11,9 @@
 
 .mir .color-b {
     background-image: linear-gradient(
-        rgb(114, 250, 255)
-        rgb(60, 147, 150)
-        rgb(114, 250, 255));
+        rgb(176, 226, 228),
+        rgb(60, 147, 150),
+        rgb(29, 49, 49));
 }
 
 .mir .color-c {
