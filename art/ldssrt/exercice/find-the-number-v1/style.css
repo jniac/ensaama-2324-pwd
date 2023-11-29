@@ -33,13 +33,13 @@ main {
 .arrow > .right {
 
     transform: skewY(var(--angle));
-    transform-origin: top right;
+    transform-origin: top left;
 
 }
 
 .arrow > .left {
 
     transform: skewY(calc(var(--angle) * -1));
-    transform-origin: top left;
+    transform-origin: top right;
 
 }
