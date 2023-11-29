@@ -1,4 +1,4 @@
-const main= document.querySelector('main')
+const main=document.querySelector('main')
 
 const arrowSource=document.querySelector('.arrow')
 
@@ -11,3 +11,4 @@ main.onclick = (event) => {
     clone.style.top=`${event.clientY}px`
     main.append(clone)
 }
+
