@@ -1,8 +1,5 @@
-
 const main = document.querySelector('main')
 const arrowSource = document.querySelector('.arrow')
-
-// console.log(arrowSource)
 
 main.onclick = (event) => {
     console.log(event.clientY)
@@ -11,3 +8,9 @@ main.onclick = (event) => {
     clone.style.top = `${event.clientY}px`
     main.append(clone)
 }
+
+
+//rdm gradient color
+const color = randFFFFFF()
+const gradient = 'linear-gradient'($!
+)
