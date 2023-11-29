@@ -24,8 +24,10 @@ alert(`C'est partiiiii !`)
 
 const hiddenNumber = Math.ceil(Math.random() * 100)
 
-alert(`Ça y est, j'ai caché un nombre. À toi de le trouver. Fais moi une proposition.`)
+// Un petit cheat quand même:
+console.log(`le nombre caché est ${hiddenNumber}`)
 
+alert(`Ça y est, j'ai caché un nombre. À toi de le trouver. Fais moi une proposition.`)
 
 function giveATry() {
   const userString = prompt(`Kouakoubeh ?`)
