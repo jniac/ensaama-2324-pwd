@@ -17,10 +17,11 @@ if (userisready===false) {
 for (let i = 0; i<3, i+=1) {
     alert(`${i}...`)
 }
+alert(`c'est partiiiii !`)
 
-
-const hiddenNumber = 54
+const hiddenNumber = Math.ceil(Math.random()*100)
 
 alert (`ça y est, j'ai caché un nombre. a toi de le trouver`)
 const userString = prompt(kouakoubeh?)
 const userNumber = Number.parseFloat(userString)
+

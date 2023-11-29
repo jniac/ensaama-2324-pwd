@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <script src="main.js"></script>
+
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap");
+
+            body {
+                padding-top: 8rem;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            h1 {
+                font-family: "Teko", sans-serif;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: 6rem;
+                margin: 0 0;
+            }
+
+            h2 {
+                font-family: "Teko", sans-serif;
+                font-weight: 600;
+                text-transform: uppercase;
+                font-size: 4rem;
+                margin: 0 0;
+                visibility: hidden;
+            }
+
+            button {
+                padding: 0.2rem 4rem;
+                font-size: 3rem;
+                font-family: "Teko", sans-serif;
+                font-weight: 600;
+                background-color: #0000;
+                border-radius: 0.5rem;
+            }
+
+            button:hover {
+                cursor: pointer;
+                background-color: black;
+                color: #fff;
+            }
+
+            .boutons {
+                display: flex;
+                gap: 2rem;
+                justify-content: center;
+            }
+
+            .not-displayed {
+                display: none !important;
+            }
+
+            .No {
+                text-align: center;
+            }
+
+            .Home {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .Start {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+            }
+
+            input {
+                text-align: center;
+                font-size: 3rem;
+                font-family: "Teko", sans-serif;
+                font-weight: 600;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="Home">
+            <h1>Tu veux jouer mon reuf ?</h1>
+            <div class="boutons">
+                <button onclick="startBtn(true)">OUI</button>
+                <button onclick="startBtn(false)">NON</button>
+            </div>
+        </div>
+
+        <div class="No not-displayed">
+            <h1>Ah ! Dommage le S</h1>
+            <button onclick="home()">RESTART</button>
+        </div>
+
+        <div class="Start not-displayed">
+            <h1>Quel est l'âge de ma grand mère ?</h1>
+            <h2 id="displayedText">elle est aps si viekle que ça</h2>
+            <input type="number" name="inputedNumber">
+            <button class="boutons" onclick="valider()">Valider</button>
+
+            <script>
+                document.addEventListener('keydown', function(e) {
+                    if (e.keyCode === 13) {
+                        valider();
+                    }
+                });
+            </script>
+        </div>
+    </body>
+</html>
