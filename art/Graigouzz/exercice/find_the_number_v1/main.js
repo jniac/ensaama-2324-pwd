@@ -11,9 +11,8 @@ const colors=[
     '#0000ff',
 ]
 
-const randomC =() =>{
+const randomC = () =>{
     const index=Math.floor(Math.random()*colors.length)
-    console.log(colors[index])
     return colors[index]
 }
 
