@@ -9,11 +9,67 @@
   <link rel="stylesheet" href="../../../common-projects/colorful/style/header.css" />
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="flex-layout fullscreen center p-16">
   <header>
     <div class="title">colorful</div>
     <div style="flex: 1"></div>
-    <div>fullscreen</div>
+    <div onclick="document.fullscreenElement ? document.exitFullscreen() : document.body.requestFullscreen()">fullscreen</div>
   </header>
+
+
+<main class="saf square">
+
+    <div class="color-a">
+        <div class="color-c square">
+            <div class="color-a" style="border-radius: 50%;"></div>
+        </div>
+    </div>
+    <div class="flex-2 color-b">
+        <div class="m-8 gap-8 column">
+        <div class="column">
+            <div class="color-a"></div>
+            <div class="color-a-alt square" style="border-radius: 50%;"></div>
+        </div>
+        <div class="row">
+            <div class="color-c "></div>
+
+            <div class="color-a"></div>
+        </div>
+    </div>
+    
+        <div class="column">
+            <div class="color-a-alt " ></div>
+            <div class="color-b square" ></div>
+            <div class="color-c square" ></div>
+            <div class="color-a square" style="border-radius: 50%;"></div>
+            <div class="color-a-alt"></div>
+        </div>
+
+    <div class="flex-2">
+        <div class="column">
+            <div class="color-c square" style="border-radius: 50%;"></div>
+            <div class="color-a"></div>
+            <div class="color-b">
+                <div class="m-8 column">
+                    <!-- <div class="color-c square" style="border-radius: 50%;"></div> -->
+                </div></div>
+                <!-- <div class="color-c square" style="border-radius: 50%;"></div> -->
+            </div>
+        </div>
+    </div>
+</main>
+
+<script type="module">
+    import { initializeStandalonePage } from '../../../common-projects/colorful/src/colorful.js'
+    initializeStandalonePage()
+
+      const element = document.querySelector('.hori')
+      element.onclick = () => {
+        document.documentElement.classList.toggle('horizontal')
+      }
+  </script>
+  </script> 
+
+
 </body>
 </html>
