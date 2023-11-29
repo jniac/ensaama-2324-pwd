@@ -2,8 +2,6 @@
 const main = document.querySelector('main')
 const arrowSource = document.querySelector('.arrow')
 
-// console.log(arrowSource)
-
 main.onclick = (event) => {
     console.log(event.clientY)
 
