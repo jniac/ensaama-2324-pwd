@@ -1,0 +1,10 @@
+.quare-background { background-color: aliceblue; }
+
+.grad-1 {
+    background-image: linear-gradient(
+        0deg,
+        #23153B,
+        #231A3D
+);}
+
+.left-1 { width: 15%; }

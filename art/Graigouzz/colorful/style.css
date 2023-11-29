@@ -7,7 +7,7 @@
 }
 
 .gra .color-c{
-    background-color: lightcoral;
+    background-color: rgb(235, 164, 164);
 }
 
 .gra .color-d{
@@ -16,7 +16,7 @@
 
 .cercle{
     border-radius: 50% 0% 50%;
-    background-image: linear-gradient(aliceblue,lightblue);
+    background-image: radial-gradient(aliceblue 25%,lightblue 80%);
 }
 
 
