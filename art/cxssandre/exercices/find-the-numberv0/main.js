@@ -20,7 +20,7 @@ for (let i = 0; i< 3; i += 1){
     alert(`${3 - i}...`)
  }
 
-const hiddenNumber = Math.ceil(Math.random() * 100)
+const hiddenNumber = Math.ceil(Math.random() *   100)
 
 alert("J'ai un nombre en tête. A toi de le trouver frerot. Fais un guess.")
 
