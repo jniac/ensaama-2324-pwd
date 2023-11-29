@@ -26,20 +26,20 @@ main {
 
     flex: 1;
     align-self: stretch;
-    background-image: linear-gradient(rgb(144, 190, 218), rgba(50, 50, 252, 0.281));
-
-}
-
-.arrow > .right {
-
-    transform: skewY(var(--angle));
-    transform-origin: top left;
+    background-image: linear-gradient(rgb(144, 190, 218), rgba(50, 50, 252, 0));
 
 }
 
 .arrow > .left {
 
     transform: skewY(calc(var(--angle) * -1));
+    transform-origin: top left;
+    
+}
+
+.arrow > .right {
+    
+    transform: skewY(var(--angle));
     transform-origin: top right;
 
 }
