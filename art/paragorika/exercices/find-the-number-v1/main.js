@@ -8,10 +8,9 @@ main.onclick = (event) => {
     clone.style.top = `${event.clientY}px`
     main.append(clone)
 
-    //rdm gradient color
-    const color = randFFFFFF()
-    const gradient = `gradient(${color}, ${color}00)`
-    clone.querySelector('.right').style.backgroundImage = gradient
-    clone.querySelector('.left').style.backgroundImage = gradient
-
-)
+// random gradient color
+const color= randFFFFFF()
+const linearGradient = `linear-gradient(${color}, ${color}00)`
+clone.querySelector('.right').style.backgroundImage = linearGradient
+clone.querySelector('.left').style.backgroundImage = linearGradient
+}
