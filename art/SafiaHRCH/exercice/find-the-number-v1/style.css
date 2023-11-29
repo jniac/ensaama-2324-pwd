@@ -1,11 +1,15 @@
 @import url(../../../../common-resources/reset.css);
 
 main {
+    position: relative;
     width: 100vw;
     height: 100vh;
+    background-color: rgb(0, 29, 21);
+    overflow: hidden;
 }
 
 .arrow {
+    --angle: 150deg;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -18,5 +22,17 @@ main {
 .arrow > div {
     flex: 1;
     align-self: stretch;
-    background-image: linear-gradient(red, blue);
+    background-image: linear-gradient(
+        rgb(0, 133, 95), 
+        #9000ff00);
+}
+
+.arrow > .left {
+    transform: skewY(calc(var(--angle)* -1));
+    transform-origin: top right;
+}
+
+.arrow > .right {
+    transform: skewY(var(--angle));
+    transform-origin: top left;
 }
