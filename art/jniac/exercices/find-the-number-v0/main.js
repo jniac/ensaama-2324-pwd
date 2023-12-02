@@ -33,6 +33,10 @@ function giveATry() {
   const userString = prompt(`Kouakoubeh ?`)
   const userNumber = Number.parseFloat(userString)
 
+  if (userString === 'exit') {
+    return
+  }
+  
   if (userNumber > hiddenNumber) {
     alert('Trop grand !')
   } else if (userNumber < hiddenNumber) {
