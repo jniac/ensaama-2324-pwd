@@ -12,7 +12,7 @@ main {
 
 .arrow {
 
-    --angle : 10deg;
+    --angle : 150deg;
     position: absolute;
     width: 100%;
     height: 50%;
@@ -28,7 +28,7 @@ main {
 
 /* UUUUUP: */
 .arrow.up{
-    top: 75%;
+    top: 60%;
 }
 
 .arrow.up > div{
@@ -49,14 +49,14 @@ main {
 
 /* down */
 .arrow.down{
-    bottom: 25%;
+    bottom: 60%;
 }
 
 
 .arrow.down > div{
     background-image: linear-gradient(
-        #df9a1c, 
-        #add8e600);
+        #add8e600,
+        #df9a1c);
 }
 
 .arrow.down > .left{
@@ -65,7 +65,7 @@ main {
 }
 
 .arrow.down > .right{
-    transform: skewY(calc(var(--angle))*-1);
+    transform: skewY(calc(var(--angle)*-1));
     transform-origin: top left;
 }
 
