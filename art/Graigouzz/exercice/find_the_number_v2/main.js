@@ -8,6 +8,9 @@ const arrowUp=document.querySelector('.arrow.up')
 const arrowDown=document.querySelector('.arrow.down')
 
 
+arrowDown.remove()
+arrowUp.remove()
+
 const colors=[
     '#ff0000',
     '#cc9900',
