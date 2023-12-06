@@ -29,17 +29,39 @@ main {
 .arrow > div {
     flex: 1;
     align-self: stretch;
+  }
+
+  
+/* UP */
+.arrow.up > div {
     background-image: linear-gradient(
         rgba(0, 133, 95, 0.877), 
         rgba(52, 0, 100, 0));
-}
-
-.arrow > .left {
-    transform: skewY(calc(var(--angle)* -1));
+  }
+  
+  .arrow.up > .left {
+    transform: skewY(calc(var(--angle) * -1));
     transform-origin: top right;
-}
-
-.arrow > .right {
+  }
+  
+  .arrow.up > .right {
     transform: skewY(var(--angle));
     transform-origin: top left;
-}
+  }
+  
+  /* DOWN: */
+  .arrow.down > div {
+    background-image: linear-gradient(
+        rgba(52, 0, 100, 0),
+      rgba(0, 133, 95, 0.877));
+  }
+  
+  .arrow.down > .left {
+    transform: skewY(var(--angle));
+    transform-origin: top right;
+  }
+  
+  .arrow.down > .right {
+    transform: skewY(calc(var(--angle) * -1));
+    transform-origin: top left;
+  }
