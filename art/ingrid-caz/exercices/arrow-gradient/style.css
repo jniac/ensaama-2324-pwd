@@ -2,12 +2,13 @@
 
 main {
     width: 100vw;
-    height: 100vh;
-    background-color: #123;
+    height: 1100vh;
+    background-color: rgb(17, 16, 16);
+
 }
 
 .arrow {
-    --angle: 10deg;
+    --angle: -200deg;
 
     position: absolute;
     bottom: 0;
@@ -18,20 +19,20 @@ main {
     flex-direction: row;
 }
 
-.arrow > div{
-    flex: 1 ;
+.arrow > div {
+    flex: 1;
     align-self: stretch;
-    background-image: linear-gradient(rgb(64, 75, 224), #fff89900);
+    background-image: linear-gradient(
+    rgb(45, 10, 128),
+    rgba(0, 0, 255, 0.493));
 }
 
 .arrow > .left {
     transform: skewY(var(--angle));
-    transform-origin: top right; 
-
+    transform-origin: top right;
 }
 
 .arrow > .right {
-    transform: skewY(calc(var(--angle) * -1));
-    transform-origin: top left; 
-
+    transform: skewY(calc(var(--angle)*-1));
+    transform-origin: top left;
 }
