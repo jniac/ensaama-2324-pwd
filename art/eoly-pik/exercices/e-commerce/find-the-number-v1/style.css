@@ -15,7 +15,7 @@ main {
     --angle : 150deg;
     position: absolute;
     width: 100%;
-    height: 50%;
+    height: 30%;
 
     display: flex;
     flex-direction: row;
@@ -28,12 +28,12 @@ main {
 
 /* UUUUUP: */
 .arrow.up{
-    top: 60%;
+    top: 40%;
 }
 
 .arrow.up > div{
     background-image: linear-gradient(
-        #1c6adf, 
+        #1cdfbf, 
         #add8e600);
 }
 
@@ -49,14 +49,14 @@ main {
 
 /* down */
 .arrow.down{
-    bottom: 60%;
+    bottom: 40%;
 }
 
 
 .arrow.down > div{
     background-image: linear-gradient(
         #add8e600,
-        #1cc2df);
+        #1c60df);
 }
 
 .arrow.down > .left{
