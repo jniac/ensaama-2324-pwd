@@ -10,71 +10,36 @@ main {
 }
 
 .arrow {
-    
+
     --angle: 10deg;
-    
+
     position: absolute;
     width: 100%;
     height: 50%;
-   
-    
+    bottom: 0;
+
     display: flex;
     flex-direction: row;
 }
-.arrow.up {
 
-    top: 75%;
-}
-
-.arrow.down {
-
-    bottom: 75%;
-}
 .arrow > div {
-    
+
     flex: 1;
     align-self: stretch;
-}
-
-/* UP */
-
-.arrow.up > div {
     background-image: linear-gradient(rgb(144, 190, 218), rgba(50, 50, 252, 0));
 
 }
 
-.arrow.up > .left {
+.arrow > .left {
 
     transform: skewY(calc(var(--angle) * -1));
     transform-origin: top left;
     
 }
 
-.arrow.up > .right {
+.arrow > .right {
     
     transform: skewY(var(--angle));
-    transform-origin: top right;
-
-}
-
-/* DOWN */
-.arrow.down > div {
-
-    background-image: linear-gradient(rgba(50, 50, 252, 0), rgb(144, 190, 218));
-
-}
-
-
-.arrow.down > .left {
-
-    transform: skewY(var(--angle));
-    transform-origin: top left;
-    
-}
-
-.arrow.down > .right {
-    
-    transform: skewY(calc(var(--angle) * -1));
     transform-origin: top right;
 
 }

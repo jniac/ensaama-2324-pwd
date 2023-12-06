@@ -3,7 +3,7 @@
 main {
     width: 100vw;
     height: 100vh;
-    background-color: darkslategray;
+    background-color: rgb(217, 0, 255);
     overflow: hidden;
 }
 
@@ -23,8 +23,8 @@ main {
     flex: 1;
     align-self: stretch;
     background-image: linear-gradient(
-        rgb(0, 255, 106), 
-        darkslategray);
+        rgb(0, 133, 55), 
+        rgb(17, 255, 255));
 }
 
 .arrow > .left {

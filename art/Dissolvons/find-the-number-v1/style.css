@@ -66,4 +66,3 @@ main {
   transform: skewY(calc(var(--angle) * -1));
   transform-origin: top left;
 }
-

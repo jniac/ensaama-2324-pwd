@@ -3,6 +3,8 @@ import { randFFFFFF } from "../../../../common-resources/js/color-utils.js";
 const main = document.querySelector('main')
 const arrowSource = document.querySelector('.arrow')
 
+arrowSource.remove ()
+
 main.onclick = (event) => {
     console.log(event.clientY)
 
@@ -15,6 +17,4 @@ main.onclick = (event) => {
     clone.querySelector('.right').style.backgroundImage = linearGradient
     clone.querySelector('.left').style.backgroundImage = linearGradient
 
-    const angle = (window.innerHeight - event.Y) / 10
-    clone.style.setProperty('--angle', `${angle}deg`)
 }
