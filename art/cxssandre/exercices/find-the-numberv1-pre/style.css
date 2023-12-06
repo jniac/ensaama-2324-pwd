@@ -4,15 +4,17 @@ main {
     width: 100vw;
     height: 100vh;
     background-color: #123;
+    overflow: hidden;
+    position: relative;
 }
 
 /* ARROW GENERIC: */
 .arrow {
-    --angle: 10deg;
+    --angle: 60deg;
   
     position: absolute;
     width: 100%;
-    height: 25%;
+    height: 10%;
   
     display: flex;
     flex-direction: row;
@@ -29,7 +31,7 @@ main {
   }
   
   .arrow.up > div {
-    background-image: linear-gradient(rgb(64, 75, 224), #fff89900);
+    background-image: linear-gradient(rgb(64, 75, 224, 0.5), #fff89900);
 
   }
   
@@ -49,7 +51,7 @@ main {
   }
   
   .arrow.down > div {
-    background-image: linear-gradient(#fff89900,rgb(64, 75, 224));
+    background-image: linear-gradient(#fff89900,rgb(64, 75, 224, 0.5));
 
   }
   
@@ -63,4 +65,4 @@ main {
     transform-origin: top left;
   }
   
-  
+
