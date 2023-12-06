@@ -21,4 +21,3 @@ main.onclick = (event) => {
   const angle = 40 * (event.y / window.innerWidth)
   clone.style.setProperty('--angle', `${angle}deg`)
 }
-
