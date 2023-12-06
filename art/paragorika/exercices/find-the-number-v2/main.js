@@ -1,4 +1,6 @@
-import { randFFFFFF } from '../../../../common-resources/js/color-utils.js'
+
+import { lerpFFFFFF, randFFFFFF } from '../../../../common-resources/js/color-utils.js'
+
 
 
 const main = document.querySelector('main')
@@ -9,8 +11,18 @@ arrowUpSource.remove()
 arrowDownSource.remove()
 
 
-const color
+const colorA = '#ff8080'
+const colorB = '#2e2edd'
 
+const randomColorAorB = () => {
+  const colors = [colorA, colorB]
+  const index = Math.floor(colors.length * Math.random())
+  return colors[index]
+}
+
+const randomLerpColor = () => {
+  return lerpFFFFFF(colorA, colorB, Math.random())
+}
 
 function addArrowUp(y) {
     const clone = arrowUpSource.cloneNode(true)
