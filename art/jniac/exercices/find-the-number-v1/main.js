@@ -4,7 +4,7 @@ const main = document.querySelector('main')
 const arrowSource = document.querySelector('.arrow')
 
 // La "source" n'est plus nécessaire, on peut la retirer de l'écran:
-arrowSource.remove()
+// arrowSource.remove()
 
 main.onclick = (event) => {
   const clone = arrowSource.cloneNode(true)
