@@ -12,22 +12,34 @@ function addArrowUp(y) {
     const clone = arrowUpSource.cloneNode(true)
     clone.style.top = `${100 - y}%`
     main.append(clone)
+
+    const color = randFFFFFF()
+const linearGradient = `linear-gradient(${color}, ${color}00)`
+clone.querySelector('.right').style.backgroundImage = linearGradient
+clone.querySelector('.left').style.backgroundImage = linearGradient
 }
 
 
 
 function addArrowDown(y) {
     const clone = arrowDownSource.cloneNode(true)
-    clone.style.top = `${100 - y}%`
+    clone.style.bottom = `${100 - y}%`
     main.append(clone)
+    
+    const color = randFFFFFF()
+const linearGradient = `linear-gradient(${color}00, ${color})`
+clone.querySelector('.right').style.backgroundImage = linearGradient
+clone.querySelector('.left').style.backgroundImage = linearGradient
+}
+
+for (let i = 0; i < 20; i++) {
+    addArrowDown(i * 10)
+    addArrowUp(i * 10)
 }
 
 
-addArrowUp(10)
-addArrowUp(20)
-addArrowUp(30)
 
-addArrowDown(10)
-addArrowDown(20)
-addArrowDown(30)
+
+
+
 
