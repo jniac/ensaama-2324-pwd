@@ -11,7 +11,7 @@ const arrowDown=document.querySelector('.arrow.down')
 const colors=[
     '#CC86B1',
     '#DAF7A6',
-   
+    '#CDC4F1', 
 ]
 
 const randomC = () =>{
