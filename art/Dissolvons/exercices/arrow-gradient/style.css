@@ -1,39 +1,40 @@
 @import url(../../../../common-resources/reset.css);
 
 main {
-    width: 100vw;
-    height: 150vh;
-    background-color: #1C1839;
-    overflow: hidden;
     position: relative;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: #28366e;
+
+    overflow: hidden;
 }
 
 .arrow {
-    --angle: 10deg;
-    
-    position:absolute;
-    bottom: 0px;
+
+    --angle : 1200deg;
+    position: absolute;
     width: 100%;
-    height: 20%;
+    height: 100%;
 
     display: flex;
     flex-direction: row;
 }
 
 .arrow > div {
-    flex: 1;
+    flex: 2;
     align-self: stretch;
 }
 
 /* UUUUUP: */
 .arrow.up{
-    top: 75%;
+    top: 100%;
 }
 
 .arrow.up > div{
     background-image: linear-gradient(
-        rgb(0, 255, 106), 
-        darkslategray);
+      rgb(209, 141, 209) , 
+      #eedfae);
 }
 
 .arrow.up > .left{
@@ -48,14 +49,14 @@ main {
 
 /* down */
 .arrow.down{
-    bottom: 25%;
+    bottom: 73%;
 }
 
 
 .arrow.down > div{
     background-image: linear-gradient(
-        #add8e600,
-        #df9a1c);
+      #f4a6f7,
+      #BFCC86 );
 }
 
 .arrow.down > .left{
@@ -67,5 +68,3 @@ main {
     transform: skewY(calc(var(--angle)*-1));
     transform-origin: top left;
 }
-
-
