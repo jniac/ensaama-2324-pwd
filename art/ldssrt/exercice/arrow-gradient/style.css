@@ -22,7 +22,7 @@ main {
     flex-direction: row;
 }
 
-.arrow.up > div {
+.arrow > div {
 
     flex: 1;
     align-self: stretch;
@@ -30,48 +30,16 @@ main {
 
 }
 
-.arrow.up > div {
-
-    flex: 1;
-    align-self: stretch;
-    background-image: linear-gradient(rgb(144, 190, 218), rgba(50, 50, 252, 0));
-
-}
-
-.arrow.up > .left {
+.arrow > .left {
 
     transform: skewY(calc(var(--angle) * -1));
     transform-origin: top left;
     
 }
 
-.arrow.up > .right {
+.arrow > .right {
     
     transform: skewY(var(--angle));
     transform-origin: top right;
 
-}
-
-.arrow.down > .left {
-
-    transform: skewY(var(--angle));
-    transform-origin: top left;
-    
-}
-
-.arrow.down > .right {
-    
-    transform: skewY(calc(var(--angle) * -1));
-    transform-origin: top right;
-
-}
-
-.arrow.up {
-
-    top: 75%;
-}
-
-.arrow.down {
-
-    bottom: 25%;
 }
