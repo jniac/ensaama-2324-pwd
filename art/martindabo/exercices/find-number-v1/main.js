@@ -1,12 +1,4 @@
-const randFF = () => {
-  return Math.floor(Math.random() * 0xff)
-    .toString(16)
-    .padStart(2, '0')
-}
-
-const randFFFFFF = () => {
-  return `#${randFF()}ffff`
-}
+import { randFFFFFF } from '../../../../common-resources/js/color-utils.js'
 
 const main = document.querySelector('main')
 const arrowUpSource = document.querySelector('.arrow.up')
