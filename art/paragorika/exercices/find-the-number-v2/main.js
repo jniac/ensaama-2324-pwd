@@ -8,6 +8,10 @@ const arrowDownSource = document.querySelector('.arrow.down')
 arrowUpSource.remove()
 arrowDownSource.remove()
 
+
+const color
+
+
 function addArrowUp(y) {
     const clone = arrowUpSource.cloneNode(true)
     clone.style.top = `${100 - y}%`
@@ -36,10 +40,3 @@ for (let i = 0; i < 20; i++) {
     addArrowDown(i * 10)
     addArrowUp(i * 10)
 }
-
-
-
-
-
-
-
