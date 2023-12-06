@@ -8,13 +8,10 @@ const arrowUp=document.querySelector('.arrow.up')
 const arrowDown=document.querySelector('.arrow.down')
 
 
-arrowDown.remove()
-arrowUp.remove()
-
 const colors=[
-    '#ff0000',
-    '#cc9900',
-    '#0000ff',
+    '#CC86B1',
+    '#DAF7A6',
+    '#CDC4F1', 
 ]
 
 const randomC = () =>{
@@ -42,4 +39,3 @@ main.onclick = (event) => {
     cloneDown.querySelector(".left").style.backgroundImage=linearGradient
     cloneDown.querySelector(".right").style.backgroundImage=linearGradient
 }
-

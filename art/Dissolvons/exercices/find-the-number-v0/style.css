@@ -18,7 +18,7 @@ body {
   --angle: 10deg;
   flex: 1;
   align-self: stretch;
-  background-image: linear-gradient(rgb(221, 131, 131), rgb(127, 127, 221));
+  background-image: linear-gradient(red, blue);
 }
 
 .arrow .left {
