@@ -9,7 +9,7 @@ arrowSource.remove()
 
 const colors=[
   '#CC86B1',
-  '#DAF7A6',
+  '#F1D1C4 ',
   '#CFEBE8',
 ]
 
