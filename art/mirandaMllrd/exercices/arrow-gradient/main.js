@@ -1,4 +1,5 @@
-import { lerpFFFFFF, randFFFFFF } from '../../../../common-resources/js/color-utils.js'
+import { randFFFFFF } from '../../../../common-resources/js/color-utils.js'
+
 
 const main = document.querySelector('main')
 const arrowUpSource = document.querySelector('.arrow.up')
@@ -8,8 +9,8 @@ const arrowDownSource = document.querySelector('.arrow.down')
 arrowUpSource.remove()
 arrowDownSource.remove()
 
-const colorA = '#9efd38'
-const colorB = '#ffe087'
+const colorA = '#ff8080'
+const colorB = '#2e2edd'
 
 const randomColorAorB = () => {
   const colors = [colorA, colorB]
@@ -53,12 +54,3 @@ for (let i = 0; i < 20; i++) {
   addArrowUp(i * 5)
   addArrowDown(i * 5)
 }
-
-makeArt()
-
-
-
-
-
-
-

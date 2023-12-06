@@ -1,0 +1,21 @@
+@import url("https://https://github.com/NaN-xyz/Rubik-Filtered");
+
+.user-input {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+.user-input input {
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: "Anonymous Pro", serif;
+  font-size: 10em;
+  font-weight: 800;
+  color: aliceblue;
+}
