@@ -3,7 +3,7 @@ import { randFFFFFF } from "../../../../common-resources/js/color-utils.js";
 const main = document.querySelector('main')
 const arrowSource = document.querySelector('.arrow')
 
-arrowSource.remove ()
+// arrowSource.remove ()
 
 main.onclick = (event) => {
     console.log(event.clientY)

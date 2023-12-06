@@ -2,13 +2,13 @@
 
 main {
     width: 100vw;
-    height: 100vh;
-    background-color: darkslategray;
-    overflow: hidden;
+    height: 1100vh;
+    background-color: rgb(17, 16, 16);
+
 }
 
 .arrow {
-    --angle: 10deg;
+    --angle: -200deg;
 
     position: absolute;
     bottom: 0;
@@ -23,16 +23,16 @@ main {
     flex: 1;
     align-self: stretch;
     background-image: linear-gradient(
-        rgb(0, 255, 106), 
-        darkslategray);
+    rgb(45, 10, 128),
+    rgba(0, 0, 255, 0.493));
 }
 
 .arrow > .left {
-    transform: skewY(calc(var(--angle)*-1));
+    transform: skewY(var(--angle));
     transform-origin: top right;
-    
 }
 
 .arrow > .right {
-    transform: skewY(var(--angle));
+    transform: skewY(calc(var(--angle)*-1));
     transform-origin: top left;
+}
