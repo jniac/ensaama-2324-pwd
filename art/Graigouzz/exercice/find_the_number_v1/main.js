@@ -5,6 +5,8 @@ const main=document.querySelector('main')
 
 const arrowSource=document.querySelector('.arrow')
 
+arrowSource.remove()
+
 const colors=[
     '#ff0000',
     '#cc9900',

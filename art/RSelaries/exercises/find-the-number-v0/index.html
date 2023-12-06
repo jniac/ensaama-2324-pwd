@@ -1,6 +1,6 @@
 <html>
     <head>
-        <script src="main.js"></script>
+        <script  type="module" src="main.js"></script>
 
         <style>
             @import url("https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap");
@@ -10,6 +10,9 @@
                 display: flex;
                 align-items: center;
                 flex-direction: column;
+                background-color: black;
+                color: #fff;
+                overflow: hidden;
             }
 
             h1 {
@@ -26,7 +29,7 @@
                 text-transform: uppercase;
                 font-size: 4rem;
                 margin: 0 0;
-                visibility: hidden;
+                opacity: 0;
             }
 
             button {
@@ -34,14 +37,16 @@
                 font-size: 3rem;
                 font-family: "Teko", sans-serif;
                 font-weight: 600;
-                background-color: #0000;
+                background-color: #000;
+                color: #fff;
                 border-radius: 0.5rem;
+                border-color: #fff;
             }
 
             button:hover {
                 cursor: pointer;
-                background-color: black;
-                color: #fff;
+                background-color: #fff;
+                color: #000;
             }
 
             .boutons {
@@ -77,11 +82,41 @@
                 font-family: "Teko", sans-serif;
                 font-weight: 600;
             }
+
+            .arrows {
+                z-index: -1;
+                position: absolute;
+                bottom: 0;
+                width: 100vw;
+                height: 50vh;
+                display: flex;
+                flex-direction: row;
+
+                --angle : 90deg;
+            }
+
+            .arrows > div {
+                flex: 10;
+                align-self: stretch;
+                background-color: #470516;
+                bottom: 0;
+            }
+
+            .arrows .left {
+                transform: skewY( calc( var(--angle) * -1 ) );
+                transform-origin: top right;
+            }
+
+            .arrows .right {
+                transform: skewY( var(--angle) );
+                transform-origin: top left;
+            }
+
         </style>
     </head>
     <body>
         <div class="Home">
-            <h1>Tu veux jouer mon reuf ?</h1>
+            <h1 id="titleText">Tu veux jouer mon reuf ?</h1>
             <div class="boutons">
                 <button onclick="startBtn(true)">OUI</button>
                 <button onclick="startBtn(false)">NON</button>
@@ -94,10 +129,17 @@
         </div>
 
         <div class="Start not-displayed">
-            <h1>Quel est l'âge de ma grand mère ?</h1>
-            <h2 id="displayedText">elle est aps si viekle que ça</h2>
+
+            <section class="arrows">
+                <div class="left"></div>
+                <div class="right"></div>
+            </section>
+
+            <h1 id="questionText">Quel est l'âge de ma grand mère ?</h1>
+            <h2 id="displayedText">elle est pas si vieille que ça</h2>
             <input type="number" name="inputedNumber">
-            <button class="boutons" onclick="valider()">Valider</button>
+            <button id="validerButtonInGame" class="boutons" onclick="valider()">Valider</button>
+            <button id="restartButtonInGame" onclick="home()">RESTART</button>
 
             <script>
                 document.addEventListener('keydown', function(e) {
@@ -106,6 +148,7 @@
                     }
                 });
             </script>
+
         </div>
     </body>
 </html>
