@@ -1,68 +1,41 @@
 @import url(../../../../common-resources/reset.css);
 
 main {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  background-color: #123;
-  overflow: hidden;
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: #6c82da;
+
+    overflow: hidden;
 }
 
-/* ARROW GENERIC: */
 .arrow {
-  --angle: 10deg;
 
-  position: absolute;
-  width: 100%;
-  height: 25%;
+    --angle : 10deg;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
 
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 .arrow > div {
-  flex: 1;
-  align-self: stretch;
+    flex: 1;
+    align-self: stretch;
+    background-image: linear-gradient(
+        #4cb4c7, 
+        rgba(190, 100, 226, 0.925));
 }
 
-/* ARROW UP: */
-.arrow.up {
-  top: 75%;
+.arrow > .left{
+    transform: skewY(calc(var(--angle)* -1));
+    transform-origin: top right;
 }
 
-.arrow.up > div {
-  background-image: linear-gradient(
-    #fff89980,
-    #fff89900);
-}
-
-.arrow.up > .left {
-  transform: skewY(calc(var(--angle) * -1));
-  transform-origin: top right;
-}
-
-.arrow.up > .right {
-  transform: skewY(var(--angle));
-  transform-origin: top left;
-}
-
-/* ARROW DOWN: */
-.arrow.down {
-  bottom: 75%;
-}
-
-.arrow.down > div {
-  background-image: linear-gradient(
-    #fff89900,
-    #fff89980);
-}
-
-.arrow.down > .left {
-  transform: skewY(var(--angle));
-  transform-origin: top right;
-}
-
-.arrow.down > .right {
-  transform: skewY(calc(var(--angle) * -1));
-  transform-origin: top left;
+.arrow > .right{
+    transform: skewY(var(--angle));
+    transform-origin: top left;
 }

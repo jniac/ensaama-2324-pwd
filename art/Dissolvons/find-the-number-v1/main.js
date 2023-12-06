@@ -1,23 +1,34 @@
 import { randFFFFFF } from '../../../../common-resources/js/color-utils.js'
 
-const main = document.querySelector('main')
-const arrowSource = document.querySelector('.arrow')
 
-// La "source" n'est plus nécessaire, on peut la retirer de l'écran:
-// arrowSource.remove()
+const main=document.querySelector('main')
+
+const arrowSource=document.querySelector('.arrow')
+
+arrowSource.remove()
+
+const colors=[
+  '#CC86B1',
+  '#DAF7A6',
+  '#CFEBE8',
+]
+
+const randomC = () =>{
+    const index=Math.floor(Math.random()*colors.length)
+    return colors[index]
+}
 
 main.onclick = (event) => {
-  const clone = arrowSource.cloneNode(true)
-  clone.style.top = `${event.y}px`
-  main.append(clone)
+    console.log(event.clientX,event.clientY)
 
-  // random gradient color
-  const color = randFFFFFF()
-  const linearGradient = `linear-gradient(${color}, ${color}00)`
-  clone.querySelector('.right').style.backgroundImage = linearGradient
-  clone.querySelector('.left').style.backgroundImage = linearGradient
+    const clone=arrowSource.cloneNode(true)
+    clone.style.top=`${event.clientY}px`
+    main.append(clone)
 
-  // dynamic angle
-  const angle = 40 * (event.y / window.innerWidth)
-  clone.style.setProperty('--angle', `${angle}deg`)
+
+    //gradient colors
+    const color= randomC()
+    const linearGradient=`linear-gradient(${color}, ${color}00)`
+    clone.querySelector(".left").style.backgroundImage=linearGradient
+    clone.querySelector(".right").style.backgroundImage=linearGradient
 }
