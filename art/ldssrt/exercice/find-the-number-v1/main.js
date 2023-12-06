@@ -24,9 +24,12 @@ function addArrowDown(y) {
   main.append(clone)
 
 }
+for (let i = 0; i < 20; i++){
+  
+  addArrowUp(i * 5)
+  
+  addArrowDown(i * 5)
 
+}
 addArrowUp(10)
-addArrowUp(30)
-
-addArrowDown(10)
 addArrowDown(30)
