@@ -18,7 +18,13 @@ main {
     flex-direction: row;
 }
 
-.arrow > div {
+/*UP*/
+
+.arrow.up{
+    top: 75%;
+}
+
+.arrow.up > div {
     flex: 1;
     align-self: stretch;
     background-image: linear-gradient(
@@ -34,4 +40,10 @@ main {
 .arrow > .right {
     transform: skewY(var(--angle));
     transform-origin: top left;
+}
+
+
+.arrow.down{
+    bottom:25%;
+
 }
