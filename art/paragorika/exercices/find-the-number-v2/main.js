@@ -48,7 +48,12 @@ clone.querySelector('.right').style.backgroundImage = linearGradient
 clone.querySelector('.left').style.backgroundImage = linearGradient
 }
 
-for (let i = 0; i < 20; i++) {
-    addArrowDown(i * 10)
-    addArrowUp(i * 10)
+function makeArt(){
+    for (let i = 0; i < 20; i++) {
+        addArrowDown(i * 8)
+        addArrowUp(i * 8)
+    }
+    
 }
+
+makeArt()
