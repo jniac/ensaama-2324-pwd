@@ -25,13 +25,13 @@ main {
 }
 
 .arrow > .left {
-    transform: skewY(calc(var(--angle) * -1));
+    transform: skewY(var(--angle));
     transform-origin: top right; 
 
 }
 
 .arrow > .right {
-    transform: skewY(var(--angle));
+    transform: skewY(calc(var(--angle) * -1));
     transform-origin: top left; 
 
 }
