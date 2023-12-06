@@ -14,12 +14,20 @@ main {
     --angle: 32.1deg;
 
     position: absolute;
-    bottom: 0;
     width: 100%;
     height: 50%;
 
     display: flex;
     flex-direction: row;
+}
+
+
+.arrow.up {
+    top:75%;
+}
+
+.arrow.down {
+    top:25%;
 }
 
 .arrow > div {
