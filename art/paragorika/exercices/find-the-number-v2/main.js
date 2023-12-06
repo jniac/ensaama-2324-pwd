@@ -1,27 +1,38 @@
 import  {randFFFFFF} from '../../../../common-resources/js/color-utils.js'
 
 const main = document.querySelector('main')
-const arrowSource = document.querySelector('.arrow')
-const colors = [
-    '#C0E7CB',
-    '#A4A3F3',
-    '#4C52DC',
-]
+const arrowUpSource = document.querySelector('.arrow.up')
+const arrowDownSource = document.querySelector('.arrow.down')
+
+arrowUpSource.remove()
+arrowDownSource.remove()
+
 const random =() =>{
     const index=Math.floor(Math.random()*colors.length)
     return colors[index]
 }
 
-main.onclick = (event) => {
-    console.log(event.clientY)
-
-    const clone = arrowSource.cloneNode(true)
-    clone.style.top = `${event.clientY}px`
+function addArrowUp(y) {
+    const clone = arrowUpSource.cloneNode(true)
+    clone.style.top = `${100 - y}%`
     main.append(clone)
-
-// random gradient color
-const color= randFFFFFF()
-const linearGradient = `linear-gradient(${color}, ${color}00)`
-clone.querySelector('.right').style.backgroundImage = linearGradient
-clone.querySelector('.left').style.backgroundImage = linearGradient
 }
+
+function addArrowDown(y) {
+    const clone = arrowDownSource.cloneNode(true)
+    clone.style.bottom = `${100 - y}%`
+    main.append(clone)
+}
+
+addArrowUp(10)
+addArrowUp(20)
+addArrowUp(30)
+addArrowUp(40)
+addArrowUp(50)
+addArrowUp(60)
+addArrowUp(70)
+
+addArrowDown(10)
+addArrowDown(20)
+addArrowDown(30)
+addArrowDown(40)
