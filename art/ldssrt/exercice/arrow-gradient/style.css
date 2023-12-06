@@ -1,49 +1,45 @@
 @import url(../../../../common-resources/reset.css);
 
-
 main {
-    position: relative;
+
     width: 100vw;
     height: 100vh;
-    background-color: #1a1630;
+    background-color:  rgb(50, 50, 252);
+    position: relative;
     overflow: hidden;
 }
 
-
 .arrow {
-    --angle: 32.1deg;
+
+    --angle: 10deg;
 
     position: absolute;
     width: 100%;
     height: 50%;
+    bottom: 0;
 
     display: flex;
     flex-direction: row;
 }
 
-
-.arrow.up {
-    top:75%;
-}
-
-.arrow.down {
-    top:25%;
-}
-
 .arrow > div {
+
     flex: 1;
     align-self: stretch;
-    background-image: linear-gradient(
-        #fa48dd,
-        #3748dd);
+    background-image: linear-gradient(rgb(144, 190, 218), rgba(50, 50, 252, 0));
+
 }
 
 .arrow > .left {
-    transform: skewY(calc(var(--angle)*-1));
-    transform-origin: top right;
+
+    transform: skewY(calc(var(--angle) * -1));
+    transform-origin: top left;
+    
 }
 
 .arrow > .right {
+    
     transform: skewY(var(--angle));
-    transform-origin: top left;
+    transform-origin: top right;
+
 }
