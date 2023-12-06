@@ -18,12 +18,11 @@ main.onclick = (event) => {
     clone.style.top = `${event.clientY}px`
     main.append(clone)
 
-    //rdm gradient color
+    //random gradient color
     const color = randFFFFFF()
     const gradient = `linear-gradient(${color}, ${color}00)`
     clone.querySelector('.right').style.backgroundImage = gradient
     clone.querySelector('.left').style.backgroundImage = gradient
-
 
     //dynamic angle
     const angle = (event.y) / 20

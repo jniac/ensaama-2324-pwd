@@ -11,7 +11,7 @@ main {
 
 
 .arrow {
-    --angle: 10deg;
+    --angle: 32.1deg;
 
     position: absolute;
     bottom: 0;
@@ -26,7 +26,7 @@ main {
     flex: 1;
     align-self: stretch;
     background-image: linear-gradient(
-        #fa4747,
+        #fa48dd,
         #3748dd);
 }
 
