@@ -24,8 +24,8 @@ main {
   flex: 1;
   align-self: stretch;
   background-image: linear-gradient(
-    #fff89980,
-    #fff89900);
+    #af99ff80,
+    #5e1fd323);
 }
 
 .arrow > .left {

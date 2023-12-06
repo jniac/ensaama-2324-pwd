@@ -21,24 +21,10 @@ const randomC = () =>{
     const index=Math.floor(Math.random()*colors.length)
     return colors[index]
 }
+function addArrowUp(y){
+    const clone = arrowUpSource.cloneNode(true)
+    clone.style.top = `${100 - y}%`
+    main.append(clone)
 
-main.onclick = (event) => {
-    console.log(event.clientX,event.clientY)
-
-    const cloneUp=arrowUp.cloneNode(true)
-    const cloneDown=arrowDown.cloneNode(true)
-    
-    cloneUp.style.top=`${event.clientY}px`
-    cloneDown.style.top=`${event.clientY}px`
-    main.append(cloneUp)
-    main.append(cloneDown)
-
-
-    //gradient colors
-    const color= randomC()
-    const linearGradient=`linear-gradient(${color}, ${color}00)`
-    cloneUp.querySelector(".left").style.backgroundImage=linearGradient
-    cloneUp.querySelector(".right").style.backgroundImage=linearGradient
-    cloneDown.querySelector(".left").style.backgroundImage=linearGradient
-    cloneDown.querySelector(".right").style.backgroundImage=linearGradient
 }
+
