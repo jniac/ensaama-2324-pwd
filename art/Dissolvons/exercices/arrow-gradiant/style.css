@@ -9,7 +9,7 @@ main {
 }
 
 .arrow {
-  --angle: 10deg;
+  --angle: 100deg;
 
   position: absolute;
   bottom: 0;
