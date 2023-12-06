@@ -8,6 +8,7 @@ main {
   overflow: hidden;
 }
 
+/* ARROW GENERIC: */
 .arrow {
   --angle: 10deg;
 
@@ -32,7 +33,7 @@ main {
   align-self: stretch;
 }
 
-/* UP: */
+/* ARROW UP: */
 .arrow.up > div {
   background-image: linear-gradient(
     #fff89980,
@@ -49,7 +50,7 @@ main {
   transform-origin: top left;
 }
 
-/* DOWN: */
+/* ARROW DOWN: */
 .arrow.down > div {
   background-image: linear-gradient(
     #fff89900,
