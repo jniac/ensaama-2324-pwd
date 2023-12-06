@@ -4,7 +4,7 @@ main {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-color: #123;
+  background-color: rgb(23, 66, 109);
   overflow: hidden;
 }
 
