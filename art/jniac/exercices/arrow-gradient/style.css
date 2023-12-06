@@ -8,11 +8,11 @@ main {
   overflow: hidden;
 }
 
-/* ARROW GENERIC: */
 .arrow {
   --angle: 10deg;
 
   position: absolute;
+  bottom: 0;
   width: 100%;
   height: 25%;
 
@@ -23,47 +23,18 @@ main {
 .arrow > div {
   flex: 1;
   align-self: stretch;
-}
-
-/* ARROW UP: */
-.arrow.up {
-  top: 75%;
-}
-
-.arrow.up > div {
   background-image: linear-gradient(
     #fff89980,
     #fff89900);
 }
 
-.arrow.up > .left {
+.arrow > .left {
   transform: skewY(calc(var(--angle) * -1));
   transform-origin: top right;
 }
 
-.arrow.up > .right {
+.arrow > .right {
   transform: skewY(var(--angle));
-  transform-origin: top left;
-}
-
-/* ARROW DOWN: */
-.arrow.down {
-  bottom: 75%;
-}
-
-.arrow.down > div {
-  background-image: linear-gradient(
-    #fff89900,
-    #fff89980);
-}
-
-.arrow.down > .left {
-  transform: skewY(var(--angle));
-  transform-origin: top right;
-}
-
-.arrow.down > .right {
-  transform: skewY(calc(var(--angle) * -1));
   transform-origin: top left;
 }
 
