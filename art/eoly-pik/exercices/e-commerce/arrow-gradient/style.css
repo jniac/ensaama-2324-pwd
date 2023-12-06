@@ -1,0 +1,45 @@
+@import url(../../../../common-resources/reset.css);
+
+main {
+
+    width: 100vw;
+    height: 100vh;
+    background-color:  rgb(111, 161, 132);
+    position: relative;
+    overflow: hidden;
+}
+
+.arrow {
+
+    --angle: 10deg;
+
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.arrow > div {
+
+    flex: 1;
+    align-self: stretch;
+    background-image: linear-gradient(rgb(34, 48, 30), rgba(140, 177, 109, 0));
+
+}
+
+.arrow > .left {
+
+    transform: skewY(calc(var(--angle) * -1));
+    transform-origin: top left;
+    
+}
+
+.arrow > .right {
+    
+    transform: skewY(var(--angle));
+    transform-origin: top right;
+
+}
