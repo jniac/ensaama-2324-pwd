@@ -2,16 +2,32 @@ import { randFFFFFF } from '../../../../common-resources/js/color-utils.js'
 
 
 const main = document.querySelector('main')
-const arrowSource = document.querySelector('.arrow')
+const arrowUpSource = document.querySelector('.arrow.up')
+const arrowDownSource = document.querySelector('.arrow.down')
 
-main.onclick = (event) => {
-    const clone = arrowSource.cloneNode(true)
-    clone.style.top = `${event.y}px`
+arrowUpSource.remove()
+arrowDownSource.remove()
+
+function addArrowUp(y) {
+    const clone = arrowUpSource.cloneNode(true)
+    clone.style.top = `${100 - y}%`
     main.append(clone)
-
-
-const color = randFFFFFF()
-const linearGradient = `linear-gradient(${color}, ${color}00)`
-clone.querySelector('.right').style.backgroundImage = linearGradient
-clone.querySelector('.left').style.backgroundImage = linearGradient
 }
+
+
+
+function addArrowDown(y) {
+    const clone = arrowDownSource.cloneNode(true)
+    clone.style.top = `${100 - y}%`
+    main.append(clone)
+}
+
+
+addArrowUp(10)
+addArrowUp(20)
+addArrowUp(30)
+
+addArrowDown(10)
+addArrowDown(20)
+addArrowDown(30)
+
