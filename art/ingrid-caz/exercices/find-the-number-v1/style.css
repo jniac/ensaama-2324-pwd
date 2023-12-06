@@ -11,28 +11,54 @@ main {
     --angle: -200deg;
 
     position: absolute;
-    bottom: 0;
     width: 100%;
-    height: 50%;
+    height: 25%;
 
     display: flex;
     flex-direction: row;
 }
 
-.arrow > div {
-    flex: 1;
-    align-self: stretch;
-    background-image: linear-gradient(
-    rgb(45, 10, 128),
-    rgba(0, 0, 255, 0.493));
+.arrow.up {
+    bottom: 75%;
 }
 
-.arrow > .left {
+.arrow.down {
+    top: 75%;
+}
+
+.arrow>div {
+    flex: 1;
+    align-self: stretch;
+
+}
+
+.arrow.up>div {
+    background-image: linear-gradient(rgb(45, 10, 128),
+            rgba(119, 0, 255, 0.192));
+}
+
+.arrow.up>.left {
+    transform: skewY(calc(var(--angle)*-1));
+    transform-origin: top right;
+}
+
+.arrow.up>.right {
+    transform: skewY(var(--angle));
+    transform-origin: top left;
+}
+
+
+.arrow.down>div {
+    background-image: linear-gradient(rgba(119, 0, 255, 0.192),
+            rgb(45, 10, 128));
+}
+
+.arrow.down>.left {
     transform: skewY(var(--angle));
     transform-origin: top right;
 }
 
-.arrow > .right {
+.arrow.down>.right {
     transform: skewY(calc(var(--angle)*-1));
     transform-origin: top left;
 }

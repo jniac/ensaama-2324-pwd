@@ -9,9 +9,9 @@ const arrowDown=document.querySelector('.arrow.down')
 
 
 const colors=[
-    '#ff0000',
-    '#cc9900',
-    '#0000ff',
+    '#CC86B1',
+    '#DAF7A6',
+   
 ]
 
 const randomC = () =>{
@@ -39,4 +39,3 @@ main.onclick = (event) => {
     cloneDown.querySelector(".left").style.backgroundImage=linearGradient
     cloneDown.querySelector(".right").style.backgroundImage=linearGradient
 }
-
