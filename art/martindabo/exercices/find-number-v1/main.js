@@ -1,4 +1,12 @@
-import { randFF, randFFFFFF } from '../../../../common-resources/js/color-utils.js'
+const randFF = () => {
+  return Math.floor(Math.random() * 0xff)
+    .toString(16)
+    .padStart(2, '0')
+}
+
+const randFFFFFF = () => {
+  return `#${randFF()}ffff`
+}
 
 const main = document.querySelector('main')
 const arrowUpSource = document.querySelector('.arrow.up')
@@ -22,7 +30,7 @@ function addArrowUp(y) {
     clone.querySelector('.left').style.backgroundImage = linearGradient
 
     //dynamic angle
-    const angle = (y) / 2
+    const angle = (y) / 4
     clone.style.setProperty('--angle', `${angle}deg`)
 }
 
@@ -41,7 +49,7 @@ function addArrowDown(y) {
     clone.querySelector('.left').style.backgroundImage = linearGradient
 
         //dynamic angle
-        const angle = (y) / 2
+        const angle = (y) / 4
         clone.style.setProperty('--angle', `${angle}deg`)
 }
 
