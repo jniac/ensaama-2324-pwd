@@ -9,11 +9,12 @@ const arrowDownSource = document.querySelector('.arrow.down');
 arrowUpSource.remove();
 arrowDownSource.remove();
 
-const colorA = '#ff8080';
-const colorB = '#2e2edd';
+const colorA = '#a9aaea';
+const colorB = '#a1d9ea';
+const colorC = '#de9bb9';
 
 const randomLerpColor = () => {
-  return lerpFFFFFF(colorA, colorB, Math.random());
+  return lerpFFFFFF(colorA, colorB,colorC, Math.random());
 };
 
 function addArrowUp(y) {
