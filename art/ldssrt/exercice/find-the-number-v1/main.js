@@ -1,13 +1,10 @@
 
+import { makeArtIntro, removeArt } from './arrow.js'
 
-const main = document.querySelector('main')
-const arrowSource = document.querySelector('.arrow')
-console.log(arrowSource)
+makeArtIntro()
 
-main.onclick = (event) => {
-
-  console.log(event.clientY)
-  const clone = arrowSource.cloneNode(true)
-  clone.style.top = `${event.clientY}px`
-  main.append(clone)
+const input = document.querySelector('input')
+input.onchange = () => {
+  console.log(input.value)
+  removeArt()
 }

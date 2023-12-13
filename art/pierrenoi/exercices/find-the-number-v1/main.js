@@ -1,17 +1,64 @@
-import { randFFFFFF } from '../../../../common-resources/js/color-utils.js'
+import { lerpFFFFFF, randFFFFFF } from '../../../../common-resources/js/color-utils.js'
 
+const art = document.querySelector('.art')
+const arrowUpSource = document.querySelector('.arrow.up')
+const arrowDownSource = document.querySelector('.arrow.down')
 
-const main = document.querySelector('main')
-const arrowSource = document.querySelector('.arrow')
+// Les "sources" ne sont plus nécessaires, on peut les retirer de l'écran:
+arrowUpSource.remove()
+arrowDownSource.remove()
 
-main.onclick = (event) => {
-    const clone = arrowSource.cloneNode(true)
-    clone.style.top = `${event.y}px`
-    main.append(clone)
+const colorA = '#9efd38'
+const colorB = '#ffe087'
 
-
-const color = randFFFFFF()
-const linearGradient = `linear-gradient(${color}, ${color}00)`
-clone.querySelector('.right').style.backgroundImage = linearGradient
-clone.querySelector('.left').style.backgroundImage = linearGradient
+const randomColorAorB = () => {
+  const colors = [colorA, colorB]
+  const index = Math.floor(colors.length * Math.random())
+  return colors[index]
 }
+
+const randomLerpColor = () => {
+  return lerpFFFFFF(colorA, colorB, Math.random())
+}
+
+
+
+function addArrowUp(y) {
+  const clone = arrowUpSource.cloneNode(true)
+  clone.style.top = `${100 - y}%`
+  art.append(clone)
+
+  // random gradient color
+  const color = randomLerpColor()
+  const linearGradient = `linear-gradient(${color}, ${color}00)`
+  clone.querySelector('.right').style.backgroundImage = linearGradient
+  clone.querySelector('.left').style.backgroundImage = linearGradient
+}
+
+function addArrowDown(y) {
+  const clone = arrowDownSource.cloneNode(true)
+  clone.style.bottom = `${100 - y}%`
+  art.append(clone)
+
+  // random gradient color
+  const color = randomLerpColor()
+  const linearGradient = `linear-gradient(${color}, ${color}00)`
+  clone.querySelector('.right').style.backgroundImage = linearGradient
+  clone.querySelector('.left').style.backgroundImage = linearGradient
+}
+
+
+
+for (let i = 0; i < 20; i++) {
+  addArrowUp(i * 5)
+  addArrowDown(i * 5)
+}
+
+makeArt()
+
+
+
+
+
+
+
