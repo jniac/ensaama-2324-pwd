@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700;1,900&display=swap');
 
-.user-input {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  width: 100%;
-  transform: translateY(-50%);
-}
 
 .user-input input {
   width: 100%;
@@ -21,5 +14,19 @@
 }
 
 .user-input input::placeholder{
-  color: aqua;
+  color: rgb(0, 165, 118)
+}
+
+.game-output {
+  font-family: 'Merriweather', serif;
+  font-size: 4em;
+  font-weight: 100;
+  color: rgb(61, 0, 160);
+
+  transition: all 0.3s ease-in-out;
+}
+
+.game-output.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
