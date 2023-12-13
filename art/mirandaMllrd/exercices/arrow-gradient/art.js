@@ -42,7 +42,7 @@ function addArrowDown(y) {
 }
 
 export function makeArtIntro() {
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 40; i++) {
     addArrowUp(i * 5);
     addArrowDown(i * 5);
   }
