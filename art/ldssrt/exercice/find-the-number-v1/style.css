@@ -1,4 +1,5 @@
 @import url(../../../../common-resources/reset.css);
+@import url(io.css);
 
 main {
 
@@ -8,6 +9,31 @@ main {
     position: relative;
     overflow: hidden;
 }
+
+.art {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.art, .io {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+.io {
+  
+    display: flex;
+    align-items: center;
+  }
 
 .arrow {
     

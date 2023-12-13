@@ -1,46 +1,42 @@
-import { randFFFFFF } from "../../../../common-resources/js/color-utils.js"
 
-const main = document.querySelector('main')
-const arrowUpSource = document.querySelector('.arrow.up')
-const arrowDownSource = document.querySelector('.arrow.down')
+import { clearArt, makeArtIntro } from "./arrow.js"
 
-
-arrowUpSource.remove()
-arrowDownSource.remove()
-
-// main.onclick = (event) => {
-//     const clone = arrowUpSource.cloneNode(true)
-//     clone.style.top = `${event.clientY}px`
-//     main.append(clone)
-
-//     const color = randFFFFFF()
-//     const linearGradient = `linear-gradient(${color}, ${color}00)`
-//     clone.querySelector(`.right`).style.backgroundImage = linearGradient
-//     clone.querySelector(`.left`).style.backgroundImage = linearGradient
-
-//     const angle = event.y
-//     clone.style.setProperty('--angle', `${angle}deg`)
-
-// }
-
-function addArrowUp(y){
-    const clone = arrowUpSource.cloneNode(true)
-    clone.style.top = `${100 - y}%`
-    main.append(clone)
-
+const gameOutput = document.querySelector('.game-output')
+gameOutput.onclick = () => {
+    gameOutput.classList.add('hidden')
+    input.focus()
 }
 
-function addArrowDown(y){
-    const clone = arrowDownSource.cloneNode(true)
-    clone.style.bottom = `${100 - y}%`
-    main.append(clone)
+makeArtIntro()
 
+const userInputs = []
+
+const hiddenNumber = Math.ceil(Math.random()*100)
+
+console.log(`le nombre caché est ${hiddenNumber}`)
+
+const input = document.querySelector('input')
+input.oninput = () => {
+    gameOutput.innerHTML = ''
+    gameOutput.classList.add('hidden')
 }
 
+input.onchange = () => {
+    clearArt()
 
-for (let i = 0; i < 20; i++){
-    addArrowUp(i * 15)
-    addArrowDown(i * 15)
+    const userNumber = Number.parseFloat(input.value)
+    input.value = ''
+    if (Number.isNaN(userNumber)) {
+        gameOutput.classList.remove('hidden')
+        gameOutput.innerHTML = 'Donne moi un nombre.'
+    } else if (userNumber > hiddenNumber) {
+        gameOutput.classList.remove('hidden')
+        gameOutput.innerHTML = 'Trop grand, comme ta stupidité'
+    } else if (userNumber < hiddenNumber) {
+        gameOutput.classList.remove('hidden')
+        gameOutput.innerHTML = 'Trop petit, comme ton QI'
+    } else if(userNumber === hiddenNumber){
+        alert('Enfin, il était temps !')
+    }
+    
 }
-
-

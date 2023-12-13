@@ -9,9 +9,9 @@ const arrowDown=document.querySelector('.arrow.down')
 
 
 const colors=[
-    '#CC86B1',
-    '#DAF7A6',
-    '#CDC4F1', 
+    '#ff0000',
+    '#cc9900',
+    '#0000ff',
 ]
 
 const randomC = () =>{

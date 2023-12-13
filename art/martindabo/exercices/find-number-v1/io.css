@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Orbitron:wght@500&display=swap");
+
+.user-input input {
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: "Orbitron", serif;
+  font-size: 10em;
+  font-weight: 800;
+  color: aliceblue;
+  transform: translateY(-5%);
+}
+
+.game-output {
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: "Orbitron", serif;
+  font-size: 5em;
+  font-weight: 500;
+  color: aliceblue;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.game-output.hidden {
+  opacity: 0;
+  pointer-events: none;
+}

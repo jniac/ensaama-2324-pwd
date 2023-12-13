@@ -1,41 +1,41 @@
-import { randFFFFFF } from '../../../../common-resources/js/color-utils.js'
+import { clearArt,makeArtIntro } from './art.js'
 
-
-const main=document.querySelector('main')
-
-const arrowUp=document.querySelector('.arrow.up')
-
-const arrowDown=document.querySelector('.arrow.down')
-
-
-const colors=[
-    '#8D89FC',
-    '#F3D8F0',
-    '#F3D8BE',
-]
-
-const randomC = () =>{
-    const index=Math.floor(Math.random()*colors.length)
-    return colors[index]
+const gameOutput = document.querySelector ('.game-output')
+gameOutput.onclick = () => {
+    gameOutput.classList.add('hidden')
+    input.focus()
 }
 
-main.onclick = (event) => {
-    console.log(event.clientX,event.clientY)
+makeArtIntro()
 
-    const cloneUp=arrowUp.cloneNode(true)
-    const cloneDown=arrowDown.cloneNode(true)
-    
-    cloneUp.style.top=`${event.clientY}px`
-    cloneDown.style.top=`${event.clientY}px`
-    main.append(cloneUp)
-    main.append(cloneDown)
+const userInputs = []
 
+const hiddenNumber = Math.ceil(Math.random() * 100)
 
-    //gradient colors
-    const color= randomC()
-    const linearGradient=`linear-gradient(${color}, ${color}00)`
-    cloneUp.querySelector(".left").style.backgroundImage=linearGradient
-    cloneUp.querySelector(".right").style.backgroundImage=linearGradient
-    cloneDown.querySelector(".left").style.backgroundImage=linearGradient
-    cloneDown.querySelector(".right").style.backgroundImage=linearGradient
+// Un petit cheat
+console.log(`le nombre caché est ${hiddenNumber}`)
+
+const input = document.querySelector('input')
+input.oninput = ()=> {
+  gameOutput.innerHTML = ''
+  gameOutput.classList.add ('hidden')
+}
+input.onchange = () => {
+    clearArt()
+
+    const userNumber = Number.parseFloat(input.value)
+    input.value = ''
+    if (Number.isNaN (userNumber)){
+      gameOutput.classList.remove('hidden')
+      gameOutput.innerHTML= 'un nombre'
+    } else if (userNumber<hiddenNumber){
+      gameOutput.classList.remove('hidden')
+      gameOutput.innerHTML= 'Trop petit comme la taille de ta bite !'
+    } else if (userNumber>hiddenNumber){
+      gameOutput.classList.remove('hidden')
+      gameOutput.innerHTML= 'Trop grand comme ta connerie !'
+    } else { 
+  alert('He He He, je vois que tu es un petit intello !')
+}
+
 }

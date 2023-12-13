@@ -1,42 +1,51 @@
-import { randFFFFFF } from '../../../../common-resources/js/color-utils.js'
+import { clearArt, makeArtIntro } from './art.js'
 
 
-const main=document.querySelector('main')
+const gameOutput = document.querySelector('.game-output')
 
-const arrowUp=document.querySelector('.arrow.up')
+gameOutput.onclick = () => {
+    gameOutput.classList.add('hidden')
+    input.focus()
+}
+makeArtIntro()
 
-const arrowDown=document.querySelector('.arrow.down')
+let number = 0
+const randomN = () => {
+    number = Math.ceil(Math.random() * 100)
+}
+randomN()
 
 
-const colors=[
-    '#ff0000',
-    '#cc9900',
-    '#0000ff',
-]
+console.log(randomN)
 
-const randomC = () =>{
-    const index=Math.floor(Math.random()*colors.length)
-    return colors[index]
+const input = document.querySelector('input')
+input.oninput = () => {
+    gameOutput.innerHTML = ''
+    gameOutput.classList.remove('hidden')
 }
 
-main.onclick = (event) => {
-    console.log(event.clientX,event.clientY)
 
-    const cloneUp=arrowUp.cloneNode(true)
-    const cloneDown=arrowDown.cloneNode(true)
-    
-    cloneUp.style.top=`${event.clientY}px`
-    cloneDown.style.top=`${event.clientY}px`
-    main.append(cloneUp)
-    main.append(cloneDown)
-
-
-    //gradient colors
-    const color= randomC()
-    const linearGradient=`linear-gradient(${color}, ${color}00)`
-    cloneUp.querySelector(".left").style.backgroundImage=linearGradient
-    cloneUp.querySelector(".right").style.backgroundImage=linearGradient
-    cloneDown.querySelector(".left").style.backgroundImage=linearGradient
-    cloneDown.querySelector(".right").style.backgroundImage=linearGradient
+input.onchange = () => {
+    clearArt()
+    const userNumber = Number.parseFloat(input.value)
+    input.value = ''
+    if (Number.isNaN(userNumber)) {
+        gameOutput.classList.remove('hidden')
+        gameOutput.innerHTML = 'un nombre stp'
+    } else if (userNumber > number) {
+        gameOutput.classList.remove('hidden')
+        gameOutput.innerHTML = 'trop grand'
+    } else if (userNumber < number) {
+        gameOutput.classList.remove('hidden')
+        gameOutput.innerHTML = 'trop petit'
+    } else {
+        gameOutput.classList.remove('hidden')
+        gameOutput.innerHTML = `BRAVO, le nombre était ${number}`
+        makeArtIntro()
+        randomN()
+    }
 }
+
+
+
 

@@ -1,18 +1,35 @@
 @import url(../../../../common-resources/reset.css);
+@import url(io.css);
 
 main {
     width: 100vw;
-    height: 1100vh;
+    height: 100vh;
     background-color: rgb(17, 16, 16);
+    overflow: hidden;
+    position: relative;
 
 }
 
+.full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .arrow {
-    --angle: -200deg;
+    --angle: 5deg;
 
     position: absolute;
     width: 100%;
-    height: 25%;
+    height: 5%;
 
     display: flex;
     flex-direction: row;
@@ -33,8 +50,8 @@ main {
 }
 
 .arrow.up>div {
-    background-image: linear-gradient(rgb(45, 10, 128),
-            rgba(119, 0, 255, 0.192));
+    background-image: linear-gradient(#e08c53,
+            #7700ff31);
 }
 
 .arrow.up>.left {
@@ -49,8 +66,8 @@ main {
 
 
 .arrow.down>div {
-    background-image: linear-gradient(rgba(119, 0, 255, 0.192),
-            rgb(45, 10, 128));
+    background-image: linear-gradient(#7700ff31,
+            #e08c53);
 }
 
 .arrow.down>.left {

@@ -1,67 +1,38 @@
-  const randFF = () => {
-    return Math.floor(Math.random() * 0xff)
-      .toString(16)
-      .padStart(2, '0')
+import { clearArt, makeArt} from './art.js'
+
+const output = document.querySelector('.output')
+output.onclick = () => {
+  output.classList.add('hidden')
+  input.focus()
+}
+
+makeArt()
+
+const userInputs = []
+
+const hiddenNumber = Math.ceil(Math.random() *100)
+console.log(`le nombre caché est ${hiddenNumber}`)
+
+const input = document.querySelector('input')
+
+input.oninput = () => {
+  output.innerHTML = ''
+  output.classList.add('hidden')
+}
+
+input.onchange = () => {
+  clearArt()
+  
+  const userNumber = Number.parseFloat(input.value)
+  input.value = ''
+  if (Number.isNaN(userNumber)){
+    output.classList.remove('hidden')
+    output.innerHTML = 'Un nombre stp.'
+  } else if (userNumber < hiddenNumber) {
+    output.classList.remove('hidden')
+    output.innerHTML = 'Trop grand.'
+  } else if (userNumber > hiddenNumber) {
+    output.classList.remove('hidden')
+    output.innerHTML = 'Trop petit.'
   }
-
-  const randFFFFFF = () => {
-    return `#${randFF()}${randFF()}dd`
-  }
-  
-
-
-const main = document.querySelector('main')
-const arrowUpSource = document.querySelector('.arrow.up')
-const arrowDownSource = document.querySelector('.arrow.down')
-
-arrowUpSource.remove()
-arrowDownSource.remove()
-
-
-function addArrowUp(y) {
-  
-  const clone = arrowUpSource.cloneNode(true)
-  clone.style.top = `${100 - y}%`
-  main.append(clone)
-
-  //random gradient color
-  const color = randFFFFFF()
-  const gradient = `linear-gradient(${color}, ${color}00)`
-  clone.querySelector('.right').style.backgroundImage = gradient
-  clone.querySelector('.left').style.backgroundImage = gradient
-
-  //dynamic angle
-  const angle = (y) / 4
-  clone.style.setProperty('--angle', `${angle}deg`)
 }
-
-function addArrowDown(y) {
-  
-  const clone = arrowDownSource.cloneNode(true) 
-  clone.style.bottom = `${100 - y}%`
-  main.append(clone)
-
-  //random gradient color
-  const color = randFFFFFF()
-  const gradient = `linear-gradient(${color}00, ${color})`
-  clone.querySelector('.right').style.backgroundImage = gradient
-  clone.querySelector('.left').style.backgroundImage = gradient
-
-  //dynamic angle
-  const angle = (y) / 4
-  clone.style.setProperty('--angle', `${angle}deg`)
-}
-
-
-const max = 11
-for (let i=0; i<max; i++){
-  addArrowUp(i *10)
-  addArrowDown(i *10)
-
-}
-
-
-
-
-
-

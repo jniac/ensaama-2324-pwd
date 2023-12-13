@@ -1,38 +1,41 @@
-@import url(../../../../common-resources/reset.css);
+import { randFFFFFF } from '../../../../common-resources/js/color-utils.js'
 
-main {
-    width: 100vw;
-    height: 100vh;
-    background-color: darkslategray;
-    overflow: hidden;
+
+const main=document.querySelector('main')
+
+const arrowUp=document.querySelector('.arrow.up')
+
+const arrowDown=document.querySelector('.arrow.down')
+
+
+const colors=[
+    '#ff0000',
+    '#cc9900',
+    '#0000ff',
+]
+
+const randomC = () =>{
+    const index=Math.floor(Math.random()*colors.length)
+    return colors[index]
 }
 
-.arrow {
-    --angle: 10deg;
+main.onclick = (event) => {
+    console.log(event.clientX,event.clientY)
 
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 50%;
-
-    display: flex;
-    flex-direction: row;
-}
-
-.arrow > div {
-    flex: 1;
-    align-self: stretch;
-    background-image: linear-gradient(
-        rgb(0, 255, 106), 
-        darkslategray);
-}
-
-.arrow > .left {
-    transform: skewY(calc(var(--angle)*-1));
-    transform-origin: top right;
+    const cloneUp=arrowUp.cloneNode(true)
+    const cloneDown=arrowDown.cloneNode(true)
     
-}
+    cloneUp.style.top=`${event.clientY}px`
+    cloneDown.style.top=`${event.clientY}px`
+    main.append(cloneUp)
+    main.append(cloneDown)
 
-.arrow > .right {
-    transform: skewY(var(--angle));
-    transform-origin: top left;
+
+    //gradient colors
+    const color= randomC()
+    const linearGradient=`linear-gradient(${color}, ${color}00)`
+    cloneUp.querySelector(".left").style.backgroundImage=linearGradient
+    cloneUp.querySelector(".right").style.backgroundImage=linearGradient
+    cloneDown.querySelector(".left").style.backgroundImage=linearGradient
+    cloneDown.querySelector(".right").style.backgroundImage=linearGradient
+}
