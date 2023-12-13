@@ -7,7 +7,6 @@ gameOutput.onclick = () => {
   input.focus()
 }
 
-
 makeArtIntro()
 
 const userInputs = []
@@ -25,6 +24,15 @@ input.onchange = () => {
   if (Number.isNaN(userNumber)) {
     gameOutput.classList.remove('hidden')
     gameOutput.innerHTML = 'Veuillez écrire un nombre.'
+  } else if (userNumber < hiddenNumber) {
+    gameOutput.classList.remove('hidden')
+    gameOutput.innerHTML = 'Non, trop petit.'
+  } else if (userNumber > hiddenNumber) {
+    gameOutput.classList.remove('hidden')
+    gameOutput.innerHTML = 'Non, trop grand.'
+  } else if (userNumber === hiddenNumber) {
+    gameOutput.classList.remove('hidden')
+    gameOutput.innerHTML = 'Bravo!'
   }
 }
 

@@ -57,10 +57,15 @@ function addArrowDown(y) {
   const angle = (y) / 4;
   clone.style.setProperty('--angle', `${angle}deg`);
 }
+
 export function makeArtIntro() {
   const max = 20;
   for (let i = 0; i < max; i++) {
     addArrowUp(i * 10);
     addArrowDown(i * 10);
   }
+}
+
+export function clearArt() {
+  art.innerHTML = ''
 }
