@@ -1,0 +1,26 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+
+.user-input {
+
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  width: 100%;
+}
+
+.user-input input {
+
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Silkscreen', sans-serif;
+  font-size: 10em;
+  font-weight: 800;
+  color: rgb(255, 255, 255);
+
+}
+

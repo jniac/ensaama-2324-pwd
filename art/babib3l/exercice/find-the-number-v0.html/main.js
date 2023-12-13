@@ -20,8 +20,32 @@ for (let i = 0; i < 3; i += 1) {
     alert(`${i}...`)
 }
 
-const hiddenNumber = 54
+const hiddenNumber = Math.ceil(Math.random() * 100)
 
 alert ('c est parti que le jeu commence')
 
-const userValue = prompt ("au dd") 
+
+function giveATry() {
+    const userString = prompt ("au dd") 
+    const userNumber = Number.parseFloat(userString)
+
+    if (userString === 'exit') {
+        return
+    }
+  
+    if (userNumber > hiddenNumber) {
+      alert('Trop grand !')
+    } else if (userNumber < hiddenNumber) {
+      alert('Trop petit !')
+    } else if (userNumber === hiddenNumber) {
+      alert('Tu as enfin gagné')
+    } else {
+      alert('Dommage trop tard tu as voulu jouer au plus malin')
+    }
+  
+    if (userNumber !== hiddenNumber) {
+      giveATry()
+    }
+  }
+  
+  giveATry()

@@ -8,10 +8,19 @@ const arrowUp=document.querySelector('.arrow.up')
 const arrowDown=document.querySelector('.arrow.down')
 
 
+arrowDown.remove()
+arrowUp.remove()
+
 const colors=[
-    '#CC86B1',
-    '#DAF7A6',
-    '#CDC4F1', 
+    '#69C6DB',
+    '##697EDB',
+    '##69A2DB',
+]
+
+const colors2=[
+    '#ff0000',
+    '#cc9900',
+    '#697EDB',
 ]
 
 const randomC = () =>{
@@ -19,7 +28,20 @@ const randomC = () =>{
     return colors[index]
 }
 
-main.onclick = (event) => {
+
+function addArrowUp(y){
+    const clone = arrowUpSource.cloneNode(true)
+    clone.style.top = `${100 - y}%`
+    main.append(clone)
+
+}
+
+const randomCo = () =>{
+    const index=Math.floor(Math.random()*colors2.length)
+    return colors[index]
+}
+
+/*main.onclick = (event) => {
     console.log(event.clientX,event.clientY)
 
     const cloneUp=arrowUp.cloneNode(true)
@@ -38,4 +60,35 @@ main.onclick = (event) => {
     cloneUp.querySelector(".right").style.backgroundImage=linearGradient
     cloneDown.querySelector(".left").style.backgroundImage=linearGradient
     cloneDown.querySelector(".right").style.backgroundImage=linearGradient
-}
+}*/
+
+function addArrowUp(y) {
+    const clone = arrowUp.cloneNode(true)
+    clone.style.top = `${100 - y}%`
+    main.append(clone)
+  
+    // random gradient color
+    const color = randomCo()
+    const linearGradient = `linear-gradient(${color}, ${color}00)`
+    clone.querySelector('.right').style.backgroundImage = linearGradient
+    clone.querySelector('.left').style.backgroundImage = linearGradient
+  }
+  
+  function addArrowDown(y) {
+    const clone = arrowDown.cloneNode(true)
+    clone.style.bottom = `${100 - y}%`
+    main.append(clone)
+  
+    // random gradient color
+    const color = randomCo()
+    const linearGradient = `linear-gradient(${color}, ${color}00)`
+    clone.querySelector('.right').style.backgroundImage = linearGradient
+    clone.querySelector('.left').style.backgroundImage = linearGradient
+  }
+  
+  
+  
+  for (let i = 0; i < 20; i++) {
+    addArrowUp(i * 5)
+    addArrowDown(i * 5)
+  }
