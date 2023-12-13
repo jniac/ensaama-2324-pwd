@@ -53,6 +53,7 @@ function valider() {
         document.getElementById('questionText').innerHTML = `T'as gagné mon reuf !`
         document.getElementById('restartButtonInGame').style.display = 'block';
         document.getElementById('validerButtonInGame').style.display = 'none';
+        document.getElementById('reglesButtonInGame').style.display = 'none';
     } else if(userNumber > hiddenNumber) {
         document.getElementById('displayedText').innerHTML = `Elle est pas si vieille que ça ma gueule !`
     } else if(userNumber < hiddenNumber) {
