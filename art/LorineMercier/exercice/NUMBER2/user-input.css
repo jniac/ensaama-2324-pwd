@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+.user-input input {
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: "Anton", serif;
+  font-size: 10em;
+  font-weight: 800;
+  color: aliceblue;
+  transform: translateY(-5%);
+}
+
+.user-input input::placeholder {
+  color: #ffff6f;
+}
+
+.game-output {
+  font-family: "Anton", serif;
+  font-size: 4em;
+  font-weight: 600;
+  color: pink;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.game-output.hidden {
+  opacity: 0;
+  pointer-events: none;
+}

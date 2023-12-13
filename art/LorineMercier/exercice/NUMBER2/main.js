@@ -1,20 +1,26 @@
-import { randFFFFFF } from "../../../../common-resources/js/color-utils.js"
+import { clearArt, makeArtIntro } from './arrow.js'
 
+const gameOutput = document.querySelector(`.game-output`)
+gameOutput.onclick = () => {
+  gameOutput.classList.add(`hidden`)
+  input.focus()
+}
 
-const main = document.querySelector('main')
-const arrowSource = document.querySelector('.arrow')
+makeArtIntro()
 
-main.onclick = (event) => {
-  console.log(event.clientY)
+const userImput = []
 
-  const clone = arrowSource.cloneNode(true)
-  clone.style.top = `${event.clientY}px`
-  main.append(clone)
+const hiddenNumber = Math.ceil(Math.random() * 100)
+console.log(`el nombre ké kaché este {hiddenNumber}`)
 
+const input = document.querySelector(`input`)
+input.onchange = () => {
+  clearArt()
 
-  const color = randFFFFFF()
-  const linearGradient = `linear-gradient(${color},${color}00)`
-  clone.querySelector(`.right`).style.backgroundImage = linearGradient
-  clone.querySelector(`.left`).style.backgroundImage = linearGradient
-
+  const UserNumber = Number.parseFloat(input.value)
+  input.value = ``
+  if (Number.isNaN(UserNumber)) {
+    gameOutput.classList.remove(`hidden`)
+    gameOutput.innerHTML = `un nombre por favor`
+  } else 
 }

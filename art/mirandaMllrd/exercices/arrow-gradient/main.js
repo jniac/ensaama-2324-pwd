@@ -1,56 +1,41 @@
-import { randFFFFFF } from '../../../../common-resources/js/color-utils.js'
+import { clearArt,makeArtIntro } from './art.js'
 
-
-const main = document.querySelector('main')
-const arrowUpSource = document.querySelector('.arrow.up')
-const arrowDownSource = document.querySelector('.arrow.down')
-
-// Les "sources" ne sont plus nécessaires, on peut les retirer de l'écran:
-arrowUpSource.remove()
-arrowDownSource.remove()
-
-const colorA = '#ff8080'
-const colorB = '#2e2edd'
-
-const randomColorAorB = () => {
-  const colors = [colorA, colorB]
-  const index = Math.floor(colors.length * Math.random())
-  return colors[index]
+const gameOutput = document.querySelector ('.game-output')
+gameOutput.onclick = () => {
+    gameOutput.classList.add('hidden')
+    input.focus()
 }
 
-const randomLerpColor = () => {
-  return lerpFFFFFF(colorA, colorB, Math.random())
+makeArtIntro()
+
+const userInputs = []
+
+const hiddenNumber = Math.ceil(Math.random() * 100)
+
+// Un petit cheat
+console.log(`le nombre caché est ${hiddenNumber}`)
+
+const input = document.querySelector('input')
+input.oninput = ()=> {
+  gameOutput.innerHTML = ''
+  gameOutput.classList.add ('hidden')
+}
+input.onchange = () => {
+    clearArt()
+
+    const userNumber = Number.parseFloat(input.value)
+    input.value = ''
+    if (Number.isNaN (userNumber)){
+      gameOutput.classList.remove('hidden')
+      gameOutput.innerHTML= 'un nombre'
+    } else if (userNumber<hiddenNumber){
+      gameOutput.classList.remove('hidden')
+      gameOutput.innerHTML= 'Trop petit comme la taille de ta bite !'
+    } else if (userNumber>hiddenNumber){
+      gameOutput.classList.remove('hidden')
+      gameOutput.innerHTML= 'Trop grand comme ta connerie !'
+    } else { 
+  alert('He He He, je vois que tu es un petit intello !')
 }
 
-
-
-function addArrowUp(y) {
-  const clone = arrowUpSource.cloneNode(true)
-  clone.style.top = `${100 - y}%`
-  main.append(clone)
-
-  // random gradient color
-  const color = randomLerpColor()
-  const linearGradient = `linear-gradient(${color}, ${color}00)`
-  clone.querySelector('.right').style.backgroundImage = linearGradient
-  clone.querySelector('.left').style.backgroundImage = linearGradient
-}
-
-function addArrowDown(y) {
-  const clone = arrowDownSource.cloneNode(true)
-  clone.style.bottom = `${100 - y}%`
-  main.append(clone)
-
-  // random gradient color
-  const color = randomLerpColor()
-  const linearGradient = `linear-gradient(${color}, ${color}00)`
-  clone.querySelector('.right').style.backgroundImage = linearGradient
-  clone.querySelector('.left').style.backgroundImage = linearGradient
-}
-
-
-
-for (let i = 0; i < 20; i++) {
-  addArrowUp(i * 5)
-  addArrowDown(i * 5)
 }

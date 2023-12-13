@@ -1,69 +1,32 @@
-import { lerpFFFFFF, randFFFFFF } from '../../../../common-resources/js/color-utils.js'
+import { clearArt, makeArtIntro } from './arrow.js'
 
-const main = document.querySelector('main')
-const arrowUpSource = document.querySelector('.arrow.up')
-const arrowDownSource = document.querySelector('.arrow.down')
-
-arrowUpSource.remove()
-arrowDownSource.remove()
-
-const colorA = '#a750da'
-const colorB = '#ffe15b'
-
-const randomColorAorB = () => {
-  const colors = [colorA, colorB]
-  const index = Math.floor(colors.length * Math.random())
-  return colors[index]
+const gameOutput = document.querySelector('.game-output')
+gameOutput.onclick = () => {
+  gameOutput.classList.add('hidden')
+  input.focus()
 }
 
-const randomLerpColor = () => {
-  return lerpFFFFFF(colorA, colorB, Math.random())
-}
+makeArtIntro()
 
-function addArrowUp(y) {
- 
-  const clone = arrowUpSource.cloneNode(true)
-  clone.style.top = `${100 - y}%`
-  main.append(clone)
+const userInputs = []
 
-  // random gradient color
-  const color = randomLerpColor()
-  const linearGradient = `linear-gradient(
-    ${color},
-    ${color}00)`
-    clone.querySelector('.right').style.backgroundImage = linearGradient
-    clone.querySelector('.left').style.backgroundImage = linearGradient
+const hiddenNumber = Math.ceil(Math.random() *100)
+console.log(`le nombre caché est ${hiddenNumber}`)
 
-    //dynamic angle
-    const angle = (y) / 4
-    clone.style.setProperty('--angle', `${angle}deg`)
-}
-
-function addArrowDown(y) {
- 
-  const clone = arrowDownSource.cloneNode(true)
-  clone.style.bottom = `${100 - y}%`
-  main.append(clone)
-
-  // random gradient color
-  const color = randomLerpColor()
-  const linearGradient = `linear-gradient(
-    ${color}00,
-    ${color})`
-    clone.querySelector('.right').style.backgroundImage = linearGradient
-    clone.querySelector('.left').style.backgroundImage = linearGradient
-
-        //dynamic angle
-        const angle = (y) / 4
-        clone.style.setProperty('--angle', `${angle}deg`)
-}
-
-function makeArt(){
-  const max = 20;
-  for (let i = 0; i < max; i++){
-    addArrowUp(i*10)
-    addArrowDown(i*10)
+const input = document.querySelector('input')
+input.onchange = () => {
+  clearArt()
+  
+  const userNumber = Number.parseFloat(input.value)
+  input.value = ''
+  if (Number.isNaN(userNumber)){
+    gameOutput.classList.remove('hidden')
+    gameOutput.innerHTML = 'Un nombre stp.'
+  } else if (userNumber > hiddenNumber) {
+    gameOutput.classList.remove('hidden')
+    gameOutput.innerHTML = 'Trop grand.'
+  } else if (userNumber > hiddenNumber) {
+    gameOutput.classList.remove('hidden')
+    gameOutput.innerHTML = 'Trop petit.'
   }
 }
-
-makeArt()

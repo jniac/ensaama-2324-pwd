@@ -1,0 +1,36 @@
+@import url("https://https://github.com/NaN-xyz/Rubik-Filtered");
+
+
+
+.user-input input {
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: "Anonymous Pro", serif;
+  font-size: 10em;
+  font-weight: 800;
+  color: aliceblue;
+  line-height: 80%;
+}
+
+.user-input input ::placeholder {
+  color: #74ff6f;
+}
+
+.game-output {
+  position: absolute;
+  display: flex;
+  font-family: "Anonymous Pro", serif;
+  font-size: 4em;
+  font-weight: 600;
+  color: aliceblue;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.game-output.hidden {
+  opacity: 0;
+  pointer-events: none;
+}

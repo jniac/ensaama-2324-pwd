@@ -1,35 +1,39 @@
 
-import { randFFFFFF } from '../../../../common-resources/js/color-utils.js'
+import { makeArtIntro, clearArt } from './arrow.js'
 
-const main = document.querySelector('main')
-const arrowUpSource = document.querySelector('.arrow.up')
-const arrowDownSource = document.querySelector('.arrow.down')
-
-// La "source" n'est plus nécessaire, on peut la retirer de l'écran:
- arrowUpSource.remove()
- arrowDownSource.remove()
-
-
-
-function addArrowUp(y) {
-  const clone = arrowUpSource.cloneNode(true)
-  clone.style.top = `${100 - y}%`
-  main.append(clone)
-
+const gameOutput = document.querySelector('.game-output')
+gameOutput.onclick = () => {
+  gameOutput.classList.add('hidden')
+  input.focus()
 }
 
-function addArrowDown(y) {
-  const clone = arrowDownSource.cloneNode(true)
-  clone.style.bottom = `${100 - y}%`
-  main.append(clone)
+makeArtIntro()
 
-}
-for (let i = 0; i < 20; i++){
-  
-  addArrowUp(i * 5)
-  
-  addArrowDown(i * 5)
+const userInputs = []
 
+const hiddenNumber = Math.ceil(Math.random() * 100)
+console.log(`le nombre caché est ${hiddenNumber}`)
+
+const input = document.querySelector('input')
+input.onchange = () => {
+  // console.log(input.value)
+  clearArt()
+
+  const userNumber = Number.parseFloat(input.value)
+  input.value = ''
+  if (Number.isNaN(userNumber)) {
+    gameOutput.classList.remove('hidden')
+    gameOutput.innerHTML = 'Veuillez écrire un nombre.'
+  } else if (userNumber < hiddenNumber) {
+    gameOutput.classList.remove('hidden')
+    gameOutput.innerHTML = 'Non, trop petit.'
+  } else if (userNumber > hiddenNumber) {
+    gameOutput.classList.remove('hidden')
+    gameOutput.innerHTML = 'Non, trop grand.'
+  } else if (userNumber === hiddenNumber) {
+    gameOutput.classList.remove('hidden')
+    gameOutput.innerHTML = 'Bravo!'
+  }
 }
-addArrowUp(10)
-addArrowDown(30)
+
+
