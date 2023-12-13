@@ -32,7 +32,7 @@ export function makeArtIntro() {
   addArrowDown(20);
 }
 
-export function removeArt() {
+export function clearArt() {
 
   art.innerHTML = ''
 }

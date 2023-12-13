@@ -1,32 +1,42 @@
 
 import { clearArt, makeArtIntro } from "./arrow.js"
 
+const gameOutput = document.querySelector('.game-output')
+gameOutput.onclick = () => {
+    gameOutput.classList.add('hidden')
+    input.focus()
+}
+
 makeArtIntro()
 
+const userInputs = []
+
+const hiddenNumber = Math.ceil(Math.random()*100)
+
+console.log(`le nombre caché est ${hiddenNumber}`)
+
 const input = document.querySelector('input')
-input.onchange = () => {
-    console.log(input.value)
-    clearArt()
+input.oninput = () => {
+    gameOutput.innerHTML = ''
+    gameOutput.classList.add('hidden')
 }
-import { randFFFFFF } from "../../../../common-resources/js/color-utils.js"
 
-const main = document.querySelector('main')
-const arrowSource = document.querySelector('.arrow')
+input.onchange = () => {
+    clearArt()
 
-
-// arrowSource.remove()
-
-// main.onclick = (event) => {
-//     const clone = arrowSource.cloneNode(true)
-//     clone.style.top = `${event.clientY}px`
-//     main.append(clone)
-
-//     const color = randFFFFFF()
-//     const linearGradient = `linear-gradient(${color}, ${color}00)`
-//     clone.querySelector(`.right`).style.backgroundImage = linearGradient
-//     clone.querySelector(`.left`).style.backgroundImage = linearGradient
-
-//     const angle = event.y
-//     clone.style.setProperty('--angle', `${angle}deg`)
+    const userNumber = Number.parseFloat(input.value)
+    input.value = ''
+    if (Number.isNaN(userNumber)) {
+        gameOutput.classList.remove('hidden')
+        gameOutput.innerHTML = 'Donne moi un nombre.'
+    } else if (userNumber > hiddenNumber) {
+        gameOutput.classList.remove('hidden')
+        gameOutput.innerHTML = 'Trop grand, comme ta stupidité'
+    } else if (userNumber < hiddenNumber) {
+        gameOutput.classList.remove('hidden')
+        gameOutput.innerHTML = 'Trop petit, comme ton QI'
+    } else if(userNumber === hiddenNumber){
+        alert('Enfin, il était temps !')
+    }
     
-// }
+}
