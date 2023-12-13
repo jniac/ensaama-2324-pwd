@@ -1,0 +1,26 @@
+
+.b3l .color-a {
+  background-image: linear-gradient(
+    0deg,
+    rgb(41, 72, 51),
+    rgb(18, 33, 25));
+}
+
+.b3l .color-d {
+  background-color: rgb(161, 156, 150);
+}
+
+.b3l .color-c {
+  --over-feedback-color: black;
+  background-image: linear-gradient(
+    rgb(196, 221, 152),
+    rgb(118, 127, 101));
+}
+
+
+.b3l .color-b{
+  background-image: linear-gradient(
+    0deg,
+    rgb(18, 33, 25),
+    rgb(41, 72, 51));
+}

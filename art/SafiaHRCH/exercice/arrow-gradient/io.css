@@ -21,5 +21,24 @@
 }
 
 .user-input input::placeholder{
-  color: aqua;
+  color: rgb(0, 165, 118)
+}
+
+.game-output {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  top: 1;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Merriweather', serif;
+  font-size: 13em;
+  font-weight: 100;
 }

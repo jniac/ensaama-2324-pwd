@@ -1,5 +1,5 @@
 @import url(../../../../common-resources/reset.css);
-@import url(user-input.css);
+@import url(io.css);
 
 main {
     width: 100vw;
@@ -10,12 +10,26 @@ main {
 
 }
 
+.art, .io {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.io {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .arrow {
-    --angle: -55deg;
+    --angle: 5deg;
 
     position: absolute;
     width: 100%;
-    height: 10%;
+    height: 5%;
 
     display: flex;
     flex-direction: row;
