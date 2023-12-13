@@ -4,8 +4,15 @@ import { getRandomFleur } from './fleurs.js'
 
 const gameOutput = document.querySelector('.game-output')
 gameOutput.onclick = () => {
-    gameOutput.classList.add('hidden')
-    input.focus()
+  input.focus()
+  hideOutput()
+}
+function hideOutput() {
+  gameOutput.classList.add('hidden')  
+}
+function output(message) {
+  gameOutput.classList.remove('hidden')
+  gameOutput.innerHTML = message
 }
 
 makeArtIntro()
@@ -17,10 +24,11 @@ const fleur = getRandomFleur()
 console.log(fleur)
 
 const input = document.querySelector('input')
+
 input.oninput = () => {
-    gameOutput.innerHTML =''
-    gameOutput.classList.add('hidden')
-}
+    gameOutput.innerHTML = ''
+    hideOutput()
+  }
 
 let goodLengthTryCount = 0
 
@@ -31,26 +39,21 @@ input.onchange = () => {
     input.value =''
 
     if(userValue.length > fleur.length) {
-        gameOutput.classList.remove('hidden')
-        gameOutput.innerHTML ='trop long'
-
+        output('trop long')
+      
     } else if (userValue.length < fleur.length) {
-        gameOutput.classList.remove('hidden')
-        gameOutput.innerHTML ='trop court'
+        output('trop court')
 
     } else if (userValue.length === fleur.length && userValue !== fleur){
         goodLengthTryCount += 1
-        gameOutput.classList.remove('hidden')
-        gameOutput.innerHTML ='bon nombre de caractère, mais pas la bonne fleur'
+        output('bon nombre de caractère, mais pas la bonne fleur')
 
         if (goodLengthTryCount === 2) {
-            gameOutput.classList.remove('hidden')
-            gameOutput.innerHTML = (`Bon allez un indice tout de même, la première lettre est : ${fleur[0]}`) 
+            output(`Bon allez un indice tout de même, la première lettre est : ${fleur[0]}`) 
         }
 
     } else {
-        gameOutput.classList.remove('hidden')
-        gameOutput.innerHTML ='pas mal, tu connais bien les fleurs'
+        output('pas mal, tu connais bien les fleurs')
     }
 }
 
