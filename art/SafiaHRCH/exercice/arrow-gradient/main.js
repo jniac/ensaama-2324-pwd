@@ -1,3 +1,13 @@
+
+import { cleanArt, makeArtIntro } from "./arrow.js"
+
+makeArtIntro()
+
+const input = document.querySelector('input')
+input.onchange = () => {
+    console.log(input.value)
+    cleanArt()
+}
 import { randFFFFFF } from "../../../../common-resources/js/color-utils.js"
 
 const main = document.querySelector('main')

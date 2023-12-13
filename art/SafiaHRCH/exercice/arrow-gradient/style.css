@@ -1,4 +1,5 @@
 @import url(../../../../common-resources/reset.css);
+@import url(user-input.css);
 
 main {
     position: relative;
@@ -9,10 +10,10 @@ main {
 }
 
 .arrow {
-    --angle: 130deg;
+    --angle: 160deg;
     position: absolute;
     width: 100%;
-    height: 15%;
+    height: 8%;
 
     display: flex;
     flex-direction: row;
@@ -31,7 +32,7 @@ main {
     align-self: stretch;
   }
 
-  
+
 /* UP */
 .arrow.up > div {
     background-image: linear-gradient(

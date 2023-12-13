@@ -4,67 +4,65 @@ main {
     width: 100vw;
     height: 100vh;
     background-color: #123;
+    overflow: hidden;
+    position: relative;
 }
 
+/* ARROW GENERIC: */
 .arrow {
-    --angle: 10deg;
-
+    --angle: 60deg;
+  
     position: absolute;
     width: 100%;
-    height: 50%;
-
+    height: 10%;
+  
     display: flex;
     flex-direction: row;
-}
-
-.arrow.up {
-    top: 75%
-}
-
-.arrow.down {
-    bottom: 75%
-}
-
-.arrow > div{
-    flex: 1 ;
+  }
+  
+  .arrow > div {
+    flex: 1;
     align-self: stretch;
+  }
+  
+  /* ARROW UP: */
+  .arrow.up {
+    top: 75%;
+  }
+  
+  .arrow.up > div {
+    background-image: linear-gradient(rgb(64, 75, 224, 0.5), #fff89900);
 
-}
-
-/*Up*/
-
-.arrow.up > div{
-    background-image: linear-gradient(rgb(64, 75, 224, 80), #fff89900);
-
-}
-
-.arrow.up > .left{
+  }
+  
+  .arrow.up > .left {
     transform: skewY(calc(var(--angle) * -1));
-    transform-origin: top right; 
+    transform-origin: top right;
+  }
+  
+  .arrow.up > .right {
+    transform: skewY(var(--angle));
+    transform-origin: top left;
+  }
+  
+  /* ARROW DOWN: */
+  .arrow.down {
+    bottom: 75%;
+  }
+  
+  .arrow.down > div {
+    background-image: linear-gradient(#fff89900,rgb(64, 75, 224, 0.5));
 
-}
-
-.arrow.up > .right{
-    transform: skewY(calc(var(--angle)));
-    transform-origin: top left; 
-    
-}
-
-/*down*/
-
-.arrow.down > div{
-    background-image: linear-gradient(rgb(64, 75, 224), #fff89980);
-
-}
-
-.arrow.down > .left{
-    transform: skewY(calc(var(--angle)));
-    transform-origin: top right; 
-
-}
-
-.arrow.down > .right{
+  }
+  
+  .arrow.down > .left {
+    transform: skewY(var(--angle));
+    transform-origin: top right;
+  }
+  
+  .arrow.down > .right {
     transform: skewY(calc(var(--angle) * -1));
-    transform-origin: top left; 
-    
-}
+    transform-origin: top left;
+  }
+  
+
