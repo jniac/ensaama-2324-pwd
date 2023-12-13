@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+.input input{
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10em;
+  font-weight: 800;
+  color: white;
+}
+
+
+.input input::placeholder{
+  color: #fffa;
+}
+
+.output {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10em;
+  font-weight: 800;
+  color: white;
+}

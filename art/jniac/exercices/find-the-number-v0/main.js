@@ -27,13 +27,19 @@ const hiddenNumber = Math.ceil(Math.random() * 100)
 // Un petit cheat quand même:
 console.log(`le nombre caché est ${hiddenNumber}`)
 
-alert(`Ça y est, j'ai caché un nombre. À toi de le trouver. Fais moi une proposition.`)
+alert(`Ça y est, j'ai caché un nombre entre 1 et 100. À toi de le trouver. Fais moi une proposition.`)
 
 function giveATry() {
   const userString = prompt(`Kouakoubeh ?`)
   const userNumber = Number.parseFloat(userString)
 
-  if (userNumber > hiddenNumber) {
+  if (userString === 'exit') {
+    return
+  }
+  
+  if (userNumber < 1 || userNumber > 100) {
+    alert(`Entre 1 et 100 t'ai je précisé ! Tu n'écoutes jamais ?`)
+  } else if (userNumber > hiddenNumber) {
     alert('Trop grand !')
   } else if (userNumber < hiddenNumber) {
     alert('Trop petit !')

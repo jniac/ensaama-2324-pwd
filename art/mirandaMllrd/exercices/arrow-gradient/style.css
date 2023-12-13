@@ -1,0 +1,99 @@
+@import url(../../../../common-resources/reset.css);
+@import url(io.css);
+
+main {
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: #77a8a6;
+
+    overflow: hidden;
+}
+
+.art, 
+.io {
+    position: absolute;
+    top : 0;
+    left : 0;
+    width: 100%;
+    height: 100%;
+}
+
+.io {
+    display : flex;
+    align-items: ;
+}
+
+.full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.arrow {
+
+    --angle : 20deg;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.arrow > div {
+    flex: 1;
+    align-self: stretch;
+}
+
+/* UUUUUP: */
+.arrow.up{
+    top: 60%;
+}
+
+.arrow.up > div{
+    background-image: linear-gradient(
+      #DDEEFC, 
+      #F3D8BE);
+}
+
+.arrow.up > .left{
+    transform: skewY(calc(var(--angle)* -1));
+    transform-origin: top right;
+}
+
+.arrow.up > .right{
+    transform: skewY(var(--angle));
+    transform-origin: top left;
+}
+
+/* down */
+.arrow.down{
+    bottom: 60%; 
+}
+
+
+.arrow.down > div{
+    background-image: linear-gradient(
+        #add8e600,
+        #F3D8BE);
+}
+
+.arrow.down > .left{
+    transform: skewY(var(--angle));
+    transform-origin: top right;
+}
+
+.arrow.down > .right{
+    transform: skewY(calc(var(--angle)*-1));
+    transform-origin: top left;
+}
+
+.game-output {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 4em;
+    font-weight: 600;
+    color: #DDEEFC;
+}

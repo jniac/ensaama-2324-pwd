@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700;1,900&display=swap');
+
+.user-input {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+.user-input input {
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Merriweather', serif;
+  font-size: 13em;
+  font-weight: 100;
+  color: white;
+}
+
+.user-input input::placeholder{
+  color: rgb(0, 165, 118)
+}
+
+.game-output {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  top: 1;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Merriweather', serif;
+  font-size: 13em;
+  font-weight: 100;
+}

@@ -1,0 +1,154 @@
+<html>
+    <head>
+        <script  type="module" src="main.js"></script>
+
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap");
+
+            body {
+                padding-top: 8rem;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                background-color: black;
+                color: #fff;
+                overflow: hidden;
+            }
+
+            h1 {
+                font-family: "Teko", sans-serif;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: 6rem;
+                margin: 0 0;
+            }
+
+            h2 {
+                font-family: "Teko", sans-serif;
+                font-weight: 600;
+                text-transform: uppercase;
+                font-size: 4rem;
+                margin: 0 0;
+                opacity: 0;
+            }
+
+            button {
+                padding: 0.2rem 4rem;
+                font-size: 3rem;
+                font-family: "Teko", sans-serif;
+                font-weight: 600;
+                background-color: #000;
+                color: #fff;
+                border-radius: 0.5rem;
+                border-color: #fff;
+            }
+
+            button:hover {
+                cursor: pointer;
+                background-color: #fff;
+                color: #000;
+            }
+
+            .boutons {
+                display: flex;
+                gap: 2rem;
+                justify-content: center;
+            }
+
+            .not-displayed {
+                display: none !important;
+            }
+
+            .No {
+                text-align: center;
+            }
+
+            .Home {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .Start {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+            }
+
+            input {
+                text-align: center;
+                font-size: 3rem;
+                font-family: "Teko", sans-serif;
+                font-weight: 600;
+            }
+
+            .arrows {
+                z-index: -1;
+                position: absolute;
+                bottom: 0;
+                width: 100vw;
+                height: 50vh;
+                display: flex;
+                flex-direction: row;
+
+                --angle : 90deg;
+            }
+
+            .arrows > div {
+                flex: 10;
+                align-self: stretch;
+                background-color: #470516;
+                bottom: 0;
+            }
+
+            .arrows .left {
+                transform: skewY( calc( var(--angle) * -1 ) );
+                transform-origin: top right;
+            }
+
+            .arrows .right {
+                transform: skewY( var(--angle) );
+                transform-origin: top left;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="Home">
+            <h1 id="titleText">Tu veux jouer mon reuf ?</h1>
+            <div class="boutons">
+                <button onclick="startBtn(true)">OUI</button>
+                <button onclick="startBtn(false)">NON</button>
+            </div>
+        </div>
+
+        <div class="No not-displayed">
+            <h1>Ah ! Dommage le S</h1>
+            <button onclick="home()">RESTART</button>
+        </div>
+
+        <div class="Start not-displayed">
+
+            <section class="arrows">
+                <div class="left"></div>
+                <div class="right"></div>
+            </section>
+
+            <h1 id="questionText">Quel est l'âge de ma grand mère ?</h1>
+            <h2 id="displayedText">elle est pas si vieille que ça</h2>
+            <input type="number" name="inputedNumber" placeholder="Quelle âge ?">
+            <button id="validerButtonInGame" class="boutons" onclick="valider()">Valider</button>
+            <button id="restartButtonInGame" onclick="home()">RESTART</button>
+
+            <script>
+                document.addEventListener('keydown', function(e) {
+                    if (e.keyCode === 13) {
+                        valider();
+                    }
+                });
+            </script>
+
+        </div>
+    </body>
+</html>
