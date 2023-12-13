@@ -1,4 +1,5 @@
 @import url(../../../../common-resources/reset.css);
+@import url(user-input.css);
 
 main {
     position: relative;
@@ -10,11 +11,20 @@ main {
     background-color: #697EDB;
 
     overflow: hidden;
+    
+}
+
+.art{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .arrow {
-    --angle : 200deg;
 
+    --angle : 55deg;
     position: absolute;
     width: 100%;
     height: 50%;
@@ -30,14 +40,14 @@ main {
 
 /* UUUUUP: */
 .arrow.up{
-    top: 70%;
+    top: 60%;
 }
 
-.arrow.up > div{
+/* .arrow.up > div{
     background-image: linear-gradient(
-        #b4a7e6, 
-        rgba(154, 85, 175, 0));
-}
+        #df9a1c, 
+        #add8e600);
+} */
 
 .arrow.up > .left{
     transform: skewY(calc(var(--angle)* -1));
@@ -55,11 +65,11 @@ main {
 }
 
 
-.arrow.down > div{
+/* .arrow.down > div{
     background-image: linear-gradient(
-        #eb95cea2,
-        #e47bac);
-}
+        #add8e600,
+        #df9a1c);
+} */
 
 .arrow.down > .left{
     transform: skewY(var(--angle));
@@ -70,6 +80,5 @@ main {
     transform: skewY(calc(var(--angle)*-1));
     transform-origin: top left;
 }
-
 
 
