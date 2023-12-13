@@ -9,8 +9,8 @@ arrowUp.remove();
 
 const colors = [
     '#69C6DB',
-    '##697EDB',
-    '##69A2DB',
+    '#697EDB',
+    '#F0AA55',
 ];
 const colors2 = [
     '#ff0000',
@@ -51,7 +51,7 @@ function addArrowUp(y) {
     art.append(clone);
 
     // random gradient color
-    const color = randomCo();
+    const color = randomC();
     const linearGradient = `linear-gradient(${color}, ${color}00)`;
     clone.querySelector('.right').style.backgroundImage = linearGradient;
     clone.querySelector('.left').style.backgroundImage = linearGradient;
@@ -62,7 +62,7 @@ function addArrowDown(y) {
     art.append(clone);
 
     // random gradient color
-    const color = randomCo();
+    const color = randomC();
     const linearGradient = `linear-gradient(${color}, ${color}00)`;
     clone.querySelector('.right').style.backgroundImage = linearGradient;
     clone.querySelector('.left').style.backgroundImage = linearGradient;
@@ -75,6 +75,6 @@ export function makeArtIntro() {
     }
 }
 
-export function cleanArt(){
+export function clearArt(){
     art.innerHTML=''
 }
