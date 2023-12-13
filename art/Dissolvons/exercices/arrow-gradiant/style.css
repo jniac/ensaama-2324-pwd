@@ -5,36 +5,41 @@ main {
 
     width: 100vw;
     height: 100vh;
-    background-color: #28366e;
+    /*background-color: #1c2549;*/
+    /* background-color: #DBBF69; */
+    background-color: #697EDB;
 
     overflow: hidden;
 }
 
 .arrow {
 
-    --angle : 1200deg;
+
+    --angle : 200deg;
+
+
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 50%;
 
     display: flex;
     flex-direction: row;
 }
 
 .arrow > div {
-    flex: 2;
+    flex: 1;
     align-self: stretch;
 }
 
 /* UUUUUP: */
 .arrow.up{
-    top: 100%;
+    top: 70%;
 }
 
 .arrow.up > div{
     background-image: linear-gradient(
-      rgb(209, 141, 209) , 
-      #eedfae);
+        #b4a7e6, 
+        rgba(154, 85, 175, 0));
 }
 
 .arrow.up > .left{
@@ -49,14 +54,14 @@ main {
 
 /* down */
 .arrow.down{
-    bottom: 73%;
+    bottom: 60%;
 }
 
 
 .arrow.down > div{
     background-image: linear-gradient(
-      #f4a6f7,
-      #BFCC86 );
+        #eb95cea2,
+        #e47bac);
 }
 
 .arrow.down > .left{

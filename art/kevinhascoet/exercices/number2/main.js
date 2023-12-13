@@ -4,8 +4,8 @@
       .padStart(2, '0')
   }
 
-  const randFFFFFF = () => {
-    return `#${randFF()}${randFF()}dd`
+  const randomColor = () => {
+    return `#${randFF()}${randFF()}99`
   }
   
 
@@ -21,11 +21,11 @@ arrowDownSource.remove()
 function addArrowUp(y) {
   
   const clone = arrowUpSource.cloneNode(true)
-  clone.style.top = `${100 - y}%`
+  clone.style.top = `${50 - y}%`
   main.append(clone)
 
   //random gradient color
-  const color = randFFFFFF()
+  const color = randomColor()
   const gradient = `linear-gradient(${color}, ${color}00)`
   clone.querySelector('.right').style.backgroundImage = gradient
   clone.querySelector('.left').style.backgroundImage = gradient
@@ -38,11 +38,11 @@ function addArrowUp(y) {
 function addArrowDown(y) {
   
   const clone = arrowDownSource.cloneNode(true) 
-  clone.style.bottom = `${100 - y}%`
+  clone.style.bottom = `${50 - y}%`
   main.append(clone)
 
   //random gradient color
-  const color = randFFFFFF()
+  const color = randomColor()
   const gradient = `linear-gradient(${color}00, ${color})`
   clone.querySelector('.right').style.backgroundImage = gradient
   clone.querySelector('.left').style.backgroundImage = gradient

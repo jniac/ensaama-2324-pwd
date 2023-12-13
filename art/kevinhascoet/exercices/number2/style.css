@@ -10,8 +10,6 @@ main {
 }
 
 .arrow {
-  --angle: 10deg;
-
   position: absolute;
   width: 100%;
   height: 10%;

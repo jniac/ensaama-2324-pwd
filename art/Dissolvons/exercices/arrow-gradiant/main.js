@@ -88,3 +88,7 @@ function addArrowUp(y) {
   
   
   
+  for (let i = 0; i < 20; i++) {
+    addArrowUp(i * 5)
+    addArrowDown(i * 5)
+  }
