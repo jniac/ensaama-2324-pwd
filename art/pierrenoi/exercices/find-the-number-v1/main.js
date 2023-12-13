@@ -1,6 +1,6 @@
 import { lerpFFFFFF, randFFFFFF } from '../../../../common-resources/js/color-utils.js'
 
-const main = document.querySelector('main')
+const art = document.querySelector('.art')
 const arrowUpSource = document.querySelector('.arrow.up')
 const arrowDownSource = document.querySelector('.arrow.down')
 
@@ -26,7 +26,7 @@ const randomLerpColor = () => {
 function addArrowUp(y) {
   const clone = arrowUpSource.cloneNode(true)
   clone.style.top = `${100 - y}%`
-  main.append(clone)
+  art.append(clone)
 
   // random gradient color
   const color = randomLerpColor()
@@ -38,7 +38,7 @@ function addArrowUp(y) {
 function addArrowDown(y) {
   const clone = arrowDownSource.cloneNode(true)
   clone.style.bottom = `${100 - y}%`
-  main.append(clone)
+  art.append(clone)
 
   // random gradient color
   const color = randomLerpColor()
