@@ -1,13 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Antonio:wght@100&family=Creepster&family=Italianno&family=Monoton&family=Permanent+Marker&family=Roboto:wght@100&display=swap");
 
-.user-input {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  width: 100%;
-  transform: translateY(-50%);
-}
-
 .user-input input {
   width: 100%;
   text-align: center;
@@ -16,6 +8,19 @@
   outline: none;
   font-family: "Anonymous Pro", serif;
   font-size: 10em;
+  font-weight: 800;
+  color: aliceblue;
+  transform: translateY(-0.066em);
+}
+
+.game-output{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  font-family: "Anonymous Pro", serif;
+  font-size: 2em;
   font-weight: 800;
   color: aliceblue;
 }

@@ -1,5 +1,5 @@
 @import url(../../../../common-resources/reset.css);
-@import url(user-input.css);
+@import url(io.css);
 
 main {
     position: relative;
@@ -11,15 +11,21 @@ main {
     background-color: #697EDB;
 
     overflow: hidden;
-    
+
 }
 
-.art{
+.full{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 .arrow {
