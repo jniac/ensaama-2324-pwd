@@ -18,10 +18,19 @@
 }
 
 .game-output {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   font-family: 'Playfair Display', serif;
   font-size: 4em;
   font-weight: 600;
   color: white;
 
+  transition: all 1.5s ease-in-out;
+}
+
+.game-output.hidden{
+  opacity: 0;
   pointer-events: none;
 }

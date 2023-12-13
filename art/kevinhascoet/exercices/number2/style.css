@@ -10,7 +10,7 @@ main {
   overflow: hidden;
 }
 
-.art {
+.full {
   position: absolute;
   top: 0;
   left: 0;
@@ -18,10 +18,10 @@ main {
   height: 100%;
 }
 
-.io > {
+.center {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .arrow {
