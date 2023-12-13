@@ -11,20 +11,6 @@ main {
     overflow: hidden;
 }
 
-.art, 
-.io {
-    position: absolute;
-    top : 0;
-    left : 0;
-    width: 100%;
-    height: 100%;
-}
-
-.io {
-    display : flex;
-    align-items: ;
-}
-
 .full {
     position: absolute;
     top: 0;
@@ -32,9 +18,16 @@ main {
     width: 100%;
     height: 100%;
 }
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 .arrow {
 
-    --angle : 20deg;
+    --angle : 65deg;
     position: absolute;
     width: 100%;
     height: 50%;

@@ -10,20 +10,20 @@ main {
 
 }
 
-.art, .io {
+.full {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-
 }
 
-.io {
+.center {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
+
 .arrow {
     --angle: 5deg;
 
@@ -50,7 +50,7 @@ main {
 }
 
 .arrow.up>div {
-    background-image: linear-gradient(#2d0a80,
+    background-image: linear-gradient(#e08c53,
             #7700ff31);
 }
 
@@ -66,8 +66,8 @@ main {
 
 
 .arrow.down>div {
-    background-image: linear-gradient(rgba(119, 0, 255, 0.192),
-            rgb(45, 10, 128));
+    background-image: linear-gradient(#7700ff31,
+            #e08c53);
 }
 
 .arrow.down>.left {

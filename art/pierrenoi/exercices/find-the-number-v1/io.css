@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://https://github.com/NaN-xyz/Rubik-Filtered");
+
+
 
 .user-input input {
   width: 100%;
@@ -6,22 +8,24 @@
   background-color: transparent;
   border: none;
   outline: none;
-  font-family: "Anton", serif;
+  font-family: "Anonymous Pro", serif;
   font-size: 10em;
   font-weight: 800;
   color: aliceblue;
-  transform: translateY(-5%);
+  line-height: 80%;
 }
 
-.user-input input::placeholder {
-  color: #ffff6f;
+.user-input input ::placeholder {
+  color: #74ff6f;
 }
 
 .game-output {
-  font-family: "Anton", serif;
+  position: absolute;
+  display: flex;
+  font-family: "Anonymous Pro", serif;
   font-size: 4em;
   font-weight: 600;
-  color: pink;
+  color: aliceblue;
 
   transition: all 0.3s ease-in-out;
 }

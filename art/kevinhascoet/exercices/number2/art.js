@@ -6,7 +6,7 @@ const randFF = () => {
 const randomColor = () => {
   return `#${randFF()}5599`;
 };
-const art = document.querySelector('main');
+const art = document.querySelector('.art');
 const arrowUpSource = document.querySelector('.arrow.up');
 const arrowDownSource = document.querySelector('.arrow.down');
 arrowUpSource.remove();

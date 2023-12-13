@@ -6,7 +6,7 @@ const arrowUpSource = document.querySelector('.arrow.up');
 const arrowDownSource = document.querySelector('.arrow.down');
 arrowUpSource.remove();
 arrowDownSource.remove();
-const colorA = '#2d0a80';
+const colorA = '#e08c53';
 const colorB = '#7700ff';
 const randomLerpColor = () => lerpFFFFFF(colorA, colorB, Math.random());
 function addArrowUp(y) {

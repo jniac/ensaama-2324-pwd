@@ -8,8 +8,8 @@ arrowUp.remove();
 
 
 const colors = [
-    '#69C6DB',
-    '#697EDB',
+    '#3891D9',
+    '#DB7163',
     '#F0AA55',
 ];
 const colors2 = [
