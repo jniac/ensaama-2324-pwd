@@ -1,5 +1,6 @@
 
 @import url(../../../../common-resources/reset.css);
+@import url(input.css);
 
 main {
   position: relative;
@@ -64,11 +65,3 @@ main {
   transform: skewY(calc(var(--angle) * -1));
   transform-origin: top left;
 }
-
-
-
-
-
-
-
-
