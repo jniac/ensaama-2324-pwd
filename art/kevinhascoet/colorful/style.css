@@ -43,7 +43,7 @@ main.kev {
   transition: 0.4s ease-in-out;
 }
 .hori:hover {
-  transform: translate(20px);
+  /* transform: translate(20px); */
 }
 
 .full {

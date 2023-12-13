@@ -9,13 +9,18 @@ const arrowDownSource = document.querySelector('.arrow.down');
 arrowUpSource.remove();
 arrowDownSource.remove();
 
-const colorA = '#a9aaea';
-const colorB = '#a1d9ea';
-const colorC = '#de9bb9';
+const colorA = '#CFEED0';
+const colorB = '#C2A8F1';
+
+const randomColorAorB = () => {
+  const colors = [colorA, colorB];
+  const index = Math.floor(colors.length * Math.random());
+  return colors[index];
+}
 
 const randomLerpColor = () => {
-  return lerpFFFFFF(colorA, colorB,colorC, Math.random());
-};
+  return lerpFFFFFF(colorA, colorB, Math.random());
+}
 
 function addArrowUp(y) {
   const clone = arrowUpSource.cloneNode(true);
@@ -42,14 +47,12 @@ function addArrowDown(y) {
 }
 
 export function makeArtIntro() {
-  for (let i = 0; i < 40; i++) {
-    addArrowUp(i * 5);
-    addArrowDown(i * 5);
+  for (let i = 0; i < 20; i++) {
+    addArrowDown(i * 9);
+    addArrowUp(i * 9);
   }
-
 }
 
-
-export function clearArt() {
+export function clearArt(){
   art.innerHTML = ''
 }
