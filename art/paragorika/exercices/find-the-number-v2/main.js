@@ -8,6 +8,11 @@ gameOutput.onclick = () => {
 
 makeArtIntro()
 
+const hiddenNumber = Math.ceil(Math.random() * 100)
+
+// Un petit cheat quand même:
+console.log(`le nombre caché est ${hiddenNumber}`)
+
 const input = document.querySelector('input')
 input.onchange = ()=>{
   clearArt()
@@ -24,5 +29,10 @@ if (Number.isNaN(userNumber)) {
 } else if (userNumber > hiddenNumber) {
   gameOutput.classList.remove('hidden')
   gameOutput.innerHTML = 'Trop grand' 
+} else{
+  gameOutput.classList.remove('hidden')
+  gameOutput.innerHTML = 'bravoooo' 
+  makeArtIntro()
+
 }
 }
