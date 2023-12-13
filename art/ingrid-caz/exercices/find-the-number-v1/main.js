@@ -1,48 +1,56 @@
-import { lerpFFFFFF, randFFFFFF} from '../../../../common-resources/js/color-utils.js'
 
-const main = document.querySelector('main')
-const arrowUpSource = document.querySelector('.arrow.up')
-const arrowDownSource = document.querySelector('.arrow.down')
+import { cleanArt, makeArtIntro } from './arrow.js'
+import { getRandomFleur } from './fleurs.js'
 
-arrowUpSource.remove()
-arrowDownSource.remove()
-
-const colorA = '#2d0a80'
-const colorB = '#7700ff'
-const randomLerpColor = () => lerpFFFFFF(colorA, colorB, Math.random())
-
-
-function addArrowUp (y) {
-
-    const clone = arrowUpSource.cloneNode(true)
-    clone.style.top = `${100-y}%`
-    main.append(clone)
-
-    const color = randomLerpColor()
-    const linearGradient = `linear-gradient(${color}, ${color}00)`
-    clone.querySelector('.right').style.backgroundImage = linearGradient
-    clone.querySelector('.left').style.backgroundImage = linearGradient
-
+const gameOutput = document.querySelector('.game-output')
+gameOutput.onclick = () => {
+    gameOutput.classList.add('hidden')
+    input.focus()
 }
 
-function addArrowDown (y) {
+makeArtIntro()
 
-    const clone = arrowDownSource.cloneNode(true)
-    clone.style.top = `${100-y}%`
-    main.append(clone)
+const userInputs = []
 
-    const color = randomLerpColor()
-    const linearGradient = `linear-gradient(${color}, ${color}00)`
-    clone.querySelector('.right').style.backgroundImage = linearGradient
-    clone.querySelector('.left').style.backgroundImage = linearGradient
+const fleur = getRandomFleur()
 
+console.log(fleur)
+
+const input = document.querySelector('input')
+input.oninput = () => {
+    gameOutput.innerHTML =''
+    gameOutput.classList.add('hidden')
 }
-function makeArt(){
-    for (let i =0 ; i < 20; i++) {
-        addArrowUp(i * 5)
-        addArrowDown(i * 5)
+
+let goodLengthTryCount = 0
+
+input.onchange = () => {
+    cleanArt ()
     
+    const userValue = input.value
+    input.value =''
+
+    if(userValue.length > fleur.length) {
+        gameOutput.classList.remove('hidden')
+        gameOutput.innerHTML ='trop long'
+
+    } else if (userValue.length < fleur.length) {
+        gameOutput.classList.remove('hidden')
+        gameOutput.innerHTML ='trop court'
+
+    } else if (userValue.length === fleur.length && userValue !== fleur){
+        goodLengthTryCount += 1
+        gameOutput.classList.remove('hidden')
+        gameOutput.innerHTML ='bon nombre de caractère, mais pas la bonne fleur'
+
+        if (goodLengthTryCount === 2) {
+            gameOutput.classList.remove('hidden')
+            gameOutput.innerHTML = (`Bon allez un indice tout de même, la première lettre est : ${fleur[0]}`) 
+        }
+
+    } else {
+        gameOutput.classList.remove('hidden')
+        gameOutput.innerHTML ='pas mal, tu connais bien les fleurs'
     }
 }
 
-makeArt()

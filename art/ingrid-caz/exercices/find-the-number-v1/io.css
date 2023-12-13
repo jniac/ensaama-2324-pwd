@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+
+
+.user-input input {
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15em;
+  font-weight: 400;
+  color: aliceblue;
+  transform: translateY(-0.066em);
+}
+
+.user-input input::placeholder {
+  color: aliceblue;
+  font-weight: 600;
+}
+
+.game-output {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Raleway', sans-serif;
+  font-size: 4em;
+  font-weight: 400;
+  color: aliceblue;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.game-output.hidden {
+  opacity: 0;
+  pointer-events: none;
+
+}

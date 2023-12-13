@@ -4,61 +4,51 @@ const art = document.querySelector('.art');
 
 const arrowUpSource = document.querySelector('.arrow.up');
 const arrowDownSource = document.querySelector('.arrow.down');
+
+// Les "sources" ne sont plus nécessaires, on peut les retirer de l'écran:
 arrowUpSource.remove();
 arrowDownSource.remove();
-const colorA = '#a750da';
-const colorB = '#ffe15b';
-const randomColorAorB = () => {
-  const colors = [colorA, colorB];
-  const index = Math.floor(colors.length * Math.random());
-  return colors[index];
-};
-const randomLerpColor = () => {
-  return lerpFFFFFF(colorA, colorB, Math.random());
-};
-function addArrowUp(y) {
 
+const colorA = '#a9aaea';
+const colorB = '#a1d9ea';
+const colorC = '#de9bb9';
+
+const randomLerpColor = () => {
+  return lerpFFFFFF(colorA, colorB,colorC, Math.random());
+};
+
+function addArrowUp(y) {
   const clone = arrowUpSource.cloneNode(true);
   clone.style.top = `${100 - y}%`;
   art.append(clone);
 
   // random gradient color
   const color = randomLerpColor();
-  const linearGradient = `linear-gradient(
-    ${color},
-    ${color}00)`;
+  const linearGradient = `linear-gradient(${color}, ${color}00)`;
   clone.querySelector('.right').style.backgroundImage = linearGradient;
   clone.querySelector('.left').style.backgroundImage = linearGradient;
-
-  //dynamic angle
-  const angle = (y) / 4;
-  clone.style.setProperty('--angle', `${angle}deg`);
 }
-function addArrowDown(y) {
 
+function addArrowDown(y) {
   const clone = arrowDownSource.cloneNode(true);
   clone.style.bottom = `${100 - y}%`;
   art.append(clone);
 
   // random gradient color
   const color = randomLerpColor();
-  const linearGradient = `linear-gradient(
-    ${color}00,
-    ${color})`;
+  const linearGradient = `linear-gradient(${color}, ${color}00)`;
   clone.querySelector('.right').style.backgroundImage = linearGradient;
   clone.querySelector('.left').style.backgroundImage = linearGradient;
+}
 
-  //dynamic angle
-  const angle = (y) / 4;
-  clone.style.setProperty('--angle', `${angle}deg`);
-}
 export function makeArtIntro() {
-  const max = 20;
-  for (let i = 0; i < max; i++) {
-    addArrowUp(i * 10);
-    addArrowDown(i * 10);
+  for (let i = 0; i < 20; i++) {
+    addArrowUp(i * 5);
+    addArrowDown(i * 5);
   }
+
 }
+
 
 export function clearArt() {
   art.innerHTML = ''
