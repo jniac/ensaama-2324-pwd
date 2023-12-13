@@ -9,9 +9,7 @@ main {
     overflow: hidden;
 }
 
-.art,
-.io,
-.io * {
+.full {
   position: absolute;
   top: 0;
   left: 0;
@@ -19,8 +17,9 @@ main {
   height: 100%;
 }
 
-.io {
+.center {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
