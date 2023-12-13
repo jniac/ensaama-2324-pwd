@@ -1,21 +1,26 @@
 import { lerpFFFFFF } from '../../../../common-resources/js/color-utils.js';
 
-const art = document.querySelector('main');
+const art = document.querySelector('.art');
 
 const arrowUpSource = document.querySelector('.arrow.up');
 const arrowDownSource = document.querySelector('.arrow.down');
+
 arrowUpSource.remove();
 arrowDownSource.remove();
+
 const colorA = '#a750da';
 const colorB = '#ffe15b';
+
 const randomColorAorB = () => {
   const colors = [colorA, colorB];
   const index = Math.floor(colors.length * Math.random());
   return colors[index];
 };
+
 const randomLerpColor = () => {
   return lerpFFFFFF(colorA, colorB, Math.random());
 };
+
 function addArrowUp(y) {
 
   const clone = arrowUpSource.cloneNode(true);
