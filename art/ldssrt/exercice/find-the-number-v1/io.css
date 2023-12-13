@@ -24,3 +24,31 @@
 
 }
 
+.user-input ::placeholder {
+
+  color: white;
+}
+
+.game-output {
+
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 1;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  font-family: 'Silkscreen', sans-serif;;
+  font-size: 5em;
+  font-weight: 800;
+  color: rgb(255, 255, 255);
+
+  transition: all 0.3s ease-in-out;
+}
+
+.game-output.hidden {
+
+  opacity: 0;
+  pointer-events: none;
+}

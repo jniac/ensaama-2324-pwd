@@ -1,6 +1,6 @@
 import { lerpFFFFFF } from "../../../../common-resources/js/color-utils.js";
 
-const art = document.querySelector('main');
+const art = document.querySelector('.art');
 const arrowUpSource = document.querySelector('.arrow.up');
 const arrowDownSource = document.querySelector('.arrow.down');
 

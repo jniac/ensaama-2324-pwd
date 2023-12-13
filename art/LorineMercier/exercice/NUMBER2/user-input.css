@@ -17,7 +17,16 @@
   color: #ffff6f;
 }
 
-
 .game-output {
+  font-family: "Anton", serif;
+  font-size: 4em;
+  font-weight: 600;
+  color: pink;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.game-output.hidden {
+  opacity: 0;
   pointer-events: none;
 }
