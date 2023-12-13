@@ -1,4 +1,4 @@
-import { clearArt, makeArtIntro } from './arrow.js'
+import { clearArt, makeArtIntro } from './art.js'
 
 makeArtIntro()
 
