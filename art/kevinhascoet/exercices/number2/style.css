@@ -10,7 +10,7 @@ main {
   overflow: hidden;
 }
 
-.art, .io {
+.art {
   position: absolute;
   top: 0;
   left: 0;
