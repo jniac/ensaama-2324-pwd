@@ -19,3 +19,6 @@
   font-weight: 800;
   color: aliceblue;
 }
+.user-input input::placeholder {
+  color: #ffff6f;
+}
