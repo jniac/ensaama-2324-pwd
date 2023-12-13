@@ -26,4 +26,6 @@
   font-size: 4em;
   font-weight: 600;
   color: white;
+
+  pointer-events: none;
 }
