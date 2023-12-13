@@ -1,21 +1,25 @@
-@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Orbitron:wght@500&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
 
 .user-input {
+
   position: absolute;
   z-index: 1;
   top: 50%;
   width: 100%;
-  transform: translateY(-50%);
 }
 
 .user-input input {
+
   width: 100%;
   text-align: center;
   background-color: transparent;
   border: none;
   outline: none;
-  font-family: "Orbitron", serif;
+  font-family: 'Silkscreen', sans-serif;
   font-size: 10em;
   font-weight: 800;
-  color: aliceblue;
+  color: rgb(255, 255, 255);
+
 }
