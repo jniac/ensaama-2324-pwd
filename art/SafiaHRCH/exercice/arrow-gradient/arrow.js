@@ -1,6 +1,6 @@
 import { lerpFFFFFF } from "../../../../common-resources/js/color-utils.js";
 
-const main = document.querySelector('main');
+const art = document.querySelector('main');
 const arrowUpSource = document.querySelector('.arrow.up');
 const arrowDownSource = document.querySelector('.arrow.down');
 
@@ -23,7 +23,7 @@ const randomLerpColor = () => {
 export function addArrowUp(y) {
     const clone = arrowUpSource.cloneNode(true);
     clone.style.top = `${100 - y}%`;
-    main.append(clone);
+    art.append(clone);
 
     const color = randomLerpColor();
     const linearGradient = `linear-gradient(${color}, ${color}00)`;
@@ -34,7 +34,7 @@ export function addArrowUp(y) {
 export function addArrowDown(y) {
     const clone = arrowDownSource.cloneNode(true);
     clone.style.bottom = `${100 - y}%`;
-    main.append(clone);
+    art.append(clone);
 
     const color = randomLerpColor();
     const linearGradient = `linear-gradient(${color}, ${color}00)`;
@@ -50,6 +50,6 @@ export function makeArtIntro() {
     }
 }
 
-export function cleanArt() {
-    main.innerHTML = ''
+export function clearArt() {
+    art.innerHTML = ''
 }

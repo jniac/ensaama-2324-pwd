@@ -1,6 +1,7 @@
-import { lerpFFFFFF, randFFFFFF } from '../../../../common-resources/js/color-utils.js'
+import { lerpFFFFFF } from '../../../../common-resources/js/color-utils.js'
 
 const art = document.querySelector('.art')
+
 const arrowUpSource = document.querySelector('.arrow.up')
 const arrowDownSource = document.querySelector('.arrow.down')
 
@@ -8,8 +9,8 @@ const arrowDownSource = document.querySelector('.arrow.down')
 arrowUpSource.remove()
 arrowDownSource.remove()
 
-const colorA = '#9efd38'
-const colorB = '#ffe087'
+const colorA = '#ff8080'
+const colorB = '#2e2edd'
 
 const randomColorAorB = () => {
   const colors = [colorA, colorB]
@@ -20,8 +21,6 @@ const randomColorAorB = () => {
 const randomLerpColor = () => {
   return lerpFFFFFF(colorA, colorB, Math.random())
 }
-
-
 
 function addArrowUp(y) {
   const clone = arrowUpSource.cloneNode(true)
@@ -42,23 +41,19 @@ function addArrowDown(y) {
 
   // random gradient color
   const color = randomLerpColor()
-  const linearGradient = `linear-gradient(${color}, ${color}00)`
+  const linearGradient = `linear-gradient(${color}00, ${color})`
   clone.querySelector('.right').style.backgroundImage = linearGradient
   clone.querySelector('.left').style.backgroundImage = linearGradient
 }
 
-
-
-for (let i = 0; i < 20; i++) {
-  addArrowUp(i * 5)
-  addArrowDown(i * 5)
+export function makeArtIntro() {
+  for (let i = 0; i < 6; i++) {
+    addArrowUp(i * 8)
+    addArrowDown(i * 8)
+  }
 }
 
-makeArt()
-
-
-
-
-
-
+export function clearArt() {
+  art.innerHTML = ''
+}
 
