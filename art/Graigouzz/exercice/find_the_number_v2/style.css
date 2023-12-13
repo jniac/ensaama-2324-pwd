@@ -13,8 +13,8 @@ main {
 }
 
 .arrow {
+    --angle : 200deg;
 
-    --angle : 55deg;
     position: absolute;
     width: 100%;
     height: 50%;
@@ -30,13 +30,13 @@ main {
 
 /* UUUUUP: */
 .arrow.up{
-    top: 60%;
+    top: 70%;
 }
 
 .arrow.up > div{
     background-image: linear-gradient(
-        #df9a1c, 
-        #add8e600);
+        #b4a7e6, 
+        rgba(154, 85, 175, 0));
 }
 
 .arrow.up > .left{
@@ -57,8 +57,8 @@ main {
 
 .arrow.down > div{
     background-image: linear-gradient(
-        #add8e600,
-        #df9a1c);
+        #eb95cea2,
+        #e47bac);
 }
 
 .arrow.down > .left{
@@ -70,5 +70,6 @@ main {
     transform: skewY(calc(var(--angle)*-1));
     transform-origin: top left;
 }
+
 
 

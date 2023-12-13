@@ -8,8 +8,8 @@ const arrowDownSource = document.querySelector('.arrow.down')
 arrowUpSource.remove()
 arrowDownSource.remove()
 
-const colorA = '#ff8080'
-const colorB = '#2e2edd'
+const colorA = '#9efd38'
+const colorB = '#ffe087'
 
 const randomColorAorB = () => {
   const colors = [colorA, colorB]

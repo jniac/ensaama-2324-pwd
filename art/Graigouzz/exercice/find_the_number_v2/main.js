@@ -28,6 +28,14 @@ const randomC = () =>{
     return colors[index]
 }
 
+
+function addArrowUp(y){
+    const clone = arrowUpSource.cloneNode(true)
+    clone.style.top = `${100 - y}%`
+    main.append(clone)
+
+}
+
 const randomCo = () =>{
     const index=Math.floor(Math.random()*colors2.length)
     return colors[index]
@@ -80,8 +88,3 @@ function addArrowUp(y) {
   
   
   
-  for (let i = 0; i < 20; i++) {
-    addArrowUp(i * 5)
-    addArrowDown(i * 5)
-  }
-
