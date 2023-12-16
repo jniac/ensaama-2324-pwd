@@ -6,6 +6,11 @@ gameOutput.onclick = () => {
   input.focus()
 }
 
+function output(message){
+  gameOutput.classList.remove(`hidden`)
+  gameOutput.innerHTML=message
+}
+
 makeArtIntro()
 
 const userImput = []
@@ -17,10 +22,14 @@ const input = document.querySelector(`input`)
 input.onchange = () => {
   clearArt()
 
-  const UserNumber = Number.parseFloat(input.value)
+  const userNumber = Number.parseFloat(input.value)
   input.value = ``
-  if (Number.isNaN(UserNumber)) {
-    gameOutput.classList.remove(`hidden`)
-    gameOutput.innerHTML = `un nombre por favor`
-  } else 
+  if (Number.isNaN(userNumber)) {
+   output(`un nombre por favor`)
+  } else if (userNumber > hiddenNumber) {
+  output ('Trop grandé.')
+  } else if (userNumber < hiddenNumber) {
+ output ('Trop petite.')
+  }
 }
+
