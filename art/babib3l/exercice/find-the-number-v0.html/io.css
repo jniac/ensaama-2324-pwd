@@ -6,22 +6,22 @@
   background-color: transparent;
   border: none;
   outline: none;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 20em;
   font-weight: 800;
-  color: white;
+  color: #2e2edd;
   line-height: 80%;
 }
 
 .user-input input::placeholder {
-  color: #ffff6f;
+  color: #2e2edd;
 }
 
 .game-output {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 4em;
   font-weight: 600;
-  color: white;
+  color: #2e2edd;
 
   pointer-events: none;
 }

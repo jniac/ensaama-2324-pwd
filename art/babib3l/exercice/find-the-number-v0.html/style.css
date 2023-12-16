@@ -5,7 +5,7 @@ main {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-color: rgb(23, 66, 109);
+  background-color: rgb(0, 0, 0);
   overflow: hidden;
 }
 
@@ -23,9 +23,8 @@ main {
   align-items: center;
 }
 
-/* ARROW GENERIC: */
 .arrow {
-  --angle: 10deg;
+  --angle: 40deg;
 
   position: absolute;
   width: 100%;
@@ -40,45 +39,43 @@ main {
   align-self: stretch;
 }
 
-/* ARROW UP: */
 .arrow.up {
-  top: 75%;
+  top: 40%;
 }
 
 .arrow.up > div {
   background-image: linear-gradient(
-    #fff899A0,
     #fff89900);
 }
 
 .arrow.up > .left {
-  transform: skewY(calc(var(--angle) * -1));
+  transform: skewY(calc(var(--angle) * -4));
   transform-origin: top right;
 }
 
 .arrow.up > .right {
-  transform: skewY(var(--angle));
+  transform: skewY(calc(var(--angle)* 4));
   transform-origin: top left;
 }
 
-/* ARROW DOWN: */
 .arrow.down {
-  bottom: 75%;
+  bottom: 40%;
 }
 
 .arrow.down > div {
   background-image: linear-gradient(
-    #fff89900,
-    #fff899A0);
+    rgba(1, 136, 48, 0)04, 153, 0),
+    #000000a0;
 }
 
 .arrow.down > .left {
-  transform: skewY(var(--angle));
+  transform: skewY(calc(var(--angle) * 4));
   transform-origin: top right;
 }
 
 .arrow.down > .right {
-  transform: skewY(calc(var(--angle) * -1));
+  transform: skewY(calc(var(--angle) * -4));
   transform-origin: top left;
 }
+
 

@@ -5,11 +5,8 @@ const art = document.querySelector('.art')
 const arrowUpSource = document.querySelector('.arrow.up')
 const arrowDownSource = document.querySelector('.arrow.down')
 
-// Les "sources" ne sont plus nécessaires, on peut les retirer de l'écran:
-arrowUpSource.remove()
-arrowDownSource.remove()
 
-const colorA = '#ff8080'
+const colorA = '#000000'
 const colorB = '#2e2edd'
 
 const randomColorAorB = () => {
@@ -27,7 +24,6 @@ function addArrowUp(y) {
   clone.style.top = `${100 - y}%`
   art.append(clone)
 
-  // random gradient color
   const color = randomLerpColor()
   const linearGradient = `linear-gradient(${color}, ${color}00)`
   clone.querySelector('.right').style.backgroundImage = linearGradient
@@ -39,7 +35,6 @@ function addArrowDown(y) {
   clone.style.bottom = `${100 - y}%`
   art.append(clone)
 
-  // random gradient color
   const color = randomLerpColor()
   const linearGradient = `linear-gradient(${color}00, ${color})`
   clone.querySelector('.right').style.backgroundImage = linearGradient
