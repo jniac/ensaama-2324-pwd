@@ -1,4 +1,4 @@
-import { clearArt, makeArtIntro } from './arrow.js'
+import { addArrowDown, addArrowUp, clearArt, makeArtIntro } from './arrow.js'
 
 const gameOutput = document.querySelector('.game-output')
 gameOutput.onclick = () => {
@@ -16,26 +16,36 @@ makeArtIntro()
 
 const userInputs = []
 
-const hiddenNumber = Math.ceil(Math.random() *100)
+const hiddenNumber = Math.ceil(Math.random() * 100)
 console.log(`le nombre caché est ${hiddenNumber}`)
 
 const input = document.querySelector('input')
 
 function reactToUserNumber(userNumber) {
-    userInputs.push(userNumber)
-    document.querySelector('.memo').innerHTML = 
-      userInputs.map(x => {
-        return `<div>${x}</div`
-      })
+  userInputs.push(userNumber)
+  document.querySelector('.memo').innerHTML =
+    userInputs.map(x => {
+      let classname = ''
+      if (x < hiddenNumber) {
+        classname = 'too-small'
+      } else if (x > hiddenNumber) {
+        classname = 'too-big'
+      } else {
+        classname = 'equal'
+      }
+      return `<div class="${classname}">${x}</div>`
+    })
       .join('\n')
-      
-    if (userNumber > hiddenNumber) {
+
+  if (userNumber > hiddenNumber) {
     output('Trop grand.')
-    } else if (userNumber < hiddenNumber) {
+    addArrowDown(100 - userNumber)
+  } else if (userNumber < hiddenNumber) {
     output('Trop petit.')
-    } else if (userNumber === hiddenNumber) {
+    addArrowUp(userNumber)
+  } else if (userNumber === hiddenNumber) {
     output('Trouvé!')
-    }
+  }
 }
 
 input.oninput = () => {
@@ -44,13 +54,15 @@ input.oninput = () => {
 }
 
 input.onchange = () => {
-  clearArt()
-  
+  if (userInputs.length === 0) {
+    clearArt()
+  }
+
   const userNumber = Number.parseFloat(input.value)
   input.value = ''
-  if (Number.isNaN(userNumber)){
-  output('Un nombre stp.')
-  } else if {
+  if (Number.isNaN(userNumber)) {
+    output('Un nombre stp.')
+  } else {
     reactToUserNumber(userNumber)
   }
 }
