@@ -1,13 +1,16 @@
-import { clearArt, makeArtIntro } from './art.js'
+import { randFFFFFF } from "../../../../common-resources/js/color-utils.js";
+import { cleanArt as cleanArt, makeArtIntro } from "./arrow.js";
 
 const gameOutput = document.querySelector('.game-output')
 gameOutput.onclick = () => {
   input.focus()
   hideOutput()
 }
+
 function hideOutput() {
-  gameOutput.classList.add('hidden')  
+  gameOutput.classList.add('hidden')
 }
+
 function output(message) {
   gameOutput.classList.remove('hidden')
   gameOutput.innerHTML = message
@@ -18,14 +21,14 @@ makeArtIntro()
 const userInputs = []
 
 const hiddenNumber = Math.ceil(Math.random() * 100)
-// Un petit cheat quand même:
-console.log(`le nombre caché est ${hiddenNumber}`)
+
+console.log('Le nombre caché est ${hiddenNumber}')
 
 const input = document.querySelector('input')
 
 function reactToUserNumber(userNumber) {
   userInputs.push(userNumber)
-  document.querySelector('.memo').innerHTML = 
+  document.querySelector('.memo').innerHTML =
     userInputs
       .map(x => {
         let classname = ''
@@ -41,11 +44,12 @@ function reactToUserNumber(userNumber) {
       .join('\n')
 
   if (userNumber < hiddenNumber) {
-    output('Trop petit.')
+    output('trop pitit')
   } else if (userNumber > hiddenNumber) {
-    output('Trop grand.')
-  } else if (userNumber === hiddenNumber) {
-    output('bien ouèj.')
+    output('trop grand')
+  }
+  else if (userNumber === hiddenNumber) {
+    output('Trouvé')
   }
 }
 
@@ -55,12 +59,13 @@ input.oninput = () => {
 }
 
 input.onchange = () => {
-  clearArt()
+  cleanArt()
 
   const userNumber = Number.parseFloat(input.value)
   input.value = ''
+
   if (Number.isNaN(userNumber)) {
-    output('Un nombre stp.')
+    output('Un nombre frero')
   } else {
     reactToUserNumber(userNumber)
   }

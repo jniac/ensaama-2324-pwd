@@ -6,6 +6,14 @@ gameOutput.onclick = () => {
     input.focus()
 }
 
+function hideOutput() {
+  gameOutput.classList.add('hidden')  
+}
+function output(message) {
+  gameOutput.classList.remove('hidden')
+  gameOutput.innerHTML = message
+}
+
 makeArtIntro()
 
 const userInputs = []
@@ -16,26 +24,50 @@ const hiddenNumber = Math.ceil(Math.random() * 100)
 console.log(`le nombre caché est ${hiddenNumber}`)
 
 const input = document.querySelector('input')
-input.oninput = ()=> {
-  gameOutput.innerHTML = ''
-  gameOutput.classList.add ('hidden')
+
+function reactToUserNumber(userNumber){
+  userInputs.push(userNumber)
+  document.querySelector('.memo').innerHTML=
+  userInputs
+    .map (x=> {
+      let classname = ''
+      if (x<hiddenNumber) {
+        classname ='too-small'
+      } else if (x>hiddenNumber){
+          classname ='too-big'
+      } else {
+      classname ='equal'
+      }
+      return `<div class="${classname}">${x}</div>`
+      })
+    .join ('\n')
+
+if (userNumber<hiddenNumber){
+  output ('Inexistant comme ta liberté !')
+
+} else if (userNumber>hiddenNumber){0
+  output ('Trop grand comme la taille de tes chaines !')
+
+} else if (userNumber === hiddenNumber) { 
+  output ('He He He, bon ESCLAVE !')
 }
+}
+
+input.oninput = () => {
+  gameOutput.innerHTML = ''
+  hideOutput()
+}
+
 input.onchange = () => {
     clearArt()
 
     const userNumber = Number.parseFloat(input.value)
     input.value = ''
     if (Number.isNaN (userNumber)){
-      gameOutput.classList.remove('hidden')
-      gameOutput.innerHTML= 'un nombre'
-    } else if (userNumber<hiddenNumber){
-      gameOutput.classList.remove('hidden')
-      gameOutput.innerHTML= 'Trop petit comme la taille de ta bite !'
-    } else if (userNumber>hiddenNumber){
-      gameOutput.classList.remove('hidden')
-      gameOutput.innerHTML= 'Trop grand comme ta connerie !'
-    } else { 
-  alert('He He He, je vois que tu es un petit intello !')
-}
+      output ('un nombre') 
+    }else{
+      reactToUserNumber(userNumber)
+    }
+    
 
 }

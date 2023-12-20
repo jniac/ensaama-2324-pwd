@@ -8,14 +8,14 @@ arrowUp.remove();
 
 
 const colors = [
-    '#3891D9',
-    '#DB7163',
-    '#F0AA55',
+    '#87CEFA',
+    '#B0C4DE',
+    '#ADD8E6',
 ];
 const colors2 = [
-    '#ff0000',
-    '#cc9900',
-    '#697EDB',
+    '#5472AE0',
+    '#4682B4',
+    '#87CEEB',
 ];
 const randomC = () => {
     const index = Math.floor(Math.random() * colors.length);
@@ -25,26 +25,7 @@ const randomCo = () => {
     const index = Math.floor(Math.random() * colors2.length);
     return colors2[index];
 };
-/*main.onclick = (event) => {
-    console.log(event.clientX,event.clientY)
 
-    const cloneUp=arrowUp.cloneNode(true)
-    const cloneDown=arrowDown.cloneNode(true)
-    
-    cloneUp.style.top=`${event.clientY}px`
-    cloneDown.style.top=`${event.clientY}px`
-    main.append(cloneUp)
-    main.append(cloneDown)
-
-
-    //gradient colors
-    const color= randomC()
-    const linearGradient=`linear-gradient(${color}, ${color}00)`
-    cloneUp.querySelector(".left").style.backgroundImage=linearGradient
-    cloneUp.querySelector(".right").style.backgroundImage=linearGradient
-    cloneDown.querySelector(".left").style.backgroundImage=linearGradient
-    cloneDown.querySelector(".right").style.backgroundImage=linearGradient
-}*/
 export function addArrowUp(y) {
     const clone = arrowUp.cloneNode(true);
     clone.style.top = `${100 - y}%`;

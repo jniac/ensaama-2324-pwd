@@ -1,10 +1,16 @@
-
-import { makeArtIntro, clearArt } from './arrow.js'
+import { clearArt, makeArtIntro } from './art.js'
 
 const gameOutput = document.querySelector('.game-output')
 gameOutput.onclick = () => {
-  gameOutput.classList.add('hidden')
   input.focus()
+  hideOutput()
+}
+function hideOutput() {
+  gameOutput.classList.add('hidden')  
+}
+function output(message) {
+  gameOutput.classList.remove('hidden')
+  gameOutput.innerHTML = message
 }
 
 makeArtIntro()
@@ -15,25 +21,24 @@ const hiddenNumber = Math.ceil(Math.random() * 100)
 console.log(`le nombre caché est ${hiddenNumber}`)
 
 const input = document.querySelector('input')
+
+input.oninput = () => {
+  gameOutput.innerHTML = ''
+  hideOutput()
+}
+
 input.onchange = () => {
-  // console.log(input.value)
   clearArt()
 
   const userNumber = Number.parseFloat(input.value)
   input.value = ''
   if (Number.isNaN(userNumber)) {
-    gameOutput.classList.remove('hidden')
-    gameOutput.innerHTML = 'Veuillez écrire un nombre.'
+    output('dis moi un nombre')
   } else if (userNumber < hiddenNumber) {
-    gameOutput.classList.remove('hidden')
-    gameOutput.innerHTML = 'Non, trop petit.'
+    output('Trop petit.')
   } else if (userNumber > hiddenNumber) {
-    gameOutput.classList.remove('hidden')
-    gameOutput.innerHTML = 'Non, trop grand.'
+    output('Trop grand.')
   } else if (userNumber === hiddenNumber) {
-    gameOutput.classList.remove('hidden')
-    gameOutput.innerHTML = 'Bravo!'
+    output('BRAVOO')
   }
 }
-
-

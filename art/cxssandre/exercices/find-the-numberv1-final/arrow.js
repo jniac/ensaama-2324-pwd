@@ -26,7 +26,7 @@ function addArrowUp(y) {
   clone.querySelector('.right').style.backgroundImage = linearGradient;
   clone.querySelector('.left').style.backgroundImage = linearGradient;
 }
-function addArrowDown(y) {
+ export function addArrowDown(y) {
   const clone = arrowDownSource.cloneNode(true);
   clone.style.bottom = `${100 - y}%`;
   art.append(clone);
