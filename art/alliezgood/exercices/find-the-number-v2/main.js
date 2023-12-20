@@ -1,41 +1,45 @@
-import { randFFFFFF } from '../../../../common-resources/js/color-utils.js'
+import { clearArt, makeArt } from './art.js'
 
-
-const main=document.querySelector('main')
-
-const arrowUp=document.querySelector('.arrow.up')
-
-const arrowDown=document.querySelector('.arrow.down')
-
-
-const colors=[
-    '#ff0000',
-    '#cc9900',
-    '#0000ff',
-]
-
-const randomC = () =>{
-    const index=Math.floor(Math.random()*colors.length)
-    return colors[index]
+const output = document.querySelector('.output')
+output.onclick = () => {
+  input.focus()
+  hideOutput()
+}
+function hideOutput() {
+  output.classList.add('hidden')  
+}
+function outputMessage(message) {
+  output.classList.remove('hidden')
+  output.innerHTML = message
 }
 
-main.onclick = (event) => {
-    console.log(event.clientX,event.clientY)
+makeArt()
 
-    const cloneUp=arrowUp.cloneNode(true)
-    const cloneDown=arrowDown.cloneNode(true)
-    
-    cloneUp.style.top=`${event.clientY}px`
-    cloneDown.style.top=`${event.clientY}px`
-    main.append(cloneUp)
-    main.append(cloneDown)
+const userInputs = []
 
+const hiddenNumber = Math.ceil(Math.random() * 100)
+// Un petit cheat quand même:
+console.log(`le nombre caché est ${hiddenNumber}`)
 
-    //gradient colors
-    const color= randomC()
-    const linearGradient=`linear-gradient(${color}, ${color}00)`
-    cloneUp.querySelector(".left").style.backgroundImage=linearGradient
-    cloneUp.querySelector(".right").style.backgroundImage=linearGradient
-    cloneDown.querySelector(".left").style.backgroundImage=linearGradient
-    cloneDown.querySelector(".right").style.backgroundImage=linearGradient
+const input = document.querySelector('input')
+
+input.oninput = () => {
+  output.innerHTML = ''
+  hideOutput()
+}
+
+input.onchange = () => {
+  clearArt()
+
+  const userNumber = Number.parseFloat(input.value)
+  input.value = ''
+  if (Number.isNaN(userNumber)) {
+    outputMessage('un nombre enfin gros bèta')
+  } else if (userNumber < hiddenNumber) {
+    outputMessage('PLUS:/')
+  } else if (userNumber > hiddenNumber) {
+    outputMessage('MOINS:/')
+  } else if (userNumber === hiddenNumber) {
+    outputMessage('BRAVO MON GRAND T GRAND AJRD')
+  }
 }

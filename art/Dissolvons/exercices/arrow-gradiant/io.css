@@ -9,7 +9,7 @@
   font-family: "Anonymous Pro", serif;
   font-size: 10em;
   font-weight: 800;
-  color: aliceblue;
+  color: rgb(118, 191, 255);
   transform: translateY(-0.066em);
 }
 
@@ -22,7 +22,7 @@
   font-family: "Anonymous Pro", serif;
   font-size: 2em;
   font-weight: 800;
-  color: aliceblue;
+  color: rgb(16, 48, 77);
   transition: all 0.5s ease-in-out;
 }
 
@@ -43,20 +43,20 @@
   padding: 1em;
   font-size: 2em;
   font-family: "Anonymous Pro", serif;
-  color: aliceblue;
+  color: rgb(69, 104, 134);
 }
 
 .io .memo .big{
-  color: #122738;
+  color: rgb(25, 13, 92);
 
 }
 
 .io .memo .small{
-  color: #DB7163
+  color: #322a9e
   
 }
 
 .io .memo .equal{
-  color: #135f33
+  color: #34135f
   
 }

@@ -31,3 +31,26 @@
   opacity: 0;
   pointer-events: none;
 }
+
+.io .memo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  font-family: "Orbitron", serif;
+  font-size: 2em;
+  color: white;
+}
+
+.io .memo .too-big {
+  color: rgb(64, 34, 92);
+}
+
+.io .memo .too-small {
+  color: white;
+}

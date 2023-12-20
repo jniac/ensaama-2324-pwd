@@ -21,6 +21,23 @@ console.log(`le nombre caché est ${hiddenNumber}`)
 
 const input = document.querySelector('input')
 
+function reactToUserNumber(userNumber) {
+    userInputs.push(userNumber)
+    document.querySelector('.memo').innerHTML = 
+      userInputs.map(x => {
+        return `<div>${x}</div`
+      })
+      .join('\n')
+      
+    if (userNumber > hiddenNumber) {
+    output('Trop grand.')
+    } else if (userNumber < hiddenNumber) {
+    output('Trop petit.')
+    } else if (userNumber === hiddenNumber) {
+    output('Trouvé!')
+    }
+}
+
 input.oninput = () => {
   gameOutput.innerHTML = ''
   gameOutput.classList.remove('hidden')
@@ -33,11 +50,17 @@ input.onchange = () => {
   input.value = ''
   if (Number.isNaN(userNumber)){
   output('Un nombre stp.')
-  } else if (userNumber > hiddenNumber) {
-  output('Trop grand.')
-  } else if (userNumber < hiddenNumber) {
-  output('Trop petit.')
-  } else if (userNumber === hiddenNumber) {
-  output('Bravooo!!!')
+  } else if {
+    reactToUserNumber(userNumber)
   }
 }
+
+
+
+// (userNumber > hiddenNumber) {
+//   output('Trop grand.')
+//   } else if (userNumber < hiddenNumber) {
+//   output('Trop petit.')
+//   } else if (userNumber === hiddenNumber) {
+//   output('Trouvé!')
+//   }

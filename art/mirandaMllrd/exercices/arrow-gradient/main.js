@@ -25,6 +25,34 @@ console.log(`le nombre caché est ${hiddenNumber}`)
 
 const input = document.querySelector('input')
 
+function reactToUserNumber(userNumber){
+  userInputs.push(userNumber)
+  document.querySelector('.memo').innerHTML=
+  userInputs
+    .map (x=> {
+      let classname = ''
+      if (x<hiddenNumber) {
+        classname ='too-small'
+      } else if (x>hiddenNumber){
+          classname ='too-big'
+      } else {
+      classname ='equal'
+      }
+      return `<div class="${classname}">${x}</div>`
+      })
+    .join ('\n')
+
+if (userNumber<hiddenNumber){
+  output ('Inexistant comme ta liberté !')
+
+} else if (userNumber>hiddenNumber){0
+  output ('Trop grand comme la taille de tes chaines !')
+
+} else if (userNumber === hiddenNumber) { 
+  output ('He He He, bon ESCLAVE !')
+}
+}
+
 input.oninput = () => {
   gameOutput.innerHTML = ''
   hideOutput()
@@ -37,15 +65,9 @@ input.onchange = () => {
     input.value = ''
     if (Number.isNaN (userNumber)){
       output ('un nombre') 
-
-    } else if (userNumber<hiddenNumber){
-      output ('Trop petit comme la taille de ta bite !')
-
-    } else if (userNumber>hiddenNumber){
-      output ('Trop grand comme ta connerie !')
-
-    } else if (userNumber === hiddenNumber) { 
-      output ('He He He, je vois que tu es un petit intello !')
-}
+    }else{
+      reactToUserNumber(userNumber)
+    }
+    
 
 }
