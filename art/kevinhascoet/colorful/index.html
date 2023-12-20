@@ -11,7 +11,7 @@
 </head>
 <body class="flex-layout fullscreen center p-16">
   <header>
-    <div class="hori">invert</div>
+    <div class="invert">invert</div>
     <div style="flex: 1"></div>
     <div class="full" onclick="document.fullscreenElement ? document.exitFullscreen() : document.body.requestFullscreen()">fullscreen</div>
   </header>
@@ -59,9 +59,9 @@
     import { initializeStandalonePage } from '../../../common-projects/colorful/src/colorful.js'
     initializeStandalonePage()
 
-      const element = document.querySelector('.hori')
+      const element = document.querySelector('.invert')
       element.onclick = () => {
-        document.documentElement.classList.toggle('horizontal')
+        document.documentElement.classList.toggle('inverse')
       }
   </script>
   
