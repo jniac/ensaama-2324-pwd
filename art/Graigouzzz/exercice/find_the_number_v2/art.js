@@ -8,8 +8,8 @@ arrowUp.remove();
 
 
 const colors = [
-    '#69C6DB',
-    '#697EDB',
+    '#3891D9',
+    '#DB7163',
     '#F0AA55',
 ];
 const colors2 = [
@@ -45,7 +45,7 @@ const randomCo = () => {
     cloneDown.querySelector(".left").style.backgroundImage=linearGradient
     cloneDown.querySelector(".right").style.backgroundImage=linearGradient
 }*/
-function addArrowUp(y) {
+export function addArrowUp(y) {
     const clone = arrowUp.cloneNode(true);
     clone.style.top = `${100 - y}%`;
     art.append(clone);
@@ -56,7 +56,7 @@ function addArrowUp(y) {
     clone.querySelector('.right').style.backgroundImage = linearGradient;
     clone.querySelector('.left').style.backgroundImage = linearGradient;
 }
-function addArrowDown(y) {
+export function addArrowDown(y) {
     const clone = arrowDown.cloneNode(true);
     clone.style.bottom = `${100 - y}%`;
     art.append(clone);

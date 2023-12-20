@@ -20,6 +20,7 @@ function startBtn(isStart) {
         document.getElementsByClassName('Start')[0].classList.remove('not-displayed')
         document.getElementById('restartButtonInGame').style.display = 'none';
         document.getElementById('validerButtonInGame').style.display = 'block';
+        document.getElementById('reglesButtonInGame').style.display = 'block';
     } else {
         document.getElementsByClassName('Home')[0].classList.add('not-displayed');
         document.getElementsByClassName('No')[0].classList.remove('not-displayed');
@@ -53,6 +54,7 @@ function valider() {
         document.getElementById('questionText').innerHTML = `T'as gagné mon reuf !`
         document.getElementById('restartButtonInGame').style.display = 'block';
         document.getElementById('validerButtonInGame').style.display = 'none';
+        document.getElementById('reglesButtonInGame').style.display = 'none';
     } else if(userNumber > hiddenNumber) {
         document.getElementById('displayedText').innerHTML = `Elle est pas si vieille que ça ma gueule !`
     } else if(userNumber < hiddenNumber) {

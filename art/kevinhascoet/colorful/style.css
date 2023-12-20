@@ -10,7 +10,7 @@
   --g4: linear-gradient(var(--c4), var(--c1));
 }
 
-:root.horizontal {
+:root.inverse {
   --g1: linear-gradient(0deg, var(--c1), var(--c2));
   --g2: linear-gradient(0deg, var(--c2), var(--c3));
   --g3: linear-gradient(0deg, var(--c3), var(--c1));
@@ -39,10 +39,10 @@ main.kev {
   background-image: var(--g4);
 }
 
-.hori {
+.invert {
   transition: 0.4s ease-in-out;
 }
-.hori:hover {
+.invert:hover {
   transform: translate(20px);
 }
 

@@ -1,94 +1,51 @@
-import { randFFFFFF } from '../../../../common-resources/js/color-utils.js'
+import { clearArt,makeArtIntro } from './art.js'
 
-
-const main=document.querySelector('main')
-
-const arrowUp=document.querySelector('.arrow.up')
-
-const arrowDown=document.querySelector('.arrow.down')
-
-
-arrowDown.remove()
-arrowUp.remove()
-
-const colors=[
-    '#69C6DB',
-    '##697EDB',
-    '##69A2DB',
-]
-
-const colors2=[
-    '#ff0000',
-    '#cc9900',
-    '#697EDB',
-]
-
-const randomC = () =>{
-    const index=Math.floor(Math.random()*colors.length)
-    return colors[index]
+const gameOutput = document.querySelector ('.game-output')
+gameOutput.onclick = () => {
+    gameOutput.classList.add('hidden')
+    input.focus()
 }
 
-
-function addArrowUp(y){
-    const clone = arrowUpSource.cloneNode(true)
-    clone.style.top = `${100 - y}%`
-    main.append(clone)
-
+function hideOutput() {
+  gameOutput.classList.add('hidden')  
+}
+function output(message) {
+  gameOutput.classList.remove('hidden')
+  gameOutput.innerHTML = message
 }
 
-const randomCo = () =>{
-    const index=Math.floor(Math.random()*colors2.length)
-    return colors[index]
+makeArtIntro()
+
+const userInputs = []
+
+const hiddenNumber = Math.ceil(Math.random() * 100)
+
+// Un petit cheat
+console.log(`le nombre caché est ${hiddenNumber}`)
+
+const input = document.querySelector('input')
+
+input.oninput = () => {
+  gameOutput.innerHTML = ''
+  hideOutput()
 }
 
-/*main.onclick = (event) => {
-    console.log(event.clientX,event.clientY)
+input.onchange = () => {
+    clearArt()
 
-    const cloneUp=arrowUp.cloneNode(true)
-    const cloneDown=arrowDown.cloneNode(true)
-    
-    cloneUp.style.top=`${event.clientY}px`
-    cloneDown.style.top=`${event.clientY}px`
-    main.append(cloneUp)
-    main.append(cloneDown)
+    const userNumber = Number.parseFloat(input.value)
+    input.value = ''
+    if (Number.isNaN (userNumber)){
+      output ('un nombre') 
 
+    } else if (userNumber<hiddenNumber){
+      output ('Trop petit comme la taille de ta bite !')
 
-    //gradient colors
-    const color= randomC()
-    const linearGradient=`linear-gradient(${color}, ${color}00)`
-    cloneUp.querySelector(".left").style.backgroundImage=linearGradient
-    cloneUp.querySelector(".right").style.backgroundImage=linearGradient
-    cloneDown.querySelector(".left").style.backgroundImage=linearGradient
-    cloneDown.querySelector(".right").style.backgroundImage=linearGradient
-}*/
+    } else if (userNumber>hiddenNumber){
+      output ('Trop grand comme ta connerie !')
 
-function addArrowUp(y) {
-    const clone = arrowUp.cloneNode(true)
-    clone.style.top = `${100 - y}%`
-    main.append(clone)
-  
-    // random gradient color
-    const color = randomCo()
-    const linearGradient = `linear-gradient(${color}, ${color}00)`
-    clone.querySelector('.right').style.backgroundImage = linearGradient
-    clone.querySelector('.left').style.backgroundImage = linearGradient
-  }
-  
-  function addArrowDown(y) {
-    const clone = arrowDown.cloneNode(true)
-    clone.style.bottom = `${100 - y}%`
-    main.append(clone)
-  
-    // random gradient color
-    const color = randomCo()
-    const linearGradient = `linear-gradient(${color}, ${color}00)`
-    clone.querySelector('.right').style.backgroundImage = linearGradient
-    clone.querySelector('.left').style.backgroundImage = linearGradient
-  }
-  
-  
-  
-  for (let i = 0; i < 20; i++) {
-    addArrowUp(i * 5)
-    addArrowDown(i * 5)
-  }
+    } else if (userNumber === hiddenNumber) { 
+      output ('He He He, je vois que tu es un petit intello !')
+}
+
+}

@@ -1,27 +1,51 @@
 import { randFFFFFF } from "../../../../common-resources/js/color-utils.js";
+import { cleanArt as cleanArt, makeArtIntro } from "./arrow.js";
 
-const main = document.querySelector('main')
-const arrowUpSource = document.querySelector('.arrow.up')
-const arrowDownSource = document.querySelector('.arrow.down')
-
-arrowUpSource.remove ()
-arrowDownSource.remove ()
-
-function addArrowUp(y) {
-    const clone = arrowUpSource.cloneNode(true)
-    clone.style.top = `${100 - y}%`
-    main.append(clone)
+const gameOutput = document.querySelector('.game-output')
+gameOutput.onclick = () => {
+  input.focus()
+  hideOutput()
 }
 
-function addArrowDown(y) {
-    const clone = arrowDownSource.cloneNode(true)
-    clone.style.bottom = `${100 - y}%`
-    main.append(clone)
+function hideOutput (){
+  gameOutput.classList.add('hidden')
 }
 
+function output(message){
+  gameOutput.classList.remove('hidden')
+  gameOutput.innerHTML = message
+}
 
-for (let i = 0; i <10; i++) {
-    addArrowUp(i *10)
-    addArrowDown(i *10)
+makeArtIntro()
+
+const userInputs = []
+
+const hiddenNumber = Math.ceil(Math.random() * 100)
+
+console.log('Le nombre caché est ${hiddenNumber}')
+
+const input = document.querySelector('input')
+
+input.oninput = () =>{
+  gameOutput.innerHTML = ''
+  hideOutput()
+}
+
+input.onchange = () => {
+  cleanArt()
+
+  const userNumber = Number.parseFloat(input.value)
+  input.value = ''
+  
+  if (Number.isNaN(userNumber)) {
+    output('Un nombre frero')
+} else if (userNumber < hiddenNumber) {
+    output('trop pitit')
+} else if (userNumber > hiddenNumber) {
+    output('trop grand')
+}
+else if (userNumber === hiddenNumber) {
+  output('Trouvé')
+}
 
 }
