@@ -1,4 +1,4 @@
-import { clearArt,makeArtIntro } from './art.js'
+import { addArrowDown, addArrowUp, clearArt,makeArtIntro } from './art.js'
 
 const gameOutput = document.querySelector ('.game-output')
 gameOutput.onclick = () => {
@@ -33,8 +33,10 @@ function reactToUserNumber(userNumber){
       let classname = ''
       if (x<hiddenNumber) {
         classname ='too-small'
+        addArrowUp (userNumber)
       } else if (x>hiddenNumber){
           classname ='too-big'
+          addArrowDown (userNumber)
       } else {
       classname ='equal'
       }
@@ -49,7 +51,7 @@ if (userNumber<hiddenNumber){
   output ('Trop grand comme la taille de tes chaines !')
 
 } else if (userNumber === hiddenNumber) { 
-  output ('He He He, bon ESCLAVE !')
+  output ('He He He, bon ESCLAVE (blm)!')
 }
 }
 
