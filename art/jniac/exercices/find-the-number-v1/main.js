@@ -1,4 +1,4 @@
-import { clearArt, makeArtIntro } from './art.js'
+import { addArrowDown, addArrowUp, clearArt, makeArtIntro } from './art.js'
 
 const gameOutput = document.querySelector('.game-output')
 gameOutput.onclick = () => {
@@ -39,13 +39,23 @@ function reactToUserNumber(userNumber) {
         return `<div class="${classname}">${x}</div>`
       })
       .join('\n')
-
+    
+  const distance = Math.abs(hiddenNumber - userNumber)
+  const delta = distance / 3 + 3
+  
   if (userNumber < hiddenNumber) {
     output('Trop petit.')
+    for (let i = 0; i < 3; i++) {
+      addArrowUp(userNumber - delta * i)
+    }
   } else if (userNumber > hiddenNumber) {
     output('Trop grand.')
+    for (let i = 0; i < 3; i++) {
+      addArrowDown(100 - userNumber - delta * i)
+    }
   } else if (userNumber === hiddenNumber) {
     output('bien ouèj.')
+    input.blur()
   }
 }
 
@@ -55,7 +65,9 @@ input.oninput = () => {
 }
 
 input.onchange = () => {
-  clearArt()
+  if (userInputs.length === 0) {
+    clearArt()
+  }
 
   const userNumber = Number.parseFloat(input.value)
   input.value = ''
