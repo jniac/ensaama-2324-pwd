@@ -23,31 +23,26 @@
     </header>
 
     <main class="pie square">
-        <div class="m-8 color-a column">
-            <div class="m-8 p-8 color-b">
-              <div class="square color-c"></div>
-            </div>
-    
-            <div class="flex-1 m-8 p-16 gap-16 color-c">
-              <div class="square color-b">
-                <div class="m-8 color-a"></div>
-                <div class="m-8 color-c"></div>
-              </div>
-              <div class="square color-b"></div>
-            </div>
+      <div class="color-a" style="flex: 4;">
+        <div class="color-c m-24 p-24 column">
+          <div class="color-b square" style="border-radius: 100% 0;"></div>
+          <div class="color-a p-24">
+            <div class="color-b square" style="border-radius: 100% 0;"></div>
           </div>
-        </main>
+        </div>
+      </div>
+      <div class="color-b"></div>
+      <div class="color-c"></div>
+    </main>
 
-        <script type="module">
-          import { initializeStandalonePage } from '../../../common-projects/colorful/src/colorful.js'
-          initializeStandalonePage()
-      
-            const element = document.querySelector('.hori')
-            element.onclick = () => {
-              document.documentElement.classList.toggle('horizontal')
-            }
-        </script>
+    <script type="module">
+      import { initializeStandalonePage } from "../../../common-projects/colorful/src/colorful.js";
+      initializeStandalonePage();
 
-
-      </body>
-    </html>
+      const element = document.querySelector(".hori");
+      element.onclick = () => {
+        document.documentElement.classList.toggle("horizontal");
+      };
+    </script>
+  </body>
+</html>

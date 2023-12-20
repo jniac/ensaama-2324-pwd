@@ -50,6 +50,29 @@ main * {
   overflow: hidden;
 }
 
+.isolator {
+  position: absolute;
+  width: calc(4 * var(--art-size));
+  height: calc(4 * var(--art-size));
+  border: solid #000c calc(1.5 * var(--art-size));
+  z-index: 1;
+  transition: all .15s cubic-bezier(.25, .3, .4, 1);
+
+  .info {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 100%;
+    padding: .5em;
+    font-size: .66em;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+}
+
 *[class*='color'] {
   --over-feedback-color: #fff;
   cursor: pointer;

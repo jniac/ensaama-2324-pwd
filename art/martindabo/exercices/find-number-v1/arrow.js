@@ -16,7 +16,7 @@ const randomColorAorB = () => {
 const randomLerpColor = () => {
   return lerpFFFFFF(colorA, colorB, Math.random());
 };
-function addArrowUp(y) {
+export function addArrowUp(y) {
 
   const clone = arrowUpSource.cloneNode(true);
   clone.style.top = `${100 - y}%`;
@@ -34,7 +34,7 @@ function addArrowUp(y) {
   const angle = (y) / 4;
   clone.style.setProperty('--angle', `${angle}deg`);
 }
-function addArrowDown(y) {
+export function addArrowDown(y) {
 
   const clone = arrowDownSource.cloneNode(true);
   clone.style.bottom = `${100 - y}%`;
