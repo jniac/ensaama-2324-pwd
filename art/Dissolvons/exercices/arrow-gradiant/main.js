@@ -1,51 +1,79 @@
-import { clearArt,makeArtIntro } from './art.js'
+import { addArrowDown, addArrowUp, clearArt, makeArtIntro } from './art.js'
 
-const gameOutput = document.querySelector ('.game-output')
+
+const gameOutput = document.querySelector('.game-output')
+
 gameOutput.onclick = () => {
     gameOutput.classList.add('hidden')
     input.focus()
 }
-
-function hideOutput() {
-  gameOutput.classList.add('hidden')  
-}
-function output(message) {
-  gameOutput.classList.remove('hidden')
-  gameOutput.innerHTML = message
-}
-
 makeArtIntro()
 
-const userInputs = []
+const userInputs=[]
 
-const hiddenNumber = Math.ceil(Math.random() * 100)
+let number = 0
+const randomN = () => {
+    number = Math.ceil(Math.random() * 100)
+}
+randomN()
 
-// Un petit cheat
-console.log(`le nombre caché est ${hiddenNumber}`)
+
+console.log(randomN)
 
 const input = document.querySelector('input')
 
-input.oninput = () => {
-  gameOutput.innerHTML = ''
-  hideOutput()
+function reactToUserNumber(userNumber){
+    userInputs.push(userNumber)
+    document.querySelector('.memo').innerHTML=
+        userInputs
+            .map(x=>{
+                let classname
+                if(x<number){
+                    classname='small'
+                    addArrowUp(userNumber)
+                }else if(x>number){
+                    classname='big'
+                    addArrowDown(   userNumber)
+                }
+                else{
+                    classname='equal'
+                }
+                return `<div class="${classname}"=>${x}</div>`
+            })
+            .join('\n')
+
+    if (userNumber > number) {
+        gameOutput.classList.remove('hidden')
+        gameOutput.innerHTML = 'trop grand !'
+    } else if (userNumber < number) {
+        gameOutput.classList.remove('hidden')
+        gameOutput.innerHTML = 'trop petit !'
+    } else {
+        gameOutput.classList.remove('hidden')
+        gameOutput.innerHTML = `Nikel c'était bien : ${number} supeer `
+        makeArtIntro()
+        randomN()
+    }
 }
 
+input.oninput = () => {
+    gameOutput.innerHTML = ''
+    gameOutput.classList.remove('hidden')
+}
+
+
 input.onchange = () => {
-    clearArt()
+    if (userInputs.length === 0) {
+        clearArt()
+    }
 
     const userNumber = Number.parseFloat(input.value)
     input.value = ''
-    if (Number.isNaN (userNumber)){
-      output ('un nombre') 
-
-    } else if (userNumber<hiddenNumber){
-      output ('Trop petit comme la taille de ta bite !')
-
-    } else if (userNumber>hiddenNumber){
-      output ('Trop grand comme ta connerie !')
-
-    } else if (userNumber === hiddenNumber) { 
-      output ('He He He, je vois que tu es un petit intello !')
+    if (Number.isNaN(userNumber)) {
+        gameOutput.classList.remove('hidden')
+        gameOutput.innerHTML = 'trouve le nombre'
+    } else {
+        reactToUserNumber(userNumber)
+    }
 }
 
-}
