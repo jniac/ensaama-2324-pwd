@@ -50,8 +50,8 @@ main {
 /* UP */
 .arrow.up > div {
     background-image: linear-gradient(
-        rgba(0, 133, 95, 0.877), 
-        rgba(52, 0, 100, 0));
+        rgba(0, 133, 95, 0.63), 
+        rgba(52, 0, 100, 0.61));
   }
   
   .arrow.up > .left {
@@ -67,8 +67,8 @@ main {
   /* DOWN: */
   .arrow.down > div {
     background-image: linear-gradient(
-        rgba(52, 0, 100, 0),
-      rgba(0, 133, 95, 0.877));
+      rgba(52, 0, 100, 0.61),
+        rgba(0, 133, 95, 0.699));
   }
   
   .arrow.down > .left {

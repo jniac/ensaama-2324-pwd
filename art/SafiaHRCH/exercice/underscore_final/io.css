@@ -10,18 +10,18 @@
   font-family: 'Merriweather', serif;
   font-size: 13em;
   font-weight: 100;
-  color: white;
+  color: rgb(0, 165, 118)
 }
 
 .user-input input::placeholder{
-  color: rgb(0, 165, 118)
+  color: rgb(84, 201, 162)
 }
 
 .game-output {
   font-family: 'Merriweather', serif;
   font-size: 4em;
   font-weight: 100;
-  color: rgb(61, 0, 160);
+  color: rgb(124, 58, 187);
 
   transition: all 0.3s ease-in-out;
 }
@@ -29,4 +29,27 @@
 .game-output.hidden {
   opacity: 0;
   pointer-events: none;
+}
+
+.io .memo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  font-family: 'Merriweather', serif;
+  font-size: 3em;
+  color: white;
+}
+
+.io .memo .too-big {
+  color: rgb(128, 40, 211);
+}
+
+.io .memo .too-small {
+  color: rgb(0, 165, 118)
 }
