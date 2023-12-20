@@ -23,13 +23,14 @@ export function makeArtIntro() {
 
   for (let i = 0; i < 20; i++) {
 
-    addArrowUp(i * 5);
+    addArrowUp(i * 2);
 
-    addArrowDown(i * 5);
+    addArrowDown(i * 2);
 
   }
-  addArrowUp(20);
-  addArrowDown(20);
+  addArrowDown(10);
+  addArrowUp(10);
+ 
 }
 
 export function clearArt() {
