@@ -9,7 +9,7 @@
   font-family: "Anonymous Pro", serif;
   font-size: 10em;
   font-weight: 800;
-  color: rgb(118, 191, 255);
+  color: rgb(76, 140, 196);
   transform: translateY(-0.066em);
 }
 
@@ -22,7 +22,7 @@
   font-family: "Anonymous Pro", serif;
   font-size: 2em;
   font-weight: 800;
-  color: rgb(16, 48, 77);
+  color: rgb(66, 55, 165);
   transition: all 0.5s ease-in-out;
 }
 
@@ -43,7 +43,7 @@
   padding: 1em;
   font-size: 2em;
   font-family: "Anonymous Pro", serif;
-  color: rgb(69, 104, 134);
+  color: rgb(79, 69, 134);
 }
 
 .io .memo .big{
