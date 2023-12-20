@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Antonio:wght@100&family=Creepster&family=Italianno&family=Monoton&family=Permanent+Marker&family=Roboto:wght@100&display=swap");
 
 .user-input input {
   width: 100%;
@@ -6,49 +6,57 @@
   background-color: transparent;
   border: none;
   outline: none;
-  font-family: 'Playfair Display', serif;
-  font-size: 20em;
+  font-family: "Anonymous Pro", serif;
+  font-size: 10em;
   font-weight: 800;
-  color: white;
+  color: rgb(76, 140, 196);
+  transform: translateY(-0.066em);
 }
 
-.user-input input::placeholder {
-  color: #ffff6f;
+.game-output{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  font-family: "Anonymous Pro", serif;
+  font-size: 2em;
+  font-weight: 800;
+  color: rgb(66, 55, 165);
+  transition: all 0.5s ease-in-out;
 }
 
-.game-output {
-  font-family: 'Playfair Display', serif;
-  font-size: 4em;
-  font-weight: 600;
-  color: white;
-
-  transition :all 0.3s ease-in-out;
-}
-
-.game-output.hidden {
-  opacity: 0;
+.game-output.hidden{
   pointer-events: none;
+  opacity: 0;
 }
 
 .io .memo{
-  position:absolute;
+  position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content:center;
-  align-items:center;
+  justify-content: center;
+  align-items: center;
   padding: 1em;
-  font-family: 'Courier New', Courier, monospace;
   font-size: 2em;
-  color: aliceblue;
+  font-family: "Anonymous Pro", serif;
+  color: rgb(79, 69, 134);
 }
 
-.io .memo .too-small {
-color: rgb(241, 157, 131);
+.io .memo .big{
+  color: rgb(25, 13, 92);
+
 }
 
-.io .memo .too-big {
-  color: rgb(253, 209, 151);
-  }
+.io .memo .small{
+  color: #322a9e
+  
+}
+
+.io .memo .equal{
+  color: #34135f
+  
+}
