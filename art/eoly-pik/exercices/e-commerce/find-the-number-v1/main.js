@@ -7,7 +7,6 @@ gameOutput.onclick = () => {
   input.focus()
 }
 
-
 makeArtIntro()
 
 const userInputs = []
