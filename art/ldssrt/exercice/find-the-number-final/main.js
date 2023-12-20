@@ -49,12 +49,20 @@ function reactToUserNumber(userNumber) {
       })
       .join('\n')
 
+  const count = 3
+  const delta = 5
   if (userNumber < hiddenNumber) {
     output('Trop petit.')
-    addArrowUp(userNumber)
+    for (let i = 0; i < count; i++) {
+      addArrowUp(userNumber - i * delta)
+    }
   } else if (userNumber > hiddenNumber) {
     output('trop grand')
-    addArrowDown(100 - userNumber)
+    for (let i = 0; i < count; i++) {
+      addArrowDown(100 - userNumber + i * delta)
+    }
+
+    // addArrowDown(100 - userNumber)
   } else if (userNumber === hiddenNumber) {
     output('bravo')
   }
@@ -68,7 +76,10 @@ input.oninput = () => {
 
 input.onchange = () => {
   // console.log(input.value)
-  clearArt()
+  // clearArt()
+  if (userInputs.length === 0) {
+    clearArt()
+  }
 
   const userNumber = Number.parseFloat(input.value)
   input.value = ''
