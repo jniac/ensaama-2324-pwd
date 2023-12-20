@@ -1,13 +1,31 @@
 
+import { makeArtIntro, clearArt } from './arrow.js'
 
-const main = document.querySelector('main')
-const arrowSource = document.querySelector('.arrow')
-console.log(arrowSource)
-
-main.onclick = (event) => {
-
-  console.log(event.clientY)
-  const clone = arrowSource.cloneNode(true)
-  clone.style.top = `${event.clientY}px`
-  main.append(clone)
+const gameOutput = document.querySelector('.game-output')
+gameOutput.onclick = () => {
+  gameOutput.classList.add('hidden')
+  input.focus()
 }
+
+
+makeArtIntro()
+
+const userInputs = []
+
+const hiddenNumber = Math.ceil(Math.random() * 100)
+console.log(`le nombre caché est ${hiddenNumber}`)
+
+const input = document.querySelector('input')
+input.onchange = () => {
+  // console.log(input.value)
+  clearArt()
+
+  const userNumber = Number.parseFloat(input.value)
+  input.value = ''
+  if (Number.isNaN(userNumber)) {
+    gameOutput.classList.remove('hidden')
+    gameOutput.innerHTML = 'Veuillez écrire un nombre.'
+  }
+}
+
+
