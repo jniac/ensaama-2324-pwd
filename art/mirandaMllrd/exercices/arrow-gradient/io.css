@@ -29,3 +29,26 @@
   opacity: 0;
   pointer-events: none;
 }
+
+.io .memo{
+  position:absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  padding: 1em;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2em;
+  color: aliceblue;
+}
+
+.io .memo .too-small {
+color: rgb(241, 157, 131);
+}
+
+.io .memo .too-big {
+  color: rgb(253, 209, 151);
+  }

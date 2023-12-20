@@ -24,7 +24,16 @@ input.onchange = () => {
   input.value = ''
   if (Number.isNaN(userNumber)) {
     gameOutput.classList.remove('hidden')
-    gameOutput.innerHTML = 'Veuillez écrire un nombre.'
+    gameOutput.innerHTML = 'donne un nombre'
+  } else if (userNumber < hiddenNumber) {
+    gameOutput.classList.remove('hidden')
+    gameOutput.innerHTML = 'ah nan trop petit'
+  } else if (userNumber > hiddenNumber) {
+    gameOutput.classList.remove('hidden')
+    gameOutput.innerHTML = 'non, c énorme wsh'
+  } else if (userNumber === hiddenNumber) {
+    gameOutput.classList.remove('hidden')
+    gameOutput.innerHTML = 'yesssss'
   }
 }
 

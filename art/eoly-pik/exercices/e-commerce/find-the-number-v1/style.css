@@ -5,7 +5,7 @@ main {
 
     width: 100vw;
     height: 100vh;
-    background-color:  rgb(50, 50, 252);
+    background-color:  rgba(71, 122, 94);
     position: relative;
     overflow: hidden;
 }
@@ -65,7 +65,7 @@ main {
 /* UP */
 
 .arrow.up > div {
-    background-image: linear-gradient(rgba(144, 190, 218, 0.555), rgba(50, 50, 252, 0.5));
+    background-image: linear-gradient(rgba(71, 122, 94, 0.555), rgba(61, 61, 54, 0.479));
 
 }
 
@@ -86,7 +86,7 @@ main {
 /* DOWN */
 .arrow.down > div {
 
-    background-image: linear-gradient(rgba(50, 50, 252, 0.479), rgba(144, 190, 218, 0.521));
+    background-image: linear-gradient(rgba(61, 61, 54, 0.479), rgba(71, 122, 94, 0.555));
 
 }
 
