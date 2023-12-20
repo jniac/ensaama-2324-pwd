@@ -18,7 +18,6 @@ makeArtIntro()
 const userInputs = []
 
 const hiddenNumber = Math.ceil(Math.random() * 100)
-// Un petit cheat quand même:
 console.log(`le nombre caché est ${hiddenNumber}`)
 
 const input = document.querySelector('input')
@@ -34,12 +33,12 @@ input.onchange = () => {
   const userNumber = Number.parseFloat(input.value)
   input.value = ''
   if (Number.isNaN(userNumber)) {
-    output('Un nombre stp.')
+    output('dis moi un nombre')
   } else if (userNumber < hiddenNumber) {
     output('Trop petit.')
   } else if (userNumber > hiddenNumber) {
     output('Trop grand.')
   } else if (userNumber === hiddenNumber) {
-    output('bien ouèj.')
+    output('BRAVOO')
   }
 }

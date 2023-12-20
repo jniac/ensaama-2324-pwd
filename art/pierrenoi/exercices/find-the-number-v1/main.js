@@ -1,63 +1,48 @@
-import { lerpFFFFFF, randFFFFFF } from '../../../../common-resources/js/color-utils.js'
+import { clearArt, makeArtIntro } from './art.js'
 
-const art = document.querySelector('.art')
-const arrowUpSource = document.querySelector('.arrow.up')
-const arrowDownSource = document.querySelector('.arrow.down')
-
-// Les "sources" ne sont plus nécessaires, on peut les retirer de l'écran:
-arrowUpSource.remove()
-arrowDownSource.remove()
-
-const colorA = '#9efd38'
-const colorB = '#ffe087'
-
-const randomColorAorB = () => {
-  const colors = [colorA, colorB]
-  const index = Math.floor(colors.length * Math.random())
-  return colors[index]
+const gameOutput = document.querySelector('.game-output')
+gameOutput.onclick = () => {
+  input.focus()
+  hideOutput()
+}
+function hideOutput() {
+  gameOutput.classList.add('hidden') 
+}
+function output(message) {
+  gameOutput.classList.remove('hidden')
+  gameOutput.innerHTML = message
 }
 
-const randomLerpColor = () => {
-  return lerpFFFFFF(colorA, colorB, Math.random())
+makeArtIntro()
+
+const userInputs = []
+
+const hiddenNumber = Math.ceil(Math.random() * 100)
+
+console.log('le nombre caché est ${hiddenNumber}')
+
+const input = document.querySelector('input')
+
+input.oninput = () => {
+  gameOutput.innerHTML = ''
+  hideOutput()
 }
 
+input.onchange = () => {
+  clearArt()
 
-
-function addArrowUp(y) {
-  const clone = arrowUpSource.cloneNode(true)
-  clone.style.top = `${100 - y}%`
-  art.append(clone)
-
-  // random gradient color
-  const color = randomLerpColor()
-  const linearGradient = `linear-gradient(${color}, ${color}00)`
-  clone.querySelector('.right').style.backgroundImage = linearGradient
-  clone.querySelector('.left').style.backgroundImage = linearGradient
+  const userNumber = Number.parseFloat(input.value)
+  input.value = ''
+  if (Number.isNaN(userNumber)) {
+    output('Un nombre stp.')
+  } else if (userNumber < hiddenNumber) {
+    output('Trop petit.')
+  } else if (userNumber > hiddenNumber) {
+    output('Trop grand.')
+  } else if (userNumber === hiddenNumber) {
+    output('Bien joué.')
+  }
 }
-
-function addArrowDown(y) {
-  const clone = arrowDownSource.cloneNode(true)
-  clone.style.bottom = `${100 - y}%`
-  art.append(clone)
-
-  // random gradient color
-  const color = randomLerpColor()
-  const linearGradient = `linear-gradient(${color}, ${color}00)`
-  clone.querySelector('.right').style.backgroundImage = linearGradient
-  clone.querySelector('.left').style.backgroundImage = linearGradient
-}
-
-
-
-for (let i = 0; i < 20; i++) {
-  addArrowUp(i * 5)
-  addArrowDown(i * 5)
-}
-
-makeArt()
-
-
-
 
 
 
