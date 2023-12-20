@@ -20,6 +20,7 @@ function startBtn(isStart) {
         document.getElementsByClassName('Start')[0].classList.remove('not-displayed')
         document.getElementById('restartButtonInGame').style.display = 'none';
         document.getElementById('validerButtonInGame').style.display = 'block';
+        document.getElementById('reglesButtonInGame').style.display = 'block';
     } else {
         document.getElementsByClassName('Home')[0].classList.add('not-displayed');
         document.getElementsByClassName('No')[0].classList.remove('not-displayed');
