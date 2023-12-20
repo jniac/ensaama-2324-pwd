@@ -3,10 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trouve le nombre</title>
+    <title>Trouve le nombre (V1)</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
     <main>
       <div class="art full">
@@ -21,16 +20,21 @@
         </div>
       </div>
 
-      <div class="io full">
-        <div class="user-input full center">
+      <div class="io full center">
+        <div class="user-input">
           <input type="text" />
         </div>
 
-        <div class="game-output full center">find the number</div>
-        <div class="memo"></div>
-      </div>
-    </main>
+        <div class="game-output full center">trouve le nombre</div>
 
+        <div class="memo">
+          <div class="too-big"></div>
+          <div class="too-small"></div>
+          <div class="equal"></div>
+        </div>
+      </div>
+      
+    </main>
     <script type="module" src="main.js"></script>
   </body>
 </html>
