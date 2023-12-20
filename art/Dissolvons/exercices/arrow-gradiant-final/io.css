@@ -9,7 +9,7 @@
   font-family: "Anonymous Pro", serif;
   font-size: 10em;
   font-weight: 800;
-  color: aliceblue;
+  color: rgb(76, 140, 196);
   transform: translateY(-0.066em);
 }
 
@@ -22,11 +22,41 @@
   font-family: "Anonymous Pro", serif;
   font-size: 2em;
   font-weight: 800;
-  color: aliceblue;
+  color: rgb(66, 55, 165);
   transition: all 0.5s ease-in-out;
 }
 
 .game-output.hidden{
   pointer-events: none;
   opacity: 0;
+}
+
+.io .memo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  font-size: 2em;
+  font-family: "Anonymous Pro", serif;
+  color: rgb(79, 69, 134);
+}
+
+.io .memo .big{
+  color: rgb(25, 13, 92);
+
+}
+
+.io .memo .small{
+  color: #322a9e
+  
+}
+
+.io .memo .equal{
+  color: #34135f
+  
 }
