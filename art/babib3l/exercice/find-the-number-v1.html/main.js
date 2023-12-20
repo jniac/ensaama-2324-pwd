@@ -1,30 +1,29 @@
-import { clearArt, makeArt } from './art.js'
+import { clearArt, makeArtIntro } from './art.js'
 
-const output = document.querySelector('.output')
-output.onclick = () => {
+const gameOutput = document.querySelector('.game-output')
+gameOutput.onclick = () => {
   input.focus()
   hideOutput()
 }
 function hideOutput() {
-  output.classList.add('hidden')  
+  gameOutput.classList.add('hidden')  
 }
-function outputMessage(message) {
-  output.classList.remove('hidden')
-  output.innerHTML = message
+function output(message) {
+  gameOutput.classList.remove('hidden')
+  gameOutput.innerHTML = message
 }
 
-makeArt()
+makeArtIntro()
 
 const userInputs = []
 
 const hiddenNumber = Math.ceil(Math.random() * 100)
-// Un petit cheat quand même:
 console.log(`le nombre caché est ${hiddenNumber}`)
 
 const input = document.querySelector('input')
 
 input.oninput = () => {
-  output.innerHTML = ''
+  gameOutput.innerHTML = ''
   hideOutput()
 }
 
@@ -34,12 +33,12 @@ input.onchange = () => {
   const userNumber = Number.parseFloat(input.value)
   input.value = ''
   if (Number.isNaN(userNumber)) {
-    outputMessage('un nombre enfin gros bèta')
+    output('dis moi un nombre')
   } else if (userNumber < hiddenNumber) {
-    outputMessage('PLUS:/')
+    output('Trop petit.')
   } else if (userNumber > hiddenNumber) {
-    outputMessage('MOINS:/')
+    output('Trop grand.')
   } else if (userNumber === hiddenNumber) {
-    outputMessage('BRAVO MON GRAND T GRAND AJRD')
+    output('BRAVOO')
   }
 }

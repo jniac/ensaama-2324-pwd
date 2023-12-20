@@ -1,10 +1,122 @@
-.quare-background { background-color: aliceblue; }
+:root {
+    --c1: #3c1153;
+    --c2: #431a3d;
+    --c3: #491f58;
+    --c4: #611166;
 
-.grad-1 {
-    background-image: linear-gradient(
-        0deg,
-        #23153B,
-        #231A3D
-);}
+    --g1: linear-gradient(var(--c1), var(--c2));
+    --g2: linear-gradient(var(--c2), var(--c3));
+    --g3: linear-gradient(var(--c3), var(--c4));
+    --g4: linear-gradient(var(--c4), var(--c1));
 
-.left-1 { width: 15%; }
+    /* --fibo-width: calc(var(--main-size) - calc(var(--padding) * 2)); */
+    --fibo-width: var(--main-size);
+    --fibo-height: calc(var(--fibo-width) * calc(1 / 1.618));
+}
+
+.rse .color-a {
+    background-image: var(--g1);
+}
+.rse .color-b {
+    background-image: var(--g2);
+}
+.rse .color-c {
+    background-image: var(--g3);
+}
+.rse .color-d {
+    background-image: var(--g4);
+}
+
+main.rse {
+    background-image: linear-gradient(0deg, #23153b, #431a3d);
+    /* padding: var(--padding); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* 
+    Attention, ce style très générique "cassait" le style des autres pages.
+    Coté HTML, j'ai rajouté la classe "rse" sur la div <html> (:root).
+    Coté CSS j'ai imbriqué le style problématique sous un premier sélecteur 
+    ".rse:root" afin de restreindre la portée du style.
+    Pour plus d'information sur les CSS imbriqués, voir 
+    https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting
+*/
+.rse:root {
+    --main-size: calc(100vh - calc(var(--spacing) * 32));
+    --padding: calc(var(--main-size) * 0.04);
+
+    /* VSCode hack (le premier sélecteur CSS imbriqué est mal mis en couleurs par VSCode (19/12/2023)) */
+    .foo-bar-baz { display: unset; }
+    
+    body,
+    main,
+    main div {
+        flex: none !important;
+    }
+    
+    .fill {
+        height: calc(
+            calc(
+                    var(--fibo-width) - calc(var(--fibo-height))
+                ) / 2
+        );
+        flex: 1;
+    
+        color: #1b0526;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5vw;
+    }
+    
+    .contours {
+        width: var(--fibo-width);
+        height: var(--fibo-height);
+        /* border: solid 2px #1b052660; */
+        position: absolute;
+        transform: translate(0, calc(
+            calc(
+                    var(--fibo-width) - calc(var(--fibo-height))
+                ) / 2
+        ));
+        pointer-events: none;
+    }
+    
+    .fibonacci {
+        background-color: aqua;
+        width: var(--fibo-width);
+        height: var(--fibo-height);
+        /* margin: var(--padding) 0; */
+        
+        --square-1: calc(var(--fibo-width) - var(--fibo-height));
+        --square-2: calc(var(--fibo-height) - var(--square-1));
+        --square-3: calc(var(--square-1) - var(--square-2));
+        --square-4: calc(var(--square-2) - var(--square-3));
+        --square-5: calc(var(--square-3) - var(--square-4));
+        --square-6: calc(var(--square-4) - var(--square-5));
+        --square-7: calc(var(--square-5) - var(--square-6));
+        --square-8: calc(var(--square-6) - var(--square-7));
+    }
+    
+    .wrapper { display: flex; }
+    .wrapper.horizontal { flex-direction: column; }
+    .wrapper.vertical { flex-direction: row; }
+    
+    .wrapper.un { width: var(--square-1); }
+    .wrapper.deux { height: var(--square-2); }
+    .wrapper.trois { width: var(--square-3); }
+    .wrapper.quatre { height: var(--square-4); }
+    .wrapper.cinq { width: var(--square-5); }
+    .wrapper.six { height: var(--square-6); }
+    .wrapper.sept { width: var(--square-7); }
+    
+    .fibonacci .square-1 { width: var(--square-1); height: var(--square-1); }
+    .fibonacci .square-2 { width: var(--square-2); height: var(--square-2); }
+    .fibonacci .square-3 { width: var(--square-3); height: var(--square-3); }
+    .fibonacci .square-4 { width: var(--square-4); height: var(--square-4); }
+    .fibonacci .square-5 { width: var(--square-5); height: var(--square-5); }
+    .fibonacci .square-6 { width: var(--square-6); height: var(--square-6); }
+    .fibonacci .square-7 { width: var(--square-7); height: var(--square-7); }
+    .fibonacci .square-8 { width: var(--square-7); height: var(--square-8); }
+}

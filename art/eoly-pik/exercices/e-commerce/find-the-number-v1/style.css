@@ -1,72 +1,106 @@
 @import url(../../../../common-resources/reset.css);
+@import url(io.css);
 
 main {
-    position: relative;
 
     width: 100vw;
     height: 100vh;
-    background-color: #1c2549;
-
+    background-color:  rgb(50, 50, 252);
+    position: relative;
     overflow: hidden;
 }
 
-.arrow {
+.art {
 
-    --angle : 150deg;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.art, .io {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+.io {
+  
+    display: flex;
+    align-items: center;
+  }
+
+.arrow {
+    
+    --angle: 15deg;
+    
     position: absolute;
     width: 100%;
-    height: 30%;
-
+    height: 25%;
+   
+    
     display: flex;
     flex-direction: row;
 }
+.arrow.up {
 
+    top: 55%;
+}
+
+.arrow.down {
+
+    bottom: 55%;
+}
 .arrow > div {
+    
     flex: 1;
     align-self: stretch;
 }
 
-/* UUUUUP: */
-.arrow.up{
-    top: 40%;
+/* UP */
+
+.arrow.up > div {
+    background-image: linear-gradient(rgba(144, 190, 218, 0.555), rgba(50, 50, 252, 0.5));
+
 }
 
-.arrow.up > div{
-    background-image: linear-gradient(
-        #1cdfbf, 
-        #add8e600);
-}
+.arrow.up > .left {
 
-.arrow.up > .left{
-    transform: skewY(calc(var(--angle)* -1));
-    transform-origin: top right;
-}
-
-.arrow.up > .right{
-    transform: skewY(var(--angle));
+    transform: skewY(calc(var(--angle) * -1));
     transform-origin: top left;
+    
 }
 
-/* down */
-.arrow.down{
-    bottom: 40%;
-}
-
-
-.arrow.down > div{
-    background-image: linear-gradient(
-        #add8e600,
-        #1c60df);
-}
-
-.arrow.down > .left{
+.arrow.up > .right {
+    
     transform: skewY(var(--angle));
     transform-origin: top right;
+
 }
 
-.arrow.down > .right{
-    transform: skewY(calc(var(--angle)*-1));
+/* DOWN */
+.arrow.down > div {
+
+    background-image: linear-gradient(rgba(50, 50, 252, 0.479), rgba(144, 190, 218, 0.521));
+
+}
+
+
+.arrow.down > .left {
+
+    transform: skewY(var(--angle));
     transform-origin: top left;
+    
 }
 
+.arrow.down > .right {
+    
+    transform: skewY(calc(var(--angle) * -1));
+    transform-origin: top right;
 
+}
