@@ -1,22 +1,20 @@
-import { lerpFFFFFF } from '../../../../common-resources/js/color-utils.js';
+import { lerpFFFFFF } from "../../../../common-resources/js/color-utils.js";
 
 const art = document.querySelector('.art');
-
 const arrowUpSource = document.querySelector('.arrow.up');
 const arrowDownSource = document.querySelector('.arrow.down');
-
-// Les "sources" ne sont plus nécessaires, on peut les retirer de l'écran:
 arrowUpSource.remove();
 arrowDownSource.remove();
-
-const colorA = '#a9aaea';
-const colorB = '#a1d9ea';
-const colorC = '#de9bb9';
-
-const randomLerpColor = () => {
-  return lerpFFFFFF(colorA, colorB,colorC, Math.random());
+const colorA = '#2938D0';
+const colorB = '#29AFD0';
+const randomColorAorB = () => {
+  const colors = [colorA, colorB];
+  const index = Math.floor(colors.length * Math.random());
+  return colors[index];
 };
-
+const randomLerpColor = () => {
+  return lerpFFFFFF(colorA, colorB, Math.random());
+};
 function addArrowUp(y) {
   const clone = arrowUpSource.cloneNode(true);
   clone.style.top = `${100 - y}%`;
@@ -28,8 +26,7 @@ function addArrowUp(y) {
   clone.querySelector('.right').style.backgroundImage = linearGradient;
   clone.querySelector('.left').style.backgroundImage = linearGradient;
 }
-
-function addArrowDown(y) {
+ export function addArrowDown(y) {
   const clone = arrowDownSource.cloneNode(true);
   clone.style.bottom = `${100 - y}%`;
   art.append(clone);
@@ -40,16 +37,13 @@ function addArrowDown(y) {
   clone.querySelector('.right').style.backgroundImage = linearGradient;
   clone.querySelector('.left').style.backgroundImage = linearGradient;
 }
-
 export function makeArtIntro() {
-  for (let i = 0; i < 40; i++) {
-    addArrowUp(i * 5);
+  for (let i = 0; i < 33; i++) {
+    addArrowUp(i * 15);
     addArrowDown(i * 5);
   }
-
 }
 
-
-export function clearArt() {
+export function cleanArt() {
   art.innerHTML = ''
 }
