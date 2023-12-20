@@ -3,8 +3,8 @@ import { cleanArt as cleanArt, makeArtIntro } from "./arrow.js";
 
 const gameOutput = document.querySelector('.game-output')
 gameOutput.onclick = () => {
-  gameOutput.classList.add('hidden')
   input.focus()
+  hideOutput()
 }
 
 function hideOutput (){
