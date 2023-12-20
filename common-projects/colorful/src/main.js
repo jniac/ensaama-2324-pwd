@@ -16,25 +16,70 @@ let mainSize = 600
 const col = 4
 const row = Math.ceil(arts.length / col)
 
-const artContainer = document.createElement('div')
-artContainer.classList.add('art-container')
-document.body.append(artContainer)
+/** @type {HTMLDivElement} */
+const artContainer = document.querySelector('.art-container')
 
-const state = {
-  view: new DOMRect(),
+const state = (() => {
+  const view = new DOMRect()
+  
   /** @type {Cell[]} */
-  cells: arts.map((art, index) => {
+  const cells = arts.map((art, index) => {
     const y = Math.floor(index / col)
     const x = index - y * col
     const rect = new DOMRect(x * mainSize, y * mainSize, mainSize, mainSize)
     const inside = false
     return { art, index, rect, inside }
-  }),
+  })
+  
   /** @type {Set<Cell>} */
-  insideCells: new Set(),
+  const insideCells = new Set()
+
   /** @type {Set<Cell>} */
-  outsideCells: new Set(),
-}
+  const outsideCells = new Set()
+
+  const toCellIndex = (x, y) => {
+    const ix = pmod(x, col)
+    const iy = pmod(y, row)
+    return iy * col + ix
+  }
+
+  const getCell = (x, y) => {
+    return cells[toCellIndex(x, y)]
+  }
+
+  return {
+    view,
+    cells,
+    insideCells,
+    outsideCells,
+    toCellIndex,
+    getCell,
+  }
+})()
+
+const isolator = (() => {
+  /** @type {HTMLDivElement} */
+  const element = artContainer.querySelector('.isolator')
+  const point = new DOMPoint(NaN, NaN)
+  function update(x, y) {
+    if (point.x === x && point.y === y)
+      return
+
+    point.x = x
+    point.y = y
+
+    element.style.left = `${(x - 1.5) * mainSize}px`
+    element.style.top = `${(y - 1.5) * mainSize}px`
+  
+    const cell = state.getCell(x, y)
+    element.querySelector('.info').innerHTML = cell 
+      ? `<a href="/art/${cell.art.student.github}/colorful/index.html">${cell.art.student.names.join(' ')}</a>`
+      : ''
+  }
+  return {
+    update,
+  }
+})()
 
 for (const { art } of state.cells) {
   artContainer.append(art.mainElement)
@@ -48,6 +93,7 @@ function pmod(x, mod) {
 
 function updateSize() {
   mainSize = round(Math.min(window.innerWidth, window.innerHeight) * .9, 50)
+  document.documentElement.style.setProperty('--art-size', `${mainSize}px`)
   document.documentElement.style.setProperty('--spacing', `${(Math.round(mainSize / 500 * 4) / 4).toFixed(2)}px`)
 
   for (const { art: { mainElement } } of state.cells) {
@@ -61,21 +107,27 @@ function updatePosition() {
   artContainer.style.left = `${-view.x}px`
   artContainer.style.top = `${-view.y}px`
 
-  view.width = innerWidth
-  view.height = innerHeight
+  view.width = window.innerWidth
+  view.height = window.innerHeight
 
   const startX = Math.floor(view.left / mainSize)
   const startY = Math.floor(view.top / mainSize)
   const endX = Math.ceil(view.right / mainSize)
   const endY = Math.ceil(view.bottom / mainSize)
 
+  const focusX = Math.floor((view.x + view.width / 2) / mainSize)
+  const focusY = Math.floor((view.top + view.height / 2) / mainSize)
+
+  isolator.update(focusX, focusY)
+
+  Object.assign(window, {
+    view: { startX, startY, endX, endY },
+  })
+
   insideCells.clear()
   for (let y = startY; y < endY; y++) {
     for (let x = startX; x < endX; x++) {
-      const ix = pmod(x, col)
-      const iy = pmod(y, row)
-      const index = iy * col + ix
-      const cell = cells[index]
+      const cell = state.getCell(x, y)
       if (cell) {
         insideCells.add(cell)
         const { mainElement } = cell.art
@@ -88,13 +140,13 @@ function updatePosition() {
   outsideCells.clear()
   for (const cell of cells) {
     const inside = insideCells.has(cell)
-    cell.inside = inside
-    if (inside === false) {
+    cell.inside = inside    
+    if (inside) {
+      cell.art.mainElement.style.removeProperty('display')
+    } else {
       outsideCells.add(cell)
+      cell.art.mainElement.style.setProperty('display', 'none')
     }
-    inside
-      ? cell.art.mainElement.style.removeProperty('display')
-      : cell.art.mainElement.style.setProperty('display', 'none')
   }
 
   // console.log(`${insideCells.size} / ${cells.length}`)
