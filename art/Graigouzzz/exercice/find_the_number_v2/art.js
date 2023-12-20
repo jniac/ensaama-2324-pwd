@@ -45,7 +45,7 @@ const randomCo = () => {
     cloneDown.querySelector(".left").style.backgroundImage=linearGradient
     cloneDown.querySelector(".right").style.backgroundImage=linearGradient
 }*/
-function addArrowUp(y) {
+export function addArrowUp(y) {
     const clone = arrowUp.cloneNode(true);
     clone.style.top = `${100 - y}%`;
     art.append(clone);
@@ -56,7 +56,7 @@ function addArrowUp(y) {
     clone.querySelector('.right').style.backgroundImage = linearGradient;
     clone.querySelector('.left').style.backgroundImage = linearGradient;
 }
-function addArrowDown(y) {
+export function addArrowDown(y) {
     const clone = arrowDown.cloneNode(true);
     clone.style.bottom = `${100 - y}%`;
     art.append(clone);
