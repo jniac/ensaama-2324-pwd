@@ -1,10 +1,12 @@
 
+.io {
 
-
+  z-index: 1;
+}
 .user-input {
 
   position: absolute;
-  z-index: 1;
+  /* z-index: 1; */
   top: 45%;
   width: 100%;
 }
@@ -51,3 +53,33 @@
   opacity: 0;
   pointer-events: none;
 }
+
+
+.io .memo {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  font-family: 'Silkscreen', sans-serif;
+  font-size: 2em;
+  color: white;
+}
+
+.io .memo .too-big {
+  color:  rgb(61, 61, 54);
+  
+}
+
+.io .memo .too-small {
+  color:  rgb(34, 34, 33);
+}
+
+/* .io .memo .equal {
+  color: rgb(25, 0, 255);
+} */
