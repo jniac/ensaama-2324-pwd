@@ -14,12 +14,13 @@ import yaml from 'https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.m
  * 
  * @typedef {{
  *   grade: number
+ *   document?: string
  *   comment: string | string[]
  * }} Evaluation
  *
  * @typedef {{
  *   exercise: string
- *   [string]: { note: number }
+ *   [key: string]: Evaluation
  * }} Exercise
  */
 
@@ -28,10 +29,10 @@ async function get(url) {
   const str = await res.text()
   try {
     return yaml.load(str)
-  } catch (err) {
-    const { snippet } = err.mark
+  } catch (error) {
+    const { snippet } = error.mark
     console.log(snippet)
-    throw err
+    throw error
   }
 }
 
@@ -49,7 +50,7 @@ export async function loadInfo() {
  */
 export async function loadExercise() {
   return [
-    await get('../evaluation/colorful.yaml'),
-    await get('../evaluation/find-the-number.yaml'),
+    await get('../exercise-evaluation/colorful.yaml'),
+    await get('../exercise-evaluation/find-the-number.yaml'),
   ]
 }

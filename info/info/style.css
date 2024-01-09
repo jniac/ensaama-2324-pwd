@@ -5,11 +5,16 @@
 
 :root {
   --accent-color-rgb: 0, 51, 255;
+  --accent-font-color-rgb: 255, 255, 255;
 }
 
 body {
   font-family: 'Barlow Condensed', sans-serif;
   padding: 64px;
+}
+
+body * {
+  position: relative;
 }
 
 main * {
@@ -31,11 +36,12 @@ main .student > div:nth-child(2n) {
 
 main .student-separator {
   height: 1px;
-  background: #ccc;
+  background: #0009;
 }
 
 main .student .grade {
   padding: 2px;
+  cursor: none;
 }
 
 main .student .grade > div {
@@ -44,7 +50,7 @@ main .student .grade > div {
 
 main .student .grade:hover > div {
   background-color: rgb(var(--accent-color-rgb));
-  color: white;
+  color: rgb(var(--accent-font-color-rgb));
 }
 
 
@@ -61,7 +67,7 @@ main .student .grade:hover > div {
     0px 1px 8px rgb(var(--accent-color-rgb), 50%);
 
   background-color: rgb(var(--accent-color-rgb));
-  color: white;
+  color: rgb(var(--accent-font-color-rgb));
 
   border-radius: 4px;
 }
@@ -73,5 +79,20 @@ main .student .grade:hover > div {
 
 .info-block h3 {
   padding-bottom: 1em;
+}
+
+.info-block .small {
+  font-size: .8em;
+  opacity: .75;
+  padding-top: 1em;
+}
+
+.underline::before {
+  content: '';
+  position: absolute;
+  width: 30%;
+  height: 1px;
+  bottom: 0;
+  background-color: black;
 }
 
