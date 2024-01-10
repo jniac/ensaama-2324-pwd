@@ -1,1 +1,4 @@
-.bud .sah .petal {}
+.bud .sah .petal {
+  opacity: var(--time);
+  scale: var(--time);
+}
