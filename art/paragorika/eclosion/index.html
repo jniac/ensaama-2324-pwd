@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jojo Colorful 2</title>
+  <link rel="stylesheet" href="../../../common-resources/reset.css" />
+  <link rel="stylesheet" href="../../../common-projects/colorful/style/colorful.css" />
+  <link rel="stylesheet" href="../../../common-projects/colorful/style/header.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex-layout fullscreen center p-16">
+  <header>
+    <div class="title">colorful</div>
+    <div style="flex: 1"></div>
+    <div onclick="document.fullscreenElement ? document.exitFullscreen() : document.body.requestFullscreen()">fullscreen</div>
+  </header>
+
+  <main class="jnc square">
+    <div class="p-16 color-a">
+      <div class="p-16 color-b gap-16">
+        <div class="p-16 gap-16 color-c column">
+          <div class="color-b"></div>
+          <div class="color-b"></div>
+        </div>
+        <div class="color-c"></div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module">
+    import { initializeStandalonePage } from '../../../common-projects/colorful/src/colorful.js'
+    initializeStandalonePage()
+  </script>
+</body>
+</html>
