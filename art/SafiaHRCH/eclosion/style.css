@@ -1,4 +1,6 @@
 @import url(../../../common-resources/reset.css);
+@import url(../../../common-resources/layout/layout.css);
+@import url(sah-bud.css);
 
 section {
   height: 100vh;
@@ -10,11 +12,11 @@ section {
 }
 
 section:nth-child(1) {
-  background-color: rgb(7, 15, 32);
+  background-color:  rgb(20, 25, 94);;
 }
 
 section:nth-child(2) {
-  background-color: rgb(12, 15, 61);
+  background-color: rgb(16, 84, 255);
 }
 
 .overlay {
@@ -33,5 +35,16 @@ section:nth-child(2) {
   --size: 800px;
   flex: 0 0 var(--size);
   height: var(--size);
-  border: solid 1px rgb(204, 160, 255);
+  border: solid 1px rgb(103, 252, 239);
+}
+
+.overlay .bud .layer {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
