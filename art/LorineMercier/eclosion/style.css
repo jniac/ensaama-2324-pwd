@@ -1,49 +1,55 @@
-@import url(	../../../common-resources/reset.css);
-@import url(bud-jnc.css);
+@import url(../../../common-resources/reset.css);
+@import url(bud-pdp.css);
+
+body {background-color: rgb(202, 119, 174);
+}
 
 section {
   height: 100vh;
   display: flex;
   justify-content: center;
   font-size: 4em;
-  color: aliceblue;
+  color: rgb(202, 78, 175);
   padding: 2rem;
+
 }
 
 section:nth-child(1) {
-  background-color: #F49C88;
+  background-color: rgb(134, 140, 224);
 }
 
 section:nth-child(2) {
-  background-color: #f57a5e;
+  background-color: rgb(134, 198, 224);
+  align-items: flex-end;
 }
 
 .overlay {
   position: fixed;
   top: 0;
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
+  justify-content: center;
 
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
-.overlay .bud {
+.overlay .bud{
+
   --size: 800px;
-  flex: 0 0 var(--size);
+  width: var(--size);
   height: var(--size);
-  border: solid 1px #fff6;
+
+  border: solid 1px #fff3;
 }
 
-.overlay .bud .layer {
+.overlay .bud .layer{
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
-
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
