@@ -1,6 +1,9 @@
 # ENSAAMA 2022-2023 Pratiques (Artistiques) Web & Digitales
 
+[(evaluation - semestre 1)](https://jniac.github.io/ensaama-2324-pwd/info/info/)
+
 ## Find the number
+
 <a href="https://jniac.github.io/ensaama-2324-pwd/art/Graigouzzz/exercice/find_the_number_final/">
 <img src="md/assets/Graigouzzz-FindTheNumber.jpg">
 </a>
