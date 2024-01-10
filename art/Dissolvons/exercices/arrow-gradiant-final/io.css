@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Antonio:wght@100&family=Creepster&family=Italianno&family=Monoton&family=Permanent+Marker&family=Roboto:wght@100&display=swap");
+
+.user-input input {
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: "Anonymous Pro", serif;
+  font-size: 10em;
+  font-weight: 800;
+  color: rgb(76, 140, 196);
+  transform: translateY(-0.066em);
+}
+
+.game-output{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  font-family: "Anonymous Pro", serif;
+  font-size: 2em;
+  font-weight: 800;
+  color: rgb(66, 55, 165);
+  transition: all 0.5s ease-in-out;
+}
+
+.game-output.hidden{
+  pointer-events: none;
+  opacity: 0;
+}
+
+.io .memo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  font-size: 2em;
+  font-family: "Anonymous Pro", serif;
+  color: rgb(79, 69, 134);
+}
+
+.io .memo .big{
+  color: rgb(25, 13, 92);
+
+}
+
+.io .memo .small{
+  color: #322a9e
+  
+}
+
+.io .memo .equal{
+  color: #34135f
+  
+}
