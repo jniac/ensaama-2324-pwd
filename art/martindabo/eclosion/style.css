@@ -15,7 +15,7 @@ section:nth-child(1) {
 }
 
 section:nth-child(2) {
-  background-color: rgb(241, 152, 18);
+  background-color: rgb(14, 14, 58);
   align-items: flex-end;
 }
 
