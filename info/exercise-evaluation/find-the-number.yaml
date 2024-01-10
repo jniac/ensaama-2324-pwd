@@ -40,10 +40,10 @@ cxssandre:
   - Travail complet (historique des saisies).
 
 Dissolvons:
-  grade: 16
+  grade: 10
   page: exercices/arrow-gradiant-final/
   comment:
-  - Couleurs jolies, mais écran un peu vide.
+  - EDIT proposition trop proche de l'original (travail de Graigouzzz (Graig-Lucien))
   - L'expérience reste incomplète. Il manque l'historique de la saisie.
 
 eoly-pik:
@@ -106,13 +106,14 @@ SafiaHRCH:
     plus heureux.
 
 kevinhascoet:
-  grade: 16
+  grade: 18
   page: exercices/number2/
   comment:
   - Bel écran d'accueil, effet de perspective façon Victor Vasaraly réussi. 
     Quelque chose dans la typo qui fait que c'est bien. 
   - Travail incomplet cependant (pas d'historique des saisies).
   - Pas de dossier nommé "final"
+  - EDIT Travail complet finalement, mais il manquait en ligne le commit qui fait que.
 
 mirandaMllrd:
   grade: 18
