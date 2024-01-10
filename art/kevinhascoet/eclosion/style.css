@@ -5,21 +5,30 @@ body{
   background-color: green;
 }
 
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  scroll-behavior: smooth;
+  /* overflow: scroll; */
+  scroll-snap-type: y mandatory;
+}
+
 section{
   height: 100vh;
   display: flex;
   justify-content: center;
-  font-size: 4em;
-  color: aliceblue;
-  padding: 2rem;
+  align-items: center;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 section:nth-child(1){
-  background-color: red;
+  background-color: #61A3FF;
 }
 
 section:nth-child(2){
-  background-color: blue;
+  background-color: #2F2D70;
   align-items: flex-end;
 }
 
@@ -38,7 +47,6 @@ section:nth-child(2){
   flex: 0 0 var(--size);
   width: var(--size);
   height: var(--size);
-  border: solid 1px #fff;
 }
 
 
