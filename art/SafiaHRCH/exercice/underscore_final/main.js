@@ -1,12 +1,15 @@
-import { addArrowDown, addArrowUp, clearArt, makeArtIntro } from './art.js'
+
+import { addArrowDown, addArrowUp, clearArt, makeArtIntro } from "./arrow.js"
 
 const gameOutput = document.querySelector('.game-output')
 gameOutput.onclick = () => {
+  gameOutput.classList.add('hidden')
   input.focus()
   hideOutput()
 }
+
 function hideOutput() {
-  gameOutput.classList.add('hidden')  
+  gameOutput.classList.add('hidden')
 }
 function output(message) {
   gameOutput.classList.remove('hidden')
@@ -18,14 +21,14 @@ makeArtIntro()
 const userInputs = []
 
 const hiddenNumber = Math.ceil(Math.random() * 100)
-// Un petit cheat quand même:
+
 console.log(`le nombre caché est ${hiddenNumber}`)
 
 const input = document.querySelector('input')
 
 function reactToUserNumber(userNumber) {
   userInputs.push(userNumber)
-  document.querySelector('.memo').innerHTML = 
+  document.querySelector('.memo').innerHTML =
     userInputs
       .map(x => {
         let classname = ''
@@ -34,28 +37,28 @@ function reactToUserNumber(userNumber) {
         } else if (x > hiddenNumber) {
           classname = 'too-big'
         } else {
-          classname = 'equal'
+          classname = 'exact'
         }
         return `<div class="${classname}">${x}</div>`
       })
-      .join('\n')
-    
-  const distance = Math.abs(hiddenNumber - userNumber)
-  const delta = distance / 3 + 3
-  
+      .join(`\n`)
+
+  const count = 10
+  const delta = 8 + 10 * Math.random()
   if (userNumber < hiddenNumber) {
-    output('Trop petit.')
-    for (let i = 0; i < 3; i++) {
-      addArrowUp(userNumber - delta * i)
+    output('Trop petit, comme ton QI')
+
+    for (let i = 0; i < count; i++) {
+      addArrowDown(100 - userNumber + i * delta)
     }
   } else if (userNumber > hiddenNumber) {
-    output('Trop grand.')
-    for (let i = 0; i < 3; i++) {
-      addArrowDown(100 - userNumber - delta * i)
+    output('Trop grand, comme ta stupidité')
+
+    for (let i = 0; i < count; i++) {
+      addArrowUp(userNumber - i * delta)
     }
   } else if (userNumber === hiddenNumber) {
-    output('bien ouèj.')
-    input.blur()
+    output('Enfin, il était temps')
   }
 }
 
@@ -72,8 +75,9 @@ input.onchange = () => {
   const userNumber = Number.parseFloat(input.value)
   input.value = ''
   if (Number.isNaN(userNumber)) {
-    output('Un nombre stp.')
+    output('Donne moi un nombre')
   } else {
     reactToUserNumber(userNumber)
   }
+
 }

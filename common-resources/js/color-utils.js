@@ -1,7 +1,22 @@
 export const toFF = x => Math.floor(x).toString(16).padStart(2, '0')
 
+export const rand255 = () => {
+  return Math.floor(Math.random() * 0xff)
+}
+
 export const randFF = () => {
   return toFF(Math.floor(Math.random() * 0xff))
+}
+
+/**
+ * r, g, b are float [0, 1]
+ * @param {number} r 
+ * @param {number} g 
+ * @param {number} b 
+ * @returns {number}
+ */
+export const compyteGrayScale = (r, g, b) => {
+  return .299 * r + .587 * g + b * .114
 }
 
 export const randGrayscale = () => {

@@ -9,7 +9,8 @@ arrowDownSource.remove();
 const colorA = '#e08c53';
 const colorB = '#7700ff';
 const randomLerpColor = () => lerpFFFFFF(colorA, colorB, Math.random());
-function addArrowUp(y) {
+
+export function addArrowUp(y) {
 
     const clone = arrowUpSource.cloneNode(true);
     clone.style.top = `${100 - y}%`;
@@ -21,10 +22,10 @@ function addArrowUp(y) {
     clone.querySelector('.left').style.backgroundImage = linearGradient;
 
 }
-function addArrowDown(y) {
+export function addArrowDown(y) {
 
     const clone = arrowDownSource.cloneNode(true);
-    clone.style.top = `${100 - y}%`;
+    clone.style.bottom = `${100 - y}%`;
     art.append(clone);
 
     const color = randomLerpColor();
@@ -34,9 +35,9 @@ function addArrowDown(y) {
 
 }
 export function makeArtIntro() {
-    for (let i = 0; i < 30; i++) {
-        addArrowUp(i * 15);
-        addArrowDown(i * 15);
+    for (let i = 0; i < 8; i++) {
+        addArrowUp(i * 7);
+        addArrowDown(i * 7);
 
     }
 }
