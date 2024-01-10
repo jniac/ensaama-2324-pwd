@@ -1,0 +1,49 @@
+@import url(	../../../common-resources/reset.css);
+@import url(bud-jnc.css);
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-size: 4em;
+  color: aliceblue;
+  padding: 2rem;
+}
+
+section:nth-child(1) {
+  background-color: #F49C88;
+}
+
+section:nth-child(2) {
+  background-color: #f57a5e;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  width: 100vh;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.overlay .bud {
+  --size: 800px;
+  flex: 0 0 var(--size);
+  height: var(--size);
+  border: solid 1px #fff6;
+}
+
+.overlay .bud .layer {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
