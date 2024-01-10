@@ -28,6 +28,7 @@ section.s2 {
   --size: 800px;
   flex: 0 0 var(--size);
   height: var(--size);
+  perspective: 1200px;
 }
 
 .bud .layer {
@@ -50,5 +51,6 @@ section.s2 {
   transform: 
     rotate(calc(var(--angle) + 10deg * var(--time))) 
     translateX(calc(60px + 200px * var(--time)))
-    scale(calc(0.75 + 0.25 * var(--time)));
+    scale(calc(0.75 + 0.25 * var(--time)))
+    rotate3d(1, 1, 1, calc(45deg * var(--time)));
 }
