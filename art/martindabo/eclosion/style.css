@@ -1,5 +1,5 @@
-@import url(	../../../common-resources/reset.css);
-@import url(bud-jnc.css);
+@import url(../../../common-resources/reset.css);
+@import url(bud-mar.css);
 
 section {
   height: 100vh;
@@ -11,39 +11,39 @@ section {
 }
 
 section:nth-child(1) {
-  background-color: #F49C88;
+  background-color: rgb(255, 187, 0);
 }
 
 section:nth-child(2) {
-  background-color: #f57a5e;
+  background-color: rgb(241, 152, 18);
+  align-items: flex-end;
 }
 
 .overlay {
   position: fixed;
   top: 0;
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
 
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .overlay .bud {
   --size: 800px;
-  flex: 0 0 var(--size);
+  width: var(--size);
   height: var(--size);
-  border: solid 1px #fff6;
+  border: solid 1px #fff3;
 }
 
 .overlay .bud .layer {
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
