@@ -48,9 +48,13 @@
 }
 
 .io .memo .too-big {
-  color: rgb(64, 34, 92);
+  color: rgb(155, 68, 236);
 }
 
 .io .memo .too-small {
   color: white;
+}
+
+.io .memo .equal {
+  color: red;
 }

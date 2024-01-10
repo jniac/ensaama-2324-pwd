@@ -1,0 +1,85 @@
+
+.io {
+
+  z-index: 1;
+}
+.user-input {
+
+  position: absolute;
+  /* z-index: 1; */
+  top: 45%;
+  width: 100%;
+}
+
+.user-input input {
+
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Silkscreen', sans-serif;
+  font-size: 10em;
+  font-weight: 800;
+  color: rgb(255, 255, 255);
+
+}
+
+.user-input ::placeholder {
+
+  color: white;
+}
+
+.game-output {
+
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 1;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  font-family: 'Silkscreen', sans-serif;;
+  font-size: 5em;
+  font-weight: 800;
+  color: rgb(255, 255, 255);
+
+  transition: all 0.3s ease-in-out;
+}
+
+.game-output.hidden {
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+.io .memo {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  font-family: 'Silkscreen', sans-serif;
+  font-size: 2em;
+  color: white;
+}
+
+.io .memo .too-big {
+  color:  rgb(61, 61, 54);
+  
+}
+
+.io .memo .too-small {
+  color:  rgb(34, 34, 33);
+}
+
+/* .io .memo .equal {
+  color: rgb(25, 0, 255);
+} */

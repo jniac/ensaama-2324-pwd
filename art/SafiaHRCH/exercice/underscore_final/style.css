@@ -1,0 +1,82 @@
+@import url(../../../../common-resources/reset.css);
+@import url(io.css);
+
+main {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 29, 21);
+    overflow: hidden;
+}
+
+.full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+    --angle: 160deg;
+    position: absolute;
+    width: 100%;
+    height: 8%;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.arrow.up {
+    top: 75%;
+}
+
+.arrow.down {
+    bottom: 75%;
+}
+
+.arrow > div {
+    flex: 1;
+    align-self: stretch;
+  }
+
+
+/* UP */
+.arrow.up > div {
+    background-image: linear-gradient(
+        rgba(0, 133, 95, 0.63), 
+        rgba(52, 0, 100, 0.61));
+  }
+  
+  .arrow.up > .left {
+    transform: skewY(calc(var(--angle) * -1));
+    transform-origin: top right;
+  }
+  
+  .arrow.up > .right {
+    transform: skewY(var(--angle));
+    transform-origin: top left;
+  }
+  
+  /* DOWN: */
+  .arrow.down > div {
+    background-image: linear-gradient(
+      rgba(52, 0, 100, 0.61),
+        rgba(0, 133, 95, 0.699));
+  }
+  
+  .arrow.down > .left {
+    transform: skewY(var(--angle));
+    transform-origin: top right;
+  }
+  
+  .arrow.down > .right {
+    transform: skewY(calc(var(--angle) * -1));
+    transform-origin: top left;
+  }

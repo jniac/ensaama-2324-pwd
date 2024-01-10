@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap");
+
+body {
+    /* padding-top: 8rem; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    color: #fff;
+    overflow: hidden;
+}
+
+h1 {
+    font-family: "Teko", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 5vw;
+    margin: 0 0;
+}
+
+h2 {
+    font-family: "Teko", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 4rem;
+    margin: 0 0;
+    opacity: 0;
+    color: #777;
+}
+
+button {
+    padding: 0.2rem 4rem;
+    font-size: 3rem;
+    font-family: "Teko", sans-serif;
+    font-weight: 600;
+    background-color: #000;
+    color: #fff;
+    border-radius: 0.5rem;
+    border-color: #fff;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+}
+
+.boutons {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.not-displayed {
+    display: none !important;
+}
+
+.No {
+    text-align: center;
+}
+
+.Home {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 15vw;
+}
+
+.Start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+input {
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Teko", sans-serif;
+    font-weight: 600;
+    opacity: 1;
+}
+
+.arrows {
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+
+    --angle: 90deg;
+}
+
+.arrows > div {
+    flex: 10;
+    align-self: stretch;
+    background-color: #470516;
+    bottom: 0;
+}
+
+.arrows .left {
+    transform: skewY(calc(var(--angle) * -1));
+    transform-origin: top right;
+}
+
+.arrows .right {
+    transform: skewY(var(--angle));
+    transform-origin: top left;
+}
+
+#questionText {
+    padding-top: 5vw;
+}
+
+.past-user-inputs {
+    --color: #888;
+
+    font-size: 3vw;
+    font-family: "Teko", sans-serif;
+    font-weight: 600;
+    position: absolute;
+    left: 2%;
+    top: 30%;
+    list-style: none;
+    text-align: center;
+    line-height: 100%;
+
+    .input {
+        color: var(--color);
+    }
+
+    .last1 {
+        opacity: 0.7;
+    }
+    .last0 {
+        opacity: 0.4;
+    }
+}

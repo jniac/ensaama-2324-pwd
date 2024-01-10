@@ -1,6 +1,7 @@
 /* Reset CSS */
 body, body * {
   margin: 0;
+  position: relative;
   box-sizing: border-box;
   font-family: inherit; /* Forcer l'usage d'une typo unique */
 }

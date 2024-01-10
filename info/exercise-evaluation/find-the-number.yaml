@@ -1,0 +1,133 @@
+exercise: 
+  Find the number
+
+Graigouzzz:
+  grade: 20
+  page: exercice/find_the_number_final/
+  comment: 
+  - Excellent, vraiment très super à tout point de vue (couleur, composition, soins).
+  - Travail complet (historique des saisies).
+
+alliezgood:
+  grade: 10
+  page: exercices/find-the-number-v2/
+  comment:
+  - Pas de document nommé "final" (utilisé V2).
+  - Proposition bcp trop proche de celle de Kevin (version light ?).
+  - L'expérience est incomplète. Il manque l'historique de la saisie.
+
+paragorika:
+  grade: 15
+  page: exercices/find-the-number-v2/
+  comment:
+  - Pas de document nommé "final".
+  - Très belles couleurs à l'accueil, effet de relief saisissant (contraste). 
+  - L'expérience reste incomplète. Il manque l'historique de la saisie.
+
+babib3l:
+  grade: 14
+  page: exercice/find-the-number-v1.html/
+  comment:
+  - Pas de document nommé "final".
+  - L'écran d'accueil, camaïeu de bleus, est saisissant.
+  - L'expérience reste incomplète. Il manque l'historique de la saisie.
+
+cxssandre:
+  grade: 18
+  page: exercices/find-the-numberv1-final/
+  comment:
+  - C'est bien, très bien.
+  - Travail complet (historique des saisies).
+
+Dissolvons:
+  grade: 16
+  page: exercices/arrow-gradiant-final/
+  comment:
+  - Couleurs jolies, mais écran un peu vide.
+  - L'expérience reste incomplète. Il manque l'historique de la saisie.
+
+eoly-pik:
+  grade: 18
+  page: exercices/e-commerce/find_the_number_FINAL
+  comment:
+  - Ecran vert d'accueil assez réussi (finesse des lignes en arrière plan, 
+    réserve centrale). Typographie massive OK, mais ne serait-ce pas mieux 
+    centré ? (l'arrière plan est centré).
+  - CSS pété (le lien vers reset.css n'était plus à jour). Un micro scroll
+    gâche l'expérience (corrigé).
+  - Complet sans cela (historique saisie).
+
+ingrid-caz:
+  grade: 20
+  page: exercices/find-the-number-v1-final/
+  comment:
+  - C'est top. La typo ultra mince contraste joliment avec le fond. L'écran 
+    d'accueil est saisissant.
+
+martindabo:
+  grade: 20
+  page: exercices/find-number-v1/
+  comment:
+  - Excellent. L'écran d'accueil est saisissant. Le graphisme est soigné (
+    composition, couleur, typographie). 
+  - Le rendu est complet (historique des saisies).
+
+ldssrt: 
+  grade: 20
+  page: exercice/find-the-number-final/
+  comment:
+  - Excellent. Dégradés présentant une grande finesse. Le contraste entre l'arrière
+    plan (dégradés, lignes) et le premier plan (typo) est réussi. Excellent choix
+    de typo.
+  - Travail complet (historique des saisies).
+
+RSelaries:
+  grade: 19
+  page: exercises/find-the-number-v0/
+  comment:
+  - Un graphisme soigné, qui pourrait manquer de finesse. Excellente technicité
+    (programmation, css). Très bon travail.
+  - Pas de document nommé "final".
+
+pierrenoi:
+  grade: 14
+  page: exercices/find-the-number-v1
+  comment:
+  - Le travail manque de finitions (superposition placeholer / messages, historique
+    dès l'écran de départ).
+  - Pas de document nommé "final".
+
+SafiaHRCH:
+  grade: 18
+  page: exercice/underscore_final/
+  comment:
+  - De beaux camaïeux verts / violets. La superposition typographique est assumée ?
+    Il manque peut-être d'avoir trouver une solution graphique pour rendre cela 
+    plus heureux.
+
+kevinhascoet:
+  grade: 16
+  page: exercices/number2/
+  comment:
+  - Bel écran d'accueil, effet de perspective façon Victor Vasaraly réussi. 
+    Quelque chose dans la typo qui fait que c'est bien. 
+  - Travail incomplet cependant (pas d'historique des saisies).
+  - Pas de dossier nommé "final"
+
+mirandaMllrd:
+  grade: 18
+  page: exercices/arrow-gradient-final
+  comment: 
+  - Encore une fois une proposition originale sur la forme (couleur, typo), la 
+    superposition de typographie est difficile à accepter. Les messages sont 
+    parfois difficile à déchiffrer (en plus d'être difficile à interpréter)
+  - Travail complet.
+
+LorineMercier:
+  grade: 17
+  page: exercice/NUMBER2
+  comment:
+  - Écran d'accueil surprenant, plutôt réussi. La typo apparaît un peu timide
+    au centre, bcp de vide une fois l'écran d'intro parti.
+  - Travail complet.
+  - Pas de document nommé "final".
