@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>eclosion</title>
+    <link rel="stylesheet" href="style/style.css">
+  </head>
+  <body>
+    <header>
+      <div class="title">
+        eclosion_jnc
+      </div>
+      <div style="flex: 1;"></div>
+      <div 
+        class="icon" 
+        onclick="
+          document.fullscreenElement 
+            ? document.exitFullscreen() 
+            : document.documentElement.requestFullscreen()
+        "
+      ></div>
+    </header>
+
+    <main>
+      <section>off</section>
+      <section>on</section>
+    </main>
+
+    <div class="overlay jnc">
+      <svg class="full">
+        <circle r="420" fill="none" stroke="white"></circle>
+        <circle r="640" fill="none" style="stroke: var(--accent-color-2);"></circle>
+        <circle r="680" fill="none" style="stroke: white;"></circle>
+      </svg>
+      <div class="bud jnc">
+        
+        <div class="layer g1">
+          <div class="layer core">
+            <img src="assets/core.svg" data-eclosion-replace-by-external-ref="yes">
+          </div>
+  
+          <div class="layer petal-a">
+            <img src="assets/petal-a.svg" data-eclosion-replace-by-external-ref="yes">
+          </div>
+        </div>
+
+        <div class="layer petal-b">
+          <img src="assets/petal-b.svg" data-eclosion-replace-by-external-ref="yes">
+        </div>
+
+      </div>
+    </div>
+    
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
