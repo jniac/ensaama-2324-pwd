@@ -16,3 +16,22 @@ section:nth-child(1) {
 section:nth-child(2) {
   background-color: blue;
 }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay .bud {
+
+  --size: 800px;
+  flex: 0 0 var(--size);
+  height: var(--size);
+  border: solid 1px rgb(204, 160, 255);
+}
