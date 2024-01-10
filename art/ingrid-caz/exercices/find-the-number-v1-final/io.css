@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
 
 
-.user-input input {
+.io .user-input input {
   width: 100%;
   text-align: center;
   background-color: transparent;
@@ -15,12 +15,12 @@
   transform: translateY(-0.066em);
 }
 
-.user-input input::placeholder {
+.io .user-input input::placeholder {
   color: aliceblue;
   font-weight: 600;
 }
 
-.game-output {
+.io .game-output {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,8 +33,32 @@
   transition: all 0.3s ease-in-out;
 }
 
-.game-output.hidden {
+.io .game-output.hidden {
   opacity: 0;
   pointer-events: none;
 
+}
+
+.io .memo {
+  position: absolute;
+  top: 0 ;
+  left: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  padding: 1em;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2em;
+  color: aliceblue;
+}
+
+.io .memo .trop-court {
+  color: #9235fc;
+  
+}
+
+.io .memo .trop-long {
+  color: #e08c53;
 }

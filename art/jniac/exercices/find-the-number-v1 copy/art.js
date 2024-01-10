@@ -22,7 +22,7 @@ const randomLerpColor = () => {
   return lerpFFFFFF(colorA, colorB, Math.random())
 }
 
-export function addArrowUp(y) {
+function addArrowUp(y) {
   const clone = arrowUpSource.cloneNode(true)
   clone.style.top = `${100 - y}%`
   art.append(clone)
@@ -34,7 +34,7 @@ export function addArrowUp(y) {
   clone.querySelector('.left').style.backgroundImage = linearGradient
 }
 
-export function addArrowDown(y) {
+function addArrowDown(y) {
   const clone = arrowDownSource.cloneNode(true)
   clone.style.bottom = `${100 - y}%`
   art.append(clone)
