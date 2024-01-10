@@ -1,0 +1,19 @@
+@import url(../../../../../common-resources/reset.css);
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-size: 4em;
+  color: aliceblue;
+  padding: 2rem;
+}
+
+section:nth-child(1) {
+  background-color: brown;
+}
+
+section:nth-child(2) {
+  background-color: olive;
+  align-items: flex-end;
+}

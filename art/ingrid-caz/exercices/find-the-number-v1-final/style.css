@@ -25,7 +25,7 @@ main {
 }
 
 .arrow {
-    --angle: 5deg;
+    --angle: 10deg;
 
     position: absolute;
     width: 100%;
@@ -36,11 +36,11 @@ main {
 }
 
 .arrow.up {
-    bottom: 75%;
+    top: 75%;
 }
 
 .arrow.down {
-    top: 75%;
+    bottom: 75%;
 }
 
 .arrow>div {
