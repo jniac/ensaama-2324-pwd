@@ -11,7 +11,7 @@ const arrowUpSource = document.querySelector('.arrow.up');
 const arrowDownSource = document.querySelector('.arrow.down');
 arrowUpSource.remove();
 arrowDownSource.remove();
-function addArrowUp(y) {
+export function addArrowUp(y) {
 
   const clone = arrowUpSource.cloneNode(true);
   clone.style.top = `${50 - y}%`;
@@ -27,7 +27,7 @@ function addArrowUp(y) {
   const angle = (y) / 4;
   clone.style.setProperty('--angle', `${angle}deg`);
 }
-function addArrowDown(y) {
+export function addArrowDown(y) {
 
   const clone = arrowDownSource.cloneNode(true);
   clone.style.bottom = `${50 - y}%`;
