@@ -44,4 +44,15 @@
     scale(calc(.8 + .18 * var(--scroll4)));
 }
 
+.bud.jnc .petal-c {
+  --angle: 0deg;
+  opacity: var(--scroll5);
+  transform: 
+    rotate(var(--angle)) 
+    translateY(350px)
+    translateY(calc((1 - var(--scroll2)) * -100px))
+    translateY(calc((1 - var(--scroll5)) * -300px))
+    scale(calc(.5 + .5 * var(--scroll5)));
+}
+
 
