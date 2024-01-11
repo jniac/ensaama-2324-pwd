@@ -1,3 +1,4 @@
+import { clamp01 } from '../../common-resources/js/math-utils.js'
 
 /**
  * @type {Map<string, { callbacks: ((time: number) => void)[] }>}
@@ -24,9 +25,13 @@ export function initBudScroll(identifier, onScrollChange) {
   const loop = () => {
     window.requestAnimationFrame(loop)
     
-    const time =
-      document.scrollingElement.scrollTop /
-      document.scrollingElement.clientHeight
+    let time = clamp01(document.body.scrollTop / document.body.clientHeight)
+    if (document.scrollingElement) {
+      time = Math.max(time, clamp01(document.scrollingElement.scrollTop / document.scrollingElement.clientHeight))
+    }
+
+    // Fix the viewport height on safari iOS.
+    document.documentElement.style.setProperty('--vh', `${window.innerHeight}px`)
 
     if (time !== timeOld || window.performance.now() < 2000) {
       bud.style.setProperty('--time', time.toFixed(3))
