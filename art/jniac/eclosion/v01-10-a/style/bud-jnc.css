@@ -41,7 +41,7 @@
     rotate(var(--angle)) 
     translateX(660px)
     translateX(calc(100px * var(--scroll4)))
-    scale(calc(.8 + .2 * var(--scroll4)));
+    scale(calc(.8 + .18 * var(--scroll4)));
 }
 
 

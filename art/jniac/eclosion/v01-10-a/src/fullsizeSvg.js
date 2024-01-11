@@ -1,11 +1,11 @@
 import { initBudScroll } from '../../../../../common-projects/eclosion/scroll.js'
+import { range, svgFactory } from '../../../../../common-projects/eclosion/tools.js'
 import { easings, lerp } from '../../../../../common-resources/js/math-utils.js'
 
 const svg = document.querySelector('svg.fullsize')
   
 function addRadialLines(count) {
-
-  const lines = Array.from({ length: count }).map((_, i) => {
+  const lines = range(count, () => {
     const line = document.createElementNS('http://www.w3.org/2000/svg', 'line')
     line.setAttributeNS(null, 'stroke', '#fff6')
     svg.append(line)
@@ -31,8 +31,53 @@ function addRadialLines(count) {
   initBudScroll('jnc', update)
 }
 
+function addRadialTriangles({ 
+  radialCount = 12, 
+  rowCount = 5,
+  turnOffset = .5,
+  radiusMin = 100,
+  radiusMax = 600,
+} = {}) {
+  const triPathData = svgFactory.path.polygon(3, 4)
+  const triPathData2 = svgFactory.path.polygon(3, 8)
+
+  const triangles = range(radialCount, () => {
+    return range(rowCount, j => {
+      const color = j === 0 ? 'var(--accent-color-1)' : 'white'
+      const d = j === 0 ? triPathData2 : triPathData
+      const triangle = svgFactory.createNode(`<path d="${d}" style="fill: ${color}"/>`)
+      svg.append(triangle)
+      return triangle
+    })
+  })
+
+  const update = scroll => {
+    for (let i = 0; i < radialCount; i++) {
+      for (let j = 0; j < rowCount; j++) {
+        const triangle = triangles[i][j]
+        const turn = (i + turnOffset) / radialCount
+        
+        const radius = lerp(radiusMin, radiusMax, easings.out4(scroll)) + j * lerp(30, 50, easings.pcurve(1, 4)(scroll))
+        
+        const { x, y } = svgFactory.points.onCircle(radius, turn)
+        triangle.style.opacity = `${easings.out4(scroll)}`
+        triangle.style.transform = `
+          translate(${x}px, ${y}px)
+          rotate(${turn}turn)
+        `
+      }
+    }  
+  }
+
+  update(0)
+  initBudScroll('jnc', update)
+}
+
+
 export function initFullsizeSvg() {
   addRadialLines(12 * 2)
+  addRadialTriangles()
+  addRadialTriangles({ rowCount: 3, turnOffset: 0, radiusMax: 500 })
 
   const resize = () => {
     const w = window.innerWidth, h = window.innerHeight

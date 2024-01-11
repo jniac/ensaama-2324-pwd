@@ -6,6 +6,19 @@ export const hermiteSecond01 = x => x * x * x * (x * (x * 6 - 15) + 10)
 
 export const linear = x => x
 
+/**
+ * Usage: 
+ * ```
+ * const ease = easings.in(1.33)
+ * const alpha = ease(time)
+ * // or, inlined,
+ * const alpha = easeings.in(1.33)(time)
+ * ```
+ * @param {number} p 
+ * @returns {number}
+ */
+export const pow = (p = 3) => x => x ** p
+
 export const pow2 = x => x * x
 export const pow3 = x => x * x * x
 export const pow4 = x => x * x * x * x
@@ -13,12 +26,26 @@ export const pow5 = x => x * x * x * x * x
 export const pow6 = x => x * x * x * x * x * x
 
 export {
+  pow as in,
   pow2 as in2,
   pow3 as in3,
   pow4 as in4,
   pow5 as in5,
   pow6 as in6,
 }
+
+/**
+ * Usage: 
+ * ```
+ * const ease = easings.out(1.33)
+ * const alpha = ease(time)
+ * // or, inlined,
+ * const alpha = easeings.out(1.33)(time)
+ * ```
+ * @param {number} p 
+ * @returns {number}
+ */
+export const out = (p = 3) => x => 1 - (x = 1 - x) ** p
 
 export const out2 = x => 1 - (x = 1 - x) * x
 export const out3 = x => 1 - (x = 1 - x) * x * x
@@ -35,6 +62,8 @@ export const out6 = x => 1 - (x = 1 - x) * x * x * x * x * x
  * ```
  * const ease = easings.inout(3, .33)
  * const alpha = ease(time)
+ * // or, inlined,
+ * const alpha = easeings.inout(3, .33)(time)
  * ```
  * @param {number} p 
  * @param {number} i 
@@ -80,4 +109,18 @@ export const inout6 = x => {
     ? 32 * x * x * x * x * x * x
     : 1 - 32 * (x = 1 - x) * x * x * x * x * x
   )
+}
+
+/**
+ * https://www.desmos.com/calculator/9h6o072i43 (from Inigo Quilez)
+ * @param {number} a 
+ * @param {number} b 
+ * @returns 
+ */
+export const pcurve = (a = 1, b = 2) => {
+  const k = ((a + b) ** (a + b)) / ((a ** a) * (b ** b))
+  return x => {
+    x = x < 0 ? 0 : x > 1 ? 1 : x
+    return k * (x ** a) * ((1 - x) ** b)
+  }
 }
