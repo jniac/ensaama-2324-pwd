@@ -51,6 +51,13 @@ main * {
 }
 
 .isolator {
+  pointer-events: none;
+}
+.isolator > * {
+  pointer-events: all;
+}
+
+.isolator {
   position: absolute;
   width: calc(4 * var(--art-size));
   height: calc(4 * var(--art-size));

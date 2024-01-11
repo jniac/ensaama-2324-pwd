@@ -73,7 +73,7 @@ const isolator = (() => {
   
     const cell = state.getCell(x, y)
     element.querySelector('.info').innerHTML = cell 
-      ? `<a href="/art/${cell.art.student.github}/colorful/index.html">${cell.art.student.names.join(' ')}</a>`
+      ? `<a href="../../art/${cell.art.student.github}/colorful/index.html">${cell.art.student.names.join(' ')}</a>`
       : ''
   }
   return {

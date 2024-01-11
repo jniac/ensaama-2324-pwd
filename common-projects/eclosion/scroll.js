@@ -28,7 +28,7 @@ export function initBudScroll(identifier, onScrollChange) {
       document.scrollingElement.scrollTop /
       document.scrollingElement.clientHeight
 
-    if (time !== timeOld) {
+    if (time !== timeOld || window.performance.now() < 2000) {
       bud.style.setProperty('--time', time.toFixed(3))
       
       timeOld = time
