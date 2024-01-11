@@ -1,7 +1,14 @@
 
 import * as easings from './easings.js'
 
-export { easings }
+export { 
+  /**
+   * Easing functions
+   * 
+   * https://www.desmos.com/calculator/chosfesws4
+   */
+  easings,
+}
 
 export const clamp01 = x => {
   return x < 0 ? 0 : x > 1 ? 1 : x

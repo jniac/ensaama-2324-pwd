@@ -26,7 +26,20 @@ export const out4 = x => 1 - (x = 1 - x) * x * x * x
 export const out5 = x => 1 - (x = 1 - x) * x * x * x * x
 export const out6 = x => 1 - (x = 1 - x) * x * x * x * x * x
 
-// https://www.desmos.com/calculator/chosfesws4
+/**
+ * Ease in/out with asymetrical inflexion point.
+ * 
+ * https://www.desmos.com/calculator/chosfesws4
+ * 
+ * Usage:
+ * ```
+ * const ease = easings.inout(3, .33)
+ * const alpha = ease(time)
+ * ```
+ * @param {number} p 
+ * @param {number} i 
+ * @returns 
+ */
 export const inout = (p = 3, i = 0.5) => {
   return x => (x < 0 ? 0 : x > 1 ? 1 : x < i
     ? 1 / Math.pow(i, p - 1) * Math.pow(x, p)

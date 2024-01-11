@@ -1,7 +1,7 @@
 import { initBudScroll } from '../../../../../common-projects/eclosion/scroll.js'
 import { easings, lerp } from '../../../../../common-resources/js/math-utils.js'
 
-const svg = document.querySelector('svg.full')
+const svg = document.querySelector('svg.fullsize')
   
 function addRadialLines(count) {
 
@@ -31,16 +31,14 @@ function addRadialLines(count) {
   initBudScroll('jnc', update)
 }
 
-export function initFullSvg() {
-
+export function initFullsizeSvg() {
   addRadialLines(12 * 2)
 
-  const resizeSvgFull = () => {
+  const resize = () => {
     const w = window.innerWidth, h = window.innerHeight
     svg.setAttributeNS(null, 'viewBox', `${-w / 2} ${-h / 2} ${w} ${h}`)
   }
 
-  resizeSvgFull()
-
-  window.addEventListener('resize', resizeSvgFull)
+  resize()
+  window.addEventListener('resize', resize)
 }

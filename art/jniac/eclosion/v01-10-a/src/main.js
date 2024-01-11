@@ -1,16 +1,16 @@
 import { initBudScroll } from '../../../../../common-projects/eclosion/scroll.js'
 import { replaceByExternalRef } from '../../../../../common-projects/eclosion/tools.js'
 import { easings, mapRange } from '../../../../../common-resources/js/math-utils.js'
-import { initFullSvg } from './fullSvg.js'
+import { clonePetalA, clonePetalB } from './clonePetals.js'
+import { initFullsizeSvg } from './fullsizeSvg.js'
 
 await replaceByExternalRef()
 
-initFullSvg()
-
+// using dynamic imports, because here we are waiting for the external to be replaced before going further.
 const { updateBigCircles } = await import('./updateBigCircles.js')
 const { updateCoreTriangles } = await import('./updateCoreTriangles.js')
 
-const bud = document.querySelector('.bud.jnc')
+export const bud = document.querySelector('.bud.jnc')
 
 initBudScroll('jnc', scroll => {
   bud.style.setProperty('--scroll1', easings.out2(scroll).toFixed(3))
@@ -21,17 +21,11 @@ initBudScroll('jnc', scroll => {
   updateBigCircles(scroll)
 })
 
-const petalA = bud.querySelector('.petal-a')
-for (let i = 1; i < 6; i++) {
-  const clone = petalA.cloneNode(true)
-  clone.style.setProperty('--angle', `${60 * i}deg`)
-  petalA.parentElement.append(clone)
-}
+initFullsizeSvg()
 
-const petalB = bud.querySelector('.petal-b')
-for (let i = 1; i < 12; i++) {
-  const clone = petalB.cloneNode(true)
-  clone.style.setProperty('--angle', `${30 * i}deg`)
-  petalB.parentElement.append(clone)
-}
+clonePetalA()
 
+clonePetalB()
+
+// Restoring the opacity, once everything has been initialized (to avoid glitches)
+document.querySelector('.overlay.jnc').style.removeProperty('opacity')

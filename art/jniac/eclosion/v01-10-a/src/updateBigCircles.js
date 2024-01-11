@@ -1,7 +1,7 @@
 import { easings, mapRange } from '../../../../../common-resources/js/math-utils.js'
 
 /** @type {SVGElement[]} */
-const bigCircles = [...document.querySelectorAll('svg.full circle')]
+const bigCircles = [...document.querySelectorAll('svg.fullsize circle')]
 export function updateBigCircles(scroll) {
   const [c1, c2, c3] = bigCircles
 
