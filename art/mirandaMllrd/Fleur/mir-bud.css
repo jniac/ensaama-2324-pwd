@@ -1,0 +1,4 @@
+.bud.mir .petal-a {
+  opacity: var( --time);
+  transform: translateY(calc(100px*var(--time)));
+}
