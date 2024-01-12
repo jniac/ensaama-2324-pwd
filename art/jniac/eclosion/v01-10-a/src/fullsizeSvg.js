@@ -1,6 +1,6 @@
 import { initBudScroll } from '../../../../../common-projects/eclosion/scroll.js'
 import { range, svgFactory } from '../../../../../common-projects/eclosion/tools.js'
-import { easings, lerp } from '../../../../../common-resources/js/math-utils.js'
+import { easings, inverseLerp, lerp } from '../../../../../common-resources/js/math-utils.js'
 
 const svg = document.querySelector('svg.fullsize')
   
@@ -35,7 +35,7 @@ function addRadialTriangles({
   radialCount = 12, 
   rowCount = 5,
   turnOffset = .5,
-  radiusMin = 100,
+  radiusMin = 30,
   radiusMax = 600,
 } = {}) {
   const triPathData = svgFactory.path.polygon(3, 4)
@@ -59,8 +59,13 @@ function addRadialTriangles({
         
         const radius = lerp(radiusMin, radiusMax, easings.out4(scroll)) + j * lerp(30, 50, easings.pcurve(1, 4)(scroll))
         
+        const opacity = easings.out4(
+          inverseLerp(0 + (rowCount - 1 - j) * .03, .5 + (rowCount - 1 - j) * .03, scroll) 
+          * (.33 + inverseLerp(0, .5, scroll))
+        )
+        triangle.style.opacity = `${opacity.toFixed(2)}`
+
         const { x, y } = svgFactory.points.onCircle(radius, turn)
-        triangle.style.opacity = `${easings.out4(scroll)}`
         triangle.style.transform = `
           translate(${x}px, ${y}px)
           rotate(${turn}turn)
