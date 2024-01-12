@@ -31,7 +31,6 @@ section:nth-child(2) {
   flex: 0 0 var(--size);
   height: var(--size);
   perspective: 1200px;
-  *
   border: solid 1px red;
 }
 
