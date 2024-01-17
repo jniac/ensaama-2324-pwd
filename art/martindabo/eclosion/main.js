@@ -1,3 +1,3 @@
-import { initBudScroll } from '../../../common-projects/eclosion/scroll.js'
+import { initBudScroll } from '../../../common-projects/eclosion/src/scroll.js'
 
 initBudScroll('mar')
