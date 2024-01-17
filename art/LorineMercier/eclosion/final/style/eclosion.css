@@ -5,6 +5,7 @@
 .pdp .core {
    opacity: var(--scroll);
   transform: scale(calc(80% + 20% * (var(--scroll))));
+  z-index: 1;
 }
 
 .pdp .petal-a {
@@ -13,8 +14,9 @@
   transform:
     rotate(var(--angle))
     scale(calc(70% + 30% * var(--scroll)))
-    translate(94px,-94px)
+    translate(120px,-120px)
     translate(
       calc(-50px * (1 - var(--scroll))),
-      calc(50px * (1 - var(--scroll))));
+      calc(50px * (1 - var(--scroll))))
+    rotate(225deg);
 }
