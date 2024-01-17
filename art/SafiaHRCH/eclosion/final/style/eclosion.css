@@ -10,10 +10,14 @@
 }
 
 .sah .petal-a {
-  /* opacity: var(--scroll); */
+
+  --angle: 0deg;
+  opacity: var(--scroll);
   transform: 
-  translate(94px, -94px)
-  translate(
-    calc(-50px * (1 - var(--scroll))), 
-    calc(50px * (1 - var(--scroll))));
+    rotate(var(--angle))
+    scale(calc(70% + 30% * var(--scroll)))
+    translate(94px, -94px)
+      translate(
+        calc(-50px * (1 - var(--scroll))), 
+        calc(50px * (1 - var(--scroll))));
 }
