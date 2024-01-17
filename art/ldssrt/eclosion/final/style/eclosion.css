@@ -1,0 +1,18 @@
+.lds {
+
+  --scroll: 0;
+}
+
+.lds .core {
+  opacity: var(--scroll);
+  transform: 
+  scale(calc(80% + 20% * var(--scroll)));
+}
+
+.lds .petal-a {
+
+  transform: 
+  translate(94px, -94px)
+  translate(calc(-50px * (1 - var(--scroll))), 
+  calc(50px * (1 - var(--scroll))));
+}
