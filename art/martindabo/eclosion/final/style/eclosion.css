@@ -8,10 +8,16 @@
 }
 
 .mar .petal-a {
+  --angle: 0deg;
   opacity: var(--scroll);
   transform:
-    translate(94px, -94px)
+    rotate(var(--angle))
+    scale(calc(70% + 30% * var(--scroll)))
+    translate(200px, -200px)
     translate(
       calc(-50px * (1 - var(--scroll))),
-      calc(50px * (1 - var(--scroll))));
+      calc(50px * (1 - var(--scroll))))
+      rotate(calc(100deg * (1 - var(--scroll))))
+      rotate(16deg);
 }
+
