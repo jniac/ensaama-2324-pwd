@@ -1,0 +1,18 @@
+.ing {
+  --scroll: 0;
+  --scroll-2: 2;
+
+}
+
+.ing .core {
+
+  opacity: var(--scroll);
+  transform: 
+    scale(calc(90% + 10% * var(--scroll)));
+}
+
+.ing .petal-a{
+  opacity: var(--scroll);
+  transform: 
+    translate(-105px, -320px);
+}
