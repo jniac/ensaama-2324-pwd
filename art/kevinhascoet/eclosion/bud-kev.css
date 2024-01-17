@@ -1,0 +1,4 @@
+.bud.kev .petal-a{
+  opacity: var(--time);
+  transform: translateY(calc(320px * var(--time)));
+}
