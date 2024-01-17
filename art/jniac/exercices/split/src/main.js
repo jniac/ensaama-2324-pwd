@@ -1,4 +1,4 @@
-import { VisibilityTracker } from '../../../../../../common-resources/js/VisibilityTracker.js'
+import { VisibilityTracker } from '../../../../../common-resources/js/VisibilityTracker.js'
 import { setLeftImageSrc } from './left.js'
 
 for (const img of document.querySelectorAll('.right img')) {

@@ -1,0 +1,9 @@
+
+.bud.jnc .petal-a {
+  --angle: 0deg;
+  opacity: var(--time);
+  transform:
+    rotate(var(--angle)) 
+    translateY(calc(100px * var(--time)))
+    ;
+}

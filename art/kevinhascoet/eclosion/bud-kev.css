@@ -1,5 +1,46 @@
-
-
 .bud.kev .petal-a{
+  opacity: var(--time);
+  transform: translateY(calc(330px * var(--time)));
+}
 
+.bud.kev .petal-b{
+  opacity: var(--time);
+  rotate: 180deg;
+  transform: translateY(calc(330px * var(--time)));
+}
+
+.bud.kev .petal-c{
+  opacity: var(--time);
+  rotate: 90deg;
+  transform: translateY(calc(330px * var(--time)));
+}
+
+.bud.kev .petal-d{
+  opacity: var(--time);
+  rotate: -90deg;
+  transform: translateY(calc(330px * var(--time)));
+}
+
+.bud.kev .petal-e{
+  opacity: var(--time);
+  rotate: -45deg;
+  transform: translateY(calc(330px * var(--time)));
+}
+
+.bud.kev .petal-f{
+  opacity: var(--time);
+  rotate: 45deg;
+  transform: translateY(calc(330px * var(--time)));
+}
+
+.bud.kev .petal-g{
+  opacity: var(--time);
+  rotate: 135deg;
+  transform: translateY(calc(330px * var(--time)));
+}
+
+.bud.kev .petal-h{
+  opacity: var(--time);
+  rotate: -135deg;
+  transform: translateY(calc(330px * var(--time)));
 }
