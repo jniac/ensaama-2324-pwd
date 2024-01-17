@@ -3,14 +3,16 @@
 }
 
 .kev .core {
-  opacity: var(--scroll);
   transform:
     scale(calc(90% + 10% * var(--scroll)));
 }
 
 .kev .petal-a {
+  --angle : 0deg;
   opacity: var(--scroll);
   transform:
-    translate(94px, -94px)
+    rotate(var(--angle))
+    scale(calc(70% + 30% * var(--scroll)))
+    translate(200px, -300px)
     translate(calc(-50px * (1 - var(--scroll))), calc(50px * (1 - var(--scroll))));
 }
