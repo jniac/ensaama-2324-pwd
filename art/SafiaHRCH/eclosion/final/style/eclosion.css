@@ -1,0 +1,19 @@
+
+.sah {
+  --scroll: 0;
+}
+
+.sah .core {
+  opacity: var(--scroll);
+  transform: 
+  scale(calc(80% + 15% * var(--scroll)));
+}
+
+.sah .petal-a {
+  /* opacity: var(--scroll); */
+  transform: 
+  translate(94px, -94px)
+  translate(
+    calc(-50px * (1 - var(--scroll))), 
+    calc(50px * (1 - var(--scroll))));
+}
