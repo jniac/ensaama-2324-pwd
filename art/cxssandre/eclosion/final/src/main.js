@@ -2,4 +2,4 @@ import { initEclosion } from '../../../../../common-projects/eclosion/src/eclosi
 import { replaceByExternalRef } from '../../../../../common-projects/eclosion/src/tools.js'
 
 replaceByExternalRef()
-initEclosion('jnc')
+initEclosion('cxs')
