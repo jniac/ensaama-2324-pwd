@@ -1,4 +1,4 @@
-import { clamp01 } from '../../common-resources/js/math-utils.js'
+import { clamp01 } from '../../../common-resources/js/math-utils.js'
 
 /**
  * @type {Map<string, { callbacks: ((time: number) => void)[] }>}
@@ -47,3 +47,13 @@ export function initBudScroll(identifier, onScrollChange) {
 
   map.set(selector, { callbacks })
 }
+
+
+
+
+
+
+
+
+
+

@@ -1,5 +1,5 @@
-import { initBudScroll } from '../../../../../common-projects/eclosion/scroll.js'
-import { replaceByExternalRef } from '../../../../../common-projects/eclosion/tools.js'
+import { initBudScroll } from '../../../../../common-projects/eclosion/src/scroll.js'
+import { replaceByExternalRef } from '../../../../../common-projects/eclosion/src/tools.js'
 import { easings, mapRange } from '../../../../../common-resources/js/math-utils.js'
 import { clonePetalA, clonePetalB, clonePetalC } from './clonePetals.js'
 import { initFullsizeSvg } from './fullsizeSvg.js'

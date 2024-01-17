@@ -1,5 +1,5 @@
-import { initBudScroll } from '../../../../../common-projects/eclosion/scroll.js'
-import { range, svgFactory } from '../../../../../common-projects/eclosion/tools.js'
+import { initBudScroll } from '../../../../../common-projects/eclosion/src/scroll.js'
+import { range, svgFactory } from '../../../../../common-projects/eclosion/src/tools.js'
 import { easings, inverseLerp, lerp } from '../../../../../common-resources/js/math-utils.js'
 
 const svg = document.querySelector('svg.fullsize')
