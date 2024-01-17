@@ -1,3 +1,5 @@
+
 .bud .lds .petal {
   opacity: var(--time);
+  transform: translateX(calc(100 * var(--time)))
 }
