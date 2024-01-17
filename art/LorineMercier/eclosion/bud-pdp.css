@@ -1,4 +1,4 @@
-.bud .pdp .Polygon2.svg{
-
-  
+.bud.pdp .petale {
+  opacity: var(--time);
+  transform: translateY(calc(190px * var(--time)));
 }
