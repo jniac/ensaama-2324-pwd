@@ -11,5 +11,6 @@
 .kev .petal-a {
   opacity: var(--scroll);
   transform:
-    translate(94px, -94px);
+    translate(94px, -94px)
+    translate(calc(-50px * (1 - var(--scroll))), calc(50px * (1 - var(--scroll))));
 }
