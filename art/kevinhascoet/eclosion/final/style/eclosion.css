@@ -4,7 +4,7 @@
 
 .kev .core {
   transform:
-    scale(calc(3,6 * var(--scroll)));
+    rotate(calc(90deg * var(--scroll)));
 }
 
 .kev .petal-a {
