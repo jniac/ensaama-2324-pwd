@@ -1,3 +1,35 @@
-.petal-a {
-  
+.petals {
+    mix-blend-mode: screen;
+}
+
+.bud svg {
+
+}
+
+.petal-1 > svg {
+    fill: #b41125;
+}
+.petal-2 > svg {
+    fill: #c80f0f;
+}
+.petal-3 > svg {
+    fill: #b13014;
+}
+
+.rse {
+    --scroll: 0;
+    --scroll-2: 2;
+}
+
+.rse .petals {
+    --angle: 0deg;
+    /* opacity: var(--scroll); */
+    transform: 
+        rotate(var(--angle))
+        rotate(-30deg)
+        scale(calc(1 + 1 * var(--scroll)))
+        /* scale(calc(70% + 30% * var(--scroll))) */
+        translateX(calc(60px * var(--scroll)))
+        rotate(30deg)
+        ;
 }
