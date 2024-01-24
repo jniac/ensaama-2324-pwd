@@ -1,0 +1,33 @@
+.lds {
+
+  --scroll: 0;
+}
+
+.lds .core {
+  opacity: var(--scroll);
+  transform: 
+  scale(calc(60% + 40% * var(--scroll)));
+}
+
+.lds .petal-a {
+
+  --angle: 0deg;
+  opacity: var(--scroll);
+  transform:
+    rotate(var(--angle))
+    scale(calc(40% + 60% * var(--scroll))) 
+    translate(300px)
+    translateX(calc(-50px * (1 - var(--scroll))));
+}
+
+.lds .petal-b {
+
+  --angle: 0deg;
+  opacity: var(--scroll);
+  transform:
+  rotate(var(--angle))
+  scale(calc(50% + 50% * var(--scroll))) 
+  translate(300px, -300px)
+  translate(calc(-50px * (1 - var(--scroll))), 
+  calc(50px * (1 - var(--scroll))));
+}

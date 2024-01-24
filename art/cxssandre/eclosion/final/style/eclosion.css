@@ -1,0 +1,24 @@
+.cxs{
+  --scroll: 0;
+}
+
+.cxs .core {
+  opacity: var(--scroll);
+  transform: 
+    scale(calc(0.9 + 0.1 * var(--scroll)));
+}
+
+.cxs .petal {
+  opacity: var(--scroll);
+  transform: 
+    translate(94px, -94px)
+    translate(
+    calc(-50px * (1 - var(--scroll))),
+    calc(50px * (1 - var(--scroll))));
+}
+
+.cxs .sepal {
+  opacity: var(--scroll);
+  transform: 
+    translate(50px, -160px);
+}

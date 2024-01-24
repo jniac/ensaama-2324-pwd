@@ -1,0 +1,30 @@
+.gra{
+  --scroll:0;
+}
+
+.gra .core{
+  opacity: var(--scroll);
+  transform: 
+    scale(calc( 0.9 + 0.15 * var(--scroll)));
+}
+
+.gra .petal-a{
+  --angle: 0deg;
+  opacity: var(--scroll);
+  transform:
+    rotate(var(--angle))
+    translateX(calc(50px + 150px * var(--scroll)))
+    rotate(calc(var(--scroll) * 360deg));
+}
+
+.gra .petal-b{
+  --angle: 0deg;
+  opacity: var(--scroll);
+  transform:
+    rotate(var(--angle))
+    __
+    +                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+    translateX(calc(50px + 150px * var(--scroll)))
+    rotate(45deg)
+    rotate(calc(var(--scroll) * 360deg));
+}  
