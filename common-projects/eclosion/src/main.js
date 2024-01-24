@@ -15,7 +15,7 @@ async function loadEclosion(person) {
   
   const link = document.createElement('link')
   link.rel = 'stylesheet'
-  link.href = `../${folder}/style/style.css`
+  link.href = `${folder}/style/style.css`
   
   document.head.append(link)
 
@@ -26,6 +26,7 @@ async function loadEclosion(person) {
   
   document.body.append(div)
   
+  // main.js is one folder lower than index.html, so we need to go up one level more.
   import(`../${folder}/src/main.js`)
 }
 
