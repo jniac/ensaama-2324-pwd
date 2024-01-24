@@ -1,3 +1,8 @@
-import { initBudScroll } from '../../../common-projects/eclosion/scroll.js'
+import { initEclosion } from "../../../../../common-projects/eclosion/src/eclosion.js";
+import { replaceByExternalRef } from "../../../../../common-projects/eclosion/src/tools.js";
+import { clonePetalA } from './clonePetalA.js'
 
-initBudScroll('rse')
+replaceByExternalRef();
+initEclosion("rse");
+
+clonePetalA()

@@ -14,5 +14,7 @@
     rotate(var(--angle))
     scale(calc(70% + 30% * var(--scroll)))
     translate(200px, -300px)
-    translate(calc(-50px * (1 - var(--scroll))), calc(50px * (1 - var(--scroll))));
+    translate(calc(-50px * (1 - var(--scroll))), calc(50px * (1 - var(--scroll))))
+    rotate(calc(60deg * (1 - var(--scroll))))
+    rotate(210deg);
 }
