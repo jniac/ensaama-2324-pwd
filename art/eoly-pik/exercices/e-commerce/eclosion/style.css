@@ -10,10 +10,29 @@ section {
 }
 
 section:nth-child(1) {
-  background-color: brown;
+  background-color: rgb(117, 117, 110);
 }
 
 section:nth-child(2) {
-  background-color: olive;
+  background-color: rgb(30, 30, 30);
   align-items: flex-end;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay .bud {
+
+  --size: 800px;
+  flex: 0 0 var(--size);
+  height: var(--size);
+  border: solid 1px rgb(54, 56, 48);
 }

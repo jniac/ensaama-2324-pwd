@@ -6,6 +6,8 @@ Demo:
 - [split page](https://jniac.github.io/ensaama-2324-pwd/art/jniac/exercices/split/)
 - [eclosion 10/01/24](https://jniac.github.io/ensaama-2324-pwd/art/jniac/eclosion/v01-10-a/)
 
+## [eclosion project](https://jniac.github.io/ensaama-2324-pwd/common-projects/eclosion/)
+
 ## Find the number
 
 <a href="https://jniac.github.io/ensaama-2324-pwd/art/Graigouzzz/exercice/find_the_number_final/">
