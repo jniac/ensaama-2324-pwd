@@ -46,7 +46,7 @@ students:
   - Safia
   - Harireche
   github: SafiaHRCH
-  prefix: saf
+  prefix: sah
 
 - names:
   - Kévin
@@ -82,7 +82,7 @@ students:
   - Lorine
   - Mercier
   github: LorineMercier
-  prefix: lor
+  prefix: pdp
 
 - names:
   - Raphaël

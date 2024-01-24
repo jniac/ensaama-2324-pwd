@@ -1,0 +1,4 @@
+.bud.cxs .petal-a{
+  opacity: var(--time);
+  transform: translateX(calc(100px * var(--time)));
+}

@@ -6,6 +6,11 @@ body, body * {
   font-family: inherit; /* Forcer l'usage d'une typo unique */
 }
 
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /* Enlever les "ascenseurs" (windows). */
 *::-webkit-scrollbar {
   display: none;

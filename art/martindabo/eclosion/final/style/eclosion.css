@@ -1,0 +1,23 @@
+.mar {
+  --scroll: 0;
+}
+
+.mar .core {
+  opacity: var(--scroll);
+  transform: scale(calc(80% + 20% * (var(--scroll))));
+}
+
+.mar .petal-a {
+  --angle: 0deg;
+  opacity: var(--scroll);
+  transform:
+    rotate(var(--angle))
+    scale(calc(70% + 30% * var(--scroll)))
+    translate(200px, -200px)
+    translate(
+      calc(-50px * (1 - var(--scroll))),
+      calc(50px * (1 - var(--scroll))))
+      rotate(calc(100deg * (1 - var(--scroll))))
+      rotate(16deg);
+}
+
