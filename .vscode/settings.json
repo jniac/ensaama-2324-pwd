@@ -1,5 +1,6 @@
 {
   "liveServer.settings.port": 5500,
   "editor.tabSize": 2,
-  "editor.indentSize": "tabSize"
+  "editor.indentSize": "tabSize",
+  "CodeGPT.apiKey": "CodeGPT Plus Beta"
 }
