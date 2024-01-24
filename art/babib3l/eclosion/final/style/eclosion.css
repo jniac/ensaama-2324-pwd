@@ -1,15 +1,15 @@
 
-.jnc {
+.b3l {
   --scroll: 0;
 }
 
-.jnc .core {
+.b3l .core {
   opacity: var(--scroll);
   transform:
     scale(calc(70% + 30% * var(--scroll)));
 }
 
-.jnc .petal-a {
+.b3l .petal-a {
   --angle: 0deg;
   --delta: 110px;
   opacity: var(--scroll);
