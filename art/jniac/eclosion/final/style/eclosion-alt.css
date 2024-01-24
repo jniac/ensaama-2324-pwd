@@ -1,0 +1,26 @@
+
+.jnc {
+  --scroll: 0;
+  --scroll-1: 0;
+  --scroll-2: 0;
+}
+
+.jnc .core {
+  opacity: var(--scroll-1);
+  transform:
+    rotate(calc(-20deg * (1 - var(--scroll-1))))
+    scale(calc(70% + 30% * var(--scroll-1)));
+}
+
+.jnc .petal-a {
+  --angle: 0deg;
+  opacity: var(--scroll-2);
+  transform: 
+    rotate(calc(20deg * (1 - var(--scroll-2))))
+    rotate(var(--angle))
+    scale(calc(70% + 30% * var(--scroll-2)))
+    translate(94px, -94px)
+      translate(
+        calc(-50px * (1 - var(--scroll-2))), 
+        calc(50px * (1 - var(--scroll-2))));
+}
