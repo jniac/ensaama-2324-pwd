@@ -1,0 +1,18 @@
+.pf7 .core {
+  opacity: var(--scroll);
+  transform:
+    scale(calc(90% + 10% * var(--scroll)))
+
+}
+
+.pf7 .petal-a {
+  --angle: 0deg;
+  opacity: var(--scroll);
+  transform:
+    rotate(var(--angle))
+    translate(94px, -94px)
+    translate(
+      calc(-50px * (1 - var(--scroll))),
+      calc(50px * (1 - var(--scroll))));
+    
+}
