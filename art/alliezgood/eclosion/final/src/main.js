@@ -3,5 +3,5 @@ import { replaceByExternalRef } from '../../../../../common-projects/eclosion/sr
 import { clonePetalA } from './clonePetals.js'
 
 replaceByExternalRef()
-initEclosion('jnc')
+initEclosion('all')
 clonePetalA()

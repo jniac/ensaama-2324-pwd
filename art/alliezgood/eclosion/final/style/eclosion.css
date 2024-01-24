@@ -4,6 +4,7 @@
 }
 
 .all .core {
+  z-index: 1;
   opacity: var(--scroll);
   transform:
     scale(calc(70% + 30% * var(--scroll)));
