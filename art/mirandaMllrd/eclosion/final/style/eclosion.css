@@ -10,11 +10,29 @@
 
 .mir .petal-a {
   --angle: 0deg;
+  --radius: 100px;
   opacity: var(--scroll);
   transform:
+    scale(calc(75% + 25% * var(--scroll)))
     rotate(var(--angle))
-    translate(94px,-94px)
-    translate(
-      calc(-50px * (1 - var(--scroll))),
-      calc(50px * (1 - var(--scroll))));
+    translateX(var(--radius))
+    translateX(calc(50px * (1 - var(--scroll))))
+    scale(calc(100% * var(--scroll)))
+    rotate(calc(var(--scroll) * 45deg));
 }
+
+.mir .petal-a.mdr {
+  filter: hue-rotate(180deg);
+  transform:
+    scale(calc(75% + 25% * var(--scroll)))
+    rotate(var(--angle))
+    translateX(var(--radius))
+    translateX(calc(50px * (1 - var(--scroll))))
+    scale(calc(100% * var(--scroll)))
+    rotate(calc(var(--scroll) * -45deg));
+}
+
+.mir .petal-a.ext {
+  filter: hue-rotate(70deg);
+}
+
