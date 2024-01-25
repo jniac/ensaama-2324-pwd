@@ -48,6 +48,7 @@ async function loadEclosion(person, folderName = 'final') {
 
   const div = document.createElement('div')
   div.className = doc.body.className
+  div.style.setProperty('visibility', 'hidden')
   div.append(doc.body.querySelector('main'))
   div.append(doc.body.querySelector('.overlay'))
   
@@ -73,24 +74,28 @@ async function loadEclosion(person, folderName = 'final') {
   return { destroy }
 }
 
-const foo = [
+const loadEntries = [
   [data.teacher, 'final'],
   [data.teacher, 'final-2'],
   [data.teacher, 'final-3'],
 ]
 
 /** @type {Map<number, { destroy: () => void }>} */
-const eclosions = new Map()
+const loadedEclosions = new Map()
 
 scrollManager.onRequireEclosion(index => {
-  index = positiveModulo(index, foo.length)
-  loadEclosion(...foo[index])
-  .then(eclosion => eclosions.set(index, eclosion))
+  // We cannot load the eclosion right now, so we have to push the index in a 
+  // queue that will be retrieved later through the initEclosion() function.
+  instanceManager.indexQueue.push(index)
+
+  const loadIndex = positiveModulo(index, loadEntries.length)
+  loadEclosion(...loadEntries[loadIndex])
+    .then(eclosion => loadedEclosions.set(loadIndex, eclosion))
 })
 
 scrollManager.onDisposeEclosion(index => {
-  index = positiveModulo(index, foo.length)
-  eclosions.get(index).destroy()
+  const loadIndex = positiveModulo(index, loadEntries.length)
+  loadedEclosions.get(loadIndex).destroy()
 })
 
 scrollManager.noMinMax()

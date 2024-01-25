@@ -12,15 +12,14 @@ import { clamp, clamp01 } from '../../../common-resources/js/math-utils.js'
 
 
 class EclosionInstanceManager {
-  eclosionCount = 0
-  
   /** @type {Eclosion[]} */
   eclosions = []
 
-  getNewEclosionIndex() {
-    return this.eclosionCount++
+  indexQueue = []
+
+  getNextIndex() {
+    return this.indexQueue.shift() ?? 0
   }
-  
   
   getEclosion(identifier) {
     return this.eclosions.find(e => e.identifier === identifier)
@@ -54,7 +53,7 @@ export function initEclosion(identifier, onScrollChange) {
     return
   }
 
-  const index = instanceManager.getNewEclosionIndex()
+  const index = instanceManager.getNextIndex()
 
   /** @type {HTMLElement} */
   const element = document.querySelector(`.eclosion.${identifier}`)
@@ -95,6 +94,13 @@ export function initEclosion(identifier, onScrollChange) {
   instanceManager.registerEclosion(eclosion)
 
   update(0)
+
+  // Trying to prevent blinking on load.
+  window.requestAnimationFrame(() => {
+    window.requestAnimationFrame(() => {
+      element.style.removeProperty('visibility')
+    })
+  })
 }
 
 
