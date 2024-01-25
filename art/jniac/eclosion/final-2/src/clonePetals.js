@@ -1,7 +1,6 @@
-import { bud } from './main.js'
 
 export function clonePetalA() {
-  const petal = bud.querySelector('.petal-a')
+  const petal = document.querySelector('.jnc-final-2 .petal-a')
   for (let i = 1; i < 6; i++) {
     const clone = petal.cloneNode(true)
     clone.style.setProperty('--angle', `${60 * i}deg`)
@@ -10,7 +9,7 @@ export function clonePetalA() {
 }
 
 export function clonePetalB() {
-  const petal = bud.querySelector('.petal-b')
+  const petal = document.querySelector('.jnc-final-2 .petal-b')
   for (let i = 1; i < 12; i++) {
     const clone = petal.cloneNode(true)
     clone.style.setProperty('--angle', `${30 * i}deg`)
@@ -19,7 +18,7 @@ export function clonePetalB() {
 }
 
 export function clonePetalC() {
-  const petal = bud.querySelector('.petal-c')
+  const petal = document.querySelector('.jnc-final-2 .petal-c')
   for (let i = 1; i < 3; i++) {
     const clone = petal.cloneNode(true)
     clone.style.setProperty('--angle', `${120 * i}deg`)

@@ -2,9 +2,9 @@ import { initEclosion } from '../../../../../common-projects/eclosion/src/eclosi
 import { range, svgFactory } from '../../../../../common-projects/eclosion/src/tools.js'
 import { easings, inverseLerp, lerp } from '../../../../../common-resources/js/math-utils.js'
 
-const svg = document.querySelector('svg.fullsize')
-  
 function addRadialLines(count) {
+  const svg = document.querySelector('svg.fullsize')
+    
   const lines = range(count, () => {
     const line = document.createElementNS('http://www.w3.org/2000/svg', 'line')
     line.setAttributeNS(null, 'stroke', '#fff6')
@@ -38,6 +38,8 @@ function addRadialTriangles({
   radiusMin = 30,
   radiusMax = 600,
 } = {}) {
+  const svg = document.querySelector('svg.fullsize')
+    
   const triPathData = svgFactory.path.polygon(3, 4)
   const triPathData2 = svgFactory.path.polygon(3, 8)
 
@@ -78,17 +80,18 @@ function addRadialTriangles({
   initEclosion('jnc-final-2', update)
 }
 
+function fullsize() {
+  const w = window.innerWidth, h = window.innerHeight
+  for (const svg of document.querySelectorAll('svg.fullsize')) {
+    svg.setAttributeNS(null, 'viewBox', `${-w / 2} ${-h / 2} ${w} ${h}`)
+  }
+}
+
+window.addEventListener('resize', fullsize)
 
 export function initFullsizeSvg() {
   addRadialLines(12 * 2)
   addRadialTriangles()
   addRadialTriangles({ rowCount: 3, turnOffset: 0, radiusMax: 500 })
-
-  const resize = () => {
-    const w = window.innerWidth, h = window.innerHeight
-    svg.setAttributeNS(null, 'viewBox', `${-w / 2} ${-h / 2} ${w} ${h}`)
-  }
-
-  resize()
-  window.addEventListener('resize', resize)
+  fullsize()
 }

@@ -69,3 +69,7 @@ export const mapRange = (x, inMin, inMax, outMin, outMax, easing = easings.linea
   }
   return lerp(outMin, outMax, easing(inverseLerp(inMin, inMax, x)))
 }
+
+export const positiveModulo = (x, n) => {
+  return ((x % n) + n) % n
+} 

@@ -5,7 +5,7 @@ import { clonePetalA } from './clonePetals.js'
 export async function main()
 {
   await replaceByExternalRef()
-  initEclosion('jnc')
+  initEclosion('jnc-final-3')
   clonePetalA()
 }
 
