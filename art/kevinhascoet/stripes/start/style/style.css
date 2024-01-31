@@ -5,6 +5,12 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+button {
+  font-size: 2rem;
+  border: none;
+  background-color: #fff5;
+}
+
 section {
   height: 100vh;
   display: flex;
@@ -18,19 +24,19 @@ section.hidden > div {
   transform: scaleY(0)
 }
 
-section > div:nth-child(1) {
+section > div:nth-child(3n + 1) {
   background-color: #DBAE00;
   transition: all 1s cubic-bezier(1, -0.01, 0, 1.01);
 }
 
-section > div:nth-child(2) {
+section > div:nth-child(3n + 2) {
   background-color: #0B78DC;
-  transition: all 1s cubic-bezier(1, -0.41, 0, 1.41);
+  transition: all 1s cubic-bezier(1, -1.01, 0, 1.01);
 }
 
-section > div:nth-child(3) {
+section > div:nth-child(3n + 3) {
   background-color: #272F9C;
-  transition: all 1s cubic-bezier(1, -0.81, 0, 1.81);
+  transition: all 1s cubic-bezier(1, -2.01, 0, 2.01);
 }
 
 .overlay {
