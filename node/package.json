@@ -9,6 +9,7 @@
   "author": "jniac",
   "license": "ISC",
   "dependencies": {
+    "fs-extra": "^11.2.0",
     "js-yaml": "^4.1.0"
   }
 }

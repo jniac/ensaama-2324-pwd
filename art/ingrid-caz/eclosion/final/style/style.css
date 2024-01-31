@@ -7,23 +7,21 @@
   justify-content: center;
   align-items: center;
   font-size: 4em;
-  color: aliceblue;
   padding: 2rem;
 }
 
 .ing main section:nth-child(1){
-  background-color: #F49C88;
+  background-color: #f57a5e;
 }
 
 .ing main section:nth-child(2) {
-  background-color: #f57a5e;
+  background-color: #F49C88;
 }
 
 .ing .overlay .bud {
   --size: 800px;
   flex: 0 0 var(--size);
   height: var(--size);
-  border: solid 1px #fff6;
 }
 
 .ing .overlay .bud .layer {
