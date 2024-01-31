@@ -8,14 +8,78 @@
     scale(calc(80% + 20% * var(--scroll)));
 }
 
-.par .petal-a {
+.par .core2 {
   --angle : 0deg;
   opacity: var(--scroll);
   transform: 
-  rotate(var(--angle))
-  scale(calc(70% +30% * var(--scroll)))
-  translate(94px, -94px);
-  translate:(
-    calc(-50px * (1 - var(--scroll))),
-    calc(50px * (1 - var(--scroll))));
+    scale(calc(80% + 20% * var(--scroll)))
+    rotate(calc(var(--scroll) * 10deg));
+}
+
+.par .core3 {
+  --angle : 0deg;
+  opacity: var(--scroll);
+  transform: 
+    scale(calc(80% + 20% * var(--scroll)))
+    rotate(calc(var(--scroll) * -20deg));
+}
+
+
+.par .layered > * {
+  position: absolute;
+}
+
+.par .petal-a {
+  --angle : 0deg;
+  --radius: calc(100px + 100px * var(--scroll));
+  opacity: var(--scroll);
+  transform: 
+    rotate(var(--angle))
+    scale(calc(70% + 30% * var(--scroll)))
+    translate(var(--radius), 0)
+    rotate(calc(var(--scroll) * 180deg));
+}
+
+.par .petal-b {
+  --angle : 0deg;
+  --radius: calc(100px + 100px * var(--scroll));
+  opacity: var(--scroll);
+  transform: 
+    rotate(var(--angle))
+    rotate(45deg)
+    scale(calc(70% + 30% * var(--scroll)))
+    translate(var(--radius), 0)
+    rotate(calc(var(--scroll) * 110deg));
+}
+
+.par .petal-c {
+  --angle : 10deg;
+  --radius: calc(100px + 100px * var(--scroll));
+  opacity: var(--scroll);
+  transform: 
+    rotate(var(--angle))
+    rotate(20deg)
+    scale(calc(20% + 30% * var(--scroll)))
+    translate(var(--radius), 0)
+    rotate(calc(var(--scroll) * -110deg));
+}
+
+.par .core4 {
+  position:absolute;
+  scale: 15%;
+  -webkit-animation: smooth 7s ease-in;
+  animation: smooth 7s ease-in;
+}
+
+.par .core5 {
+  position:absolute;
+  scale: 15%;
+  -webkit-animation: smooth 7s ease-in;
+  animation: smooth 7s ease-in;
+}
+
+@keyframes smooth {
+  0% { opacity: 0;}
+  65% { opacity: 0;}
+  100% { opacity: 1;}
 }

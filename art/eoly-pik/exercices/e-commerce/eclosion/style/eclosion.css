@@ -1,0 +1,58 @@
+.eol {
+
+  --scroll: 0;
+}
+
+.eol .core {
+  opacity: var(--scroll);
+  transform: 
+  scale(calc(50% + 50% * var(--scroll)));
+}
+
+.eol .petal-a {
+
+  --angle: 0deg;
+  opacity: var(--scroll);
+  transform:
+    rotate(var(--angle))
+    scale(calc(50% + 50% * var(--scroll))) 
+    translate(300px,-400)
+    translate(calc(-50px * (1 - var(--scroll))), 
+    calc(50px * (1 - var(--scroll))));
+}
+
+.eol .petal-b {
+
+  --angle: 0deg;
+  opacity: var(--scroll);
+  transform:
+  rotate(var(--angle))
+  scale(calc(50% + 50% * var(--scroll))) 
+  translate(0px, -100px)
+  translate(calc(-50px * (1 - var(--scroll))), 
+  calc(50px * (1 - var(--scroll))));
+}
+
+.eol .petal-c {
+
+  --angle: 0deg;
+  opacity: var(--scroll);
+  transform:
+  rotate(var(--angle))
+  scale(calc(50% + 50% * var(--scroll))) 
+  translate(0px, -230px)
+  translate(calc(-50px * (1 - var(--scroll))), 
+  calc(50px * (1 - var(--scroll))));
+}
+
+.eol .petal-d {
+
+  --angle: 0deg;
+  opacity: var(--scroll);
+  transform:
+  rotate(var(--angle))
+  scale(calc(50% + 50% * var(--scroll))) 
+  translate(0px, 200px)
+  translate(calc(-50px * (1 - var(--scroll))), 
+  calc(50px * (1 - var(--scroll))));
+}
