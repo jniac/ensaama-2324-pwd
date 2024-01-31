@@ -9,6 +9,8 @@ button {
   font-size: 2rem;
   border: none;
   background-color: #fff5;
+  color: #0b0f49;
+  padding: 6px 32px;
 }
 
 section {
@@ -31,7 +33,7 @@ section > div:nth-child(3n + 1) {
 
 section > div:nth-child(3n + 2) {
   background-color: #0B78DC;
-  transition: all 1s cubic-bezier(1, -1.01, 0, 1.01);
+  transition: all 1s cubic-bezier(1, -1.01, 0, 1.51);
 }
 
 section > div:nth-child(3n + 3) {
