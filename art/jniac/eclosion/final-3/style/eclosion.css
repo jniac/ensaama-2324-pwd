@@ -1,0 +1,28 @@
+
+.jnc-final-3 {
+  --scroll: 0;
+}
+
+.jnc-final-3 .core {
+  opacity: var(--scroll);
+  transform:
+    scale(calc(70% + 30% * var(--scroll)));
+}
+
+.jnc-final-3 .petal-a:nth-child(2n+1) path {
+  fill: red;
+  stroke: none;
+}
+
+.jnc-final-3 .petal-a {
+  --angle: 0deg;
+  --delta: 110px;
+  opacity: var(--scroll);
+  transform: 
+    rotate(var(--angle))
+    scale(calc(70% + 30% * var(--scroll)))
+    translate(var(--delta), calc(var(--delta) * -1))
+      translate(
+        calc(-50px * (1 - var(--scroll))), 
+        calc(50px * (1 - var(--scroll))));
+}

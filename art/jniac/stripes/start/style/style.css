@@ -1,0 +1,52 @@
+@import url(../../../../../common-resources/reset.css);
+@import url(https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap);
+
+body {
+  font-family: 'Fira Code', monospace;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  background-color: rgb(43, 110, 226);
+}
+
+section > div {
+  flex: 1 0 0;
+  transform-origin: 50% 100%;
+  background-color: rgb(86, 169, 77);
+}
+
+section.hidden > div {
+  transform: scaleY(0);
+}
+
+section > div:nth-child(2n) {
+  background-color: rgb(67, 133, 60);
+}
+
+section > div:nth-child(4n + 1) {
+  transition: transform 1s cubic-bezier(0.5, 0, 0.2, 1);
+}
+
+section > div:nth-child(4n + 2) {
+  transition: transform 1s cubic-bezier(0.6, 0, 0.2, 1);
+}
+
+section > div:nth-child(4n + 3) {
+  transition: transform 1s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+section > div:nth-child(4n + 4) {
+  transition: transform 1s cubic-bezier(0.8, 0, 0.2, 1);
+}
+
+.overlay {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  padding: 1em;
+
+  display: flex;
+  justify-content: center;
+}
