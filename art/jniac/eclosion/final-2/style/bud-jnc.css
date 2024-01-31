@@ -1,0 +1,66 @@
+
+.jnc-final-2.eclosion {
+  none{}
+
+  .overlay {
+    --accent-color-1: rgb(89, 255, 255);
+    --accent-color-2: #c38c3a;
+  }
+  
+  .bud {
+    border: none;
+  }
+  
+  .bud .g1 {
+    transform:
+      scale(.7)
+      rotate(calc(60deg * (1 - var(--scroll3))));
+  }
+  
+  .bud .core {
+    opacity: var(--scroll1);
+    transform:
+      scale(calc(.6 + .4 * var(--scroll1)));
+  }
+  
+  .bud .petal-a {
+    --angle: 0deg;
+    opacity: var(--scroll2);
+    transform:
+      rotate(var(--angle)) 
+      translateY(calc(360px * var(--scroll2)))
+      scale(.9)
+      scaleY(calc(.8 + .2 * var(--scroll2)));
+  }
+  
+  .bud .petal-a:nth-child(2n + 1) {
+    transform:
+      rotate(var(--angle)) 
+      translateY(calc(280px * var(--scroll2)))
+      scale(.82)
+      scaleY(var(--scroll2));
+  }
+  
+  .bud .petal-b {
+    --angle: 0deg;
+    opacity: var(--scroll4);
+    transform: 
+      rotate(var(--angle)) 
+      translateX(660px)
+      translateX(calc(100px * var(--scroll4)))
+      scale(calc(.8 + .18 * var(--scroll4)));
+  }
+  
+  .bud .petal-c {
+    --angle: 0deg;
+    opacity: var(--scroll5);
+    transform: 
+      rotate(var(--angle)) 
+      translateY(350px)
+      translateY(calc((1 - var(--scroll2)) * -100px))
+      translateY(calc((1 - var(--scroll5)) * -300px))
+      scale(calc(.5 + .5 * var(--scroll5)));
+  }
+} 
+
+

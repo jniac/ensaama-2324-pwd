@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>rse_stripes</title>
+        <link rel="stylesheet" href="./style/style.css" />
+    </head>
+    <body>
+        <main>
+            <div class="wrapper sectionX">
+                <section class="hidden">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </section>
+
+                <script>
+                    const section = document.querySelector("section");
+                    const divsToDup =
+                        document.querySelectorAll("section > div");
+
+                    const timesOfDuping = 2;
+
+                    for (let i = 0; i < timesOfDuping; i++) {
+                        for (const divToDup of divsToDup) {
+                            const divClone = divToDup.cloneNode();
+                            section.append(divClone);
+                        }
+                    }
+                </script>
+            </div>
+            <script>
+                const wrapperToClone = document.querySelector('div.wrapper.sectionX')
+                const main = document.querySelector('main')
+                const wrapperClone = wrapperToClone.cloneNode(true)
+                wrapperClone.classList.replace('sectionX', 'sectionY')
+                main.append(wrapperClone)
+            </script>
+        </main>
+
+        <div class="overlay">
+            <button class="toggle-button">CLIQUE</button>
+        </div>
+
+        <script type="module" src="./src/main.js"></script>
+    </body>
+</html>

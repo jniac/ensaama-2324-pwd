@@ -1,0 +1,51 @@
+@import url(../../../../../common-resources/reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+button {
+  font-size: 2rem;
+  border: none;
+  background-color: #fff5;
+  color: #0b0f49;
+  padding: 4px 32px;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+}
+
+section > div {
+  flex: 1 0 0;
+}
+
+section.hidden > div {
+  transform: scaleY(0)
+}
+
+section > div:nth-child(3n + 1) {
+  background-color: #DBAE00;
+  transition: all 1s cubic-bezier(1, -0.01, 0, 1.01);
+}
+
+section > div:nth-child(3n + 2) {
+  background-color: #0B78DC;
+  transition: all 1s cubic-bezier(1, -1.01, 0, 1.51);
+}
+
+section > div:nth-child(3n + 3) {
+  background-color: #272F9C;
+  transition: all 1s cubic-bezier(1, -2.01, 0, 2.01);
+}
+
+.overlay {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+}

@@ -28,9 +28,9 @@ export const data = await window
  * @param {Person} person
  * @returns {Promise<{ folder: string, doc: Document }>}
  */
-export async function fetchEclosion(person) {
+export async function fetchEclosion(person, folderName = 'final') {
 
-  const folder = `../../art/${person.github}/eclosion/final`
+  const folder = `../../art/${person.github}/eclosion/${folderName}`
   const index = `${folder}/index.html`
   const request = await window.fetch(index)
   const text = await request.text()
