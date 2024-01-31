@@ -2,8 +2,7 @@ import { initEclosion } from '../../../../../common-projects/eclosion/src/eclosi
 import { replaceByExternalRef } from '../../../../../common-projects/eclosion/src/tools.js'
 import { clonePetalA } from './clonePetals.js'
 
-export async function main()
-{
+export async function main() {
   await replaceByExternalRef()
   initEclosion('jnc')
   clonePetalA()
