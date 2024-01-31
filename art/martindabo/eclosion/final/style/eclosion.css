@@ -4,7 +4,8 @@
 
 .mar .core {
   opacity: var(--scroll);
-  transform: scale(calc(80% + 20% * (var(--scroll))));
+  transform: scale(calc(80% + 20% * (var(--scroll))))
+  rotate(calc(100deg * var(--scroll)));
 }
 
 .mar .petal-a {
