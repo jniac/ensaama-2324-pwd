@@ -1,0 +1,27 @@
+@import url(https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap);
+@import url(../../../common-resources/reset.css);
+
+:root {
+  font-family: 'Fira Code', monospace;
+  background-color: #111;
+}
+
+main {
+  &, & iframe {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+iframe {
+  transition: 
+    transform 1s cubic-bezier(0.25, 0, 0.25, 1),
+    opacity 1s cubic-bezier(0.75, 0, 0.25, 1);
+}
+
+iframe.hidden {
+  transform: scale(1.05);
+  opacity: 0;
+}

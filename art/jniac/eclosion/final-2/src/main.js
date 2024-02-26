@@ -7,9 +7,6 @@ import { initFullsizeSvg } from './fullsizeSvg.js'
 export async function main() {
   await replaceByExternalRef()
 
-  console.log('jnc-final-2')
-  console.log(document.querySelector('.jnc-final-2 main'))
-  
   // using dynamic imports, because here we are waiting for the external to be replaced before going further.
   const { updateBigCircles } = await import('./updateBigCircles.js')
   const { updateCoreTriangles } = await import('./updateCoreTriangles.js')

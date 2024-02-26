@@ -2,8 +2,6 @@ import { positiveModulo } from '../../../common-resources/js/math-utils.js'
 import { data, fetchEclosion } from './data.js'
 import { instanceManager, scrollManager } from './eclosion.js'
 
-const entries = [...data.students, data.teacher]
-
 const cache = new Map()
 
 /**
@@ -55,7 +53,9 @@ async function loadEclosion(person, folderName = 'final') {
   document.body.append(div)
   
   // main.js is one folder lower than index.html, so we need to go up one level more.
-  const { main } = await import(`../${folder}/src/main.js`)
+  const mainModule = await import(`../${folder}/src/main.js`)
+  console.log(mainModule.main)
+  const { main } = mainModule
 
   // main() is executed only if it has not been cached yet (when reloading the eclosion occurs).
   if (cache.has(identifier) === false) {
@@ -74,30 +74,33 @@ async function loadEclosion(person, folderName = 'final') {
   return { destroy }
 }
 
+// const loadEntries = [
+//   [data.teacher, 'final'],
+//   [data.teacher, 'final-2'],
+//   [data.teacher, 'final-3'],
+// ]
+
 const loadEntries = [
-  [data.teacher, 'final'],
-  [data.teacher, 'final-2'],
-  [data.teacher, 'final-3'],
+  ...data.students.map(s => [s, 'final']),
 ]
 
 /** @type {Map<number, { destroy: () => void }>} */
 const loadedEclosions = new Map()
 
-scrollManager.onRequireEclosion(index => {
-  // We cannot load the eclosion right now, so we have to push the index in a 
-  // queue that will be retrieved later through the initEclosion() function.
-  instanceManager.indexQueue.push(index)
+scrollManager
+  .onRequireEclosion(index => {
+    // We cannot load the eclosion right now, so we have to push the index in a 
+    // queue that will be retrieved later through the initEclosion() function.
+    instanceManager.indexQueue.push(index)
 
-  const loadIndex = positiveModulo(index, loadEntries.length)
-  loadEclosion(...loadEntries[loadIndex])
-    .then(eclosion => loadedEclosions.set(loadIndex, eclosion))
-})
+    const loadIndex = positiveModulo(index, loadEntries.length)
+    loadEclosion(...loadEntries[loadIndex])
+      .then(eclosion => loadedEclosions.set(loadIndex, eclosion))
+  })
+  .onDisposeEclosion(index => {
+    const loadIndex = positiveModulo(index, loadEntries.length)
+    loadedEclosions.get(loadIndex).destroy()
+  })
+  .noMinMax()
 
-scrollManager.onDisposeEclosion(index => {
-  const loadIndex = positiveModulo(index, loadEntries.length)
-  loadedEclosions.get(loadIndex).destroy()
-})
-
-scrollManager.noMinMax()
-scrollManager.updateScroll(0)
-
+Object.assign(window, { scrollManager })
