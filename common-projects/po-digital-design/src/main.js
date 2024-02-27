@@ -1,55 +1,67 @@
-import yaml from 'https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/+esm'
-
-/**
- * @type {{
- *   entries: {
- *     url: string
- *   }[]
- * }}
- */
-const data = await window
-  .fetch('data.yaml')
-  .then(response => response.text())
-  .then(yaml.load)
-
-const [iframe1, iframe2] = document.querySelectorAll('iframe')
-let current = 0
-
-function currentIframe() {
-  return current === 0 ? iframe1 : iframe2
-}
-
-function otherIframe() {
-  return current !== 0 ? iframe1 : iframe2
-}
-
-async function fadeIn(url) {
-  current = (current + 1) % 2
-  const iframe = currentIframe()
-  const parent = iframe.parentElement
-  iframe.classList.add('hidden')
-  iframe.remove()
-  parent.appendChild(iframe)
-  iframe.src = url
-  await wait(.1)
-  iframe.classList.remove('hidden')
-  await wait(1)
-  otherIframe().classList.add('hidden')
-}
-
-function wait(seconds) {
-  return new Promise(resolve => window.setTimeout(resolve, seconds * 1000))
-}
+import { currentDocument, fadeIn } from './iframes.js'
+import { wait } from './utils.js'
+import { data } from './data.js'
 
 await wait(.5)
+
+async function search() {
+  const input = currentDocument().querySelector('input')
+
+  await wait(2.5)
+
+  let min = 0, max = 100
+  const random = () => {
+    const r = Math.random()
+    const n = Math.floor(r * (max - min + 1)) + min
+    if (r < .5) {
+      min = n
+    } else {
+      max = n
+    }
+    return n
+  }
+
+  for (let i = 0; i < 5; i++) {
+    input.value = random()
+    input.dispatchEvent(new Event('input'))
+    await wait(.5)
+    input.dispatchEvent(new Event('change'))
+    await wait(1.5)
+  }
+}
+
+async function click() {
+  await wait(1)
+  
+  const divs = [...currentDocument().querySelectorAll('main > div')]
+  for (let i = 0; i < 5; i++) {
+    for (let j = 0; j < 3; j++) {
+      const div = divs[Math.floor(Math.random() * divs.length)]
+      div.click()
+    }
+    await wait(1)
+  }
+}
 
 let index = -1
 async function next() {
   index = (index + 1) % data.entries.length
-  fadeIn(data.entries[index].url)
+  const entry = data.entries[index]
+  
+  fadeIn(entry.url)
+  
+  await wait(1)
+  
+  if (entry.type === 'find-the-number') {
+    await search()
+  } else {
+    await click()
+  }
 
-  await wait(5)
+  await wait(1)
+  
   next()
 }
 
 next()
+
