@@ -33,7 +33,7 @@ async function search() {
 async function click() {
   await wait(1)
   
-  const divs = [...currentDocument().querySelectorAll('main > div')]
+  const divs = [...currentDocument().querySelectorAll('main div')]
   for (let i = 0; i < 5; i++) {
     for (let j = 0; j < 3; j++) {
       const div = divs[Math.floor(Math.random() * divs.length)]

@@ -20,7 +20,7 @@ function consolidateUrl(url) {
   // Remove leading and trailing slashes
   url = url.replace(/^\/|\/$/g, '')
 
-  if (/:\d$/.test(window.location.origin)) {
+  if (/\:\d{3,5}$/.test(window.location.origin)) {
     return `${window.location.origin}/${url}`
   }
   
