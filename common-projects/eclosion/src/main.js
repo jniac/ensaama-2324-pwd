@@ -54,9 +54,11 @@ async function loadEclosion(person, folderName = 'final') {
   
   // main.js is one folder lower than index.html, so we need to go up one level more.
   const mainModule = await import(`../${folder}/src/main.js`)
-  console.log(mainModule.main)
   const { main } = mainModule
-
+  if (main === undefined) {
+    console.warn(`No main() function found in ${folder}/src/main.js.`)
+  }
+  
   // main() is executed only if it has not been cached yet (when reloading the eclosion occurs).
   if (cache.has(identifier) === false) {
     cache.set(identifier, main)
@@ -80,9 +82,21 @@ async function loadEclosion(person, folderName = 'final') {
 //   [data.teacher, 'final-3'],
 // ]
 
-const loadEntries = [
-  ...data.students.map(s => [s, 'final']),
+const validWork = [
+  'cxssandre',
+  'ingrid-caz',
+  'kevinhascoet',
+  'ldssrt',
+  'martindabo',
+  'RSelaries',
+  'SafiaHRCH',
 ]
+
+const loadEntries = data.students
+  .filter(s => validWork.includes(s.github))
+  .map(s => [s, 'final'])
+
+loadEntries.push([data.teacher, 'final-2'])
 
 /** @type {Map<number, { destroy: () => void }>} */
 const loadedEclosions = new Map()
