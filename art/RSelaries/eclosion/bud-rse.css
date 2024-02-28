@@ -1,15 +1,17 @@
-.petals {
+.rse .petals {
     mix-blend-mode: screen;
 }
 
-.petal-1 > svg {
-    fill: #b41125;
-}
-.petal-2 > svg {
-    fill: #c80f0f;
-}
-.petal-3 > svg {
-    fill: #b13014;
+.rse {
+    .petal-1 > svg { fill: #b41125; }
+    .petal-2 > svg { fill: #c80f0f; }
+    .petal-3 > svg { fill: #b13014; }
+    /* .petal-4 > svg { fill: #b15014; }
+    .petal-5 > svg { fill: #9c3b11; }
+    .petal-6 > svg { fill: #c9440b; }
+    .petal-7 > svg { fill: #c93218; }
+    .petal-8 > svg { fill: #e2511c; }
+    .petal-9 > svg { fill: #b14a06; } */
 }
 
 .rse {
@@ -18,11 +20,11 @@
     --scroll-2: 2;
 }
 
-.rse .big-petal > svg {
+.rse .big-petals > svg {
+    transform-origin: center;
     transform: scale(var(--scroll-big));
     position: absolute;
     opacity: var(--scroll-2);
-    z-index: -1;
     scale: 3;
     fill: none;
     stroke: #fff;
@@ -45,3 +47,30 @@
         rotate(30deg)
     ;
 }
+
+.rse .petals1 {
+    --angle: 0deg;
+    /* opacity: var(--scroll); */
+    transform: 
+        rotate(var(--angle))
+        rotate(-30deg)
+        scale(calc(0.5 * var(--scroll-3)))
+        translateX(calc(calc(60px * 10) * var(--scroll-3)))
+        rotate(30deg)
+    ;
+}
+
+.rse .flowers {
+    position: absolute;
+    opacity: var(--scroll-3);
+    transform:
+        rotate(calc(var(--angle) + 30deg))
+        translateX(calc(300px * var(--scroll-3)))
+        scale(0.2)
+        rotate(30deg)
+    ;
+}
+
+.rse .big-petal-1 { transform: scale(calc(1) + calc(var() * 0.1)); }
+.rse .big-petal-2 { transform: scale(calc(1)); }
+.rse .big-petal-3 { transform: scale(calc(1)); }
