@@ -73,20 +73,113 @@
     transform: rotate(calc(var(--scroll-4) * var(--rotate-big)));
 }
 
-/* .rse .big-petal-1 {
-    transform:
-        rotate(calc(var(--scroll-4) * calc(15deg * 1)))
-        ;
-    }
-    
-    .rse .big-petal-2 {
-        transform:
-        rotate(calc(var(--scroll-4) * calc(15deg * 2)))
-        ;
-    }
-    
-    .rse .big-petal-3 {
-        transform:
-        rotate(calc(var(--scroll-4) * calc(15deg * 3)))
+.rse .big-petal-0 {
+    position: absolute;
+    z-index: 200;
+}
+
+.rse .big-petal-0 > svg{
+    stroke: #b13014;
+    stroke-width: 2px;
+}
+
+.triangles {
+    position: absolute;
+    --angle: 0deg;
+    transform: rotate(calc(60deg * var(--scroll)));
+}
+
+.triangles > svg {
+    z-index: 20;
+    mix-blend-mode: multiply;
+    rotate: var(--angle);
+    fill: #c80f0f;
+    opacity: calc(0.9 * var(--scroll-2));
+    transform: 
+        translateX(calc(450px * var(--scroll)))
+        scale(calc(6 * var(--scroll)))
     ;
-} */
+}
+
+.triangles1 > svg {
+    rotate: var(--angle);
+    fill: #fff;
+    opacity: calc(0.3 * var(--scroll-4));
+    stroke-width: 0.6px;
+    transform: 
+        translateX(calc(500px * var(--scroll)))
+        scale(calc(5 * var(--scroll)))
+    ;
+}
+
+.triangles2, .triangles3, .triangles4, .triangles5, .triangles6 {
+    position: absolute;
+    --angle: 0deg;
+    transform: rotate(calc(-60deg * var(--scroll)));
+}
+
+.triangles2 > svg {
+    z-index: 20;
+    mix-blend-mode: multiply;
+    rotate: var(--angle);
+    stroke: #fff;
+    stroke-width: 0.6;
+    opacity: calc(0.9 * var(--scroll-2));
+    transform: 
+        translateX(calc(500px * var(--scroll)))
+        scale(calc(6 * var(--scroll)))
+    ;
+}
+
+.triangles3 > svg {
+    z-index: 20;
+    mix-blend-mode: multiply;
+    rotate: var(--angle);
+    stroke: #fff;
+    stroke-width: 0.6;
+    opacity: calc(0.9 * var(--scroll-2));
+    transform: 
+        translateX(calc(calc(500px + calc(50px * var(--scroll-4))) * var(--scroll)))
+        scale(calc(6 * var(--scroll)))
+    ;
+}
+
+.triangles4 > svg {
+    z-index: 20;
+    mix-blend-mode: multiply;
+    rotate: var(--angle);
+    stroke: #fff;
+    stroke-width: 0.6;
+    opacity: calc(0.9 * var(--scroll-2));
+    transform: 
+        translateX(calc(calc(500px + calc(100px * var(--scroll-4))) * var(--scroll)))
+        scale(calc(6 * var(--scroll)))
+    ;
+}
+
+.triangles5 > svg {
+    z-index: 20;
+    mix-blend-mode: multiply;
+    rotate: var(--angle);
+    stroke: #fff;
+    stroke-width: 0.6;
+    opacity: calc(0.9 * var(--scroll-2));
+    transform: 
+        translateX(calc(calc(500px + calc(150px * var(--scroll-4))) * var(--scroll)))
+        scale(calc(6 * var(--scroll)))
+    ;
+}
+
+.triangles6 {
+    transform: rotate(calc(-60deg * var(--scroll-4)));
+}
+
+.triangles6 > svg {
+    position: absolute;
+    mix-blend-mode: color-dodge;
+    z-index: 30;
+    rotate: var(--angle);
+    opacity: calc(var(--scroll-5));
+    fill: #621010;
+    transform: translateX(calc(74px * var(--scroll-5)));
+}
