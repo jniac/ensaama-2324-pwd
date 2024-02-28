@@ -1,9 +1,9 @@
-import { initEclosion } from "../../../common-projects/eclosion/src/eclosion.js"
+import { initEclosion } from "../../../../common-projects/eclosion/src/eclosion.js"
 import {
     replaceByExternalRef,
     svgFactory,
-} from "../../../common-projects/eclosion/src/tools.js"
-import { clamp, inverseLerp } from "../../../common-resources/js/math-utils.js"
+} from "../../../../common-projects/eclosion/src/tools.js"
+import { clamp, inverseLerp } from "../../../../common-resources/js/math-utils.js"
 import { clonePetalA, clonePetalB, clonePetalC } from "./clonePetalA.js"
 
 function main() {
