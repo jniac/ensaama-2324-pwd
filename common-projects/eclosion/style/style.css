@@ -13,6 +13,10 @@
 
   none {}
 
+  .hidden {
+    visibility: hidden;
+  }
+
   main {
     height: 100vh;
     overflow: scroll;
@@ -47,7 +51,7 @@
   .bud {
     flex: 0 0 var(--bud-size);
     height: var(--bud-size);
-    border: solid 1px #fff6;
+    /* border: solid 1px #fff6; */
   }
 
   .layer {
