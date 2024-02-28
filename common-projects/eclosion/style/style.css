@@ -13,6 +13,31 @@
 
   none {}
 
+  button.fullscreen {
+    --size: 3em;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0.5em;
+
+    width: var(--size);
+    height: var(--size);
+    background-color: white;
+    border: none;
+
+    mask-image: url(../../../common-resources/assets/baseline-fullscreen.svg);
+    -webkit-mask-image: url(../../../common-resources/assets/baseline-fullscreen.svg);
+    mask-size: contain;
+    -webkit-mask-size: contain;
+
+    cursor: pointer;
+
+    :root:fullscreen & {
+      display: none;
+    }
+  }
+
   .hidden {
     visibility: hidden;
   }
