@@ -71,6 +71,6 @@
     ;
 }
 
-.rse .big-petal-1 { transform: scale(calc(1) + calc(var() * 0.1)); }
-.rse .big-petal-2 { transform: scale(calc(1)); }
-.rse .big-petal-3 { transform: scale(calc(1)); }
+.rse .big-petal-1 { transform: scale(calc(1 + calc(var(--scroll-4) * 0.03)) ); }
+.rse .big-petal-2 { transform: scale(calc(1 + calc(var(--scroll-4) * 0.06)) ); }
+.rse .big-petal-3 { transform: scale(calc(1 + calc(var(--scroll-4) * 0.09)) ); }
