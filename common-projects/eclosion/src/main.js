@@ -2,6 +2,10 @@ import { positiveModulo } from '../../../common-resources/js/math-utils.js'
 import { data, fetchEclosion } from './data.js'
 import { instanceManager, scrollManager } from './eclosion.js'
 
+document.querySelector('button.fullscreen').addEventListener('click', () => {
+  document.documentElement.requestFullscreen()
+})
+
 const cache = new Map()
 
 /**
