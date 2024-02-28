@@ -14,7 +14,7 @@ function main() {
     initEclosion("rse", (scroll) => {
         root.style.setProperty( "--scroll-1", inverseLerp(0.0, 0.5, scroll).toFixed(3) )
         root.style.setProperty( "--scroll-2", inverseLerp(0.485, 1, scroll).toFixed(3) )
-        root.style.setProperty( "--scroll-big", (inverseLerp(0.3, 1, scroll) * 2).toFixed(3) )
+        root.style.setProperty( "--scroll-big", (inverseLerp(0, 1, scroll) * 2).toFixed(3) )
         root.style.setProperty( "--scroll-3", (inverseLerp(0.7, 1, scroll)).toFixed(3) )
         root.style.setProperty( "--scroll-4", (inverseLerp(0.9, 1, scroll)).toFixed(3) )
     })

@@ -3,9 +3,18 @@
 }
 
 .rse {
-    .petal-1 > svg { fill: #b41125; }
-    .petal-2 > svg { fill: #c80f0f; }
-    .petal-3 > svg { fill: #b13014; }
+    .petal-1>svg {
+        fill: #b41125;
+    }
+
+    .petal-2>svg {
+        fill: #c80f0f;
+    }
+
+    .petal-3>svg {
+        fill: #b13014;
+    }
+
     /* .petal-4 > svg { fill: #b15014; }
     .petal-5 > svg { fill: #9c3b11; }
     .petal-6 > svg { fill: #c9440b; }
@@ -20,7 +29,7 @@
     --scroll-2: 2;
 }
 
-.rse .big-petals > svg {
+.rse .big-petals>svg {
     transform-origin: center;
     transform: scale(var(--scroll-big));
     position: absolute;
@@ -37,40 +46,47 @@
 
 .rse .petals {
     --angle: 0deg;
-    /* opacity: var(--scroll); */   
-    transform: 
-        rotate(var(--angle))
-        rotate(-30deg)
-        scale(calc(1 + 1 * var(--scroll-1)))
+    /* opacity: var(--scroll); */
+    transform:
+        rotate(var(--angle)) rotate(-30deg) scale(calc(1 + 1 * var(--scroll-1)))
         /* scale(calc(70% + 30% * var(--scroll-1))) */
-        translateX(calc(calc(60px * 0.5)* var(--scroll-1)))
-        rotate(30deg)
-    ;
+        translateX(calc(calc(60px * 0.5)* var(--scroll-1))) rotate(30deg);
 }
 
 .rse .petals1 {
     --angle: 0deg;
     /* opacity: var(--scroll); */
-    transform: 
-        rotate(var(--angle))
-        rotate(-30deg)
-        scale(calc(0.5 * var(--scroll-3)))
-        translateX(calc(calc(60px * 10) * var(--scroll-3)))
-        rotate(30deg)
-    ;
+    transform:
+        scale(calc(0.5 * var(--scroll-3))) translateX(calc(calc(60px * 10) * var(--scroll-3)));
 }
 
 .rse .flowers {
     position: absolute;
     opacity: var(--scroll-3);
     transform:
-        rotate(calc(var(--angle) + 30deg))
-        translateX(calc(300px * var(--scroll-3)))
-        scale(0.2)
-        rotate(30deg)
-    ;
+        rotate(calc(var(--angle) + 30deg)) translateX(calc(250px * var(--scroll-3))) scale(0.2) rotate(30deg);
 }
 
-.rse .big-petal-1 { transform: scale(calc(1 + calc(var(--scroll-4) * 0.03)) ); }
-.rse .big-petal-2 { transform: scale(calc(1 + calc(var(--scroll-4) * 0.06)) ); }
-.rse .big-petal-3 { transform: scale(calc(1 + calc(var(--scroll-4) * 0.09)) ); }
+.rse .big-petals {
+    --rotate-big: 0deg  ;
+
+    transform: rotate(calc(var(--scroll-4) * var(--rotate-big)));
+}
+
+/* .rse .big-petal-1 {
+    transform:
+        rotate(calc(var(--scroll-4) * calc(15deg * 1)))
+        ;
+    }
+    
+    .rse .big-petal-2 {
+        transform:
+        rotate(calc(var(--scroll-4) * calc(15deg * 2)))
+        ;
+    }
+    
+    .rse .big-petal-3 {
+        transform:
+        rotate(calc(var(--scroll-4) * calc(15deg * 3)))
+    ;
+} */
