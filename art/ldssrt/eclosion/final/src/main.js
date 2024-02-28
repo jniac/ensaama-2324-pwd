@@ -2,8 +2,12 @@ import { initEclosion } from '../../../../../common-projects/eclosion/src/eclosi
 import { replaceByExternalRef } from '../../../../../common-projects/eclosion/src/tools.js'
 import { clonePetalA, clonePetalB } from './clonePetals.js'
 
-replaceByExternalRef()
-initEclosion('lds')
+export function main() {
+  replaceByExternalRef()
+  initEclosion('lds')
+  
+  clonePetalA()
+  clonePetalB()
+}
 
-clonePetalA()
-clonePetalB()
+main()

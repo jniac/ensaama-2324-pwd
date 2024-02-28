@@ -2,11 +2,6 @@ import { initEclosion } from '../../../../../common-projects/eclosion/src/eclosi
 import { replaceByExternalRef } from '../../../../../common-projects/eclosion/src/tools.js'
 import { clonePetal } from './clonePetal.js'
 
-replaceByExternalRef()
-initEclosion('cxs')
-clonePetal()
-cloneSepal()
-
 export function cloneSepal() {
   const sepal = document.querySelector('.cxs .sepal');
   for (let i = 1; i < 15; i++) {
@@ -15,3 +10,12 @@ export function cloneSepal() {
     sepal.parentElement.append(clone);
   }
 }
+
+export function main() {
+  replaceByExternalRef()
+  initEclosion('cxs')
+  clonePetal()
+  cloneSepal()
+}
+
+main()
