@@ -1,6 +1,7 @@
 import { currentDocument, fadeIn } from './iframes.js'
 import { wait } from './utils.js'
 import { data } from './data.js'
+import './fullscreen.js'
 
 await wait(.5)
 
