@@ -70,3 +70,5 @@ input.onchange = () => {
     reactToUserNumber(userNumber)
   }
 }
+
+window.addEventListener()

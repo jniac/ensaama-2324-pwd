@@ -9,8 +9,10 @@
 }
 
 .cxs .petal {
+  --angle: 0deg;
   opacity: var(--scroll);
-  transform: 
+  transform:
+    rotate(var(--angle))
     translate(94px, -94px)
     translate(
     calc(-50px * (1 - var(--scroll))),
@@ -18,7 +20,12 @@
 }
 
 .cxs .sepal {
+  --angle: 0deg;
   opacity: var(--scroll);
-  transform: 
-    translate(50px, -160px);
+  transform:
+    rotate(var(--angle)) 
+    translate(90px, -160px)
+    translate(
+      calc(-50px * (1 - var(--scroll))),
+      calc(50px * (1 - var(--scroll))));
 }

@@ -8,7 +8,11 @@ Demo:
 - [split page](https://jniac.github.io/ensaama-2324-pwd/art/jniac/exercices/split/)
 - [eclosion 10/01/24](https://jniac.github.io/ensaama-2324-pwd/art/jniac/eclosion/v01-10-a/)
 
-## [eclosion project](https://jniac.github.io/ensaama-2324-pwd/common-projects/eclosion/)
+## eclosion project
+- [eclosion project](https://jniac.github.io/ensaama-2324-pwd/common-projects/eclosion/)
+
+## Portes Ouvertes
+- [po-digital-design](https://jniac.github.io/ensaama-2324-pwd/common-projects/po-digital-design/)
 
 ## Find the number
 
@@ -20,7 +24,8 @@ Demo:
 <img src="md/assets/Idssrt-FindTheNumber.jpg">
 </a>
 
-## [colorful project](https://jniac.github.io/ensaama-2324-pwd/common-projects/colorful/)
+## colorful project
+- [colorful project](https://jniac.github.io/ensaama-2324-pwd/common-projects/colorful/)
 
 ### Travaux
 <a href="https://jniac.github.io/ensaama-2324-pwd/art/mirandaMllrd/colorful/">

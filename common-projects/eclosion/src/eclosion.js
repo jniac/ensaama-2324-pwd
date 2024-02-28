@@ -187,23 +187,34 @@ class EclosionScrollManager {
     for (const callback of this.#onScrollCallbacks) {
       callback(this.#scroll)
     }
+  
+    for (const eclosion of instanceManager.eclosions) {
+      const relativeScroll = scrollManager.scroll - eclosion.index * 2
+      eclosion.update(relativeScroll)
+    }  
+  
+    return this
   }
 
   onScroll(callback) {
     this.#onScrollCallbacks.add(callback)
+    return this
   }
 
   onRequireEclosion(callback) {
     this.#onRequireCallbacks.add(callback)
+    return this
   }
 
   onDisposeEclosion(callback) {
     this.#onDisposeCallbacks.add(callback)
+    return this
   }
 
   noMinMax() {
     this.#scrollMin = -Infinity
     this.#scrollMax = Infinity
+    return this
   }
 }
 
@@ -214,10 +225,5 @@ window.addEventListener('wheel', event => {
 
   const delta = event.deltaY / window.innerHeight
   scrollManager.updateScroll(scrollManager.scroll + delta)
-  
-  for (const eclosion of instanceManager.eclosions) {
-    const relativeScroll = scrollManager.scroll - eclosion.index * 2
-    eclosion.update(relativeScroll)
-  }  
 })
 

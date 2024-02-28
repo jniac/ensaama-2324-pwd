@@ -1,4 +1,9 @@
+@import url(https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap);
 @import url(../../../common-resources/layout/spacing.css);
+
+:root {
+  font-family: 'Fira Code', monospace;  
+} 
 
 body {
   color: #333;
@@ -8,7 +13,7 @@ body {
 @media (prefers-color-scheme: dark) {
   body {
     color: white;
-    background-color: #333;
+    background-color: #171717;
   }
 }
 
