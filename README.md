@@ -24,6 +24,10 @@ Demo:
 <img src="md/assets/Idssrt-FindTheNumber.jpg">
 </a>
 
+<a href="https://jniac.github.io/ensaama-2324-pwd/art/cxssandre/exercices/find-the-numberv1-final/">
+<img src="md/assets/cxssandre_exercices_find-the-numberv1.jpg">
+</a>
+
 ## colorful project
 - [colorful project](https://jniac.github.io/ensaama-2324-pwd/common-projects/colorful/)
 
