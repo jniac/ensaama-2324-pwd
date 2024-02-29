@@ -1,32 +1,13 @@
 import { clamp01, easings, inverseLerp } from '../../../common-resources/js/math-utils.js'
-import { data } from '../../eclosion/src/data.js'
-import { getArtIndex, setArtCount } from './art-indices.js'
+import { getArtIndex } from './art-indices.js'
+import { eclosions } from './eclosion-data.js'
 import { moduleSvgDebug } from './moduleSvgDebug.js'
 
-const validWork = [
-  'cxssandre',
-  'ingrid-caz',
-  'kevinhascoet',
-  'ldssrt',
-  'martindabo',
-  'RSelaries',
-  'SafiaHRCH',
-]
-
-const eclosions = data.students
-  .filter(person => validWork.includes(person.github))
-  .map(person => ({ person, folder: 'final' }))
-
-eclosions.push({ person: data.teacher, folder: 'final' })
-
-setArtCount(eclosions.length)
-
 class ScrollModule {
-
   /**
    * How damn hard is it to write a function that does "only" this?
    * @param {number} scroll 
-   * @param {number} offset Represents the "position" of the modules.
+   * @param {number} offset Represents the "position" of the modules (which are desynchronized, to be ready to get in when the current get out).
    * @param {number} step Represents the "distance" a module covers, if there are 3 modules step should be 3, if there are 4 modules step should be 4, etc.
    * @param {number} scalar It's an ambiguous concept, if scalar is 1 (default value) modules are "edge to edge", if scalar is 2 modules are spaced by 1, if scalar is 3 modules are spaced by 2, etc.
    * @returns {number}
@@ -50,6 +31,7 @@ class ScrollModule {
 
   /** @type {import('../../eclosion/src/data.js').Person} */
   person = null
+  artIndex = -1
 
   constructor(offset, step, scalar, iframe) {
     this.offset = offset
@@ -68,15 +50,7 @@ class ScrollModule {
 
   updateScroll(scroll) {
     const indexNew = ScrollModule.computeIndex(scroll, this.offset, this.step, this.scalar)
-    if (this.index !== indexNew) {
-      this.index = indexNew
-      const artIndex = getArtIndex(this.index)
-      const { person, folder } = eclosions[artIndex]
-      const url = `../../art/${person.github}/eclosion/${folder}/`
-      this.iframe.src = url
-      this.person = person
-      const fullUrl = new URL(url, window.location.href)
-    }
+    this.setIndex(indexNew)
 
     const localScroll = scroll - this.index * this.scalar
     const innerScroll = clamp01(localScroll)
@@ -98,11 +72,66 @@ class ScrollModule {
     this.localScroll = localScroll
     this.innerScroll = innerScroll
   }
+
+  setIndex(indexNew, artIndex = getArtIndex(indexNew)) {
+    if (this.index === indexNew) {
+      return
+    }
+
+    this.index = indexNew
+    this.artIndex = artIndex
+
+    const { person, folder } = eclosions[artIndex]
+    const url = `../../art/${person.github}/eclosion/${folder}/`
+    this.iframe.src = url
+    this.person = person
+
+    // const fullUrl = new URL(url, window.location.href)
+    // console.log(fullUrl.href)
+  }
+}
+
+function getArtIndexFromHash() {
+  const hash = window.location.hash.slice(1)
+  if (!hash) {
+    return -1
+  }
+
+  const re = new RegExp(hash, 'i')
+  return eclosions.findIndex(({ person }) => re.test(person.github))
+}
+
+/**
+ * @param {ScrollModule} module 
+ * @returns {ScrollModule}
+ */
+function initHashModule(module) {
+  const artIndex = getArtIndexFromHash()
+  if (artIndex !== -1) {
+    module.setIndex(0, artIndex)
+  }
+  return module
+}
+
+function gotoArtIndex(artIndex) {
+  const sortedModules = [...modules].sort((a, b) => a.index - b.index)
+  const existingModule = sortedModules.find(module => module.artIndex === artIndex)
+  const scrollDestination = existingModule.index * 2
+
+  let scroll = scrollPosition
+  function animate() {
+    scroll += (scrollDestination - scroll) * 0.1
+    scrollPosition = scroll
+    if (Math.abs(scroll - scrollDestination) > 0.001) {
+      window.requestAnimationFrame(animate)
+    }
+  }
+  animate()
 }
 
 const iframes = document.querySelectorAll('iframe')
 export const modules = [
-  new ScrollModule(0, 3, 2, iframes[0]),
+  initHashModule(new ScrollModule(0, 3, 2, iframes[0])),
   new ScrollModule(1, 3, 2, iframes[1]),
   new ScrollModule(2, 3, 2, iframes[2]),
 ]
@@ -113,6 +142,10 @@ export let scrollPosition = 0
 export let easeScrollPosition = 0
 /** @type {ScrollModule} */
 export let currentModule = null
+
+function getCurrentModule() {
+  return currentModule
+}
 
 function update(deltaTime) {
   scrollPosition += 0.1 * deltaTime
@@ -149,6 +182,18 @@ window.addEventListener('wheel', event => {
   scrollPosition += delta * 0.5
 })
 
+window.addEventListener('hashchange', () => {
+  const artIndex = getArtIndexFromHash()
+  if (artIndex !== -1) {
+    gotoArtIndex(artIndex)
+  }
+})
+
 document.querySelector('button.fullscreen').addEventListener('click', () => {
   document.documentElement.requestFullscreen()
+})
+
+Object.assign(window, {
+  gotoArtIndex,
+  getCurrentModule,
 })
