@@ -20,15 +20,15 @@ class EclosionInstanceManager {
   getNextIndex() {
     return this.indexQueue.shift() ?? 0
   }
-  
+
   getEclosion(identifier) {
     return this.eclosions.find(e => e.identifier === identifier)
   }
-  
+
   registerEclosion(eclosion) {
     this.eclosions.push(eclosion)
   }
-  
+
   disposeEclosion(identifier) {
     const eclosion = this.getEclosion(identifier)
     if (eclosion) {
@@ -70,7 +70,7 @@ export function initEclosion(identifier, onScrollChange) {
     for (const onScrollChange of eclosion.onScrollChange) {
       onScrollChange?.(innerScroll)
     }
-    
+
     const outerScroll = clamp(relativeScroll, -1, 2)
     if (outerScroll < 0) {
       const y = -outerScroll * window.innerHeight
@@ -115,7 +115,7 @@ export function initEclosion(identifier, onScrollChange) {
 const updateSize = () => {
   const padding = 32
   const defaultSize = 800
-  const dim = Math.min(window.innerWidth, window.innerHeight) - padding;
+  const dim = Math.min(window.innerWidth, window.innerHeight) - padding
   const scale = Math.min(1, dim / defaultSize)
   for (const element of document.querySelectorAll(`.eclosion .bud`)) {
     element.style.setProperty('scale', scale.toFixed(4))
@@ -180,19 +180,19 @@ class EclosionScrollManager {
 
     const currentEclosionIndex = Math.floor(this.#scroll / 2)
     this.#updateIndexes(
-      currentEclosionIndex - 1, 
-      currentEclosionIndex, 
+      currentEclosionIndex - 1,
+      currentEclosionIndex,
       currentEclosionIndex + 1)
 
     for (const callback of this.#onScrollCallbacks) {
       callback(this.#scroll)
     }
-  
+
     for (const eclosion of instanceManager.eclosions) {
       const relativeScroll = scrollManager.scroll - eclosion.index * 2
       eclosion.update(relativeScroll)
-    }  
-  
+    }
+
     return this
   }
 
@@ -226,4 +226,7 @@ window.addEventListener('wheel', event => {
   const delta = event.deltaY / window.innerHeight
   scrollManager.updateScroll(scrollManager.scroll + delta)
 })
+
+// Expose scrollManager to the document scope for iframe communication.
+Object.assign(document, { scrollManager })
 
