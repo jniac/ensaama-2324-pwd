@@ -181,6 +181,16 @@ window.addEventListener('wheel', event => {
   scrollPosition += delta * 0.5
 })
 
+let oldTouch = null
+window.addEventListener('touchstart', event => {
+  oldTouch = event.touches[0]
+})
+window.addEventListener('touchmove', event => {
+  const deltaY = event.touches[0].clientY - oldTouch.clientY
+  oldTouch = event.touches[0]
+  scrollPosition += -deltaY / window.innerHeight
+})
+
 window.addEventListener('hashchange', () => {
   const artIndex = getArtIndexFromHash()
   if (artIndex !== -1) {
