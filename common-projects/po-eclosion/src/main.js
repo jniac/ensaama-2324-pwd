@@ -183,9 +183,11 @@ window.addEventListener('wheel', event => {
 
 let oldTouch = null
 window.addEventListener('touchstart', event => {
+  event.preventDefault()
   oldTouch = event.touches[0]
 })
 window.addEventListener('touchmove', event => {
+  event.preventDefault()
   const deltaY = event.touches[0].clientY - oldTouch.clientY
   oldTouch = event.touches[0]
   scrollPosition += -deltaY / window.innerHeight
