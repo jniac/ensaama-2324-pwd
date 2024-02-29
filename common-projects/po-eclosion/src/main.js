@@ -39,11 +39,10 @@ class ScrollModule {
     this.scalar = scalar
     this.iframe = iframe
 
+    // Hiding the header from the iframe
     this.iframe.onload = () => {
       const style = this.iframe.contentDocument.createElement('style')
-      style.innerHTML = `
-        header { display: none; }
-      `
+      style.innerHTML = ` header { display: none; }`
       this.iframe.contentDocument.head.appendChild(style)
     }
   }

@@ -23,7 +23,7 @@ function consolidateUrl(url) {
   if (/\:\d{3,5}$/.test(window.location.origin)) {
     return `${window.location.origin}/${url}`
   }
-  
+
   if (/github.io$/.test(window.location.origin)) {
     const tokens = window.location.pathname.split('/').filter(s => s.length > 0)
     const repo = tokens[0]
@@ -36,7 +36,16 @@ function consolidateUrl(url) {
 
 export async function fadeIn(url) {
   current = (current + 1) % 2
+
   const iframe = currentIframe()
+
+  // Hiding the header from the iframe
+  iframe.onload = () => {
+    const style = iframe.contentDocument.createElement('style')
+    style.innerHTML = ` header { display: none; }`
+    iframe.contentDocument.head.appendChild(style)
+  }
+
   const parent = iframe.parentElement
   iframe.classList.add('hidden')
   iframe.remove()

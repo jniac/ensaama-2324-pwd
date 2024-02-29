@@ -33,7 +33,7 @@ async function search() {
 
 async function click() {
   await wait(1)
-  
+
   const divs = [...currentDocument().querySelectorAll('main div')]
   for (let i = 0; i < 5; i++) {
     for (let j = 0; j < 3; j++) {
@@ -48,11 +48,15 @@ let index = -1
 async function next() {
   index = (index + 1) % data.entries.length
   const entry = data.entries[index]
-  
+
   fadeIn(entry.url)
-  
+
+  const spans = document.querySelectorAll('header div span')
+  spans[0].innerHTML = entry.type
+  spans[1].innerHTML = entry.url.split('/')[2]
+
   await wait(1)
-  
+
   if (entry.type === 'find-the-number') {
     await search()
   } else {
@@ -60,7 +64,7 @@ async function next() {
   }
 
   await wait(1)
-  
+
   next()
 }
 
