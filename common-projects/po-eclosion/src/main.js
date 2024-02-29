@@ -1,4 +1,4 @@
-import { clamp01, easings } from '../../../common-resources/js/math-utils.js'
+import { clamp01, easings, inverseLerp } from '../../../common-resources/js/math-utils.js'
 import { data } from '../../eclosion/src/data.js'
 import { getArtIndex, setArtCount } from './art-indices.js'
 import { moduleSvgDebug } from './moduleSvgDebug.js'
@@ -42,6 +42,8 @@ class ScrollModule {
   scalar = -1
 
   index = NaN
+  localScroll = 0
+  innerScroll = 0
 
   /** @type {HTMLIFrameElement} */
   iframe = null
@@ -81,7 +83,8 @@ class ScrollModule {
     this.iframe.contentDocument.scrollManager?.updateScroll(innerScroll)
 
     if (localScroll < 0) {
-      this.iframe.style.transform = `translateY(${(-localScroll * 100).toFixed(2)}%)`
+      const alpha = inverseLerp(0, .8, -localScroll)
+      this.iframe.style.transform = `translateY(${(easings.cubicBezier(.75, .9, .8, 1)(alpha) * 100).toFixed(2)}%)`
       this.iframe.style.zIndex = '2'
     } else if (localScroll <= 1) {
       this.iframe.style.transform = ``
@@ -92,9 +95,8 @@ class ScrollModule {
       this.iframe.style.zIndex = '0'
     }
 
-    if (localScroll >= 0 && localScroll <= 1) {
-      document.querySelector('header div span').innerHTML = `${this.person.github}::${Math.ceil(100 * localScroll)}%`
-    }
+    this.localScroll = localScroll
+    this.innerScroll = innerScroll
   }
 }
 
@@ -109,16 +111,26 @@ export const modules = [
 
 export let scrollPosition = 0
 export let easeScrollPosition = 0
+/** @type {ScrollModule} */
+export let currentModule = null
 
 function update(deltaTime) {
+  scrollPosition += 0.1 * deltaTime
   easeScrollPosition += (scrollPosition - easeScrollPosition) * 0.1
   Object.assign(window, { scrollPosition, easeScrollPosition })
 
   for (const module of modules) {
     module.updateScroll(easeScrollPosition)
+    if (module.localScroll >= 0 && module.localScroll <= 1) {
+      currentModule = module
+    }
   }
 
-  scrollPosition += 0.1 * deltaTime
+  if (currentModule) {
+    const pc = Math.round(100 * currentModule.innerScroll).toString()
+    const { github } = currentModule.person
+    document.querySelector('header div span').innerHTML = `${github}{${pc}%}`
+  }
 }
 
 let oldMs = 0
