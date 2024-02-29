@@ -16,3 +16,42 @@ main {
     height: 100vh;
   }
 }
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 1em;
+  color: white;
+  font-size: .75em;
+  letter-spacing: .15em;
+
+  button.fullscreen {
+    --size: 3em;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0.5em;
+
+    width: var(--size);
+    height: var(--size);
+    background-color: white;
+    border: none;
+
+    mask-image: url(../../../common-resources/assets/baseline-fullscreen.svg);
+    -webkit-mask-image: url(../../../common-resources/assets/baseline-fullscreen.svg);
+    mask-size: contain;
+    -webkit-mask-size: contain;
+
+    cursor: pointer;
+
+    :root:fullscreen & {
+      display: none;
+    }
+  }
+}

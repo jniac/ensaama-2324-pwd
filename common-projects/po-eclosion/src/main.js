@@ -1,4 +1,4 @@
-import { clamp01 } from '../../../common-resources/js/math-utils.js'
+import { clamp01, easings } from '../../../common-resources/js/math-utils.js'
 import { data } from '../../eclosion/src/data.js'
 import { getArtIndex, setArtCount } from './art-indices.js'
 import { moduleSvgDebug } from './moduleSvgDebug.js'
@@ -41,16 +41,27 @@ class ScrollModule {
 
   scalar = -1
 
+  index = NaN
+
   /** @type {HTMLIFrameElement} */
   iframe = null
 
-  index = NaN
+  /** @type {import('../../eclosion/src/data.js').Person} */
+  person = null
 
   constructor(offset, step, scalar, iframe) {
     this.offset = offset
     this.step = step
     this.scalar = scalar
     this.iframe = iframe
+
+    this.iframe.onload = () => {
+      const style = this.iframe.contentDocument.createElement('style')
+      style.innerHTML = `
+        header { display: none; }
+      `
+      this.iframe.contentDocument.head.appendChild(style)
+    }
   }
 
   updateScroll(scroll) {
@@ -61,20 +72,29 @@ class ScrollModule {
       const { person, folder } = eclosions[artIndex]
       const url = `../../art/${person.github}/eclosion/${folder}/`
       this.iframe.src = url
+      this.person = person
       const fullUrl = new URL(url, window.location.href)
     }
 
     const localScroll = scroll - this.index * this.scalar
     const innerScroll = clamp01(localScroll)
     this.iframe.contentDocument.scrollManager?.updateScroll(innerScroll)
-    const outerScroll = localScroll < 0 ? localScroll : localScroll < 1 ? 0 : localScroll - 1
-    this.iframe.style.transform = `translateY(${(-outerScroll * 100).toFixed(2)}%)`
 
-    // const debugIndex = 0
-    // this.iframe.style.visibility = this.offset === debugIndex ? 'visible' : 'hidden'
-    // if (this.offset === debugIndex) {
+    if (localScroll < 0) {
+      this.iframe.style.transform = `translateY(${(-localScroll * 100).toFixed(2)}%)`
+      this.iframe.style.zIndex = '2'
+    } else if (localScroll <= 1) {
+      this.iframe.style.transform = ``
+      this.iframe.style.zIndex = '1'
+    } else {
+      const alpha = 1 - localScroll
+      this.iframe.style.transform = `translateY(${(easings.in3(alpha) * 20).toFixed(2)}%)`
+      this.iframe.style.zIndex = '0'
+    }
 
-    // }
+    if (localScroll >= 0 && localScroll <= 1) {
+      document.querySelector('header div span').innerHTML = `${this.person.github}::${Math.ceil(100 * localScroll)}%`
+    }
   }
 }
 
@@ -90,21 +110,33 @@ export const modules = [
 export let scrollPosition = 0
 export let easeScrollPosition = 0
 
-function update() {
-  window.requestAnimationFrame(update)
-
+function update(deltaTime) {
   easeScrollPosition += (scrollPosition - easeScrollPosition) * 0.1
   Object.assign(window, { scrollPosition, easeScrollPosition })
 
   for (const module of modules) {
     module.updateScroll(easeScrollPosition)
   }
+
+  scrollPosition += 0.1 * deltaTime
 }
 
-update()
+let oldMs = 0
+function frame(ms) {
+  window.requestAnimationFrame(frame)
+
+  const dt = (ms - oldMs) / 1000
+  oldMs = ms
+  update(dt)
+}
+
+window.requestAnimationFrame(frame)
 
 window.addEventListener('wheel', event => {
   const delta = event.deltaY / window.innerHeight
-  scrollPosition += delta
+  scrollPosition += delta * 0.5
 })
 
+document.querySelector('button.fullscreen').addEventListener('click', () => {
+  document.documentElement.requestFullscreen()
+})
