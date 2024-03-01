@@ -15,7 +15,7 @@ function setArtCount(count) {
   artIndices = Array.from({ length: artCount }, (_, i) => i)
 }
 
-function getArtIndexDistance(scrollIndex, artIndex, maxDistance = 4) {
+function getArtIndexDistance(scrollIndex, artIndex, maxDistance = artCount) {
   if (map.has(scrollIndex) && map.get(scrollIndex) === artIndex) {
     return 0
   }
