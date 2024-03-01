@@ -6,6 +6,10 @@
   background-color: #111;
 }
 
+:root:fullscreen {
+  cursor: none;
+}
+
 main {
   pointer-events: none;
 
