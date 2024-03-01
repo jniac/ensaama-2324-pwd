@@ -163,6 +163,7 @@ function update(deltaTime) {
   if (currentModule) {
     const pc = Math.round(100 * currentModule.innerScroll).toString()
     const { github } = currentModule.person
+    document.querySelector('header div a').href = `#${github}`
     document.querySelector('header div span').innerHTML = `${github}{${pc}%}`
   }
 }
@@ -171,7 +172,7 @@ let oldMs = 0
 function frame(ms) {
   window.requestAnimationFrame(frame)
 
-  const dt = Math.min((ms - oldMs) / 1000, 1/30)
+  const dt = Math.min((ms - oldMs) / 1000, 1 / 30)
   oldMs = ms
   update(dt)
 }
