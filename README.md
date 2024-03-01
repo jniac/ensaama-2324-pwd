@@ -16,6 +16,10 @@ Demo:
 ## eclosion project
 - [eclosion project](https://jniac.github.io/ensaama-2324-pwd/common-projects/eclosion/)
 
+<a href="https://jniac.github.io/ensaama-2324-pwd/art/RSelaries/eclosion/final/">
+<img src="md/assets/art_RSelaries_eclosion.jpg">
+</a>
+
 ## Find the number
 
 <a href="https://jniac.github.io/ensaama-2324-pwd/art/Graigouzzz/exercice/find_the_number_final/">
