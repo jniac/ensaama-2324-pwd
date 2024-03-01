@@ -1,6 +1,11 @@
 @import url(../../../../../common-projects/eclosion/style/style.css);
 @import url(eclosion.css);
 
+.ing {
+  --background-color-1: #f57a5e;
+  --background-color-2: #F49C88;
+}
+
 .ing main section {
   height: 100vh;
   display: flex;
@@ -11,11 +16,11 @@
 }
 
 .ing main section:nth-child(1){
-  background-color: #f57a5e;
+  background-image: linear-gradient(var(--background-color-1) 70%, var(--background-color-2));
 }
 
 .ing main section:nth-child(2) {
-  background-color: #F49C88;
+  background-color: var(--background-color-2);
 }
 
 .ing .overlay .bud {

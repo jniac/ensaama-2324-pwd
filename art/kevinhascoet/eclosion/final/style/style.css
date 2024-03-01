@@ -1,2 +1,15 @@
 @import url(../../../../../common-projects/eclosion/style/style.css);
 @import url(eclosion.css);
+
+.kev {
+  --background-color-1: #1c1b33;
+  --background-color-2: #1f1723;
+}
+
+.kev main section:nth-child(1) {
+  background-image: linear-gradient(var(--background-color-1) 70%, var(--background-color-2));
+}
+
+.kev main section:nth-child(2) {
+  background-color: var(--background-color-2);
+}

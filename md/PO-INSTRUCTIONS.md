@@ -1,8 +1,13 @@
-# PO Instruction
+# PO Instructions
 
-Instructions pour affichage sur poste de travail en local.
+Instructions pour affichage sur poste de travail en "local".
 
-Pour lancer les expériences "PO", il faut : 
+> NOTE :  
+> Pour une version "online" les liens suivants suffisent pour accéder aux expériences: 
+> - [po-digital-design](https://jniac.github.io/ensaama-2324-pwd/common-projects/po-digital-design/)
+> - [po-eclosion](https://jniac.github.io/ensaama-2324-pwd/common-projects/po-eclosion/)
+
+Pour lancer les expériences "PO" en "local", il faut : 
 
 - Cloner le dépôt git (ensaama-2324-pwd) quelque part sur la machine (généralement le dossier "Documents")
 

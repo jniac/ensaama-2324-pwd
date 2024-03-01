@@ -1,4 +1,15 @@
 @import url(../../../../../common-projects/eclosion/style/style.css);
 @import url(eclosion.css);
 
+.sah {
+  --background-color-1: #141e24;
+  --background-color-2: #1e1723;
+}
 
+.sah main section:nth-child(1) {
+  background-image: linear-gradient(var(--background-color-1) 70%, var(--background-color-2));
+}
+
+.sah main section:nth-child(2) {
+  background-color: var(--background-color-2);
+}
