@@ -12,26 +12,39 @@ function value() {
 
 /**
  * @typedef {{
- *   init: (value?: bigint | number) => PRNG
- *   state: () => bigint
+ *   init: (value?: BigInt | number) => PRNG
+ *   state: (value?: BigInt) => BigInt
  *   float: (() => number) & ((max: number) => number) & ((min: number, max: number) => number)
  *   int: ((max: number) => number) & ((min: number, max: number) => number)
+ *   chance: (probability: number) => boolean
  *   among: <T>(array: ArrayLike<T>) => T
  *   amongWeighted: <T>(array: ArrayLike<T>, weights: ArrayLike<number>, options?: { weightsAreNormalized?: boolean }) => T
  * }} PRNG
  * 
- * Pseudo Random Number Generator
+ * Pseudo Random Number Generator using BigInt for implementing the Park-Miller algorithm.
  * 
  * State can be saved and restored:
  * ```javascript
  * const state = PRNG.state()
  * // ...
- * PRNG.init(state)
+ * PRNG.state(state)
+ * // or
+ * PRNG.init(state) // Slower because of internal checks.
  * ```
  * 
  * @type {PRNG}
  */
 export const PRNG = {
+  /**
+   * Returns the current state of the PRNG, can be used to restore the state later.
+   * @param {BigInt} value 
+   * @returns BigInt
+   */
+  state(value = state) {
+    state = value
+    return state
+  },
+
   init(seed) {
     if (typeof seed === 'bigint') {
       state = seed
@@ -51,10 +64,6 @@ export const PRNG = {
     return PRNG
   },
 
-  state() {
-    return state
-  },
-
   float() {
     const [min, max] =
       arguments.length === 0 ? [0, 1] :
@@ -70,6 +79,10 @@ export const PRNG = {
         arguments
     next()
     return min + Math.floor((max - min) * value())
+  },
+
+  chance(probability) {
+    return PRNG.float() < probability
   },
 
   among(array) {
@@ -91,7 +104,7 @@ export const PRNG = {
 
     const rand = PRNG.float()
     let sum = 0
-    for (let i = 0; i < array.length; i++) {
+    for (let i = 0, max = array.length; i < max; i++) {
       sum += weights[i]
       if (rand < sum) {
         return array[i]

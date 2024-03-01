@@ -60,3 +60,8 @@ Demo:
 
 [Celia (babib3l)](https://jniac.github.io/ensaama-2324-pwd/art/babib3l/colorful/)
 
+## Notes
+
+Les ressources suivantes sont de bonne qualité :
+- [easings.js](common-resources/js/easings.js) permet de définir des courbes transitions (ease in/out, cubic-bezier...).
+- [prng.js](common-resources/js/prng.js) permet de générer des nombres aléatoires de manière prédictive en utilisant les opérations sur les BigInt.

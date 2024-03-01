@@ -180,10 +180,17 @@ const cubic01SearchT = (
 
 const solveCubicEasing = (x1, y1, x2, y2, x, iterations = bezierDefaultIterations, precision = bezierDefaultPrecision) => {
   const t = cubic01SearchT(x1, x2, x, iterations, precision)
-  const y = cubic01(y1, y2, t)
-  return y
+  return cubic01(y1, y2, t)
 }
 
+/**
+ * Returns a cubic bezier easing function.
+ * @param {number} x1 
+ * @param {number} y1 
+ * @param {number} x2 
+ * @param {number} y2 
+ * @returns {(x: number) => number}
+ */
 export const cubicBezier = (x1, y1, x2, y2) => {
   return x => {
     return solveCubicEasing(x1, y1, x2, y2, x)
