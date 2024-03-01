@@ -130,10 +130,12 @@ function gotoArtIndex(artIndex) {
 
 const iframes = document.querySelectorAll('iframe')
 export const modules = [
-  initHashModule(new ScrollModule(0, 3, 2, iframes[0])),
+  new ScrollModule(0, 3, 2, iframes[0]),
   new ScrollModule(1, 3, 2, iframes[1]),
   new ScrollModule(2, 3, 2, iframes[2]),
 ]
+
+initHashModule(modules[0])
 
 // moduleSvgDebug()
 
