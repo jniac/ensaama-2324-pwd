@@ -1,2 +1,16 @@
 @import url(../../../../../common-projects/eclosion/style/style.css);
 @import url(eclosion.css);
+
+.mar {
+  --background-color-1: #a19046;
+  --background-color-1-bis: #d8c365;
+  --background-color-2: #1c1930;
+}
+
+.mar main section:nth-child(1) {
+  background-image: linear-gradient(var(--background-color-1) 10%, var(--background-color-1-bis));
+}
+
+.mar main section:nth-child(2) {
+  background-color: var(--background-color-2);
+}
