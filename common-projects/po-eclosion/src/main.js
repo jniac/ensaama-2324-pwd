@@ -169,7 +169,7 @@ let oldMs = 0
 function frame(ms) {
   window.requestAnimationFrame(frame)
 
-  const dt = (ms - oldMs) / 1000
+  const dt = Math.min((ms - oldMs) / 1000, 1/30)
   oldMs = ms
   update(dt)
 }
@@ -185,13 +185,13 @@ let oldTouch = null
 window.addEventListener('touchstart', event => {
   event.preventDefault()
   oldTouch = event.touches[0]
-})
+}, { passive: false })
 window.addEventListener('touchmove', event => {
   event.preventDefault()
   const deltaY = event.touches[0].clientY - oldTouch.clientY
   oldTouch = event.touches[0]
   scrollPosition += -deltaY / window.innerHeight
-})
+}, { passive: false })
 
 window.addEventListener('hashchange', () => {
   const artIndex = getArtIndexFromHash()
