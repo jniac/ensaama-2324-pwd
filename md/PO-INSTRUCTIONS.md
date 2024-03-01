@@ -25,3 +25,6 @@ Pour lancer les expériences "PO", il faut :
 - La page s'ouvre automatiquement dans le navigateur par défaut. Si ce n'est pas Chrome, ouvrir la page dans Chrome (support CSS, performances).
 
 - Mettre la page en plein écran !
+  <br/><br/><a href="assets/po-fullscreen.jpg">
+    <img src="assets/po-fullscreen.jpg" width="320">
+  </a>
