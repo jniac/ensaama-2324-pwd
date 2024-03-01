@@ -8,6 +8,11 @@ Pour lancer les expériences "PO", il faut :
 
 - Ouvrir le dépôt / dossier ensaama-2324-pwd avec VSCode
 
+- S'assurer que le dépot est à jour (git pull)
+  <br/><br/><a href="assets/po-git-pull.jpg">
+    <img src="assets/po-git-pull.jpg" width="320">
+  </a>
+
 - S'assurer que l'extension [live server](https://github.com/ritwickdey/vscode-live-server) a été installée dans VSCode
   <br/><br/><a href="assets/po-live-server-extension.jpg">
     <img src="assets/po-live-server-extension.jpg" width="320">
