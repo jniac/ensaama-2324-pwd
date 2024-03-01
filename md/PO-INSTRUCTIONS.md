@@ -1,6 +1,9 @@
 # PO Instruction
 
+Instructions pour affichage sur poste de travail en local.
+
 Pour lancer les expériences "PO", il faut : 
+
 - Cloner le dépôt git (ensaama-2324-pwd) quelque part sur la machine (généralement le dossier "Documents")
 
 - Ouvrir le dépôt / dossier ensaama-2324-pwd avec VSCode

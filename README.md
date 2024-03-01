@@ -9,6 +9,7 @@ Demo:
 - [eclosion 10/01/24](https://jniac.github.io/ensaama-2324-pwd/art/jniac/eclosion/v01-10-a/)
 
 ## Portes Ouvertes
+- [instructions pour affichage sur poste de travail en local](md/PO-INSTRUCTIONS.md)
 - [po-digital-design](https://jniac.github.io/ensaama-2324-pwd/common-projects/po-digital-design/)
 - [po-eclosion](https://jniac.github.io/ensaama-2324-pwd/common-projects/po-eclosion/)
 
