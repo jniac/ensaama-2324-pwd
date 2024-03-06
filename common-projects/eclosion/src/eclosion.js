@@ -42,7 +42,7 @@ export const instanceManager = new EclosionInstanceManager()
 /**
  * Init the eclosion scroll.
  * @param {string} identifier 
- * @param {(scroll: number) => void} onScrollChange 
+ * @param {(scroll: number, element: HTMLElement) => void} onScrollChange 
  */
 export function initEclosion(identifier, onScrollChange) {
   // initEclosion can be called multiple times, so we need to check if the 
@@ -68,7 +68,7 @@ export function initEclosion(identifier, onScrollChange) {
     element.style.setProperty('--scroll', innerScroll.toFixed(3))
 
     for (const onScrollChange of eclosion.onScrollChange) {
-      onScrollChange?.(innerScroll)
+      onScrollChange?.(innerScroll, element)
     }
 
     const outerScroll = clamp(relativeScroll, -1, 2)
