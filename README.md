@@ -1,4 +1,5 @@
-# ENSAAMA 2022-2023 Pratiques (Artistiques) Web & Digitales
+ENSAAMA 2023-2024
+# Pratiques (Artistiques) Web & Digitales
 
 [(evaluation - semestre 1)](https://jniac.github.io/ensaama-2324-pwd/info/info/)
 
