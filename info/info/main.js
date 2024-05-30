@@ -103,7 +103,7 @@ async function main() {
             <div class="w-40 grade click-stop" onpointerover="gradeOnOver(event, ${index})" onpointerleave="gradeOnLeave()" onclick="gradeOnClick(${index})">
               <div class="ctr">
                 <span class="ctr ${evaluation.page ? 'underline' : ''}">
-                  ${evaluation?.grade ?? '???'}
+                  ${evaluation?.grade ?? '...'}
                 </span>
               </div>
             </div>`

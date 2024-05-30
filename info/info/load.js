@@ -53,5 +53,6 @@ export async function loadExercise() {
     await get('../exercise-evaluation/colorful.yaml'),
     await get('../exercise-evaluation/find-the-number.yaml'),
     await get('../exercise-evaluation/eclosion-scroll.yaml'),
+    await get('../exercise-evaluation/eclosion-ue5.yaml'),
   ]
 }
