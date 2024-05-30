@@ -22,33 +22,33 @@ main * {
   flex: 1;
 }
 
-main .student {
+main .info-row {
   flex-direction: row;
 }
 
-main .student > div {
+main .info-row > div {
   padding: .25em;
 }
 
-main .student > div:nth-child(2n) {
+main .info-row > div:nth-child(2n) {
   background-color: #9992;
 }
 
-main .student-separator {
+main .info-row-separator {
   height: 1px;
   background: #0009;
 }
 
-main .student .grade {
+main .info-row .grade {
   padding: 2px;
   cursor: none;
 }
 
-main .student .grade > div {
+main .info-row .grade > div {
   border-radius: 2px;
 }
 
-main .student .grade:hover > div {
+main .info-row .grade:hover > div {
   background-color: rgb(var(--accent-color-rgb));
   color: rgb(var(--accent-font-color-rgb));
 }
@@ -93,6 +93,14 @@ main .student .grade:hover > div {
   width: 30%;
   height: 1px;
   bottom: 0;
-  background-color: black;
+  background-color: currentColor;
 }
 
+.vertical-text {
+  display: flex;
+  padding: .5em 0 !important;
+  justify-content: flex-start;
+  align-items: center;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}

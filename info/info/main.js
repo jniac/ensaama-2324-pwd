@@ -5,7 +5,7 @@ import { loadExercise as loadEvaluations, loadInfo } from './load.js'
 async function main() {
   const info = await loadInfo()
   const exercises = await loadEvaluations()
-  
+
   /** 
    * @type {{
    *   exerciseName: string
@@ -21,8 +21,8 @@ async function main() {
 
     const { exerciseName, student, evaluation } = gradeInfos[index]
 
-    let lines = Array.isArray(evaluation.comment) 
-      ? evaluation.comment 
+    let lines = Array.isArray(evaluation.comment)
+      ? evaluation.comment
       : [evaluation.comment ?? '...']
 
     lines = lines
@@ -42,8 +42,8 @@ async function main() {
         <h3>${student.names.join(' ')} (${student.github}) — ${exerciseName}</h3>
         ${lines.join('\n')}
       </div>
-    `     
-      
+    `
+
     const srcRect = srcDiv.getBoundingClientRect()
     const infoRect = infoBlock.getBoundingClientRect()
     const x = srcRect.left + 44
@@ -52,7 +52,7 @@ async function main() {
     infoBlock.style.left = `${x}px`
     infoBlock.style.top = `${clamp(y, 32, window.innerHeight - infoRect.height - 32)}px`
     infoBlock.style.width = `${window.innerWidth - x - 32}px`
-    
+
     const r = rand255()
     const g = rand255()
     const b = rand255()
@@ -74,16 +74,26 @@ async function main() {
       window.open(url)
     }
   }
-  
+
   Object.assign(window, {
     gradeOnOver,
     gradeOnLeave,
     gradeOnClick,
   })
-  
-  let lines = info.students
-    .map((student, index) =>
-    {
+
+  let lines = []
+
+  lines.push(/* html */`
+    <div class="info-row" style="opacity: 0.33;">
+      <div class="w-40 dim"></div>
+      <div class="w-200 bottom">nom</div>
+      <div class="w-100 bottom">github</div>
+      ${exercises.map(e => `<div class="w-40 vertical-text">${e.exercise}</div>`).join('\n')}
+    </div>
+ `)
+
+  lines.push(...info.students
+    .map((student, index) => {
       const studentEvaluations = exercises
         .map(exercise => {
           const index = gradeInfos.length
@@ -92,16 +102,16 @@ async function main() {
           return (`
             <div class="w-40 grade click-stop" onpointerover="gradeOnOver(event, ${index})" onpointerleave="gradeOnLeave()" onclick="gradeOnClick(${index})">
               <div class="ctr">
-                <span class="ctr ${evaluation.page ? '' : 'underline'}">
+                <span class="ctr ${evaluation.page ? 'underline' : ''}">
                   ${evaluation?.grade ?? '???'}
                 </span>
               </div>
             </div>`
           )
         })
-  
+
       return /* html */`
-        <div class="student">
+        <div class="info-row">
           <div class="w-40 dim">${index + 1}</div>
           <div class="w-200">${student.names.join(' ')}</div>
           <div class="w-100">${student.github}</div>
@@ -110,14 +120,15 @@ async function main() {
         </div>
       `
     })
-  
+  )
+
   lines = lines
     .map((line, index) => index === 0 ? [line] : [
-      `<div class="student-separator"></div>`,
+      `<div class="info-row-separator"></div>`,
       line,
     ])
     .flat()
-  
+
   document.querySelector('main').innerHTML = lines.join('\n')
 }
 

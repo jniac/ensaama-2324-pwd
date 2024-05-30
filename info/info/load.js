@@ -52,5 +52,6 @@ export async function loadExercise() {
   return [
     await get('../exercise-evaluation/colorful.yaml'),
     await get('../exercise-evaluation/find-the-number.yaml'),
+    await get('../exercise-evaluation/eclosion-scroll.yaml'),
   ]
 }
